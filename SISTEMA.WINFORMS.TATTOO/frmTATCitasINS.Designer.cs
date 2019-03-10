@@ -40,10 +40,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
             this.ptbAbajo = new System.Windows.Forms.PictureBox();
             this.ptbDerecha = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -69,7 +65,6 @@
             this.btnAplicar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -106,6 +101,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.txtDireccion);
             this.panel1.Controls.Add(this.label7);
@@ -209,10 +205,6 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.panel11);
-            this.panel3.Controls.Add(this.panel10);
-            this.panel3.Controls.Add(this.panel9);
-            this.panel3.Controls.Add(this.panel8);
             this.panel3.Controls.Add(this.ptbAbajo);
             this.panel3.Controls.Add(this.ptbDerecha);
             this.panel3.Controls.Add(this.label3);
@@ -222,46 +214,6 @@
             this.panel3.Size = new System.Drawing.Size(1309, 35);
             this.panel3.TabIndex = 88;
             this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.Black;
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel11.Enabled = false;
-            this.panel11.Location = new System.Drawing.Point(0, 0);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(3, 35);
-            this.panel11.TabIndex = 98;
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.Black;
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel10.Enabled = false;
-            this.panel10.Location = new System.Drawing.Point(1306, 0);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(3, 35);
-            this.panel10.TabIndex = 97;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.Black;
-            this.panel9.Enabled = false;
-            this.panel9.Location = new System.Drawing.Point(0, 32);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1309, 4);
-            this.panel9.TabIndex = 96;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.Black;
-            this.panel8.Enabled = false;
-            this.panel8.Location = new System.Drawing.Point(1, 0);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1309, 4);
-            this.panel8.TabIndex = 95;
             // 
             // ptbAbajo
             // 
@@ -535,22 +487,11 @@
             this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAceptar.UseVisualStyleBackColor = true;
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(628, 339);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(49, 16);
-            this.label14.TabIndex = 105;
-            this.label14.Text = "Minoro";
-            // 
             // frmTATCitasINS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1333, 695);
-            this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -619,10 +560,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox ptbDerecha;
         private System.Windows.Forms.PictureBox ptbAbajo;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel PanelAbajo;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbxEstadoCita;
@@ -639,6 +576,5 @@
         private System.Windows.Forms.ComboBox cbxTamaño;
         public System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
     }
 }
