@@ -1,0 +1,459 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CE6B9D30-91FA-43E7-ABF6-B99C0FF3F284}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SISTEMA.WINFORMS.TATTOO</RootNamespace>
+    <AssemblyName>SISTEMA.WINFORMS.TATTOO</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmTATCitasCAT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATCitasCAT.Designer.cs">
+      <DependentUpon>frmTATCitasCAT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATCitasINS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATCitasINS.Designer.cs">
+      <DependentUpon>frmTATCitasINS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATClientesCAT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATClientesCAT.Designer.cs">
+      <DependentUpon>frmTATClientesCAT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATClientesINS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATClientesINS.Designer.cs">
+      <DependentUpon>frmTATClientesINS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATClientesMDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATClientesMDF.Designer.cs">
+      <DependentUpon>frmTATClientesMDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATClientesMOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATClientesMOS.Designer.cs">
+      <DependentUpon>frmTATClientesMOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATClientesRMV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATClientesRMV.Designer.cs">
+      <DependentUpon>frmTATClientesRMV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATEmpleadosCAT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATEmpleadosCAT.Designer.cs">
+      <DependentUpon>frmTATEmpleadosCAT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATEmpleadosFND.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATEmpleadosFND.Designer.cs">
+      <DependentUpon>frmTATEmpleadosFND.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATEmpleadosINS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATEmpleadosINS.Designer.cs">
+      <DependentUpon>frmTATEmpleadosINS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATEmpleadosMDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATEmpleadosMDF.Designer.cs">
+      <DependentUpon>frmTATEmpleadosMDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATEmpleadosRMV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATEmpleadosRMV.Designer.cs">
+      <DependentUpon>frmTATEmpleadosRMV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATEstadoCitaCAT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATEstadoCitaCAT.Designer.cs">
+      <DependentUpon>frmTATEstadoCitaCAT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATEstadoCitaINS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATEstadoCitaINS.Designer.cs">
+      <DependentUpon>frmTATEstadoCitaINS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATEstadoCitaMDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATEstadoCitaMDF.Designer.cs">
+      <DependentUpon>frmTATEstadoCitaMDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATEstadoCitaMOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATEstadoCitaMOS.Designer.cs">
+      <DependentUpon>frmTATEstadoCitaMOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATEstadoCitaRMV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATEstadoCitaRMV.Designer.cs">
+      <DependentUpon>frmTATEstadoCitaRMV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATTamañosCAT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATTamañosCAT.Designer.cs">
+      <DependentUpon>frmTATTamañosCAT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATTamañosINS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATTamañosINS.Designer.cs">
+      <DependentUpon>frmTATTamañosINS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATTamañosMDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATTamañosMDF.Designer.cs">
+      <DependentUpon>frmTATTamañosMDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATTamañosMOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATTamañosMOS.Designer.cs">
+      <DependentUpon>frmTATTamañosMOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATTamañosRMV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATTamañosRMV.Designer.cs">
+      <DependentUpon>frmTATTamañosRMV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATTiposEmpleadosCAT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATTiposEmpleadosCAT.Designer.cs">
+      <DependentUpon>frmTATTiposEmpleadosCAT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATTiposEmpleadosFND.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATTiposEmpleadosFND.Designer.cs">
+      <DependentUpon>frmTATTiposEmpleadosFND.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATTiposEmpleadosINS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATTiposEmpleadosINS.Designer.cs">
+      <DependentUpon>frmTATTiposEmpleadosINS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATTiposEmpleadosMDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATTiposEmpleadosMDF.Designer.cs">
+      <DependentUpon>frmTATTiposEmpleadosMDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATTiposEmpleadosRMV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATTiposEmpleadosRMV.Designer.cs">
+      <DependentUpon>frmTATTiposEmpleadosRMV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATTiposPermisosCAT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATTiposPermisosCAT.Designer.cs">
+      <DependentUpon>frmTATTiposPermisosCAT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATTIposPermisosFND.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATTIposPermisosFND.Designer.cs">
+      <DependentUpon>frmTATTIposPermisosFND.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATTiposPermisosINS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATTiposPermisosINS.Designer.cs">
+      <DependentUpon>frmTATTiposPermisosINS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATTIposPermisosMDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATTIposPermisosMDF.Designer.cs">
+      <DependentUpon>frmTATTIposPermisosMDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATTiposPermisosRMV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATTiposPermisosRMV.Designer.cs">
+      <DependentUpon>frmTATTiposPermisosRMV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="wfTATClientes.cs" />
+    <Compile Include="wfTATEmpleados.cs" />
+    <Compile Include="wfTATEstadoCita.cs" />
+    <Compile Include="wfTATTamaños.cs" />
+    <Compile Include="wfTATTiposEmpleados.cs" />
+    <Compile Include="wfTATTiposPermisos.cs" />
+    <EmbeddedResource Include="frmTATCitasCAT.resx">
+      <DependentUpon>frmTATCitasCAT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATCitasINS.resx">
+      <DependentUpon>frmTATCitasINS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATClientesCAT.resx">
+      <DependentUpon>frmTATClientesCAT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATClientesINS.resx">
+      <DependentUpon>frmTATClientesINS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATClientesMDF.resx">
+      <DependentUpon>frmTATClientesMDF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATClientesMOS.resx">
+      <DependentUpon>frmTATClientesMOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATClientesRMV.resx">
+      <DependentUpon>frmTATClientesRMV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATEmpleadosCAT.resx">
+      <DependentUpon>frmTATEmpleadosCAT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATEmpleadosFND.resx">
+      <DependentUpon>frmTATEmpleadosFND.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATEmpleadosINS.resx">
+      <DependentUpon>frmTATEmpleadosINS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATEmpleadosMDF.resx">
+      <DependentUpon>frmTATEmpleadosMDF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATEmpleadosRMV.resx">
+      <DependentUpon>frmTATEmpleadosRMV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATEstadoCitaCAT.resx">
+      <DependentUpon>frmTATEstadoCitaCAT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATEstadoCitaINS.resx">
+      <DependentUpon>frmTATEstadoCitaINS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATEstadoCitaMDF.resx">
+      <DependentUpon>frmTATEstadoCitaMDF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATEstadoCitaMOS.resx">
+      <DependentUpon>frmTATEstadoCitaMOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATEstadoCitaRMV.resx">
+      <DependentUpon>frmTATEstadoCitaRMV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATTamañosCAT.resx">
+      <DependentUpon>frmTATTamañosCAT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATTamañosINS.resx">
+      <DependentUpon>frmTATTamañosINS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATTamañosMDF.resx">
+      <DependentUpon>frmTATTamañosMDF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATTamañosMOS.resx">
+      <DependentUpon>frmTATTamañosMOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATTamañosRMV.resx">
+      <DependentUpon>frmTATTamañosRMV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATTiposEmpleadosCAT.resx">
+      <DependentUpon>frmTATTiposEmpleadosCAT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATTiposEmpleadosFND.resx">
+      <DependentUpon>frmTATTiposEmpleadosFND.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATTiposEmpleadosINS.resx">
+      <DependentUpon>frmTATTiposEmpleadosINS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATTiposEmpleadosMDF.resx">
+      <DependentUpon>frmTATTiposEmpleadosMDF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATTiposEmpleadosRMV.resx">
+      <DependentUpon>frmTATTiposEmpleadosRMV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATTiposPermisosCAT.resx">
+      <DependentUpon>frmTATTiposPermisosCAT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATTIposPermisosFND.resx">
+      <DependentUpon>frmTATTIposPermisosFND.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATTiposPermisosINS.resx">
+      <DependentUpon>frmTATTiposPermisosINS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATTIposPermisosMDF.resx">
+      <DependentUpon>frmTATTIposPermisosMDF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATTiposPermisosRMV.resx">
+      <DependentUpon>frmTATTiposPermisosRMV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icono-Cerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGOINK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgClientes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgBuscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SALIR2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SALIR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgAgregar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgEditar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgEliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgMostrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGOINK1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgCancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgAceptar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgAplicar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgCopiar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgEliminar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgEliminar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgTamaños.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGOINK2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgCopiar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgAceptar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgEliminar3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EMPLEADOS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgAgregar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SISTEMA.TATTOO\SISTEMA.TATTOO.csproj">
+      <Project>{6f17b106-e22a-4a8f-b235-f2a80bd7c21b}</Project>
+      <Name>SISTEMA.TATTOO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\84327850-anatomía-del-cuerpo-humano-frente-espalda-vista-lateral-mujer-ilustración-vectorial-.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ClasificarDerecha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CasificarAbajo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PerfilHombre.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

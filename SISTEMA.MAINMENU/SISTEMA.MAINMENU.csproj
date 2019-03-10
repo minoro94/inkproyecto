@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BFC4FD67-C90B-4533-94D2-9186B251F00F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SISTEMA.MAINMENU</RootNamespace>
+    <AssemblyName>SISTEMA.MAINMENU</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FORMA_PADRE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMA_PADRE.Designer.cs">
+      <DependentUpon>FORMA_PADRE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATLogin.Designer.cs">
+      <DependentUpon>frmTATLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATUsuariosCAT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATUsuariosCAT.Designer.cs">
+      <DependentUpon>frmTATUsuariosCAT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATUsuariosINS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATUsuariosINS.Designer.cs">
+      <DependentUpon>frmTATUsuariosINS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATUsuariosMDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATUsuariosMDF.Designer.cs">
+      <DependentUpon>frmTATUsuariosMDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATUsuariosRMV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATUsuariosRMV.Designer.cs">
+      <DependentUpon>frmTATUsuariosRMV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="wfTATUsuarios.cs" />
+    <EmbeddedResource Include="FORMA_PADRE.resx">
+      <DependentUpon>FORMA_PADRE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATLogin.resx">
+      <DependentUpon>frmTATLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATUsuariosCAT.resx">
+      <DependentUpon>frmTATUsuariosCAT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATUsuariosINS.resx">
+      <DependentUpon>frmTATUsuariosINS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATUsuariosMDF.resx">
+      <DependentUpon>frmTATUsuariosMDF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATUsuariosRMV.resx">
+      <DependentUpon>frmTATUsuariosRMV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\HERRAMIENTAS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\LOGOINK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\CERRAR1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LOGOPRINCIPALINK.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\CLIENTES.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\CONFIGURACION.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\CITAS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\MENU.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\SALIR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\LOGOUT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\SALIR2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\LOGOUT2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\PRODUCTO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\PRODUCTO2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\EMPLEADOS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\USUARIOS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\BLOC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\CALCULADORA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\MARCA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\TIPO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Icono-AdministrarUsuarios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Icono-Cerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\ImgBuscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\ImgAgregar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\ImgEditar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\ImgEliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\ImgMirar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\ImgAplicar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\ImgAceptar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\ImgCancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SISTEMA.TATTOO\SISTEMA.TATTOO.csproj">
+      <Project>{6f17b106-e22a-4a8f-b235-f2a80bd7c21b}</Project>
+      <Name>SISTEMA.TATTOO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SISTEMA.WINFORMS.TATTOO\SISTEMA.WINFORMS.TATTOO.csproj">
+      <Project>{ce6b9d30-91fa-43e7-abf6-b99c0ff3f284}</Project>
+      <Name>SISTEMA.WINFORMS.TATTOO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
