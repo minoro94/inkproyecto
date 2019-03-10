@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Collections;
 
 namespace SISTEMA.WINFORMS.TATTOO
 {
@@ -19,6 +20,9 @@ namespace SISTEMA.WINFORMS.TATTOO
             ptbAbajo.Visible = true;
             ptbDerecha.Visible = false;
         }
+
+        Rectangle [] ARREGLO;
+        int i = 0;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -61,14 +65,11 @@ namespace SISTEMA.WINFORMS.TATTOO
             System.Drawing.Graphics graphicsObj;
             graphicsObj = pictureBox2.CreateGraphics();
             Pen myPen = new Pen(System.Drawing.Color.Red, 5);
-            Rectangle myRectangle = new Rectangle(x - 597, y - 355, 5, 5);
+            Rectangle myRectangle = new Rectangle(x - 758, y - 450, 5, 5);
             graphicsObj.DrawEllipse(myPen, myRectangle);
-            
-            
-            
-            
+            ARREGLO[i] = myRectangle;
+            i++;
         }
-
         #endregion
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -77,6 +78,14 @@ namespace SISTEMA.WINFORMS.TATTOO
             
         }
 
+        public void EliminaPunto()
+        {
+            ARREGLO = new Rectangle[ARREGLO.Length - 1]; 
+            for (int i = 0; i < ARREGLO.Length; i++)
+            {
+
+            }
+        }
 
 
         private void pictureBox2_MouseClick(object sender, MouseEventArgs e)
