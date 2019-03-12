@@ -19,10 +19,11 @@ namespace SISTEMA.WINFORMS.TATTOO
             InitializeComponent();
             ptbAbajo.Visible = true;
             ptbDerecha.Visible = false;
+            
         }
-
-        Rectangle [] ARREGLO;
-        int i = 0;
+        int i = 1;
+        Rectangle[] ARREGLO;
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -60,45 +61,66 @@ namespace SISTEMA.WINFORMS.TATTOO
         }
 
         #region DIBUJAR
-        private void dibuja(int x, int y)
+        private void dibuja(int x, int y, bool decision)
         {
-            System.Drawing.Graphics graphicsObj;
-            graphicsObj = pictureBox2.CreateGraphics();
-            Pen myPen = new Pen(System.Drawing.Color.Red, 5);
-            Rectangle myRectangle = new Rectangle(x - 758, y - 450, 5, 5);
-            graphicsObj.DrawEllipse(myPen, myRectangle);
-            ARREGLO[i] = myRectangle;
-            i++;
+            ARREGLO = new Rectangle[i];
+            if (decision)
+            {
+                int a = panel1.Location.Y + pictureBox2.Location.Y + this.Location.Y + 4;
+                int b = panel1.Location.X + pictureBox2.Location.X + this.Location.X + 4;
+                int X = x - b;
+                int Y = y - a;
+                System.Drawing.Graphics graphicsObj;
+                graphicsObj = pictureBox2.CreateGraphics();
+                Pen myPen = new Pen(System.Drawing.Color.Red, 5);
+                Rectangle myRectangle = new Rectangle(X, Y, 5, 5);
+                graphicsObj.DrawEllipse(myPen, myRectangle);
+                for (int i = 0; i < ARREGLO.Length; i++)
+                {
+                    
+                    if(ARREGLO[0].Y == 0 && ARREGLO[0].X == 0 && X != ARREGLO[i].X && ARREGLO[i].Y != Y)
+                    {
+                        ARREGLO[i] = myRectangle;
+                    }
+                    
+                }
+                i++;
+            }
+            else
+            {
+                EliminaPunto();
+            }
+            
+            
         }
         #endregion
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            
-            
-        }
+       
 
         public void EliminaPunto()
         {
             ARREGLO = new Rectangle[ARREGLO.Length - 1]; 
             for (int i = 0; i < ARREGLO.Length; i++)
             {
-
+                Rectangle myRectangle = new Rectangle(ARREGLO[i].X, ARREGLO[i].Y, 5, 5);
             }
+            i--;
         }
 
 
         private void pictureBox2_MouseClick(object sender, MouseEventArgs e)
         {
-            if(e.Button == MouseButtons.Right)
+            int x = MousePosition.X;
+            int y = MousePosition.Y;
+            if (e.Button == MouseButtons.Right)
             {
                 pictureBox2.Refresh();
+                dibuja(x, y, false);
             }
             else
             {
-                int x = MousePosition.X;
-                int y = MousePosition.Y;
-                dibuja(x, y);
+                
+                dibuja(x, y, true);
             }
         }
     }
