@@ -54,8 +54,6 @@
             this.PanelAbajo = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.cbxEstadoCita = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label6 = new System.Windows.Forms.Label();
             this.txtFiiltro = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -66,6 +64,8 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -365,25 +365,6 @@
             this.cbxEstadoCita.Size = new System.Drawing.Size(305, 24);
             this.cbxEstadoCita.TabIndex = 95;
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CustomFormat = "dddd-MMMM-yyyy    hh:mm  tt";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(944, 121);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(281, 22);
-            this.dateTimePicker1.TabIndex = 97;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(866, 124);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 16);
-            this.label6.TabIndex = 98;
-            this.label6.Text = "Fecha Cita";
-            // 
             // txtFiiltro
             // 
             this.txtFiiltro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -493,6 +474,25 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CustomFormat = "dddd-MMMM-yyyy    hh:mm  tt";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(944, 121);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(281, 22);
+            this.dateTimePicker1.TabIndex = 97;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(866, 124);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(72, 16);
+            this.label6.TabIndex = 98;
+            this.label6.Text = "Fecha Cita";
+            // 
             // frmTATCitasINS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -570,8 +570,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbxEstadoCita;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label6;
         public System.Windows.Forms.TextBox txtFiiltro;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
@@ -583,5 +581,7 @@
         public System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label6;
     }
 }

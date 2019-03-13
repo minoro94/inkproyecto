@@ -215,7 +215,7 @@ namespace SISTEMA.TATTOO
         }
         #endregion
 
-        #region DIPOSE
+        #region DISPOSE
         public void Dispose()
         {
             if(DB.objConexion != null)

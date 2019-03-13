@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmTATCitasCAP_MDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATCitasCAP_MDF.Designer.cs">
+      <DependentUpon>frmTATCitasCAP_MDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATCitasCAP_RMV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATCitasCAP_RMV.Designer.cs">
+      <DependentUpon>frmTATCitasCAP_RMV.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTATCitasCAT_CAP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,10 +187,6 @@
     <None Include="Resources\84327850-anatomía-del-cuerpo-humano-frente-espalda-vista-lateral-mujer-ilustración-vectorial-.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SISTEMA.MAINMENU\SISTEMA.MAINMENU.csproj">
-      <Project>{bfc4fd67-c90b-4533-94d2-9186b251f00f}</Project>
-      <Name>SISTEMA.MAINMENU</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SISTEMA.TATTOO\SISTEMA.TATTOO.csproj">
       <Project>{6f17b106-e22a-4a8f-b235-f2a80bd7c21b}</Project>
       <Name>SISTEMA.TATTOO</Name>

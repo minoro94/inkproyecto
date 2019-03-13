@@ -111,6 +111,7 @@
             this.btnEliminar.Text = "&Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnSalir
             // 
@@ -126,6 +127,7 @@
             this.btnSalir.Text = "&Salir";
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnEditar
             // 
@@ -141,6 +143,7 @@
             this.btnEditar.Text = "&Editar";
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnAgregar
             // 
@@ -156,6 +159,7 @@
             this.btnAgregar.Text = "&Agregar";
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // panel5
             // 
@@ -188,16 +192,18 @@
             this.lstLista.TabIndex = 107;
             this.lstLista.UseCompatibleStateImageBehavior = false;
             this.lstLista.View = System.Windows.Forms.View.Details;
+            this.lstLista.SelectedIndexChanged += new System.EventHandler(this.lstLista_SelectedIndexChanged);
+            this.lstLista.DoubleClick += new System.EventHandler(this.lstLista_DoubleClick);
             // 
             // Usuario
             // 
             this.Usuario.Text = "Nombre Cliente";
-            this.Usuario.Width = 480;
+            this.Usuario.Width = 440;
             // 
             // Empleado
             // 
             this.Empleado.Text = "Fecha Cita";
-            this.Empleado.Width = 155;
+            this.Empleado.Width = 195;
             // 
             // btnBuscar
             // 
@@ -210,6 +216,7 @@
             this.btnBuscar.Size = new System.Drawing.Size(38, 24);
             this.btnBuscar.TabIndex = 105;
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // label1
             // 
@@ -233,6 +240,8 @@
             this.txtFiiltro.Name = "txtFiiltro";
             this.txtFiiltro.Size = new System.Drawing.Size(490, 22);
             this.txtFiiltro.TabIndex = 104;
+            this.txtFiiltro.TextChanged += new System.EventHandler(this.txtFiiltro_TextChanged);
+            this.txtFiiltro.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtFiiltro_KeyUp);
             // 
             // panel2
             // 
@@ -257,6 +266,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(668, 35);
             this.panel1.TabIndex = 102;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // panel8
             // 
@@ -296,6 +306,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox3.TabIndex = 12;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox2
             // 
@@ -307,6 +318,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseDown);
             // 
             // label8
             // 
@@ -318,6 +330,7 @@
             this.label8.Size = new System.Drawing.Size(108, 16);
             this.label8.TabIndex = 9;
             this.label8.Text = "Administrar Citas";
+            this.label8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label8_MouseDown);
             // 
             // panel4
             // 
@@ -352,12 +365,14 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximumSize = new System.Drawing.Size(668, 573);
             this.MinimumSize = new System.Drawing.Size(668, 573);
             this.Name = "frmTATCitasCAT_CAP";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTATCitasCAT_CAP";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmTATCitasCAT_CAP_FormClosing);
+            this.Load += new System.EventHandler(this.frmTATCitasCAT_CAP_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

@@ -26,21 +26,22 @@ namespace SISTEMA.TATTOO
             public string ImagenTatto;
             public double Costo;
             public double Anticipo;
-            public int ZonaCuerpo;
+            public string ZonaCuerpo;
             public string Descripcion;
             public string USUARIO;
-            public string FECHAHORACAMBIO;
+            public DateTime FECHAHORACAMBIO;
             public bool ELIMINADO;
 
             public string nombreCliente;
             public string Tamaño;
             public string NombreEstadoCita;
+            public string Telefono;
         }
         #endregion
 
         #region LISTARES
         #region LISTAR SIN FILTRO
-        public bool Listar(ref strTATCitas[] ARR)
+        public bool Listar(ref strTATCitas[] ARR,DateTime FechaInicio, DateTime FechaFin)
         {
             DB.conexionBD();
 
@@ -48,9 +49,15 @@ namespace SISTEMA.TATTOO
             DB.objConexion.Open();
             int Cuantos = 0;
 
-            DB.COM1.CommandText = "Select count (*) from visCitas where ELIMINADO = 0";
+            DB.COM1.CommandText = "Select count(*) from visCitas where FechaCita <  CAST(dateadd(day, 1 ,@FechaFin) AS DATE) and FechaCita> CAST(dateadd(day, -1 ,@FechaInicio) AS DATE) and ELIMINADO = 0";
+            SqlParameter SQP1 = new SqlParameter("@FechaFin",FechaFin);
+            SQP1.SqlDbType = SqlDbType.DateTime;
+            SqlParameter SQP2 = new SqlParameter("@FechaInicio",FechaInicio);
+            SQP2.SqlDbType = SqlDbType.DateTime;
+            DB.COM1.Parameters.Add(SQP1);
+            DB.COM1.Parameters.Add(SQP2);
             Cuantos = (int)DB.COM1.ExecuteScalar();
-            DB.COM1.CommandText = "Select * from visCitas where ELIMINADO = 0";
+            DB.COM1.CommandText = "Select * from visCitas where FechaCita <  CAST(dateadd(day, 1 ,@FechaFin) AS DATE) and FechaCita> CAST(dateadd(day, -1 ,@FechaInicio) AS DATE) and ELIMINADO = 0 order by FechaCita desc";
 
             try
             {
@@ -66,47 +73,125 @@ namespace SISTEMA.TATTOO
                     ARR[i].FechaCita = (DateTime)DB.REG1["FechaCita"];
                     ARR[i].idEstadoCita = (int)DB.REG1["idEstadoCita"];
                     ARR[i].Firma = (string)DB.REG1["Firma"];
-                    ARR[i].ImagenTatto = (string)DB.REG1["ImagenTatto"];
+                    ARR[i].ImagenTatto = (string)DB.REG1["ImagenTattoo"];
                     ARR[i].idTamaño = (int)DB.REG1["idTamaño"];
-                    ARR[i].Costo = (double)DB.REG1["Costo"];
-                    ARR[i].Anticipo = (double)DB.REG1["Anticipo"];
-                    ARR[i].ZonaCuerpo = (int)DB.REG1["ZonaCuerpo"];
+                    ARR[i].Costo = Convert.ToDouble(DB.REG1["Costo"]);
+                    ARR[i].Anticipo = Convert.ToDouble(DB.REG1["Anticipo"]);
+                    ARR[i].ZonaCuerpo = (string)DB.REG1["ZonaCuerpo"];
                     ARR[i].Descripcion = (string)DB.REG1["Descripcion"];
                     ARR[i].USUARIO = (string)DB.REG1["USUARIO"];
                     ARR[i].ELIMINADO = (bool)DB.REG1["ELIMINADO"];
                     ARR[i].nombreCliente = (string)DB.REG1["nombreCliente"];
                     ARR[i].Tamaño = (string)DB.REG1["Tamaño"];
                     ARR[i].NombreEstadoCita = (string)DB.REG1["NombreEstadoCita"];
+                    ARR[i].Telefono = (string)DB.REG1["Telefono"];
                     i++;
                 }
                 DB.REG1.Close();
                 DB.objConexion.Close();
+                DB.COM1.Parameters.Clear();
                 return true;
             }
-            catch
+            catch(Exception e)
             {
                 DB.objConexion.Close();
                 DB.REG1.Close();
+                DB.COM1.Parameters.Clear();
                 return false;
             }
         }
         #endregion
 
-        #region LISTAR CON FILTRO
-        public bool Listar(ref strTATCitas[] ARR, string Nombre, DateTime FechaI, DateTime FechaF)
+
+        #endregion
+
+        #region DAO
+        public bool DAO(ref strTATCitas str, int Instruccion)
         {
-            
             DB.conexionBD();
+
+            DB.COM1.CommandText = "spCitas";
+            DB.COM1.CommandType = CommandType.StoredProcedure;
+
             DB.COM1.Connection = DB.objConexion;
             DB.objConexion.Open();
-            int Cuantos = 0;
-            return true;
-           
 
+            try
+            {
+                DB.COM1.Parameters.AddWithValue("ACCION", Instruccion);
+                DB.COM1.Parameters.AddWithValue("idCita",str.idCita);
+                DB.COM1.Parameters.AddWithValue("idCliente",str.idCliente);
+                DB.COM1.Parameters.AddWithValue("idEstadoCita",str.idEstadoCita);
+                DB.COM1.Parameters.AddWithValue("idTamaño",str.idTamaño);
+                DB.COM1.Parameters.AddWithValue("FechaCita",str.FechaCita);
+                DB.COM1.Parameters.AddWithValue("Firma",str.Firma);
+                DB.COM1.Parameters.AddWithValue("ImagenTatto",str.ImagenTatto);
+                DB.COM1.Parameters.AddWithValue("Costo",str.Costo);
+                DB.COM1.Parameters.AddWithValue("Anticipo",str.Anticipo);
+                DB.COM1.Parameters.AddWithValue("ZonaCuerpo",str.ZonaCuerpo);
+                DB.COM1.Parameters.AddWithValue("Descripcion",str.Descripcion);
+                DB.COM1.Parameters.AddWithValue("USUARIO",str.USUARIO);
+                DB.COM1.Parameters.AddWithValue("FECHAHORACAMBIO",DateTime.Now);
+                DB.COM1.Parameters.AddWithValue("ELIMINADO",str.ELIMINADO);
 
-            
+                DB.REG1 = DB.COM1.ExecuteReader();
+
+                if (DB.REG1.HasRows)
+                {
+                    DB.REG1.Read();
+                    str.idCita = (int)DB.REG1["idCita"];
+                    str.idCliente = (int)DB.REG1["idCliente"];
+                    str.idEstadoCita = (int)DB.REG1["idEstadoCita"];
+                    str.idTamaño = (int)DB.REG1["idTamaño"];
+                    str.FechaCita = (DateTime)DB.REG1["FechaCita"];
+                    str.Firma = (string)DB.REG1["Firma"];
+                    str.ImagenTatto = (string)DB.REG1["ImagenTatto"];
+                    str.Costo = (double)DB.REG1["Costo"];
+                    str.Anticipo = (double)DB.REG1["Anticipo"];
+                    str.ZonaCuerpo = (string)DB.REG1["ZonaCuerpo"];
+                    str.Descripcion = (string)DB.REG1["Descripcion"];
+                    str.USUARIO = (string)DB.REG1["USUARIO"];
+                    str.FECHAHORACAMBIO = (DateTime)DB.REG1["FECHAHORACAMBIO"];
+                    str.ELIMINADO = (bool)DB.REG1["ELIMINADO"];
+                    str.nombreCliente = (string)DB.REG1["nombreCliente"];
+                    str.Tamaño = (string)DB.REG1["Tamaño"];
+                    str.NombreEstadoCita = (string)DB.REG1["NombreEstadoCita"];
+                    str.Telefono = (string)DB.REG1["Telefono"];
+                }
+                return true;
+            }
+            catch(Exception e)
+            {
+                return false;
+            }
+            finally
+            {
+                DB.REG1.Close();
+                DB.objConexion.Close();
+                DB.COM1.Parameters.Clear();
+                DB.COM1.CommandType = CommandType.Text;
+            }
         }
         #endregion
+
+        #region DISPOSE
+        public void Dispose()
+        {
+            if (DB.objConexion != null)
+            {
+                if (DB.REG1 != null)
+                {
+                    if (!DB.REG1.IsClosed)
+                    {
+                        DB.REG1.Close();
+                    }
+                }
+                if (DB.objConexion.State == ConnectionState.Open)
+                {
+                    DB.objConexion.Close();
+                }
+            }
+        }
         #endregion
     }
 }

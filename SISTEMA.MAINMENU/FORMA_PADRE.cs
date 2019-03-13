@@ -13,6 +13,8 @@ using SISTEMA.TATTOO;
 using System.IO;
 using System.Diagnostics;
 using SISTEMA.WINFORMS.TATTOO;
+using SISTEMA.WINFORMS.CAPTURAS.TATTOO;
+
 
 namespace SISTEMA.MAINMENU
 {
@@ -233,7 +235,8 @@ namespace SISTEMA.MAINMENU
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            frmTATCitasCAT frm = new frmTATCitasCAT();
+            frmTATCitasCAT_CAP frm = new frmTATCitasCAT_CAP();
+            frm.USUARIO = strUsuario.nombreUsuario;
             frm.ShowDialog();
 
         }
