@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BFC4FD67-C90B-4533-94D2-9186B251F00F}</ProjectGuid>
+    <ProjectGuid>{008E616C-2B9C-45E3-91C0-2D4A71357810}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>SISTEMA.MAINMENU</RootNamespace>
-    <AssemblyName>SISTEMA.MAINMENU</AssemblyName>
+    <RootNamespace>SISTEMA.WINFORMS.CAPTURAS.TATTOO</RootNamespace>
+    <AssemblyName>SISTEMA.WINFORMS.CAPTURAS.TATTOO</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,63 +46,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FORMA_PADRE.cs">
+    <Compile Include="frmTATCitasCAT_CAP.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMA_PADRE.Designer.cs">
-      <DependentUpon>FORMA_PADRE.cs</DependentUpon>
+    <Compile Include="frmTATCitasCAT_CAP.Designer.cs">
+      <DependentUpon>frmTATCitasCAT_CAP.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTATLogin.cs">
+    <Compile Include="frmTATCitasCAT_INS.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTATLogin.Designer.cs">
-      <DependentUpon>frmTATLogin.cs</DependentUpon>
+    <Compile Include="frmTATCitasCAT_INS.Designer.cs">
+      <DependentUpon>frmTATCitasCAT_INS.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTATUsuariosCAT.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmTATUsuariosCAT.Designer.cs">
-      <DependentUpon>frmTATUsuariosCAT.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmTATUsuariosINS.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmTATUsuariosINS.Designer.cs">
-      <DependentUpon>frmTATUsuariosINS.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmTATUsuariosMDF.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmTATUsuariosMDF.Designer.cs">
-      <DependentUpon>frmTATUsuariosMDF.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmTATUsuariosRMV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmTATUsuariosRMV.Designer.cs">
-      <DependentUpon>frmTATUsuariosRMV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HERRAMIENTAS.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="wfTATUsuarios.cs" />
-    <EmbeddedResource Include="FORMA_PADRE.resx">
-      <DependentUpon>FORMA_PADRE.cs</DependentUpon>
+    <Compile Include="wfTATCitas.cs" />
+    <EmbeddedResource Include="frmTATCitasCAT_CAP.resx">
+      <DependentUpon>frmTATCitasCAT_CAP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTATLogin.resx">
-      <DependentUpon>frmTATLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmTATUsuariosCAT.resx">
-      <DependentUpon>frmTATUsuariosCAT.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmTATUsuariosINS.resx">
-      <DependentUpon>frmTATUsuariosINS.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmTATUsuariosMDF.resx">
-      <DependentUpon>frmTATUsuariosMDF.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmTATUsuariosRMV.resx">
-      <DependentUpon>frmTATUsuariosRMV.cs</DependentUpon>
+    <EmbeddedResource Include="frmTATCitasCAT_INS.resx">
+      <DependentUpon>frmTATCitasCAT_INS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -128,96 +91,94 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Imagenes\HERRAMIENTAS.png" />
+    <None Include="Resources\SALIR2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Imagenes\LOGOINK.png" />
+    <None Include="Resources\SALIR.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Imagenes\CERRAR1.png" />
+    <None Include="Resources\PerfilHombre.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="LOGOPRINCIPALINK.jpg" />
+    <None Include="Resources\LOGOINK2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Imagenes\CLIENTES.png" />
+    <None Include="Resources\LOGOINK1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Imagenes\CONFIGURACION.png" />
+    <None Include="Resources\LOGOINK.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Imagenes\CITAS.png" />
+    <None Include="Resources\ImgTamaños.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Imagenes\MENU.png" />
+    <None Include="Resources\ImgMostrar.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Imagenes\SALIR.png" />
+    <None Include="Resources\ImgEliminar3.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Imagenes\LOGOUT.png" />
+    <None Include="Resources\ImgEliminar2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Imagenes\SALIR2.png" />
+    <None Include="Resources\ImgEliminar1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Imagenes\LOGOUT2.png" />
+    <None Include="Resources\ImgEliminar.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Imagenes\PRODUCTO.png" />
+    <None Include="Resources\ImgEditar.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Imagenes\PRODUCTO2.png" />
+    <None Include="Resources\ImgCopiar1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Imagenes\EMPLEADOS.png" />
+    <None Include="Resources\ImgCopiar.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Imagenes\USUARIOS.png" />
+    <None Include="Resources\ImgClientes.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Imagenes\BLOC.png" />
+    <None Include="Resources\ImgCancelar.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Imagenes\CALCULADORA.png" />
+    <None Include="Resources\ImgBuscar.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Imagenes\MARCA.png" />
+    <None Include="Resources\ImgAplicar.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Imagenes\TIPO.png" />
+    <None Include="Resources\ImgAgregar1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Imagenes\Icono-AdministrarUsuarios.png" />
+    <None Include="Resources\ImgAgregar.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Imagenes\Icono-Cerrar.png" />
+    <None Include="Resources\ImgAceptar1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Imagenes\ImgBuscar.png" />
+    <None Include="Resources\ImgAceptar.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Imagenes\ImgAgregar.png" />
+    <None Include="Resources\Icono-Cerrar.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Imagenes\ImgEditar.png" />
+    <None Include="Resources\EMPLEADOS.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Imagenes\ImgEliminar.png" />
+    <None Include="Resources\ClasificarDerecha.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Imagenes\ImgMirar.png" />
+    <None Include="Resources\CasificarAbajo.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Imagenes\ImgAplicar.png" />
+    <None Include="Resources\84327850-anatomía-del-cuerpo-humano-frente-espalda-vista-lateral-mujer-ilustración-vectorial-.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Imagenes\ImgAceptar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Imagenes\ImgCancelar.png" />
-  </ItemGroup>
-  <ItemGroup>
+    <ProjectReference Include="..\SISTEMA.MAINMENU\SISTEMA.MAINMENU.csproj">
+      <Project>{bfc4fd67-c90b-4533-94d2-9186b251f00f}</Project>
+      <Name>SISTEMA.MAINMENU</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SISTEMA.TATTOO\SISTEMA.TATTOO.csproj">
       <Project>{6f17b106-e22a-4a8f-b235-f2a80bd7c21b}</Project>
       <Name>SISTEMA.TATTOO</Name>

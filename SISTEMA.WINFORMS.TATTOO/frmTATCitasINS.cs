@@ -21,8 +21,8 @@ namespace SISTEMA.WINFORMS.TATTOO
             ptbDerecha.Visible = false;
             
         }
-        int i = 1;
-        Rectangle[] ARREGLO;
+
+        Rectangle[] ARREGLO = new Rectangle[0];
         
 
         private void button1_Click(object sender, EventArgs e)
@@ -57,14 +57,17 @@ namespace SISTEMA.WINFORMS.TATTOO
                 ptbDerecha.Visible = false;
                 ptbAbajo.Visible = true;
                 PanelAbajo.Location = new Point(3, 691);
+                pictureBox2.Refresh();
+                dibuja(1000,0,true);
             }
         }
 
         #region DIBUJAR
         private void dibuja(int x, int y, bool decision)
         {
-            ARREGLO = new Rectangle[i];
-            if (decision)
+            Rectangle[] Aux = new Rectangle[ARREGLO.Length + 1];
+            int au = 0;
+            if (decision && x != 1000)
             {
                 int a = panel1.Location.Y + pictureBox2.Location.Y + this.Location.Y + 4;
                 int b = panel1.Location.X + pictureBox2.Location.X + this.Location.X + 4;
@@ -77,19 +80,35 @@ namespace SISTEMA.WINFORMS.TATTOO
                 graphicsObj.DrawEllipse(myPen, myRectangle);
                 for (int i = 0; i < ARREGLO.Length; i++)
                 {
-                    
-                    if(ARREGLO[0].Y == 0 && ARREGLO[0].X == 0 && X != ARREGLO[i].X && ARREGLO[i].Y != Y)
-                    {
-                        ARREGLO[i] = myRectangle;
-                    }
-                    
+                    Aux[i] = ARREGLO[i];
+                    au = i+1;
                 }
-                i++;
+                Aux[au] = myRectangle;
+
+                ARREGLO = new Rectangle[Aux.Length];
+                for (int i = 0; i < ARREGLO.Length; i++)
+                {
+                    ARREGLO[i] = Aux[i];
+                }
+
+                
+            }
+            else if (x == 1000)
+            {
+                for (int i = 0; i < ARREGLO.Length; i++)
+                {
+                    System.Drawing.Graphics graphicsObj;
+                    graphicsObj = pictureBox2.CreateGraphics();
+                    Pen myPen = new Pen(System.Drawing.Color.Red, 5);
+                    Rectangle myRectangle = new Rectangle(ARREGLO[i].X, ARREGLO[i].Y, 5, 5);
+                    graphicsObj.DrawEllipse(myPen, myRectangle);
+                }
             }
             else
             {
                 EliminaPunto();
             }
+            
             
             
         }
@@ -99,12 +118,30 @@ namespace SISTEMA.WINFORMS.TATTOO
 
         public void EliminaPunto()
         {
-            ARREGLO = new Rectangle[ARREGLO.Length - 1]; 
-            for (int i = 0; i < ARREGLO.Length; i++)
+            if(ARREGLO.Length == 0)
             {
-                Rectangle myRectangle = new Rectangle(ARREGLO[i].X, ARREGLO[i].Y, 5, 5);
+
             }
-            i--;
+            else
+            {
+                Rectangle[] aux = new Rectangle[ARREGLO.Length - 1];
+                for (int i = 0; i < aux.Length; i++)
+                {
+                    aux[i] = ARREGLO[i];
+                    System.Drawing.Graphics graphicsObj;
+                    graphicsObj = pictureBox2.CreateGraphics();
+                    Pen myPen = new Pen(System.Drawing.Color.Red, 5);
+                    Rectangle myRectangle = new Rectangle(aux[i].X, aux[i].Y, 5, 5);
+                    graphicsObj.DrawEllipse(myPen, myRectangle);
+
+                }
+                ARREGLO = new Rectangle[aux.Length];
+                for (int i = 0; i < ARREGLO.Length; i++)
+                {
+                    ARREGLO[i] = aux[i];
+                }
+            }
+            
         }
 
 
@@ -121,6 +158,22 @@ namespace SISTEMA.WINFORMS.TATTOO
             {
                 
                 dibuja(x, y, true);
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    string img = openFileDialog1.FileName;
+                    pictureBox1.Image = Image.FromFile(img);
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("El Archivo Seleccionado No Es Un Tipo De Imagen");
             }
         }
     }

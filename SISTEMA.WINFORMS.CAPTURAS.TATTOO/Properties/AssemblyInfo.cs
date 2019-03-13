@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // La información general de un ensamblado se controla mediante el siguiente 
 // conjunto de atributos. Cambie estos valores de atributo para modificar la información
 // asociada con un ensamblado.
-[assembly: AssemblyTitle("SISTEMA.WINFORMS.CAPTURAS.TATTO")]
+[assembly: AssemblyTitle("SISTEMA.WINFORMS.CAPTURAS.TATTOO")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SISTEMA.WINFORMS.CAPTURAS.TATTO")]
+[assembly: AssemblyProduct("SISTEMA.WINFORMS.CAPTURAS.TATTOO")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // El siguiente GUID sirve como id. de typelib si este proyecto se expone a COM.
-[assembly: Guid("600af947-7ce5-4bd3-9990-ed1c4c2ec64b")]
+[assembly: Guid("008e616c-2b9c-45e3-91c0-2d4a71357810")]
 
 // La información de versión de un ensamblado consta de los cuatro valores siguientes:
 //

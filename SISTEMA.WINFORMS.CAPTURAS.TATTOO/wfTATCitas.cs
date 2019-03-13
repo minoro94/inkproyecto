@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SISTEMA.WINFORMS.CAPTURAS.TATTO
+namespace SISTEMA.WINFORMS.CAPTURAS.TATTOO
 {
-    class Program
+    class wfTATCitas
     {
-        static void Main(string[] args)
-        {
-        }
     }
 }
