@@ -118,65 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="84327850-anatomía-del-cuerpo-humano-frente-espalda-vista-lateral-mujer-ilustración-vectorial-" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\84327850-anatomía-del-cuerpo-humano-frente-espalda-vista-lateral-mujer-ilustración-vectorial-.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CasificarAbajo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CasificarAbajo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ClasificarDerecha" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ClasificarDerecha.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="EMPLEADOS" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\EMPLEADOS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Icono-Cerrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icono-Cerrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ImgAceptar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ImgAceptar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ImgAceptar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ImgAceptar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="ImgAgregar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ImgAgregar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ImgAgregar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ImgAgregar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ImgAplicar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ImgAplicar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ImgBuscar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ImgBuscar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ImgCancelar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ImgCancelar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ImgClientes" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ImgClientes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ImgCopiar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ImgCopiar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ImgCopiar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ImgCopiar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ImgEditar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ImgEditar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ImgEliminar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ImgEliminar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ImgEliminar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ImgEliminar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ImgEliminar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ImgEliminar2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ImgEliminar3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ImgEliminar3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ImgMostrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ImgMostrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,22 +127,82 @@
   <data name="ImgTamaños" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ImgTamaños.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ImgEliminar3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ImgEliminar3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EMPLEADOS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EMPLEADOS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImgBuscar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ImgBuscar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImgAceptar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ImgAceptar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="LOGOINK" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LOGOINK.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImgClientes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ImgClientes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImgEliminar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ImgEliminar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SALIR2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SALIR2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LOGOINK1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LOGOINK1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LOGOINK2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LOGOINK2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ImgCopiar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ImgCopiar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PerfilHombre" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PerfilHombre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ImgAgregar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ImgAgregar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImgCancelar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ImgCancelar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImgEliminar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ImgEliminar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImgAceptar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ImgAceptar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SALIR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SALIR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SALIR2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SALIR2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ImgEditar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ImgEditar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImgCopiar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ImgCopiar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CasificarAbajo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CasificarAbajo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="84327850-anatomía-del-cuerpo-humano-frente-espalda-vista-lateral-mujer-ilustración-vectorial-" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\84327850-anatomía-del-cuerpo-humano-frente-espalda-vista-lateral-mujer-ilustración-vectorial-.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImgAplicar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ImgAplicar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PerfilHombre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PerfilHombre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icono-Cerrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icono-Cerrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ClasificarDerecha" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ClasificarDerecha.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGOINK2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGOINK2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImgEliminar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ImgEliminar2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PerfilMujer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PerfilMujer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

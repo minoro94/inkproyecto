@@ -37,6 +37,13 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.gbInfoTatuajes = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblAdjuntarImagen = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cbxTamaño = new System.Windows.Forms.ComboBox();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.ptbPerfil = new System.Windows.Forms.PictureBox();
+            this.ptbTatuaje = new System.Windows.Forms.PictureBox();
             this.PanelBorderAbajo = new System.Windows.Forms.Panel();
             this.PanelInfoTatuaje = new System.Windows.Forms.Panel();
             this.ptbAbajo = new System.Windows.Forms.PictureBox();
@@ -44,37 +51,32 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.gbDatosCita = new System.Windows.Forms.GroupBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.lblContraseña = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbxEstadoCita = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtAnticipo = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtCosto = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtFiiltro = new System.Windows.Forms.TextBox();
-            this.ptbTatuaje = new System.Windows.Forms.PictureBox();
-            this.ptbPerfil = new System.Windows.Forms.PictureBox();
-            this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.cbxTamaño = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnAplicar = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.lblTelefono = new System.Windows.Forms.Label();
+            this.lblNombreCliente = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.gbInfoTatuajes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbPerfil)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbTatuaje)).BeginInit();
             this.PanelInfoTatuaje.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbAbajo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbDerecha)).BeginInit();
             this.gbDatosCita.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbTatuaje)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbPerfil)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -121,6 +123,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox3.TabIndex = 50;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // panel6
             // 
@@ -167,7 +170,7 @@
             // gbInfoTatuajes
             // 
             this.gbInfoTatuajes.Controls.Add(this.label4);
-            this.gbInfoTatuajes.Controls.Add(this.label2);
+            this.gbInfoTatuajes.Controls.Add(this.lblAdjuntarImagen);
             this.gbInfoTatuajes.Controls.Add(this.label7);
             this.gbInfoTatuajes.Controls.Add(this.cbxTamaño);
             this.gbInfoTatuajes.Controls.Add(this.txtDireccion);
@@ -178,6 +181,81 @@
             this.gbInfoTatuajes.Size = new System.Drawing.Size(1309, 448);
             this.gbInfoTatuajes.TabIndex = 95;
             this.gbInfoTatuajes.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(40, 146);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 16);
+            this.label4.TabIndex = 108;
+            this.label4.Text = "Descripcion";
+            // 
+            // lblAdjuntarImagen
+            // 
+            this.lblAdjuntarImagen.AutoSize = true;
+            this.lblAdjuntarImagen.BackColor = System.Drawing.Color.White;
+            this.lblAdjuntarImagen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdjuntarImagen.Location = new System.Drawing.Point(1060, 255);
+            this.lblAdjuntarImagen.Name = "lblAdjuntarImagen";
+            this.lblAdjuntarImagen.Size = new System.Drawing.Size(120, 16);
+            this.lblAdjuntarImagen.TabIndex = 107;
+            this.lblAdjuntarImagen.Text = "Adjuntar Imagen";
+            this.lblAdjuntarImagen.Click += new System.EventHandler(this.lblAdjuntarImagen_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(40, 88);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(59, 16);
+            this.label7.TabIndex = 106;
+            this.label7.Text = "Tamaño";
+            // 
+            // cbxTamaño
+            // 
+            this.cbxTamaño.BackColor = System.Drawing.SystemColors.Window;
+            this.cbxTamaño.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxTamaño.FormattingEnabled = true;
+            this.cbxTamaño.Location = new System.Drawing.Point(105, 85);
+            this.cbxTamaño.Name = "cbxTamaño";
+            this.cbxTamaño.Size = new System.Drawing.Size(283, 24);
+            this.cbxTamaño.TabIndex = 105;
+            // 
+            // txtDireccion
+            // 
+            this.txtDireccion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccion.Location = new System.Drawing.Point(43, 176);
+            this.txtDireccion.MaxLength = 300;
+            this.txtDireccion.Multiline = true;
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(345, 254);
+            this.txtDireccion.TabIndex = 104;
+            // 
+            // ptbPerfil
+            // 
+            this.ptbPerfil.BackColor = System.Drawing.Color.White;
+            this.ptbPerfil.Location = new System.Drawing.Point(451, 85);
+            this.ptbPerfil.Name = "ptbPerfil";
+            this.ptbPerfil.Size = new System.Drawing.Size(393, 345);
+            this.ptbPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbPerfil.TabIndex = 2;
+            this.ptbPerfil.TabStop = false;
+            this.ptbPerfil.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ptbPerfil_MouseClick);
+            // 
+            // ptbTatuaje
+            // 
+            this.ptbTatuaje.BackColor = System.Drawing.Color.White;
+            this.ptbTatuaje.Location = new System.Drawing.Point(909, 85);
+            this.ptbTatuaje.Name = "ptbTatuaje";
+            this.ptbTatuaje.Size = new System.Drawing.Size(393, 345);
+            this.ptbTatuaje.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbTatuaje.TabIndex = 1;
+            this.ptbTatuaje.TabStop = false;
+            this.ptbTatuaje.Click += new System.EventHandler(this.ptbTatuaje_Click);
             // 
             // PanelBorderAbajo
             // 
@@ -247,15 +325,17 @@
             // 
             // gbDatosCita
             // 
+            this.gbDatosCita.Controls.Add(this.label5);
+            this.gbDatosCita.Controls.Add(this.cbxEstadoCita);
             this.gbDatosCita.Controls.Add(this.label11);
-            this.gbDatosCita.Controls.Add(this.textBox1);
+            this.gbDatosCita.Controls.Add(this.txtAnticipo);
             this.gbDatosCita.Controls.Add(this.label10);
-            this.gbDatosCita.Controls.Add(this.txtFiiltro);
+            this.gbDatosCita.Controls.Add(this.txtCosto);
             this.gbDatosCita.Controls.Add(this.label6);
             this.gbDatosCita.Controls.Add(this.dateTimePicker1);
             this.gbDatosCita.Controls.Add(this.label13);
-            this.gbDatosCita.Controls.Add(this.label12);
-            this.gbDatosCita.Controls.Add(this.lblContraseña);
+            this.gbDatosCita.Controls.Add(this.lblTelefono);
+            this.gbDatosCita.Controls.Add(this.lblNombreCliente);
             this.gbDatosCita.Controls.Add(this.label1);
             this.gbDatosCita.Location = new System.Drawing.Point(12, 46);
             this.gbDatosCita.Name = "gbDatosCita";
@@ -264,49 +344,70 @@
             this.gbDatosCita.TabStop = false;
             this.gbDatosCita.Text = "Datos Cita";
             // 
-            // lblContraseña
+            // label5
             // 
-            this.lblContraseña.BackColor = System.Drawing.SystemColors.Info;
-            this.lblContraseña.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblContraseña.Location = new System.Drawing.Point(116, 34);
-            this.lblContraseña.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblContraseña.Name = "lblContraseña";
-            this.lblContraseña.Size = new System.Drawing.Size(474, 22);
-            this.lblContraseña.TabIndex = 88;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(608, 71);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(77, 16);
+            this.label5.TabIndex = 114;
+            this.label5.Text = "Estado Cita";
             // 
-            // label1
+            // cbxEstadoCita
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label1.Location = new System.Drawing.Point(7, 34);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 16);
-            this.label1.TabIndex = 87;
-            this.label1.Text = "Nombre Cliente";
+            this.cbxEstadoCita.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxEstadoCita.FormattingEnabled = true;
+            this.cbxEstadoCita.Location = new System.Drawing.Point(691, 68);
+            this.cbxEstadoCita.Name = "cbxEstadoCita";
+            this.cbxEstadoCita.Size = new System.Drawing.Size(281, 24);
+            this.cbxEstadoCita.TabIndex = 113;
             // 
-            // label13
+            // label11
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label13.Location = new System.Drawing.Point(7, 68);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(62, 16);
-            this.label13.TabIndex = 106;
-            this.label13.Text = "Telefono";
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(1112, 71);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(66, 16);
+            this.label11.TabIndex = 112;
+            this.label11.Text = "Anticipo $";
             // 
-            // label12
+            // txtAnticipo
             // 
-            this.label12.BackColor = System.Drawing.SystemColors.Info;
-            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label12.Location = new System.Drawing.Point(116, 67);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(227, 22);
-            this.label12.TabIndex = 105;
+            this.txtAnticipo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAnticipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAnticipo.Location = new System.Drawing.Point(1190, 68);
+            this.txtAnticipo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAnticipo.MaxLength = 20;
+            this.txtAnticipo.Name = "txtAnticipo";
+            this.txtAnticipo.Size = new System.Drawing.Size(112, 22);
+            this.txtAnticipo.TabIndex = 111;
+            this.txtAnticipo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAnticipo_KeyPress);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(1112, 35);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(53, 16);
+            this.label10.TabIndex = 110;
+            this.label10.Text = "Costo $";
+            // 
+            // txtCosto
+            // 
+            this.txtCosto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCosto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCosto.Location = new System.Drawing.Point(1190, 32);
+            this.txtCosto.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCosto.MaxLength = 20;
+            this.txtCosto.Name = "txtCosto";
+            this.txtCosto.Size = new System.Drawing.Size(112, 22);
+            this.txtCosto.TabIndex = 109;
+            this.txtCosto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCosto_KeyPress);
             // 
             // label6
             // 
@@ -327,134 +428,49 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(281, 22);
             this.dateTimePicker1.TabIndex = 107;
             // 
-            // label11
+            // label13
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(1112, 71);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(66, 16);
-            this.label11.TabIndex = 112;
-            this.label11.Text = "Anticipo $";
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.label13.Location = new System.Drawing.Point(7, 68);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(62, 16);
+            this.label13.TabIndex = 106;
+            this.label13.Text = "Telefono";
             // 
-            // textBox1
+            // lblTelefono
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(1190, 68);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.MaxLength = 20;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(112, 22);
-            this.textBox1.TabIndex = 111;
+            this.lblTelefono.BackColor = System.Drawing.SystemColors.Info;
+            this.lblTelefono.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTelefono.Location = new System.Drawing.Point(116, 67);
+            this.lblTelefono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTelefono.Name = "lblTelefono";
+            this.lblTelefono.Size = new System.Drawing.Size(227, 22);
+            this.lblTelefono.TabIndex = 105;
             // 
-            // label10
+            // lblNombreCliente
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(1112, 35);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(53, 16);
-            this.label10.TabIndex = 110;
-            this.label10.Text = "Costo $";
+            this.lblNombreCliente.BackColor = System.Drawing.SystemColors.Info;
+            this.lblNombreCliente.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblNombreCliente.Location = new System.Drawing.Point(116, 34);
+            this.lblNombreCliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombreCliente.Name = "lblNombreCliente";
+            this.lblNombreCliente.Size = new System.Drawing.Size(474, 22);
+            this.lblNombreCliente.TabIndex = 88;
             // 
-            // txtFiiltro
+            // label1
             // 
-            this.txtFiiltro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtFiiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFiiltro.Location = new System.Drawing.Point(1190, 32);
-            this.txtFiiltro.Margin = new System.Windows.Forms.Padding(4);
-            this.txtFiiltro.MaxLength = 20;
-            this.txtFiiltro.Name = "txtFiiltro";
-            this.txtFiiltro.Size = new System.Drawing.Size(112, 22);
-            this.txtFiiltro.TabIndex = 109;
-            // 
-            // ptbTatuaje
-            // 
-            this.ptbTatuaje.BackColor = System.Drawing.Color.White;
-            this.ptbTatuaje.Location = new System.Drawing.Point(909, 85);
-            this.ptbTatuaje.Name = "ptbTatuaje";
-            this.ptbTatuaje.Size = new System.Drawing.Size(393, 345);
-            this.ptbTatuaje.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbTatuaje.TabIndex = 1;
-            this.ptbTatuaje.TabStop = false;
-            // 
-            // ptbPerfil
-            // 
-            this.ptbPerfil.BackColor = System.Drawing.Color.White;
-            this.ptbPerfil.Location = new System.Drawing.Point(451, 85);
-            this.ptbPerfil.Name = "ptbPerfil";
-            this.ptbPerfil.Size = new System.Drawing.Size(393, 345);
-            this.ptbPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbPerfil.TabIndex = 2;
-            this.ptbPerfil.TabStop = false;
-            // 
-            // txtDireccion
-            // 
-            this.txtDireccion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccion.Location = new System.Drawing.Point(43, 176);
-            this.txtDireccion.MaxLength = 300;
-            this.txtDireccion.Multiline = true;
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(345, 254);
-            this.txtDireccion.TabIndex = 104;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(40, 88);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(59, 16);
-            this.label7.TabIndex = 106;
-            this.label7.Text = "Tamaño";
-            // 
-            // cbxTamaño
-            // 
-            this.cbxTamaño.BackColor = System.Drawing.SystemColors.Window;
-            this.cbxTamaño.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxTamaño.FormattingEnabled = true;
-            this.cbxTamaño.Location = new System.Drawing.Point(105, 85);
-            this.cbxTamaño.Name = "cbxTamaño";
-            this.cbxTamaño.Size = new System.Drawing.Size(283, 24);
-            this.cbxTamaño.TabIndex = 105;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1060, 255);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 16);
-            this.label2.TabIndex = 107;
-            this.label2.Text = "Adjuntar Imagen";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(40, 146);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 16);
-            this.label4.TabIndex = 108;
-            this.label4.Text = "Descripcion";
-            // 
-            // btnAplicar
-            // 
-            this.btnAplicar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAplicar.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATTOO.Properties.Resources.ImgAplicar;
-            this.btnAplicar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAplicar.Location = new System.Drawing.Point(1036, 650);
-            this.btnAplicar.Name = "btnAplicar";
-            this.btnAplicar.Size = new System.Drawing.Size(90, 33);
-            this.btnAplicar.TabIndex = 99;
-            this.btnAplicar.Text = "&Aplicar";
-            this.btnAplicar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAplicar.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.label1.Location = new System.Drawing.Point(7, 34);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(101, 16);
+            this.label1.TabIndex = 87;
+            this.label1.Text = "Nombre Cliente";
             // 
             // btnCancelar
             // 
@@ -482,12 +498,15 @@
             this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAceptar.UseVisualStyleBackColor = true;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // frmTATCitasCAT_INS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1333, 695);
-            this.Controls.Add(this.btnAplicar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.gbDatosCita);
@@ -504,20 +523,21 @@
             this.Name = "frmTATCitasCAT_INS";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTATCitasCAT_INS";
+            this.Load += new System.EventHandler(this.frmTATCitasCAT_INS_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.gbInfoTatuajes.ResumeLayout(false);
             this.gbInfoTatuajes.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbPerfil)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbTatuaje)).EndInit();
             this.PanelInfoTatuaje.ResumeLayout(false);
             this.PanelInfoTatuaje.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbAbajo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbDerecha)).EndInit();
             this.gbDatosCita.ResumeLayout(false);
             this.gbDatosCita.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbTatuaje)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbPerfil)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -541,25 +561,27 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.GroupBox gbDatosCita;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        public System.Windows.Forms.Label lblContraseña;
+        public System.Windows.Forms.Label lblNombreCliente;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label13;
-        public System.Windows.Forms.Label label12;
+        public System.Windows.Forms.Label lblTelefono;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label11;
-        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox txtAnticipo;
         private System.Windows.Forms.Label label10;
-        public System.Windows.Forms.TextBox txtFiiltro;
+        public System.Windows.Forms.TextBox txtCosto;
         private System.Windows.Forms.PictureBox ptbTatuaje;
         private System.Windows.Forms.PictureBox ptbPerfil;
         private System.Windows.Forms.TextBox txtDireccion;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblAdjuntarImagen;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cbxTamaño;
         private System.Windows.Forms.Label label4;
-        public System.Windows.Forms.Button btnAplicar;
         public System.Windows.Forms.Button btnCancelar;
         public System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cbxEstadoCita;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

@@ -324,6 +324,16 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATTOO.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PerfilMujer {
+            get {
+                object obj = ResourceManager.GetObject("PerfilMujer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SALIR {
             get {
                 object obj = ResourceManager.GetObject("SALIR", resourceCulture);

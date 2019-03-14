@@ -17,8 +17,9 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATTOO
         #region AGREGAR
         public DialogResult Agregar(ref string USUARIO)
         {
-            frmTATCitasCAT_INS Forma = new frmTATCitasCAT_INS();
-            return Forma.ShowDialog();
+            frmTATClientesCAP_FND frm = new frmTATClientesCAP_FND();
+            frm.USUARIO = USUARIO;
+            return frm.ShowDialog();
         }
         #endregion
 

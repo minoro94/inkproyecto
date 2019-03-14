@@ -16,7 +16,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATTOO
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmTATCitasCAT_INS());
+            Application.Run(new frmTATClientesCAP_FND());
         }
     }
 }

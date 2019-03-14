@@ -81,5 +81,15 @@ namespace SISTEMA.WINFORMS.TATTOO
             return Forma.ShowDialog();
         }
         #endregion
+
+        #region BUSCAR
+        public DialogResult Buscar(ref TATClientes.strTATClientes DATOS)
+        {
+            frmTATClientesFND Forma = new frmTATClientesFND();
+            DialogResult res = Forma.ShowDialog();
+            DATOS = Forma.str;
+            return DialogResult.OK;
+        }
+        #endregion
     }
 }

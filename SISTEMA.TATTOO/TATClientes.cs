@@ -66,18 +66,19 @@ namespace SISTEMA.TATTOO
                     ARR[i].Domicilio = (string)DB.REG1["Domicilio"];
                     ARR[i].Municipio = (string)DB.REG1["Municipio"];
                     ARR[i].CodigoPostal = (string)DB.REG1["CodigoPostal"].ToString().Trim();
-                    ARR[i].Edad = (int)DB.REG1["Edad"];
+                    ARR[i].Edad = Convert.ToInt16(DB.REG1["Edad"]);
                     ARR[i].Sexo = (bool)DB.REG1["Sexo"];
                     ARR[i].HistorialMedico = (string)DB.REG1["HistorialMedico"];
                     ARR[i].USUARIO = (string)DB.REG1["USUARIO"];
                     ARR[i].FECHAHORACAMBIO = (DateTime)DB.REG1["FECHAHORACAMBIO"];
                     ARR[i].ELIMINADO = (bool)DB.REG1["ELIMINADO"];
+                    i++;
                 }
                 DB.REG1.Close();
                 DB.objConexion.Close();
                 return true;
             }
-            catch
+            catch(Exception e)
             {
                 DB.objConexion.Close();
                 DB.REG1.Close();
@@ -100,6 +101,13 @@ namespace SISTEMA.TATTOO
                 Cuantos = (int)DB.COM1.ExecuteScalar();
 
                 DB.COM1.CommandText = "Select * from Clientes where ELIMINADO = 0 AND nombreCliente like '%' + '" + filtro.nombreCliente + "' + '%'";
+            }
+            else if(filtro.idCliente != 0)
+            {
+                DB.COM1.CommandText = "Select count (*) from Clientes where ELIMINADO = 0 AND idCliente = " + filtro.idCliente + " ";
+                Cuantos = (int)DB.COM1.ExecuteScalar();
+
+                DB.COM1.CommandText = "Select * from Clientes where ELIMINADO = 0 AND idCliente = " + filtro.idCliente + " ";
             }
             else
             {
@@ -136,7 +144,7 @@ namespace SISTEMA.TATTOO
                 }
                 return true;
             }
-            catch
+            catch(Exception e)
             {
                 return false;
             }

@@ -70,6 +70,12 @@
     <Compile Include="frmTATCitasCAT_INS.Designer.cs">
       <DependentUpon>frmTATCitasCAT_INS.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTATClientesCAP_FND.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATClientesCAP_FND.Designer.cs">
+      <DependentUpon>frmTATClientesCAP_FND.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="wfTATCitas.cs" />
@@ -78,6 +84,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTATCitasCAT_INS.resx">
       <DependentUpon>frmTATCitasCAT_INS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATClientesCAP_FND.resx">
+      <DependentUpon>frmTATClientesCAP_FND.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -195,6 +204,9 @@
       <Project>{ce6b9d30-91fa-43e7-abf6-b99c0ff3f284}</Project>
       <Name>SISTEMA.WINFORMS.TATTOO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PerfilMujer.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
