@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SISTEMA.TATTOO;
 
-namespace SISTEMA.WINFORMS.CAPTURAS.TATTOO
+namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
 {
-   public class wfTATCitas
+    public class wfTATCitas
     {
         #region OBJETOS
         TATCitas TABLA = new TATCitas();
@@ -18,7 +18,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATTOO
         public DialogResult Agregar(ref string USUARIO)
         {
             frmTATClientesCAP_FND frm = new frmTATClientesCAP_FND();
-            frm.USUARIO = USUARIO;
+           // frm.USUARIO = USUARIO;
             return frm.ShowDialog();
         }
         #endregion
@@ -27,7 +27,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATTOO
         public DialogResult Modificar(ref TATCitas.strTATCitas str, string USUARIO)
         {
             frmTATCitasCAP_MDF Forma = new frmTATCitasCAP_MDF();
-            Forma.ptbPerfil.Image = Herramientas.decodeImagen(str.ImagenTatto, ".png");
+            //Forma.ptbPerfil.Image = Herramientas.decodeImagen(str.ImagenTatto, ".png");
             return Forma.ShowDialog();
         }
         #endregion

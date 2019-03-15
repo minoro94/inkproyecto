@@ -233,6 +233,7 @@ namespace SISTEMA.MAINMENU
         }
         #endregion
 
+        #region CITAS
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             frmTATCitasCAT_CAP frm = new frmTATCitasCAT_CAP();
@@ -240,5 +241,6 @@ namespace SISTEMA.MAINMENU
             frm.ShowDialog();
 
         }
+        #endregion
     }
 }

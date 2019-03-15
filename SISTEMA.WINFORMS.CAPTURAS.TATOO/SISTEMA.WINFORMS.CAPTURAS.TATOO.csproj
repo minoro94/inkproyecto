@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{008E616C-2B9C-45E3-91C0-2D4A71357810}</ProjectGuid>
+    <ProjectGuid>{BED312D6-3B9E-4A4E-91FD-5F5766DCD7F5}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>SISTEMA.WINFORMS.CAPTURAS.TATTOO</RootNamespace>
-    <AssemblyName>SISTEMA.WINFORMS.CAPTURAS.TATTOO</AssemblyName>
+    <RootNamespace>SISTEMA.WINFORMS.CAPTURAS.TATOO</RootNamespace>
+    <AssemblyName>SISTEMA.WINFORMS.CAPTURAS.TATOO</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmTATCitasCAP_CAT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATCitasCAP_CAT.Designer.cs">
+      <DependentUpon>frmTATCitasCAP_CAT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATCitasCAP_INS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATCitasCAP_INS.Designer.cs">
+      <DependentUpon>frmTATCitasCAP_INS.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTATCitasCAP_MDF.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,18 +70,6 @@
     <Compile Include="frmTATCitasCAP_RMV.Designer.cs">
       <DependentUpon>frmTATCitasCAP_RMV.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTATCitasCAT_CAP.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmTATCitasCAT_CAP.Designer.cs">
-      <DependentUpon>frmTATCitasCAT_CAP.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmTATCitasCAT_INS.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmTATCitasCAT_INS.Designer.cs">
-      <DependentUpon>frmTATCitasCAT_INS.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmTATClientesCAP_FND.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,29 +78,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="wfTATCitas.cs" />
-    <EmbeddedResource Include="frmTATCitasCAP_MDF.resx">
-      <DependentUpon>frmTATCitasCAP_MDF.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmTATCitasCAT_CAP.resx">
-      <DependentUpon>frmTATCitasCAT_CAP.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmTATCitasCAT_INS.resx">
-      <DependentUpon>frmTATCitasCAT_INS.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmTATClientesCAP_FND.resx">
-      <DependentUpon>frmTATClientesCAP_FND.cs</DependentUpon>
+    <EmbeddedResource Include="frmTATCitasCAP_CAT.resx">
+      <DependentUpon>frmTATCitasCAP_CAT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -115,95 +106,94 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\84327850-anatomía-del-cuerpo-humano-frente-espalda-vista-lateral-mujer-ilustración-vectorial-.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CasificarAbajo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ClasificarDerecha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EMPLEADOS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icono-Cerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgAceptar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgAceptar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgAgregar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgAgregar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgAplicar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgBuscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgCancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgClientes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgCopiar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgCopiar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgEditar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgEliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgEliminar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgEliminar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgEliminar3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgMostrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgTamaños.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGOINK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGOINK1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGOINK2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PerfilHombre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SALIR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SALIR2.png" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\SISTEMA.TATTOO\SISTEMA.TATTOO.csproj">
       <Project>{6f17b106-e22a-4a8f-b235-f2a80bd7c21b}</Project>
       <Name>SISTEMA.TATTOO</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SISTEMA.WINFORMS.TATTOO\SISTEMA.WINFORMS.TATTOO.csproj">
-      <Project>{ce6b9d30-91fa-43e7-abf6-b99c0ff3f284}</Project>
-      <Name>SISTEMA.WINFORMS.TATTOO</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Img\SALIR2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Img\SALIR.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Img\PerfilHombre.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Img\LOGOINK2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Img\LOGOINK1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Img\LOGOINK.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Img\ImgTamaños.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Img\ImgMostrar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Img\ImgEliminar3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Img\ImgEliminar2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Img\ImgEliminar1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Img\ImgEliminar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Img\ImgEditar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Img\ImgCopiar1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Img\ImgCopiar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Img\ImgClientes.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Img\ImgCancelar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Img\ImgBuscar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Img\ImgAplicar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Img\ImgAgregar1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Img\ImgAgregar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Img\ImgAceptar1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Img\ImgAceptar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Img\Icono-Cerrar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Img\EMPLEADOS.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Img\ClasificarDerecha.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Img\CasificarAbajo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

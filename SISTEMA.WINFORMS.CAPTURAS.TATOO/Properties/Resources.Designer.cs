@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SISTEMA.WINFORMS.CAPTURAS.TATTOO.Properties {
+namespace SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATTOO.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SISTEMA.WINFORMS.CAPTURAS.TATTOO.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -57,6 +57,17 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATTOO.Properties {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _84327850_anatomía_del_cuerpo_humano_frente_espalda_vista_lateral_mujer_ilustración_vectorial_ {
+            get {
+                object obj = ResourceManager.GetObject("84327850-anatomía-del-cuerpo-humano-frente-espalda-vista-lateral-mujer-ilustració" +
+                        "n-vectorial-", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

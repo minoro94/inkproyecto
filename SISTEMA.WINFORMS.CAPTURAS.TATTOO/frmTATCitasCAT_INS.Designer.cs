@@ -41,7 +41,7 @@
             this.lblAdjuntarImagen = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.cbxTamaño = new System.Windows.Forms.ComboBox();
-            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.ptbPerfil = new System.Windows.Forms.PictureBox();
             this.ptbTatuaje = new System.Windows.Forms.PictureBox();
             this.PanelBorderAbajo = new System.Windows.Forms.Panel();
@@ -58,7 +58,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtCosto = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaCita = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
             this.lblTelefono = new System.Windows.Forms.Label();
             this.lblNombreCliente = new System.Windows.Forms.Label();
@@ -67,6 +67,8 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
+            this.openFileDialog3 = new System.Windows.Forms.OpenFileDialog();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -173,7 +175,7 @@
             this.gbInfoTatuajes.Controls.Add(this.lblAdjuntarImagen);
             this.gbInfoTatuajes.Controls.Add(this.label7);
             this.gbInfoTatuajes.Controls.Add(this.cbxTamaño);
-            this.gbInfoTatuajes.Controls.Add(this.txtDireccion);
+            this.gbInfoTatuajes.Controls.Add(this.txtDescripcion);
             this.gbInfoTatuajes.Controls.Add(this.ptbPerfil);
             this.gbInfoTatuajes.Controls.Add(this.ptbTatuaje);
             this.gbInfoTatuajes.Location = new System.Drawing.Point(12, 186);
@@ -224,16 +226,16 @@
             this.cbxTamaño.Size = new System.Drawing.Size(283, 24);
             this.cbxTamaño.TabIndex = 105;
             // 
-            // txtDireccion
+            // txtDescripcion
             // 
-            this.txtDireccion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccion.Location = new System.Drawing.Point(43, 176);
-            this.txtDireccion.MaxLength = 300;
-            this.txtDireccion.Multiline = true;
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(345, 254);
-            this.txtDireccion.TabIndex = 104;
+            this.txtDescripcion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcion.Location = new System.Drawing.Point(43, 176);
+            this.txtDescripcion.MaxLength = 300;
+            this.txtDescripcion.Multiline = true;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(345, 254);
+            this.txtDescripcion.TabIndex = 104;
             // 
             // ptbPerfil
             // 
@@ -332,7 +334,7 @@
             this.gbDatosCita.Controls.Add(this.label10);
             this.gbDatosCita.Controls.Add(this.txtCosto);
             this.gbDatosCita.Controls.Add(this.label6);
-            this.gbDatosCita.Controls.Add(this.dateTimePicker1);
+            this.gbDatosCita.Controls.Add(this.dtpFechaCita);
             this.gbDatosCita.Controls.Add(this.label13);
             this.gbDatosCita.Controls.Add(this.lblTelefono);
             this.gbDatosCita.Controls.Add(this.lblNombreCliente);
@@ -419,14 +421,14 @@
             this.label6.TabIndex = 108;
             this.label6.Text = "Fecha Cita";
             // 
-            // dateTimePicker1
+            // dtpFechaCita
             // 
-            this.dateTimePicker1.CustomFormat = "dddd-MMMM-yyyy    hh:mm  tt";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(691, 31);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(281, 22);
-            this.dateTimePicker1.TabIndex = 107;
+            this.dtpFechaCita.CustomFormat = "dddd-MMMM-yyyy    hh:mm  tt";
+            this.dtpFechaCita.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFechaCita.Location = new System.Drawing.Point(691, 31);
+            this.dtpFechaCita.Name = "dtpFechaCita";
+            this.dtpFechaCita.Size = new System.Drawing.Size(281, 22);
+            this.dtpFechaCita.TabIndex = 107;
             // 
             // label13
             // 
@@ -484,6 +486,7 @@
             this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAceptar
             // 
@@ -497,10 +500,19 @@
             this.btnAceptar.Text = "&Aceptar";
             this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // openFileDialog2
+            // 
+            this.openFileDialog2.FileName = "openFileDialog2";
+            // 
+            // openFileDialog3
+            // 
+            this.openFileDialog3.FileName = "openFileDialog3";
             // 
             // frmTATCitasCAT_INS
             // 
@@ -566,14 +578,14 @@
         private System.Windows.Forms.Label label13;
         public System.Windows.Forms.Label lblTelefono;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpFechaCita;
         private System.Windows.Forms.Label label11;
         public System.Windows.Forms.TextBox txtAnticipo;
         private System.Windows.Forms.Label label10;
         public System.Windows.Forms.TextBox txtCosto;
         private System.Windows.Forms.PictureBox ptbTatuaje;
         private System.Windows.Forms.PictureBox ptbPerfil;
-        private System.Windows.Forms.TextBox txtDireccion;
+        private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label lblAdjuntarImagen;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cbxTamaño;
@@ -583,5 +595,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cbxEstadoCita;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog2;
+        private System.Windows.Forms.OpenFileDialog openFileDialog3;
     }
 }

@@ -125,14 +125,14 @@ namespace SISTEMA.TATTOO
                 DB.COM1.Parameters.AddWithValue("idTamaño",str.idTamaño);
                 DB.COM1.Parameters.AddWithValue("FechaCita",str.FechaCita);
                 DB.COM1.Parameters.AddWithValue("Firma",str.Firma);
-                DB.COM1.Parameters.AddWithValue("ImagenTatto",str.ImagenTatto);
+                DB.COM1.Parameters.AddWithValue("ImagenTattoo",str.ImagenTatto);
                 DB.COM1.Parameters.AddWithValue("Costo",str.Costo);
                 DB.COM1.Parameters.AddWithValue("Anticipo",str.Anticipo);
                 DB.COM1.Parameters.AddWithValue("ZonaCuerpo",str.ZonaCuerpo);
                 DB.COM1.Parameters.AddWithValue("Descripcion",str.Descripcion);
                 DB.COM1.Parameters.AddWithValue("USUARIO",str.USUARIO);
-                DB.COM1.Parameters.AddWithValue("FECHAHORACAMBIO",DateTime.Now);
-                DB.COM1.Parameters.AddWithValue("ELIMINADO",str.ELIMINADO);
+               // DB.COM1.Parameters.AddWithValue("FECHAHORACAMBIO",DateTime.Now);
+               // DB.COM1.Parameters.AddWithValue("ELIMINADO",str.ELIMINADO);
 
                 DB.REG1 = DB.COM1.ExecuteReader();
 
