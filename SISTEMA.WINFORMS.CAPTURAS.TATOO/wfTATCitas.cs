@@ -18,7 +18,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         public DialogResult Agregar(ref string USUARIO)
         {
             frmTATClientesCAP_FND frm = new frmTATClientesCAP_FND();
-           // frm.USUARIO = USUARIO;
+            frm.USUARIO = USUARIO;
             return frm.ShowDialog();
         }
         #endregion
