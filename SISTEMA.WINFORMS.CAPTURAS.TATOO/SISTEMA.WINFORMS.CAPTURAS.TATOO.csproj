@@ -82,6 +82,12 @@
     <EmbeddedResource Include="frmTATCitasCAP_CAT.resx">
       <DependentUpon>frmTATCitasCAP_CAT.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmTATCitasCAP_INS.resx">
+      <DependentUpon>frmTATCitasCAP_INS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATClientesCAP_FND.resx">
+      <DependentUpon>frmTATClientesCAP_FND.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -194,6 +200,16 @@
       <Project>{6f17b106-e22a-4a8f-b235-f2a80bd7c21b}</Project>
       <Name>SISTEMA.TATTOO</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SISTEMA.WINFORMS.TATTOO\SISTEMA.WINFORMS.TATTOO.csproj">
+      <Project>{ce6b9d30-91fa-43e7-abf6-b99c0ff3f284}</Project>
+      <Name>SISTEMA.WINFORMS.TATTOO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\PerfilMujer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Capturas\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

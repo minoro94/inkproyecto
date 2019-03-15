@@ -222,6 +222,10 @@
       <Project>{6f17b106-e22a-4a8f-b235-f2a80bd7c21b}</Project>
       <Name>SISTEMA.TATTOO</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SISTEMA.WINFORMS.CAPTURAS.TATOO\SISTEMA.WINFORMS.CAPTURAS.TATOO.csproj">
+      <Project>{bed312d6-3b9e-4a4e-91fd-5f5766dcd7f5}</Project>
+      <Name>SISTEMA.WINFORMS.CAPTURAS.TATOO</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SISTEMA.WINFORMS.CAPTURAS.TATTOO\SISTEMA.WINFORMS.CAPTURAS.TATTOO.csproj">
       <Project>{008e616c-2b9c-45e3-91c0-2d4a71357810}</Project>
       <Name>SISTEMA.WINFORMS.CAPTURAS.TATTOO</Name>

@@ -32,6 +32,8 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         string imgTatuaje;
         string imgZonaCuerpo;
 
+        Random rnd = new Random();
+
         Rectangle[] Rectangulos = new Rectangle[0];
 
         TATTamaños.strTATTamaños[] ARR_Tamaños;
@@ -193,13 +195,13 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             {
                 // ptbPerfil.Image = TATTOO.Properties.Resources.PerfilHombre;
                 // ptbPerfil.Tag = TATTOO.Properties.Resources.PerfilHombre;
-                openFileDialog2.FileName = @"C:\repos\inkproyecto\SISTEMA.WINFORMS.CAPTURAS.TATTOO\Resources\PerfilHombre.png";
+                openFileDialog2.FileName = @"C:\repos\inkproyecto\SISTEMA.WINFORMS.CAPTURAS.TATOO\Resources\PerfilHombre.png";
                 ptbPerfil.Image = Image.FromFile(openFileDialog2.FileName);
             }
             else
             {
 
-                openFileDialog2.FileName = @"C:\repos\inkproyecto\SISTEMA.WINFORMS.CAPTURAS.TATTOO\Resources\PerfilMujer.png";
+                openFileDialog2.FileName = @"C:\repos\inkproyecto\SISTEMA.WINFORMS.CAPTURAS.TATOO\Resources\PerfilMujer.png";
                 ptbPerfil.Image = Image.FromFile(openFileDialog2.FileName);
             }
         }
@@ -344,6 +346,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         #region BOTON ACEPTAR
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+            CapturaPantalla();
             strCitas.idCliente = idCliente;
             strCitas.idEstadoCita = Convert.ToInt32(IDsEstadoCita[cbxEstadoCita.SelectedIndex]);
             strCitas.idTamaño = Convert.ToInt32(IDsTamaños[cbxTamaño.SelectedIndex]);
@@ -351,7 +354,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             strCitas.Costo = Convert.ToDouble(txtCosto.Text.Trim());
             strCitas.Anticipo = Convert.ToDouble(txtAnticipo.Text.Trim());
             strCitas.Descripcion = txtDescripcion.Text.Trim();
-            imgZonaCuerpo = openFileDialog2.FileName; ;
+            
             strCitas.Firma = "Default";
             strCitas.USUARIO = USUARIO;
             try
@@ -380,6 +383,31 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                 this.DialogResult = DialogResult.Cancel;
                 return;
             }
+        }
+        #endregion
+
+        #region CAPTURA DE PANTALLA
+        private void CapturaPantalla()
+        {
+            Bitmap BmpScreen = new Bitmap(ptbPerfil.Size.Width, ptbPerfil.Size.Height, System.Drawing.Imaging.PixelFormat.Format32bppPArgb);
+
+            Graphics ScreenShot = Graphics.FromImage(BmpScreen);
+
+            ScreenShot.CopyFromScreen(ptbPerfil.Location.X, ptbPerfil.Location.Y, 0, 0, Screen.PrimaryScreen.Bounds.Size, CopyPixelOperation.SourceCopy);
+
+            string fileNom = String.Empty;
+
+            saveFileDialog1.Filter = "Excel files (*.png)|*.png";
+
+            saveFileDialog1.RestoreDirectory = true;
+
+
+
+            fileNom = @"C:\repos\inkproyecto\SISTEMA.WINFORMS.CAPTURAS.TATOO\Capturas\Img" + Convert.ToString(rnd.Next(10000)) + ".png";
+            imgZonaCuerpo = fileNom;
+            BmpScreen.Save(fileNom, System.Drawing.Imaging.ImageFormat.Png);
+
+            //File.Delete(fileNom);
         }
         #endregion
     }

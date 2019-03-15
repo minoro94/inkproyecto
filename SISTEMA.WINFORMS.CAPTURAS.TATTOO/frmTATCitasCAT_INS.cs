@@ -347,6 +347,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATTOO
         }
         #endregion
 
+        #region BOTON ACEPTAR
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             strCitas.idCliente = idCliente;
@@ -386,7 +387,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATTOO
                 return;
             }
         }
-
+        #endregion
 
         #region Captura Pantalla
         public void CapturaPantalla()
