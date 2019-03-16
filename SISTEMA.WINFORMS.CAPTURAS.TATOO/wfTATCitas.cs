@@ -27,7 +27,13 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         public DialogResult Modificar(ref TATCitas.strTATCitas str, string USUARIO)
         {
             frmTATCitasCAP_MDF Forma = new frmTATCitasCAP_MDF();
-            //Forma.ptbPerfil.Image = Herramientas.decodeImagen(str.ImagenTatto, ".png");
+            Forma.lblNombreCliente.Text = str.nombreCliente;
+            Forma.lblTelefono.Text = str.Telefono;
+            Forma.txtAnticipo.Text = str.Anticipo.ToString();
+            Forma.txtCosto.Text = str.Costo.ToString();
+            Forma.txtDescripcion.Text = str.Descripcion;
+            Forma.ptbPerfil.Image = Herramientas.decodeImagen(str.ZonaCuerpo, ".png");
+            Forma.ptbTatuaje.Image = Herramientas.decodeImagen(str.ImagenTatto, ".png");
             return Forma.ShowDialog();
         }
         #endregion

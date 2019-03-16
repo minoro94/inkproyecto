@@ -343,46 +343,61 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         }
         #endregion
 
+        
+
         #region BOTON ACEPTAR
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            CapturaPantalla();
-            strCitas.idCliente = idCliente;
-            strCitas.idEstadoCita = Convert.ToInt32(IDsEstadoCita[cbxEstadoCita.SelectedIndex]);
-            strCitas.idTamaño = Convert.ToInt32(IDsTamaños[cbxTamaño.SelectedIndex]);
-            strCitas.FechaCita = dtpFechaCita.Value;
-            strCitas.Costo = Convert.ToDouble(txtCosto.Text.Trim());
-            strCitas.Anticipo = Convert.ToDouble(txtAnticipo.Text.Trim());
-            strCitas.Descripcion = txtDescripcion.Text.Trim();
-            
-            strCitas.Firma = "Default";
-            strCitas.USUARIO = USUARIO;
-            try
+            if(txtAnticipo.Text.Trim() == "" && txtCosto.Text.Trim() == "" && imgTatuaje == "")
             {
-                String Imgtat = Herramientas.encodeImagen(imgTatuaje);
-                strCitas.ImagenTatto = Imgtat;
-                String ImgZon = Herramientas.encodeImagen(imgZonaCuerpo);
-                strCitas.ZonaCuerpo = ImgZon;
-            }
-            catch (Exception)
-            {
-                strCitas.ImagenTatto = null;
-            }
+                CapturaPantalla();
+                strCitas.idCliente = idCliente;
+                strCitas.idEstadoCita = Convert.ToInt32(IDsEstadoCita[cbxEstadoCita.SelectedIndex]);
+                strCitas.idTamaño = Convert.ToInt32(IDsTamaños[cbxTamaño.SelectedIndex]);
+                strCitas.FechaCita = dtpFechaCita.Value;
+                strCitas.Costo = Convert.ToDouble(txtCosto.Text.Trim());
+                strCitas.Anticipo = Convert.ToDouble(txtAnticipo.Text.Trim());
+                strCitas.Descripcion = txtDescripcion.Text.Trim();
+                strCitas.Firma = "Default";
+                strCitas.USUARIO = USUARIO;
 
-            bool Agregado = TABLA_Citas.DAO(ref strCitas, 1);
 
-            if (Agregado)
-            {
-                MessageBox.Show(this, "Agregado Correctamente", "Operacion Correcta", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.DialogResult = DialogResult.OK;
-                Close();
+                try
+                {
+                    String Imgtat = Herramientas.encodeImagen(imgTatuaje);
+                    strCitas.ImagenTatto = Imgtat;
+                    String ImgZon = Herramientas.encodeImagen(imgZonaCuerpo);
+                    strCitas.ZonaCuerpo = ImgZon;
+                }
+                catch (Exception)
+                {
+                    strCitas.ImagenTatto = null;
+                }
+
+                bool Agregado = TABLA_Citas.DAO(ref strCitas, 1);
+
+                if (Agregado)
+                {
+                    MessageBox.Show(this, "Agregado Correctamente", "Operacion Correcta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.DialogResult = DialogResult.OK;
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show(this, "Ha Ocurrido Un Error", "Operacion Fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    this.DialogResult = DialogResult.Cancel;
+                    return;
+                }
             }
             else
             {
-                MessageBox.Show(this, "Ha Ocurrido Un Error", "Operacion Fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(this, "Campos Vacios", "Faltan Campos Por Completar", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.DialogResult = DialogResult.Cancel;
                 return;
             }
+            
+            
+          
         }
         #endregion
 
@@ -393,7 +408,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
 
             Graphics ScreenShot = Graphics.FromImage(BmpScreen);
 
-            ScreenShot.CopyFromScreen(ptbPerfil.Location.X, ptbPerfil.Location.Y, 0, 0, Screen.PrimaryScreen.Bounds.Size, CopyPixelOperation.SourceCopy);
+            ScreenShot.CopyFromScreen(ptbPerfil.Location.X + this.Location.X + gbInfoTatuajes.Location.X, ptbPerfil.Location.Y + this.Location.Y + gbInfoTatuajes.Location.Y, 0, 0, Screen.PrimaryScreen.Bounds.Size, CopyPixelOperation.SourceCopy);
 
             string fileNom = String.Empty;
 
@@ -407,7 +422,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             imgZonaCuerpo = fileNom;
             BmpScreen.Save(fileNom, System.Drawing.Imaging.ImageFormat.Png);
 
-            //File.Delete(fileNom);
+            File.Delete(fileNom);
         }
         #endregion
     }

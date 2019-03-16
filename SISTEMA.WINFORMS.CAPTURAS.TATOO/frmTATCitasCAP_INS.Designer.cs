@@ -68,6 +68,7 @@
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
             this.PanelBorderAbajo = new System.Windows.Forms.Panel();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.saveFileDialog2 = new System.Windows.Forms.SaveFileDialog();
             this.gbDatosCita.SuspendLayout();
             this.PanelInfoTatuaje.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbAbajo)).BeginInit();
@@ -593,5 +594,6 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog2;
         private System.Windows.Forms.Panel PanelBorderAbajo;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog2;
     }
 }

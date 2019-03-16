@@ -16,5 +16,16 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         {
             InitializeComponent();
         }
+
+        public int IDTamaño;
+        public int IDEstadoCita;
+        public string USUARIO;
+
+        #region CLOSE
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        #endregion
     }
 }
