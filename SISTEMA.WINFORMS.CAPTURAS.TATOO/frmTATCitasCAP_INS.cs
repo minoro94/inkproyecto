@@ -19,8 +19,10 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         public frmTATCitasCAP_INS()
         {
             InitializeComponent();
-            ptbAbajo.Visible = true;
-            ptbDerecha.Visible = false;
+            ptbAbajo.Visible = false;
+            ptbDerecha.Visible = true;
+            
+            
         }
 
         #region OBJETOS
@@ -207,6 +209,34 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         }
         #endregion
 
+        #region ESTABLECER
+        private void Establece()
+        {
+            gbInfoTatuajes.Visible = true;
+            if (gbInfoTatuajes.Visible)
+            {
+                gbInfoTatuajes.Visible = false;
+                ptbAbajo.Visible = false;
+                ptbDerecha.Visible = true;
+                this.Size = new System.Drawing.Size(1333, 263);
+                btnAceptar.Location = new Point(1135, 214);
+                btnCancelar.Location = new Point(1231, 214);
+                PanelBorderAbajo.Location = new Point(3, 259);
+            }
+            else
+            {
+                gbInfoTatuajes.Visible = true;
+                ptbDerecha.Visible = false;
+                ptbAbajo.Visible = true;
+                this.Size = new System.Drawing.Size(1333, 695);
+                btnAceptar.Location = new Point(1135, 650);
+                btnCancelar.Location = new Point(1234, 650);
+                PanelBorderAbajo.Location = new Point(3, 691);
+                ptbPerfil.Refresh();
+                Dibuja(1000, 0, true);
+            }
+        }
+        #endregion
         #region MOUSE DOWN PANEL INFO TATUAJE
         private void PanelInfoTatuaje_MouseDown(object sender, MouseEventArgs e)
         {
@@ -242,6 +272,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             FillComboEstadoCita();
             FillDatosClientes();
             CargarPerfil(strClientes.Sexo);
+            Establece();
         }
         #endregion
 
@@ -255,12 +286,15 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         #region KEY PRESS
         private void txtCosto_KeyPress(object sender, KeyPressEventArgs e)
         {
+           
             if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
             {
                 MessageBox.Show("Solo se permiten números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
+                Dibuja(1000, 0, true);
                 return;
             }
+            
         }
 
         private void txtAnticipo_KeyPress(object sender, KeyPressEventArgs e)
@@ -269,6 +303,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             {
                 MessageBox.Show("Solo se permiten números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
+                Dibuja(1000, 0, true);
                 return;
             }
         }
@@ -282,7 +317,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             {
                 if (x == DialogResult.OK)
                 {
-                    lblAdjuntarImagen.Visible = false;
+                    btnAdjuntarImagen.Location = new Point(1046, 18);
                     ptbTatuaje.Image = Image.FromFile(openFileDialog1.FileName);
                     imgTatuaje = openFileDialog1.FileName;
 
@@ -290,12 +325,12 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             }
             catch
             {
-                lblAdjuntarImagen.Visible = true;
+                btnAdjuntarImagen.Location = new Point(1049, 242);
                 MessageBox.Show("El Archivo Seleccionado No Es Un Tipo De Imagen");
             }
         }
 
-        private void lblAdjuntarImagen_Click(object sender, EventArgs e)
+        /*private void lblAdjuntarImagen_Click(object sender, EventArgs e)
         {
             DialogResult x = openFileDialog1.ShowDialog();
             try
@@ -316,7 +351,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                 MessageBox.Show("El Archivo Seleccionado No Es Un Tipo De Imagen");
             }
         }
-
+        */
         #endregion
 
         #region MOUSE CLICK
@@ -343,12 +378,10 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         }
         #endregion
 
-        
-
         #region BOTON ACEPTAR
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            if(txtAnticipo.Text.Trim() == "" && txtCosto.Text.Trim() == "" && imgTatuaje == "")
+            if(txtAnticipo.Text.Trim() != "" && txtCosto.Text.Trim() != "" && imgTatuaje != "")
             {
                 CapturaPantalla();
                 strCitas.idCliente = idCliente;
@@ -368,6 +401,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                     strCitas.ImagenTatto = Imgtat;
                     String ImgZon = Herramientas.encodeImagen(imgZonaCuerpo);
                     strCitas.ZonaCuerpo = ImgZon;
+                    //File.Delete(imgZonaCuerpo);
                 }
                 catch (Exception)
                 {
@@ -391,9 +425,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             }
             else
             {
-                MessageBox.Show(this, "Campos Vacios", "Faltan Campos Por Completar", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                this.DialogResult = DialogResult.Cancel;
-                return;
+                MessageBox.Show(this, "Faltan Campos Por Completar", "Campos Vacios", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
             
@@ -422,7 +454,31 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             imgZonaCuerpo = fileNom;
             BmpScreen.Save(fileNom, System.Drawing.Imaging.ImageFormat.Png);
 
-            File.Delete(fileNom);
+            
+        }
+        #endregion
+
+        #region BOTON ADJUNTAR IMAGEN
+        private void btnAdjuntarImagen_Click(object sender, EventArgs e)
+        {
+            DialogResult x = openFileDialog1.ShowDialog();
+            try
+            {
+                if (x == DialogResult.OK)
+                {
+
+
+                    ptbTatuaje.Image = Image.FromFile(openFileDialog1.FileName);
+                    btnAdjuntarImagen.Location = new Point(1046, 18);
+                    imgTatuaje = openFileDialog1.FileName;
+
+                }
+            }
+            catch
+            {
+                btnAdjuntarImagen.Location = new Point(1049, 242);
+                MessageBox.Show("El Archivo Seleccionado No Es Un Tipo De Imagen");
+            }
         }
         #endregion
     }

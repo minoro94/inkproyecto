@@ -19,6 +19,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         {
             frmTATClientesCAP_FND frm = new frmTATClientesCAP_FND();
             frm.USUARIO = USUARIO;
+            
             return frm.ShowDialog();
         }
         #endregion

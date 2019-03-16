@@ -18,6 +18,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         public frmTATClientesCAP_FND()
         {
             InitializeComponent();
+            
         }
 
         #region OBJETOS
@@ -82,10 +83,12 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             frmTATCitasCAP_INS frm = new frmTATCitasCAP_INS();
             strClientes.idCliente = Convert.ToInt32(IDsClientes[cbxClientes.SelectedIndex]);
             frm.idCliente = strClientes.idCliente;
+            
             frm.USUARIO = USUARIO;
 
             this.Close();
             frm.ShowDialog();
+            this.DialogResult = DialogResult.OK;
         }
         #endregion
 

@@ -35,7 +35,7 @@ namespace SISTEMA.TATTOO
         public void conexionBD()
         {
             //Cadena de conexion con seguridad SQL
-            string cadenaConexion = "Server=25.76.187.241;Database=Tattoo;User Id=sa;Password=123456;";
+            string cadenaConexion = "Server=192.168.1.107;Database=Tattoo;User Id=sa;Password=123456;";
 
             //Cadena de conexion con Seguridad Integrada de Windows
             //Personalizar la cadena de conxion de acuerdo a su Base de datos

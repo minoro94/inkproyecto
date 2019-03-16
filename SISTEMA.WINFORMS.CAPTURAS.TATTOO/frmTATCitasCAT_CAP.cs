@@ -58,7 +58,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATTOO
             
             DateTime finicio = dtpInicio.Value;
             DateTime fFin = dtpFin.Value;
-            bool Resulto = TABLA_Citas.Listar(ref ARR, finicio, fFin);
+            bool Resulto = TABLA_Citas.Listar(ref ARR, finicio, fFin, strCitas);
             int i = 0;
             if(Resulto == true)
             { 
@@ -82,6 +82,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATTOO
         #region METODO TIEMPO
         
         #endregion
+
         #region BOTON BUSCAR
         private void btnBuscar_Click(object sender, EventArgs e)
         {

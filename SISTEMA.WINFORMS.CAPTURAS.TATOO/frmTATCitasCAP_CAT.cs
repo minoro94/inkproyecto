@@ -57,7 +57,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
 
             DateTime finicio = dtpInicio.Value;
             DateTime fFin = dtpFin.Value;
-            bool Resulto = TABLA_Citas.Listar(ref ARR, finicio, fFin);
+            bool Resulto = TABLA_Citas.Listar(ref ARR, finicio, fFin, strCitas);
             int i = 0;
             if (Resulto == true)
             {
