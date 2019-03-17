@@ -38,11 +38,13 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             {
                 btnEditar.Enabled = false;
                 btnEliminar.Enabled = false;
+                btnMostrar.Enabled = false;
             }
             else
             {
                 btnEditar.Enabled = true;
                 btnEliminar.Enabled = true;
+                btnMostrar.Enabled = true;
             }
         }
         #endregion
@@ -235,8 +237,28 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                 }
             }
         }
+
         #endregion
 
-       
+        #region BOTON MOSTRAR
+        private void btnMostrar_Click(object sender, EventArgs e)
+        {
+            DialogResult Resultado;
+
+            if(lstLista.SelectedItems.Count >= 1)
+            {
+                strCitas = (TATCitas.strTATCitas)lstLista.SelectedItems[0].Tag;
+                Resultado = WF.Mostrar(ref strCitas, USUARIO);
+                if(Resultado == DialogResult.OK)
+                {
+                    RefreshList();
+                }
+                else
+                {
+                    RefreshList();
+                }
+            }
+        }
+        #endregion
     }
 }

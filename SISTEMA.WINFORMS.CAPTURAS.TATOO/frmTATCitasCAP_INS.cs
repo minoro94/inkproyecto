@@ -205,39 +205,6 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         }
         #endregion
 
-        #region ESTABLECER
-        private void Establece()
-        {
-            gbInfoTatuajes.Visible = true;
-            if (gbInfoTatuajes.Visible)
-            {
-                gbInfoTatuajes.Visible = false;
-                ptbAbajo.Visible = false;
-                ptbDerecha.Visible = true;
-                this.Size = new System.Drawing.Size(1333, 263);
-                btnAceptar.Location = new Point(1135, 214);
-                btnCancelar.Location = new Point(1231, 214);
-                btnAceptar.Enabled = false;
-                
-                PanelBorderAbajo.Location = new Point(3, 259);
-            }
-            else
-            {
-                gbInfoTatuajes.Visible = true;
-                ptbDerecha.Visible = false;
-                ptbAbajo.Visible = true;
-                this.Size = new System.Drawing.Size(1333, 695);
-                btnAceptar.Location = new Point(1135, 650);
-                btnCancelar.Location = new Point(1234, 650);
-                btnAceptar.Enabled = true;
-               
-                PanelBorderAbajo.Location = new Point(3, 691);
-                ptbPerfil.Refresh();
-                Dibuja(1000, 0, true);
-            }
-        }
-        #endregion
-
         #region MOUSE DOWN PANEL INFO TATUAJE
         private void PanelInfoTatuaje_MouseDown(object sender, MouseEventArgs e)
         {
@@ -277,7 +244,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             FillComboEstadoCita();
             FillDatosClientes();
             CargarPerfil(strClientes.Sexo);
-            Establece();
+            PanelInfoTatuaje_MouseDown(null, null);
         }
         #endregion
 

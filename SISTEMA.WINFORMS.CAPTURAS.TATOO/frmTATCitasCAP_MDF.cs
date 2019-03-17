@@ -149,6 +149,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             FillComboEstadoCita();
             FillComboTamaños();
             FillDatosClientes();
+            PanelInfoTatuaje_MouseDown(null,null);
         }
         #endregion
 
@@ -334,20 +335,20 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             Clipboard.SetDataObject(ScreenShot);
             imgZonaCuerpo = Clipboard.GetText();
             
-            //saveFileDialog1.Filter = "Excel files (*.png)|*.png";
-            //saveFileDialog1.RestoreDirectory = true;
-            //fileNom = @"C:\repos\inkproyecto\SISTEMA.WINFORMS.CAPTURAS.TATOO\Capturas\Img" + Convert.ToString(rnd.Next(10000)) + ".png";
-            //imgZonaCuerpo = fileNom;
-            //BmpScreen.Save(fileNom, System.Drawing.Imaging.ImageFormat.Png);
+            saveFileDialog1.Filter = "Excel files (*.png)|*.png";
+            saveFileDialog1.RestoreDirectory = true;
+            fileNom = @"C:\repos\inkproyecto\SISTEMA.WINFORMS.CAPTURAS.TATOO\Capturas\Img" + Convert.ToString(rnd.Next(10000)) + ".png";
+            imgZonaCuerpo = fileNom;
+            BmpScreen.Save(fileNom, System.Drawing.Imaging.ImageFormat.Png);
 
-            BinaryFormatter binFormatter = new BinaryFormatter();
+            /*BinaryFormatter binFormatter = new BinaryFormatter();
             using (Image img = Clipboard.GetImage())
             using (MemoryStream memStream = new MemoryStream())
             {
                 binFormatter.Serialize(memStream, img);
                 byte[] bytes = memStream.ToArray();
                 imgZonaCuerpo = Convert.ToBase64String(bytes);
-            }
+            }*/
         }
         #endregion
 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTATCitasCAP_MDF));
             this.panel4 = new System.Windows.Forms.Panel();
             this.PanelBorderAbajo = new System.Windows.Forms.Panel();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -51,6 +52,7 @@
             this.ptbDerecha = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.gbInfoTatuajes = new System.Windows.Forms.GroupBox();
+            this.btnLimpiarPerfil = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -68,7 +70,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.btnLimpiarPerfil = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
@@ -366,6 +367,18 @@
             this.gbInfoTatuajes.TabIndex = 123;
             this.gbInfoTatuajes.TabStop = false;
             // 
+            // btnLimpiarPerfil
+            // 
+            this.btnLimpiarPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiarPerfil.Location = new System.Drawing.Point(557, 18);
+            this.btnLimpiarPerfil.Name = "btnLimpiarPerfil";
+            this.btnLimpiarPerfil.Size = new System.Drawing.Size(147, 38);
+            this.btnLimpiarPerfil.TabIndex = 113;
+            this.btnLimpiarPerfil.TabStop = false;
+            this.btnLimpiarPerfil.Text = "Limpiar Perfil";
+            this.btnLimpiarPerfil.UseVisualStyleBackColor = true;
+            this.btnLimpiarPerfil.Click += new System.EventHandler(this.btnLimpiarPerfil_Click);
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -551,18 +564,6 @@
             this.pictureBox4.TabIndex = 12;
             this.pictureBox4.TabStop = false;
             // 
-            // btnLimpiarPerfil
-            // 
-            this.btnLimpiarPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiarPerfil.Location = new System.Drawing.Point(557, 18);
-            this.btnLimpiarPerfil.Name = "btnLimpiarPerfil";
-            this.btnLimpiarPerfil.Size = new System.Drawing.Size(147, 38);
-            this.btnLimpiarPerfil.TabIndex = 113;
-            this.btnLimpiarPerfil.TabStop = false;
-            this.btnLimpiarPerfil.Text = "Limpiar Perfil";
-            this.btnLimpiarPerfil.UseVisualStyleBackColor = true;
-            this.btnLimpiarPerfil.Click += new System.EventHandler(this.btnLimpiarPerfil_Click);
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
@@ -588,6 +589,7 @@
             this.Controls.Add(this.panel4);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmTATCitasCAP_MDF";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -1,6 +1,6 @@
 ﻿namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
 {
-    partial class frmTATCitasCAP_RMV
+    partial class frmTATCitasCAP_MOS
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTATCitasCAP_RMV));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTATCitasCAP_MOS));
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.gbDatosCita = new System.Windows.Forms.GroupBox();
+            this.lblAnticipo = new System.Windows.Forms.Label();
+            this.lblCosto = new System.Windows.Forms.Label();
+            this.lblEstadoCita = new System.Windows.Forms.Label();
+            this.lblFechaCita = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -46,6 +50,8 @@
             this.ptbDerecha = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.gbInfoTatuajes = new System.Windows.Forms.GroupBox();
+            this.lblTamaño = new System.Windows.Forms.Label();
+            this.lblDescripcion = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -62,12 +68,6 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.PanelBorderAbajo = new System.Windows.Forms.Panel();
-            this.lblFechaCita = new System.Windows.Forms.Label();
-            this.lblEstadoCita = new System.Windows.Forms.Label();
-            this.lblCosto = new System.Windows.Forms.Label();
-            this.lblAnticipo = new System.Windows.Forms.Label();
-            this.lblDescripcion = new System.Windows.Forms.Label();
-            this.lblTamaño = new System.Windows.Forms.Label();
             this.gbDatosCita.SuspendLayout();
             this.PanelInfoTatuaje.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbAbajo)).BeginInit();
@@ -88,12 +88,11 @@
             this.btnCancelar.Location = new System.Drawing.Point(1231, 650);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(90, 33);
-            this.btnCancelar.TabIndex = 135;
+            this.btnCancelar.TabIndex = 143;
             this.btnCancelar.TabStop = false;
             this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAceptar
             // 
@@ -103,12 +102,11 @@
             this.btnAceptar.Location = new System.Drawing.Point(1132, 650);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(90, 33);
-            this.btnAceptar.TabIndex = 134;
+            this.btnAceptar.TabIndex = 142;
             this.btnAceptar.TabStop = false;
             this.btnAceptar.Text = "&Aceptar";
             this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAceptar.UseVisualStyleBackColor = true;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // gbDatosCita
             // 
@@ -128,9 +126,53 @@
             this.gbDatosCita.Location = new System.Drawing.Point(12, 46);
             this.gbDatosCita.Name = "gbDatosCita";
             this.gbDatosCita.Size = new System.Drawing.Size(1309, 101);
-            this.gbDatosCita.TabIndex = 133;
+            this.gbDatosCita.TabIndex = 141;
             this.gbDatosCita.TabStop = false;
             this.gbDatosCita.Text = "Datos Cita";
+            // 
+            // lblAnticipo
+            // 
+            this.lblAnticipo.BackColor = System.Drawing.SystemColors.Info;
+            this.lblAnticipo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblAnticipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnticipo.Location = new System.Drawing.Point(1087, 70);
+            this.lblAnticipo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAnticipo.Name = "lblAnticipo";
+            this.lblAnticipo.Size = new System.Drawing.Size(112, 22);
+            this.lblAnticipo.TabIndex = 118;
+            // 
+            // lblCosto
+            // 
+            this.lblCosto.BackColor = System.Drawing.SystemColors.Info;
+            this.lblCosto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCosto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCosto.Location = new System.Drawing.Point(1087, 34);
+            this.lblCosto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCosto.Name = "lblCosto";
+            this.lblCosto.Size = new System.Drawing.Size(112, 22);
+            this.lblCosto.TabIndex = 117;
+            // 
+            // lblEstadoCita
+            // 
+            this.lblEstadoCita.BackColor = System.Drawing.SystemColors.Info;
+            this.lblEstadoCita.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblEstadoCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstadoCita.Location = new System.Drawing.Point(691, 70);
+            this.lblEstadoCita.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEstadoCita.Name = "lblEstadoCita";
+            this.lblEstadoCita.Size = new System.Drawing.Size(281, 22);
+            this.lblEstadoCita.TabIndex = 116;
+            // 
+            // lblFechaCita
+            // 
+            this.lblFechaCita.BackColor = System.Drawing.SystemColors.Info;
+            this.lblFechaCita.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblFechaCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaCita.Location = new System.Drawing.Point(691, 33);
+            this.lblFechaCita.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFechaCita.Name = "lblFechaCita";
+            this.lblFechaCita.Size = new System.Drawing.Size(281, 22);
+            this.lblFechaCita.TabIndex = 115;
             // 
             // label5
             // 
@@ -226,7 +268,7 @@
             this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1333, 4);
-            this.panel7.TabIndex = 130;
+            this.panel7.TabIndex = 138;
             // 
             // PanelInfoTatuaje
             // 
@@ -238,8 +280,7 @@
             this.PanelInfoTatuaje.Margin = new System.Windows.Forms.Padding(4);
             this.PanelInfoTatuaje.Name = "PanelInfoTatuaje";
             this.PanelInfoTatuaje.Size = new System.Drawing.Size(1327, 35);
-            this.PanelInfoTatuaje.TabIndex = 132;
-            this.PanelInfoTatuaje.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelInfoTatuaje_MouseDown);
+            this.PanelInfoTatuaje.TabIndex = 140;
             // 
             // ptbAbajo
             // 
@@ -289,8 +330,30 @@
             this.gbInfoTatuajes.Location = new System.Drawing.Point(3, 186);
             this.gbInfoTatuajes.Name = "gbInfoTatuajes";
             this.gbInfoTatuajes.Size = new System.Drawing.Size(1327, 448);
-            this.gbInfoTatuajes.TabIndex = 131;
+            this.gbInfoTatuajes.TabIndex = 139;
             this.gbInfoTatuajes.TabStop = false;
+            // 
+            // lblTamaño
+            // 
+            this.lblTamaño.BackColor = System.Drawing.SystemColors.Info;
+            this.lblTamaño.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTamaño.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTamaño.Location = new System.Drawing.Point(125, 85);
+            this.lblTamaño.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTamaño.Name = "lblTamaño";
+            this.lblTamaño.Size = new System.Drawing.Size(263, 24);
+            this.lblTamaño.TabIndex = 114;
+            // 
+            // lblDescripcion
+            // 
+            this.lblDescripcion.BackColor = System.Drawing.SystemColors.Info;
+            this.lblDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.Location = new System.Drawing.Point(43, 176);
+            this.lblDescripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDescripcion.Name = "lblDescripcion";
+            this.lblDescripcion.Size = new System.Drawing.Size(345, 81);
+            this.lblDescripcion.TabIndex = 113;
             // 
             // label9
             // 
@@ -371,7 +434,7 @@
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(3, 695);
-            this.panel5.TabIndex = 129;
+            this.panel5.TabIndex = 137;
             // 
             // panel2
             // 
@@ -384,7 +447,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1333, 35);
-            this.panel2.TabIndex = 128;
+            this.panel2.TabIndex = 136;
             // 
             // panel1
             // 
@@ -404,9 +467,9 @@
             this.label8.Location = new System.Drawing.Point(52, 11);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(115, 16);
+            this.label8.Size = new System.Drawing.Size(104, 16);
             this.label8.TabIndex = 51;
-            this.label8.Text = "Remover una Cita";
+            this.label8.Text = "Mostrar una Cita";
             // 
             // pictureBox3
             // 
@@ -449,7 +512,7 @@
             this.panel4.Location = new System.Drawing.Point(1330, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(3, 695);
-            this.panel4.TabIndex = 136;
+            this.panel4.TabIndex = 144;
             // 
             // PanelBorderAbajo
             // 
@@ -458,75 +521,9 @@
             this.PanelBorderAbajo.Location = new System.Drawing.Point(0, 691);
             this.PanelBorderAbajo.Name = "PanelBorderAbajo";
             this.PanelBorderAbajo.Size = new System.Drawing.Size(1333, 4);
-            this.PanelBorderAbajo.TabIndex = 137;
+            this.PanelBorderAbajo.TabIndex = 145;
             // 
-            // lblFechaCita
-            // 
-            this.lblFechaCita.BackColor = System.Drawing.SystemColors.Info;
-            this.lblFechaCita.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblFechaCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaCita.Location = new System.Drawing.Point(691, 33);
-            this.lblFechaCita.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblFechaCita.Name = "lblFechaCita";
-            this.lblFechaCita.Size = new System.Drawing.Size(281, 22);
-            this.lblFechaCita.TabIndex = 115;
-            // 
-            // lblEstadoCita
-            // 
-            this.lblEstadoCita.BackColor = System.Drawing.SystemColors.Info;
-            this.lblEstadoCita.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblEstadoCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstadoCita.Location = new System.Drawing.Point(691, 70);
-            this.lblEstadoCita.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblEstadoCita.Name = "lblEstadoCita";
-            this.lblEstadoCita.Size = new System.Drawing.Size(281, 22);
-            this.lblEstadoCita.TabIndex = 116;
-            // 
-            // lblCosto
-            // 
-            this.lblCosto.BackColor = System.Drawing.SystemColors.Info;
-            this.lblCosto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblCosto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCosto.Location = new System.Drawing.Point(1087, 34);
-            this.lblCosto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCosto.Name = "lblCosto";
-            this.lblCosto.Size = new System.Drawing.Size(112, 22);
-            this.lblCosto.TabIndex = 117;
-            // 
-            // lblAnticipo
-            // 
-            this.lblAnticipo.BackColor = System.Drawing.SystemColors.Info;
-            this.lblAnticipo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblAnticipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnticipo.Location = new System.Drawing.Point(1087, 70);
-            this.lblAnticipo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblAnticipo.Name = "lblAnticipo";
-            this.lblAnticipo.Size = new System.Drawing.Size(112, 22);
-            this.lblAnticipo.TabIndex = 118;
-            // 
-            // lblDescripcion
-            // 
-            this.lblDescripcion.BackColor = System.Drawing.SystemColors.Info;
-            this.lblDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.Location = new System.Drawing.Point(43, 176);
-            this.lblDescripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(345, 81);
-            this.lblDescripcion.TabIndex = 113;
-            // 
-            // lblTamaño
-            // 
-            this.lblTamaño.BackColor = System.Drawing.SystemColors.Info;
-            this.lblTamaño.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblTamaño.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTamaño.Location = new System.Drawing.Point(125, 85);
-            this.lblTamaño.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTamaño.Name = "lblTamaño";
-            this.lblTamaño.Size = new System.Drawing.Size(263, 24);
-            this.lblTamaño.TabIndex = 114;
-            // 
-            // frmTATCitasCAP_RMV
+            // frmTATCitasCAP_MOS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -544,11 +541,10 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "frmTATCitasCAP_RMV";
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "frmTATCitasCAP_MOS";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmTATCitasCAP_RMV";
-            this.Load += new System.EventHandler(this.frmTATCitasCAP_RMV_Load);
+            this.Text = "frmTATCitasCAP_MOS";
             this.gbDatosCita.ResumeLayout(false);
             this.gbDatosCita.PerformLayout();
             this.PanelInfoTatuaje.ResumeLayout(false);
@@ -572,6 +568,10 @@
         public System.Windows.Forms.Button btnCancelar;
         public System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.GroupBox gbDatosCita;
+        public System.Windows.Forms.Label lblAnticipo;
+        public System.Windows.Forms.Label lblCosto;
+        public System.Windows.Forms.Label lblEstadoCita;
+        public System.Windows.Forms.Label lblFechaCita;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
@@ -586,6 +586,8 @@
         private System.Windows.Forms.PictureBox ptbDerecha;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox gbInfoTatuajes;
+        public System.Windows.Forms.Label lblTamaño;
+        public System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
@@ -601,12 +603,6 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel4;
-        public System.Windows.Forms.Label lblAnticipo;
-        public System.Windows.Forms.Label lblCosto;
-        public System.Windows.Forms.Label lblEstadoCita;
-        public System.Windows.Forms.Label lblFechaCita;
-        public System.Windows.Forms.Label lblTamaño;
-        public System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.Panel PanelBorderAbajo;
     }
 }
