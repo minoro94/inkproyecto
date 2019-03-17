@@ -289,13 +289,14 @@
             "Inventario",
             "Marcas",
             "Productos",
-            "Servicios",
             "Tipos de Empleados",
             "Tipos de Permisos",
             "Tipos de Productos",
             "Usuarios",
-            "Caja",
-            "Gastos"});
+            "Citas",
+            "Clientes",
+            "Tamaños",
+            "EstadoCita"});
             this.chkltsPermisos.Location = new System.Drawing.Point(3, 3);
             this.chkltsPermisos.Name = "chkltsPermisos";
             this.chkltsPermisos.Size = new System.Drawing.Size(414, 327);

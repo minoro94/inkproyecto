@@ -67,6 +67,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                     L = new ListViewItem();
                     L.Tag = Dato;
                     L.Text = Dato.nombreCliente;
+                    L.SubItems.Add(Dato.NombreEstadoCita);
                     L.SubItems.Add(Convert.ToString(Dato.FechaCita));
                     lstLista.Items.Add(L);
                     i++;
@@ -235,5 +236,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             }
         }
         #endregion
+
+       
     }
 }

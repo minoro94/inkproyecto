@@ -29,6 +29,8 @@ namespace SISTEMA.MAINMENU
         }
         #endregion
 
+
+
         #region METODO REFRESH
         public void RefreshPermisos()
         {
@@ -153,7 +155,8 @@ namespace SISTEMA.MAINMENU
         {
             frmTATTamañosCAT frm = new frmTATTamañosCAT();
             frm.USUARIO = strUsuario.nombreUsuario;
-            frm.ShowDialog();
+            string nombreTabla = "Tamaños";
+            AgregarHijos(ref nombreTabla, frm);
         }
         #endregion
 
@@ -180,7 +183,8 @@ namespace SISTEMA.MAINMENU
         {
             frmTATClientesCAT frm = new frmTATClientesCAT();
             frm.USUARIO = strUsuario.nombreUsuario;
-            frm.ShowDialog();
+            string nombreTabla = "Clientes";
+            AgregarHijos(ref nombreTabla, frm);
         }
         #endregion
 
@@ -189,7 +193,8 @@ namespace SISTEMA.MAINMENU
         {
             frmTATTiposPermisosCAT frm = new frmTATTiposPermisosCAT();
             frm.USUARIO = strUsuario.nombreUsuario;
-            frm.ShowDialog();
+            string nombreTabla = "Tipos de Permisos"; ;
+            AgregarHijos(ref nombreTabla, frm);
         }
         #endregion
 
@@ -198,7 +203,8 @@ namespace SISTEMA.MAINMENU
         {
             frmTATTiposEmpleadosCAT frm = new frmTATTiposEmpleadosCAT();
             frm.USUARIO = strUsuario.nombreUsuario;
-            frm.ShowDialog();
+            string nombreTabla = "Tipos de Empleados";
+            AgregarHijos(ref nombreTabla, frm);
         }
         #endregion
 
@@ -229,7 +235,8 @@ namespace SISTEMA.MAINMENU
         {
             frmTATEstadoCitaCAT frm = new frmTATEstadoCitaCAT();
             frm.USUARIO = strUsuario.nombreUsuario;
-            frm.ShowDialog();
+            string nombreTabla = "EstadoCita";
+            AgregarHijos(ref nombreTabla, frm);
         }
         #endregion
 
@@ -238,7 +245,9 @@ namespace SISTEMA.MAINMENU
         {
             frmTATCitasCAP_CAT frm = new frmTATCitasCAP_CAT();
             frm.USUARIO = strUsuario.nombreUsuario;
-            frm.ShowDialog();
+            string nombreTabla = "Citas";
+            AgregarHijos(ref nombreTabla, frm);
+            
 
         }
         #endregion

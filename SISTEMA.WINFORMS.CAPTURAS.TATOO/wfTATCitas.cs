@@ -35,6 +35,13 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             Forma.txtDescripcion.Text = str.Descripcion;
             Forma.ptbPerfil.Image = Herramientas.decodeImagen(str.ZonaCuerpo, ".png");
             Forma.ptbTatuaje.Image = Herramientas.decodeImagen(str.ImagenTatto, ".png");
+            Forma.imgtato = str.ImagenTatto;
+            Forma.IDTamaño = str.idTamaño;
+            Forma.IDEstadoCita = str.idEstadoCita;
+            Forma.idCliente = str.idCliente;
+            Forma.dtpFechaCita.Value = str.FechaCita;
+            Forma.USUARIO = str.USUARIO;
+            Forma.idCita = str.idCita;
             return Forma.ShowDialog();
         }
         #endregion

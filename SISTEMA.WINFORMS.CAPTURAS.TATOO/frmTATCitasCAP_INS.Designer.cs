@@ -50,6 +50,10 @@
             this.ptbDerecha = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.gbInfoTatuajes = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnAdjuntarImagen = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.cbxTamaño = new System.Windows.Forms.ComboBox();
@@ -69,10 +73,6 @@
             this.PanelBorderAbajo = new System.Windows.Forms.Panel();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.saveFileDialog2 = new System.Windows.Forms.SaveFileDialog();
-            this.btnAdjuntarImagen = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.gbDatosCita.SuspendLayout();
             this.PanelInfoTatuaje.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbAbajo)).BeginInit();
@@ -247,7 +247,7 @@
             this.lblTelefono.Location = new System.Drawing.Point(116, 67);
             this.lblTelefono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(227, 22);
+            this.lblTelefono.Size = new System.Drawing.Size(112, 22);
             this.lblTelefono.TabIndex = 105;
             // 
             // lblNombreCliente
@@ -347,6 +347,49 @@
             this.gbInfoTatuajes.Size = new System.Drawing.Size(1327, 448);
             this.gbInfoTatuajes.TabIndex = 105;
             this.gbInfoTatuajes.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(1093, 66);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(61, 16);
+            this.label9.TabIndex = 112;
+            this.label9.Text = "Tatuaje";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(584, 66);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(97, 16);
+            this.label2.TabIndex = 111;
+            this.label2.Text = "Zona Cuerpo";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(125, 339);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(193, 56);
+            this.button1.TabIndex = 110;
+            this.button1.TabStop = false;
+            this.button1.Text = "FIRMA";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btnAdjuntarImagen
+            // 
+            this.btnAdjuntarImagen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdjuntarImagen.Location = new System.Drawing.Point(1049, 242);
+            this.btnAdjuntarImagen.Name = "btnAdjuntarImagen";
+            this.btnAdjuntarImagen.Size = new System.Drawing.Size(147, 38);
+            this.btnAdjuntarImagen.TabIndex = 109;
+            this.btnAdjuntarImagen.TabStop = false;
+            this.btnAdjuntarImagen.Text = "Adjuntar Imagen";
+            this.btnAdjuntarImagen.UseVisualStyleBackColor = true;
+            this.btnAdjuntarImagen.Click += new System.EventHandler(this.btnAdjuntarImagen_Click);
             // 
             // label4
             // 
@@ -517,49 +560,6 @@
             this.PanelBorderAbajo.Name = "PanelBorderAbajo";
             this.PanelBorderAbajo.Size = new System.Drawing.Size(1333, 4);
             this.PanelBorderAbajo.TabIndex = 111;
-            // 
-            // btnAdjuntarImagen
-            // 
-            this.btnAdjuntarImagen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdjuntarImagen.Location = new System.Drawing.Point(1049, 242);
-            this.btnAdjuntarImagen.Name = "btnAdjuntarImagen";
-            this.btnAdjuntarImagen.Size = new System.Drawing.Size(147, 38);
-            this.btnAdjuntarImagen.TabIndex = 109;
-            this.btnAdjuntarImagen.TabStop = false;
-            this.btnAdjuntarImagen.Text = "Adjuntar Imagen";
-            this.btnAdjuntarImagen.UseVisualStyleBackColor = true;
-            this.btnAdjuntarImagen.Click += new System.EventHandler(this.btnAdjuntarImagen_Click);
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(125, 339);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(193, 56);
-            this.button1.TabIndex = 110;
-            this.button1.TabStop = false;
-            this.button1.Text = "FIRMA";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(584, 66);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 16);
-            this.label2.TabIndex = 111;
-            this.label2.Text = "Zona Cuerpo";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(1093, 66);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(61, 16);
-            this.label9.TabIndex = 112;
-            this.label9.Text = "Tatuaje";
             // 
             // frmTATCitasCAP_INS
             // 

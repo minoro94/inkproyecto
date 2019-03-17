@@ -54,6 +54,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.Estado = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -180,6 +181,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lstLista.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Usuario,
+            this.Estado,
             this.Empleado});
             this.lstLista.Cursor = System.Windows.Forms.Cursors.Default;
             this.lstLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -200,12 +202,12 @@
             // Usuario
             // 
             this.Usuario.Text = "Nombre Cliente";
-            this.Usuario.Width = 440;
+            this.Usuario.Width = 270;
             // 
             // Empleado
             // 
             this.Empleado.Text = "Fecha Cita";
-            this.Empleado.Width = 195;
+            this.Empleado.Width = 180;
             // 
             // btnBuscar
             // 
@@ -353,6 +355,11 @@
             this.panel3.Size = new System.Drawing.Size(668, 3);
             this.panel3.TabIndex = 133;
             // 
+            // Estado
+            // 
+            this.Estado.Text = "Estado Cita";
+            this.Estado.Width = 185;
+            // 
             // frmTATCitasCAP_CAT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -424,5 +431,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.ColumnHeader Estado;
     }
 }

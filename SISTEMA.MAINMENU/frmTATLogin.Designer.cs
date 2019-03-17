@@ -104,7 +104,7 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(355, 14);
             this.txtUsuario.TabIndex = 11;
-            this.txtUsuario.Text = "ADMINISTRADOR";
+            this.txtUsuario.Text = "pruebas";
             this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
             this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsuario_KeyPress);
             this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);

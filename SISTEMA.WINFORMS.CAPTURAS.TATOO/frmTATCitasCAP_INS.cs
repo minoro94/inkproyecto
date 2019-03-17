@@ -21,8 +21,6 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             InitializeComponent();
             ptbAbajo.Visible = false;
             ptbDerecha.Visible = true;
-            
-            
         }
 
         #region OBJETOS
@@ -195,8 +193,6 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         {
             if (Sexo)
             {
-                // ptbPerfil.Image = TATTOO.Properties.Resources.PerfilHombre;
-                // ptbPerfil.Tag = TATTOO.Properties.Resources.PerfilHombre;
                 openFileDialog2.FileName = @"C:\repos\inkproyecto\SISTEMA.WINFORMS.CAPTURAS.TATOO\Resources\PerfilHombre.png";
                 ptbPerfil.Image = Image.FromFile(openFileDialog2.FileName);
             }
@@ -221,6 +217,8 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                 this.Size = new System.Drawing.Size(1333, 263);
                 btnAceptar.Location = new Point(1135, 214);
                 btnCancelar.Location = new Point(1231, 214);
+                btnAceptar.Enabled = false;
+                
                 PanelBorderAbajo.Location = new Point(3, 259);
             }
             else
@@ -231,12 +229,15 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                 this.Size = new System.Drawing.Size(1333, 695);
                 btnAceptar.Location = new Point(1135, 650);
                 btnCancelar.Location = new Point(1234, 650);
+                btnAceptar.Enabled = true;
+               
                 PanelBorderAbajo.Location = new Point(3, 691);
                 ptbPerfil.Refresh();
                 Dibuja(1000, 0, true);
             }
         }
         #endregion
+
         #region MOUSE DOWN PANEL INFO TATUAJE
         private void PanelInfoTatuaje_MouseDown(object sender, MouseEventArgs e)
         {
@@ -248,6 +249,8 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                 this.Size = new System.Drawing.Size(1333, 263);
                 btnAceptar.Location = new Point(1135, 214);
                 btnCancelar.Location = new Point(1231, 214);
+                btnAceptar.Enabled = false;
+                
                 PanelBorderAbajo.Location = new Point(3, 259);
             }
             else
@@ -258,6 +261,8 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                 this.Size = new System.Drawing.Size(1333, 695);
                 btnAceptar.Location = new Point(1135, 650);
                 btnCancelar.Location = new Point(1234, 650);
+                btnAceptar.Enabled = true;
+                
                 PanelBorderAbajo.Location = new Point(3, 691);
                 ptbPerfil.Refresh();
                 Dibuja(1000, 0, true);
@@ -319,6 +324,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                 {
                     btnAdjuntarImagen.Location = new Point(1046, 18);
                     ptbTatuaje.Image = Image.FromFile(openFileDialog1.FileName);
+                    btnAdjuntarImagen.Text = "Cambiar Imagen";
                     imgTatuaje = openFileDialog1.FileName;
 
                 }
@@ -330,28 +336,6 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             }
         }
 
-        /*private void lblAdjuntarImagen_Click(object sender, EventArgs e)
-        {
-            DialogResult x = openFileDialog1.ShowDialog();
-            try
-            {
-                if (x == DialogResult.OK)
-                {
-
-
-                    ptbTatuaje.Image = Image.FromFile(openFileDialog1.FileName);
-                    lblAdjuntarImagen.Visible = false;
-                    imgTatuaje = openFileDialog1.FileName;
-
-                }
-            }
-            catch
-            {
-                lblAdjuntarImagen.Visible = true;
-                MessageBox.Show("El Archivo Seleccionado No Es Un Tipo De Imagen");
-            }
-        }
-        */
         #endregion
 
         #region MOUSE CLICK
@@ -388,6 +372,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                 strCitas.idEstadoCita = Convert.ToInt32(IDsEstadoCita[cbxEstadoCita.SelectedIndex]);
                 strCitas.idTamaño = Convert.ToInt32(IDsTamaños[cbxTamaño.SelectedIndex]);
                 strCitas.FechaCita = dtpFechaCita.Value;
+                strCitas.FechaCita = new DateTime(dtpFechaCita.Value.Year, dtpFechaCita.Value.Month, dtpFechaCita.Value.Day, dtpFechaCita.Value.Hour, dtpFechaCita.Value.Minute, 0);
                 strCitas.Costo = Convert.ToDouble(txtCosto.Text.Trim());
                 strCitas.Anticipo = Convert.ToDouble(txtAnticipo.Text.Trim());
                 strCitas.Descripcion = txtDescripcion.Text.Trim();
@@ -470,6 +455,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
 
                     ptbTatuaje.Image = Image.FromFile(openFileDialog1.FileName);
                     btnAdjuntarImagen.Location = new Point(1046, 18);
+                    btnAdjuntarImagen.Text = "Cambiar Imagen";
                     imgTatuaje = openFileDialog1.FileName;
 
                 }
@@ -481,5 +467,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             }
         }
         #endregion
+
+        
     }
 }

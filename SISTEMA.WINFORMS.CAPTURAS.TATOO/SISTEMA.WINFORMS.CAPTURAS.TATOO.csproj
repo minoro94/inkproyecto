@@ -88,6 +88,9 @@
     <EmbeddedResource Include="frmTATCitasCAP_MDF.resx">
       <DependentUpon>frmTATCitasCAP_MDF.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmTATCitasCAP_RMV.resx">
+      <DependentUpon>frmTATCitasCAP_RMV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTATClientesCAP_FND.resx">
       <DependentUpon>frmTATClientesCAP_FND.cs</DependentUpon>
     </EmbeddedResource>
