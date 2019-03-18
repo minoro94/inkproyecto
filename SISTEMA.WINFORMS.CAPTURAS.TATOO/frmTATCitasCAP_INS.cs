@@ -193,13 +193,14 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         {
             if (Sexo)
             {
-                openFileDialog2.FileName = @"C:\repos\inkproyecto\SISTEMA.WINFORMS.CAPTURAS.TATOO\Resources\PerfilHombre.png";
+                openFileDialog2.FileName = @"C:\Rep\SISTEMA.WINFORMS.CAPTURAS.TATOO\Resources\PerfilHombre.png";
+
                 ptbPerfil.Image = Image.FromFile(openFileDialog2.FileName);
             }
             else
             {
 
-                openFileDialog2.FileName = @"C:\repos\inkproyecto\SISTEMA.WINFORMS.CAPTURAS.TATOO\Resources\PerfilMujer.png";
+                openFileDialog2.FileName = @"C:\Rep\SISTEMA.WINFORMS.CAPTURAS.TATOO\Resources\PerfilMujer.png";
                 ptbPerfil.Image = Image.FromFile(openFileDialog2.FileName);
             }
         }
@@ -402,7 +403,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
 
 
 
-            fileNom = @"C:\repos\inkproyecto\SISTEMA.WINFORMS.CAPTURAS.TATOO\Capturas\Img" + Convert.ToString(rnd.Next(10000)) + ".png";
+            fileNom = @"C:\Rep\SISTEMA.WINFORMS.CAPTURAS.TATOO\Capturas\Img" + Convert.ToString(rnd.Next(10000)) + ".png";
             imgZonaCuerpo = fileNom;
             BmpScreen.Save(fileNom, System.Drawing.Imaging.ImageFormat.Png);
 

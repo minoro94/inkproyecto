@@ -92,6 +92,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         {
             dtpInicio.Value = DateTime.Today.AddDays(-(int)DateTime.Today.DayOfWeek + 1);
             dtpFin.Value = DateTime.Today.AddDays(-(int)DateTime.Today.DayOfWeek + 7);
+            dtpFin.Value = new DateTime(dtpFin.Value.Year, dtpFin.Value.Month, dtpFin.Value.Day, 23, 59, 0);
             RefreshList();
             EnableButtons();
         }
@@ -211,7 +212,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                 }
                 else
                 {
-
+                    RefreshList();
                 }
 
             }
@@ -260,5 +261,10 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             }
         }
         #endregion
+
+        private void dtpFin_ValueChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTATCitasCAP_CAT));
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.dtpFin = new System.Windows.Forms.DateTimePicker();
             this.dtpInicio = new System.Windows.Forms.DateTimePicker();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -56,6 +55,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnMostrar = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -65,40 +65,31 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(348, 110);
+            this.label3.Location = new System.Drawing.Point(351, 108);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(19, 16);
             this.label3.TabIndex = 131;
             this.label3.Text = "a:";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(10, 110);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 16);
-            this.label2.TabIndex = 130;
-            this.label2.Text = "De:";
-            // 
             // dtpFin
             // 
-            this.dtpFin.CustomFormat = "dddd-MMMM-yyyy    hh:mm  tt";
+            this.dtpFin.CustomFormat = "dddd- d- MMMM-yyyy  ";
             this.dtpFin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFin.Location = new System.Drawing.Point(374, 105);
+            this.dtpFin.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.dtpFin.Location = new System.Drawing.Point(423, 104);
             this.dtpFin.Name = "dtpFin";
-            this.dtpFin.Size = new System.Drawing.Size(281, 22);
+            this.dtpFin.Size = new System.Drawing.Size(232, 22);
             this.dtpFin.TabIndex = 129;
+            this.dtpFin.ValueChanged += new System.EventHandler(this.dtpFin_ValueChanged);
             // 
             // dtpInicio
             // 
-            this.dtpInicio.CustomFormat = "dddd-MMMM-yyyy    hh:mm  tt";
+            this.dtpInicio.CustomFormat = "dddd-d-MMMM-yyyy ";
             this.dtpInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpInicio.Location = new System.Drawing.Point(39, 105);
+            this.dtpInicio.Location = new System.Drawing.Point(80, 103);
             this.dtpInicio.Name = "dtpInicio";
-            this.dtpInicio.Size = new System.Drawing.Size(302, 22);
+            this.dtpInicio.Size = new System.Drawing.Size(219, 22);
             this.dtpInicio.TabIndex = 128;
             // 
             // btnEliminar
@@ -377,16 +368,27 @@
             this.btnMostrar.UseVisualStyleBackColor = true;
             this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(13, 109);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(29, 16);
+            this.label2.TabIndex = 135;
+            this.label2.Text = "De:";
+            // 
             // frmTATCitasCAP_CAT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(668, 573);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.dtpFin);
             this.Controls.Add(this.dtpInicio);
             this.Controls.Add(this.btnEliminar);
@@ -425,7 +427,6 @@
         #endregion
 
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dtpFin;
         private System.Windows.Forms.DateTimePicker dtpInicio;
         public System.Windows.Forms.Button btnEliminar;
@@ -451,5 +452,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ColumnHeader Estado;
         public System.Windows.Forms.Button btnMostrar;
+        private System.Windows.Forms.Label label2;
     }
 }

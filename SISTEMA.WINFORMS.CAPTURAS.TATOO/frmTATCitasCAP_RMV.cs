@@ -35,6 +35,9 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+            str.idCita = idCita;
+            str.USUARIO = USUARIO;
+            str.FechaCita = Convert.ToDateTime(lblFechaCita.Text);
             if(TABLA_Citas.DAO(ref str, 3))
             {
                 MessageBox.Show(this, "El registro ah sido eliminado correctamente", "OPERACION CORRECTA", MessageBoxButtons.OK, MessageBoxIcon.Information);
