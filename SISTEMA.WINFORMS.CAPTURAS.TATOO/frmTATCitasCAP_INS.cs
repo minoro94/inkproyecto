@@ -394,15 +394,14 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             Graphics ScreenShot = Graphics.FromImage(BmpScreen);
 
             ScreenShot.CopyFromScreen(ptbPerfil.Location.X + this.Location.X + gbInfoTatuajes.Location.X, ptbPerfil.Location.Y + this.Location.Y + gbInfoTatuajes.Location.Y, 0, 0, Screen.PrimaryScreen.Bounds.Size, CopyPixelOperation.SourceCopy);
-
+            
             string fileNom = String.Empty;
 
             saveFileDialog1.Filter = "Excel files (*.png)|*.png";
 
             saveFileDialog1.RestoreDirectory = true;
-
-
-
+            
+            
             fileNom = @"C:\Rep\SISTEMA.WINFORMS.CAPTURAS.TATOO\Capturas\Img" + Convert.ToString(rnd.Next(10000)) + ".png";
             imgZonaCuerpo = fileNom;
             BmpScreen.Save(fileNom, System.Drawing.Imaging.ImageFormat.Png);
