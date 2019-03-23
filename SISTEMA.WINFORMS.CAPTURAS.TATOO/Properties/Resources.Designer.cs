@@ -284,6 +284,16 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Izquierda {
+            get {
+                object obj = ResourceManager.GetObject("Izquierda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LOGOINK {
             get {
                 object obj = ResourceManager.GetObject("LOGOINK", resourceCulture);
