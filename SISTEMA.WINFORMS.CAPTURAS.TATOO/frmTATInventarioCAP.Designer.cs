@@ -40,12 +40,13 @@
             this.Can = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lstLista = new System.Windows.Forms.ListView();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnAceptar = new System.Windows.Forms.Button();
-            this.PanelBorderAbajo = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.cbxTamaño = new System.Windows.Forms.ComboBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnAceptar = new System.Windows.Forms.Button();
+            this.btnAgregarCliente = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -69,7 +70,7 @@
             this.panel5.Enabled = false;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(3, 536);
+            this.panel5.Size = new System.Drawing.Size(3, 335);
             this.panel5.TabIndex = 85;
             // 
             // panel2
@@ -135,13 +136,13 @@
             this.panel4.Enabled = false;
             this.panel4.Location = new System.Drawing.Point(546, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(3, 536);
+            this.panel4.Size = new System.Drawing.Size(3, 335);
             this.panel4.TabIndex = 111;
             // 
             // Pro
             // 
             this.Pro.Text = "Producto";
-            this.Pro.Width = 270;
+            this.Pro.Width = 420;
             // 
             // Can
             // 
@@ -165,7 +166,7 @@
             this.lstLista.Margin = new System.Windows.Forms.Padding(4);
             this.lstLista.MultiSelect = false;
             this.lstLista.Name = "lstLista";
-            this.lstLista.Size = new System.Drawing.Size(526, 346);
+            this.lstLista.Size = new System.Drawing.Size(526, 150);
             this.lstLista.TabIndex = 123;
             this.lstLista.UseCompatibleStateImageBehavior = false;
             this.lstLista.View = System.Windows.Forms.View.Details;
@@ -180,15 +181,43 @@
             this.label2.TabIndex = 129;
             this.label2.Text = "Productos a Utilizar";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(12, 81);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(70, 16);
+            this.label7.TabIndex = 134;
+            this.label7.Text = "Producto";
+            // 
+            // cbxTamaño
+            // 
+            this.cbxTamaño.BackColor = System.Drawing.SystemColors.Window;
+            this.cbxTamaño.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxTamaño.FormattingEnabled = true;
+            this.cbxTamaño.Location = new System.Drawing.Point(97, 78);
+            this.cbxTamaño.Name = "cbxTamaño";
+            this.cbxTamaño.Size = new System.Drawing.Size(263, 24);
+            this.cbxTamaño.TabIndex = 133;
+            this.cbxTamaño.TabStop = false;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(376, 80);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(48, 22);
+            this.numericUpDown1.TabIndex = 135;
+            // 
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.ImgCancelar;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(447, 491);
+            this.btnCancelar.Location = new System.Drawing.Point(447, 290);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(90, 33);
-            this.btnCancelar.TabIndex = 131;
+            this.btnCancelar.TabIndex = 137;
             this.btnCancelar.TabStop = false;
             this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -202,63 +231,47 @@
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.ImgAceptar;
             this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAceptar.Location = new System.Drawing.Point(348, 491);
+            this.btnAceptar.Location = new System.Drawing.Point(348, 290);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(90, 33);
-            this.btnAceptar.TabIndex = 130;
+            this.btnAceptar.TabIndex = 136;
             this.btnAceptar.TabStop = false;
             this.btnAceptar.Text = "&Aceptar";
             this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAceptar.UseVisualStyleBackColor = true;
             // 
-            // PanelBorderAbajo
+            // btnAgregarCliente
             // 
-            this.PanelBorderAbajo.BackColor = System.Drawing.Color.Black;
-            this.PanelBorderAbajo.Enabled = false;
-            this.PanelBorderAbajo.Location = new System.Drawing.Point(0, 532);
-            this.PanelBorderAbajo.Name = "PanelBorderAbajo";
-            this.PanelBorderAbajo.Size = new System.Drawing.Size(549, 4);
-            this.PanelBorderAbajo.TabIndex = 132;
+            this.btnAgregarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarCliente.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.Mas;
+            this.btnAgregarCliente.Location = new System.Drawing.Point(464, 64);
+            this.btnAgregarCliente.Name = "btnAgregarCliente";
+            this.btnAgregarCliente.Size = new System.Drawing.Size(50, 50);
+            this.btnAgregarCliente.TabIndex = 138;
+            this.btnAgregarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAgregarCliente.UseVisualStyleBackColor = true;
             // 
-            // label7
+            // panel7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(10, 93);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 16);
-            this.label7.TabIndex = 134;
-            this.label7.Text = "Producto";
-            // 
-            // cbxTamaño
-            // 
-            this.cbxTamaño.BackColor = System.Drawing.SystemColors.Window;
-            this.cbxTamaño.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxTamaño.FormattingEnabled = true;
-            this.cbxTamaño.Location = new System.Drawing.Point(95, 90);
-            this.cbxTamaño.Name = "cbxTamaño";
-            this.cbxTamaño.Size = new System.Drawing.Size(263, 24);
-            this.cbxTamaño.TabIndex = 133;
-            this.cbxTamaño.TabStop = false;
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(416, 92);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 22);
-            this.numericUpDown1.TabIndex = 135;
+            this.panel7.BackColor = System.Drawing.Color.Black;
+            this.panel7.Enabled = false;
+            this.panel7.Location = new System.Drawing.Point(0, 331);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(549, 4);
+            this.panel7.TabIndex = 139;
             // 
             // frmTATInventarioCAP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(549, 536);
+            this.ClientSize = new System.Drawing.Size(549, 335);
+            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.btnAgregarCliente);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.cbxTamaño);
-            this.Controls.Add(this.PanelBorderAbajo);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lstLista);
             this.Controls.Add(this.panel4);
@@ -295,11 +308,12 @@
         public System.Windows.Forms.ColumnHeader Can;
         public System.Windows.Forms.ListView lstLista;
         private System.Windows.Forms.Label label2;
-        public System.Windows.Forms.Button btnCancelar;
-        public System.Windows.Forms.Button btnAceptar;
-        private System.Windows.Forms.Panel PanelBorderAbajo;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cbxTamaño;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
+        public System.Windows.Forms.Button btnCancelar;
+        public System.Windows.Forms.Button btnAceptar;
+        public System.Windows.Forms.Button btnAgregarCliente;
+        private System.Windows.Forms.Panel panel7;
     }
 }

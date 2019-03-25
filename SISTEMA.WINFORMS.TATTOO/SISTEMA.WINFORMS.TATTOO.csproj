@@ -156,6 +156,30 @@
     <Compile Include="frmTATEstadoCitaRMV.Designer.cs">
       <DependentUpon>frmTATEstadoCitaRMV.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTATInventarioCAT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATInventarioCAT.Designer.cs">
+      <DependentUpon>frmTATInventarioCAT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATInventarioINS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATInventarioINS.Designer.cs">
+      <DependentUpon>frmTATInventarioINS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATInventarioMDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATInventarioMDF.Designer.cs">
+      <DependentUpon>frmTATInventarioMDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATInventarioRMV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATInventarioRMV.Designer.cs">
+      <DependentUpon>frmTATInventarioRMV.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTATTamañosCAT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -251,6 +275,7 @@
     <Compile Include="wfTATClientes.cs" />
     <Compile Include="wfTATEmpleados.cs" />
     <Compile Include="wfTATEstadoCita.cs" />
+    <Compile Include="wfTATInventario.cs" />
     <Compile Include="wfTATTamaños.cs" />
     <Compile Include="wfTATTiposEmpleados.cs" />
     <Compile Include="wfTATTiposPermisos.cs" />
@@ -307,6 +332,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTATEstadoCitaRMV.resx">
       <DependentUpon>frmTATEstadoCitaRMV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATInventarioCAT.resx">
+      <DependentUpon>frmTATInventarioCAT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATInventarioINS.resx">
+      <DependentUpon>frmTATInventarioINS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTATTamañosCAT.resx">
       <DependentUpon>frmTATTamañosCAT.cs</DependentUpon>

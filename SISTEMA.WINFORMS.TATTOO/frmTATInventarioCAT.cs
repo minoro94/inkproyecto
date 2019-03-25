@@ -12,18 +12,17 @@ using System.Runtime.InteropServices;
 
 namespace SISTEMA.WINFORMS.TATTOO
 {
-    public partial class frmTATClientesCAT : Form
+    public partial class frmTATInventarioCAT : Form
     {
-        public frmTATClientesCAT()
+        public frmTATInventarioCAT()
         {
             InitializeComponent();
         }
 
         #region OBJETOS
-        TATClientes.strTATClientes strClientes = new TATClientes.strTATClientes();
-        TATClientes TABLA_Clientes = new TATClientes();
-        wfTATClientes WF = new wfTATClientes();
-
+        TATInventario.strTATInventario strInventario = new TATInventario.strTATInventario();
+        TATInventario TABLA_Inventario = new TATInventario();
+        wfTATInventario WF = new wfTATInventario();
         public string USUARIO = "";
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -32,7 +31,6 @@ namespace SISTEMA.WINFORMS.TATTOO
         #endregion
 
         #region ENABLE BUTTONS
-
         public void EnableButtons()
         {
             if (lstLista.SelectedItems.Count == 0)
@@ -53,22 +51,20 @@ namespace SISTEMA.WINFORMS.TATTOO
         public void RefreshList()
         {
             lstLista.Items.Clear();
-            TATClientes.strTATClientes[] ARR = null;
-            strClientes.nombreCliente = txtFiiltro.Text.Trim();
-            bool Resulto = TABLA_Clientes.Listar(ref ARR, strClientes);
-            int i = 0;
-            if(Resulto == true)
+            TATInventario.strTATInventario[] ARR = null;
+            strInventario.NombreProducto = txtFiiltro.Text.Trim();
+            bool Resulto = TABLA_Inventario.Listar(ref ARR, strInventario);
+            
+            if (Resulto)
             {
                 ListViewItem L;
-                foreach(TATClientes.strTATClientes Dato in ARR)
+                foreach(TATInventario.strTATInventario Dato in ARR)
                 {
                     L = new ListViewItem();
                     L.Tag = Dato;
-                    L.Text = Dato.nombreCliente;
-                    L.SubItems.Add(Dato.Telefono);
+                    L.Text = Dato.NombreProducto;
+                    L.SubItems.Add(Dato.Cantidad.ToString());
                     lstLista.Items.Add(L);
-                    i++;
-
                 }
             }
             EnableButtons();
@@ -76,7 +72,7 @@ namespace SISTEMA.WINFORMS.TATTOO
         #endregion
 
         #region LOAD
-        private void frmTATClientesCAT_Load(object sender, EventArgs e)
+        private void frmTATInventarioCAT_Load(object sender, EventArgs e)
         {
             RefreshList();
             EnableButtons();
@@ -104,13 +100,6 @@ namespace SISTEMA.WINFORMS.TATTOO
         }
         #endregion
 
-        #region TEXTCHANGED
-        private void txtFiiltro_TextChanged(object sender, EventArgs e)
-        {
-            RefreshList();
-        }
-        #endregion
-
         #region CLOSE
         private void pictureBox3_Click(object sender, EventArgs e)
         {
@@ -119,7 +108,7 @@ namespace SISTEMA.WINFORMS.TATTOO
         #endregion
 
         #region MOUSE DOWN
-        private void pictureBox2_MouseDown(object sender, MouseEventArgs e)
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
@@ -131,7 +120,7 @@ namespace SISTEMA.WINFORMS.TATTOO
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        private void pictureBox2_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
@@ -139,9 +128,9 @@ namespace SISTEMA.WINFORMS.TATTOO
         #endregion
 
         #region FORM CLOSING
-        private void frmTATClientesCAT_FormClosing(object sender, FormClosingEventArgs e)
+        private void frmTATInventarioCAT_FormClosing(object sender, FormClosingEventArgs e)
         {
-            TABLA_Clientes.Dispose();
+            TABLA_Inventario.Dispose();
         }
         #endregion
 
@@ -155,23 +144,6 @@ namespace SISTEMA.WINFORMS.TATTOO
         }
         #endregion
 
-        #region DOUBLE CLICK
-        private void lstLista_DoubleClick(object sender, EventArgs e)
-        {
-            DialogResult Resultado;
-            if(lstLista.SelectedItems.Count >= 1)
-            {
-                strClientes = (TATClientes.strTATClientes)lstLista.SelectedItems[0].Tag;
-                Resultado = WF.Modificar(ref strClientes, USUARIO);
-                if(Resultado == System.Windows.Forms.DialogResult.OK)
-                {
-                    RefreshList();
-                }
-            }
-        }
-        #endregion
-
-        #region BOTON AGREGAR
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             DialogResult Resultado;
@@ -186,39 +158,35 @@ namespace SISTEMA.WINFORMS.TATTOO
                 btnAgregar_Click(null, null);
             }
         }
-        #endregion
 
-        #region BOTON EDITAR
         private void btnEditar_Click(object sender, EventArgs e)
         {
             DialogResult Resultado;
 
             if (lstLista.SelectedItems.Count >= 1)
             {
-                strClientes = (TATClientes.strTATClientes)lstLista.SelectedItems[0].Tag;
-                Resultado = WF.Modificar(ref strClientes, USUARIO);
+                strInventario = (TATInventario.strTATInventario)lstLista.SelectedItems[0].Tag;
+                Resultado = WF.Modificar(ref strInventario, USUARIO);
                 if (Resultado == System.Windows.Forms.DialogResult.OK)
                 {
                     RefreshList();
                 }
                 else
                 {
-                    
+
                 }
-                
+
             }
         }
-        #endregion
 
-        #region BOTON ELIMINAR
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             DialogResult Resultado;
 
             if (lstLista.SelectedItems.Count >= 1)
             {
-                strClientes = (TATClientes.strTATClientes)lstLista.SelectedItems[0].Tag;
-                Resultado = WF.Remover(ref strClientes, USUARIO);
+                strInventario = (TATInventario.strTATInventario)lstLista.SelectedItems[0].Tag;
+                Resultado = WF.Remover(ref strInventario, USUARIO);
                 if (Resultado == System.Windows.Forms.DialogResult.OK)
                 {
                     RefreshList();
@@ -229,6 +197,5 @@ namespace SISTEMA.WINFORMS.TATTOO
                 }
             }
         }
-        #endregion
     }
 }

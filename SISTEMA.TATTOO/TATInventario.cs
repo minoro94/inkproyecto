@@ -18,16 +18,15 @@ namespace SISTEMA.TATTOO
         public struct strTATInventario
         {
             public int idInventario;
-            public int idProducto;
-            public int idUsuario;
-            public int cantidadStock;
+            public string NombreProducto;
+            public int Cantidad;
             public string Nota;
+            
             public string USUARIO;
             public DateTime FECHAHORACAMBIO;
             public bool ELIMINADO;
-            public string Modelo;
-            public string nombreUsuario;
-            public string codigoProducto;
+            public int idUsuario;
+            
         }
         #endregion
 
@@ -41,11 +40,11 @@ namespace SISTEMA.TATTOO
             DB.COM1.Connection = DB.objConexion;
             DB.objConexion.Open();
             int Cuantos = 0;
-            DB.COM1.CommandText = "Select count (*) from visTATInventario where ELIMINADO = 0 ";
+            DB.COM1.CommandText = "Select count (*) from Inventario where ELIMINADO = 0 ";
 
             Cuantos = (int)DB.COM1.ExecuteScalar();
 
-            DB.COM1.CommandText = "Select * from visTATInventario where ELIMINADO = 0";
+            DB.COM1.CommandText = "Select * from Inventario where ELIMINADO = 0";
 
             try
             {
@@ -57,16 +56,14 @@ namespace SISTEMA.TATTOO
                 {
                     ARR[i] = new strTATInventario();
                     ARR[i].idInventario = (int)DB.REG1["idInventario"];
-                    ARR[i].idProducto = (int)DB.REG1["idProducto"];
+                    
                     ARR[i].idUsuario = (int)DB.REG1["idUsuario"];
-                    ARR[i].cantidadStock = (int)DB.REG1["cantidadStock"];
+                    ARR[i].Cantidad = (int)DB.REG1["Cantidad"];
                     ARR[i].Nota = DB.REG1["Nota"].ToString();
                     ARR[i].USUARIO = DB.REG1["USUARIO"].ToString();
                     ARR[i].FECHAHORACAMBIO = (DateTime)DB.REG1["FECHAHORACAMBIO"];
                     ARR[i].ELIMINADO = (bool)DB.REG1["ELIMINADO"];
-                    ARR[i].Modelo = DB.REG1["Modelo"].ToString();
-                    ARR[i].nombreUsuario = DB.REG1["nombreUsuario"].ToString();
-                    ARR[i].codigoProducto = DB.REG1["codigoProducto"].ToString();
+                    
                     i++;
                 }
                 DB.REG1.Close();
@@ -83,29 +80,23 @@ namespace SISTEMA.TATTOO
         #endregion
 
         #region LISTAR CON FILTRO
-        public bool Listar(ref strTATInventario[] ARR, string filtro)
+        public bool Listar(ref strTATInventario[] ARR, strTATInventario filtro)
         {
             DB.conexionBD();
             DB.COM1.Connection = DB.objConexion;
             DB.objConexion.Open();
             int Cuantos = 0;
-            if(filtro != "")
+            if(filtro.NombreProducto != "")
             {
-                DB.COM1.CommandText = "Select count (*) from (SELECT * FROM visTATInventario where ELIMINADO = 0) AS A  WHERE A.codigoProducto like '%' + '" + filtro + "' + '%'" +
-                    "OR A.Modelo like '%' + '" + filtro + "' + '%'" +
-                    "OR CAST (A.cantidadStock AS varchar(10)) like '%' + '" + filtro + "' + '%'";
-
-
+                DB.COM1.CommandText = "Select count (*) from Inventario where ELIMINADO = 0 and NombreProducto like '%' + '" + filtro.NombreProducto + "' + '%'";
                 Cuantos = (int)DB.COM1.ExecuteScalar();
-                DB.COM1.CommandText = "Select * from (SELECT * FROM visTATInventario where ELIMINADO = 0) AS A  WHERE A.codigoProducto like '%' + '" + filtro + "' + '%'" +
-                    "OR A.Modelo like '%' + '" + filtro + "' + '%'" +
-                    "OR CAST (A.cantidadStock AS varchar(10)) like '%' + '" + filtro + "' + '%'";
+                DB.COM1.CommandText = "Select * from Inventario where ELIMINADO = 0 and NombreProducto like '%' + '" + filtro.NombreProducto + "' + '%'";
             }
             else
             {
-                DB.COM1.CommandText = "Select count (*) from visTATInventario where ELIMINADO = 0";
+                DB.COM1.CommandText = "Select count (*) from Inventario where ELIMINADO = 0";
                 Cuantos = (int)DB.COM1.ExecuteScalar();
-                DB.COM1.CommandText = "Select * from visTATInventario where ELIMINADO = 0";
+                DB.COM1.CommandText = "Select * from Inventario where ELIMINADO = 0";
             }
             try
             {
@@ -117,16 +108,13 @@ namespace SISTEMA.TATTOO
                 {
                     ARR[i] = new strTATInventario();
                     ARR[i].idInventario = (int)DB.REG1["idInventario"];
-                    ARR[i].idProducto = (int)DB.REG1["idProducto"];
                     ARR[i].idUsuario = (int)DB.REG1["idUsuario"];
-                    ARR[i].cantidadStock = (int)DB.REG1["cantidadStock"];
+                    ARR[i].Cantidad = (int)DB.REG1["Cantidad"];
                     ARR[i].Nota = DB.REG1["Nota"].ToString();
                     ARR[i].USUARIO = DB.REG1["USUARIO"].ToString();
                     ARR[i].FECHAHORACAMBIO = (DateTime)DB.REG1["FECHAHORACAMBIO"];
                     ARR[i].ELIMINADO = (bool)DB.REG1["ELIMINADO"];
-                    ARR[i].Modelo = DB.REG1["Modelo"].ToString();
-                    ARR[i].nombreUsuario = DB.REG1["nombreUsuario"].ToString();
-                    ARR[i].codigoProducto = DB.REG1["codigoProducto"].ToString();
+                    
                     i++;
                 }
                 return true;
@@ -160,13 +148,11 @@ namespace SISTEMA.TATTOO
             {
                 DB.COM1.Parameters.AddWithValue("ACCION", Instruccion);
                 DB.COM1.Parameters.AddWithValue("idInventario", str.idInventario);
-                DB.COM1.Parameters.AddWithValue("idProducto", str.idProducto);
                 DB.COM1.Parameters.AddWithValue("idUsuario", str.idUsuario);
-                DB.COM1.Parameters.AddWithValue("cantidadStock", str.cantidadStock);
+                DB.COM1.Parameters.AddWithValue("Cantidad", str.Cantidad);
                 DB.COM1.Parameters.AddWithValue("Nota", str.Nota);
                 DB.COM1.Parameters.AddWithValue("USUARIO", str.USUARIO);
-                DB.COM1.Parameters.AddWithValue("FECHAHORACAMBIO", DateTime.Now);
-                DB.COM1.Parameters.AddWithValue("ELIMINADO", str.ELIMINADO);
+                
 
                 DB.REG1 = DB.COM1.ExecuteReader();
 
@@ -174,16 +160,13 @@ namespace SISTEMA.TATTOO
                 {
                     DB.REG1.Read();
                     str.idInventario = Convert.ToInt32(DB.REG1["idInventario"]);
-                    str.idProducto = Convert.ToInt32(DB.REG1["idProducto"]);
                     str.idUsuario = Convert.ToInt32(DB.REG1["idUsuario"]);
-                    str.cantidadStock = Convert.ToInt32(DB.REG1["cantidadStock"]);
+                    str.Cantidad = Convert.ToInt32(DB.REG1["cantidadStock"]);
                     str.Nota = Convert.ToString(DB.REG1["Nota"]);
                     str.USUARIO = DB.REG1["USUARIO"].ToString();
                     str.FECHAHORACAMBIO = Convert.ToDateTime(DB.REG1["FECHAHORACAMBIO"]);
                     str.ELIMINADO = Convert.ToBoolean(DB.REG1["ELIMINADO"]);
-                    str.Modelo = Convert.ToString(DB.REG1["Modelo"]);
-                    str.nombreUsuario = Convert.ToString(DB.REG1["nombreUsuario"]);
-                    str.codigoProducto = Convert.ToString(DB.REG1["CodigoProducto"]);
+                    
                 }
                 return true;
             }

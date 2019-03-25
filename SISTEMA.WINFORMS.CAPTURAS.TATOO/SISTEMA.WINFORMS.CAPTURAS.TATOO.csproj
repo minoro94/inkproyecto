@@ -240,6 +240,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Izquierda.png" />
+    <None Include="Resources\Mas.png" />
     <Content Include="Resources\PerfilMujer.png" />
   </ItemGroup>
   <ItemGroup>
