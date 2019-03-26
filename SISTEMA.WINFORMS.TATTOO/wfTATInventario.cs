@@ -16,9 +16,11 @@ namespace SISTEMA.WINFORMS.TATTOO
         #endregion
 
         #region AGREGAR
-        public DialogResult Agregar(ref string USUARIO)
+        public DialogResult Agregar(ref string USUARIO, int idUsuario)
         {
             frmTATInventarioINS frm = new frmTATInventarioINS();
+            frm.USUARIO = USUARIO;
+            frm.idUsuario = idUsuario;
             return frm.ShowDialog();
         }
         #endregion
@@ -27,6 +29,11 @@ namespace SISTEMA.WINFORMS.TATTOO
         public DialogResult Modificar(ref TATInventario.strTATInventario str, string USUARIO)
         {
             frmTATInventarioMDF frm = new frmTATInventarioMDF();
+            frm.txtNombreProducto.Text = str.NombreProducto;
+            frm.nudCantidad.Value = str.Cantidad;
+            frm.txtNota.Text = str.Nota;
+            frm.USUARIO = str.USUARIO;
+            frm.idUsuario = str.idUsuario;
             return frm.ShowDialog();
         }
         #endregion

@@ -24,6 +24,7 @@ namespace SISTEMA.WINFORMS.TATTOO
         TATInventario TABLA_Inventario = new TATInventario();
         wfTATInventario WF = new wfTATInventario();
         public string USUARIO = "";
+        public int idUsuario;
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -147,7 +148,7 @@ namespace SISTEMA.WINFORMS.TATTOO
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             DialogResult Resultado;
-            Resultado = WF.Agregar(ref USUARIO);
+            Resultado = WF.Agregar(ref USUARIO, idUsuario);
             if (Resultado == System.Windows.Forms.DialogResult.OK)
             {
                 RefreshList();

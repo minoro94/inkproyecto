@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.label11 = new System.Windows.Forms.Label();
-            this.txtHistorialMedico = new System.Windows.Forms.TextBox();
-            this.txtNombreCliente = new System.Windows.Forms.TextBox();
+            this.txtNota = new System.Windows.Forms.TextBox();
+            this.txtNombreProducto = new System.Windows.Forms.TextBox();
             this.Obligatorio = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -46,11 +46,13 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.nudCantidad = new System.Windows.Forms.NumericUpDown();
+            this.lblMnesaje1 = new System.Windows.Forms.Label();
+            this.txtMensaje2 = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
             this.SuspendLayout();
             // 
             // label11
@@ -65,24 +67,25 @@
             this.label11.TabIndex = 86;
             this.label11.Text = "Nota";
             // 
-            // txtHistorialMedico
+            // txtNota
             // 
-            this.txtHistorialMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHistorialMedico.Location = new System.Drawing.Point(9, 165);
-            this.txtHistorialMedico.MaxLength = 500;
-            this.txtHistorialMedico.Multiline = true;
-            this.txtHistorialMedico.Name = "txtHistorialMedico";
-            this.txtHistorialMedico.Size = new System.Drawing.Size(562, 128);
-            this.txtHistorialMedico.TabIndex = 84;
+            this.txtNota.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNota.Location = new System.Drawing.Point(9, 165);
+            this.txtNota.MaxLength = 500;
+            this.txtNota.Multiline = true;
+            this.txtNota.Name = "txtNota";
+            this.txtNota.Size = new System.Drawing.Size(562, 128);
+            this.txtNota.TabIndex = 3;
             // 
-            // txtNombreCliente
+            // txtNombreProducto
             // 
-            this.txtNombreCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreCliente.Location = new System.Drawing.Point(134, 74);
-            this.txtNombreCliente.MaxLength = 50;
-            this.txtNombreCliente.Name = "txtNombreCliente";
-            this.txtNombreCliente.Size = new System.Drawing.Size(437, 22);
-            this.txtNombreCliente.TabIndex = 88;
+            this.txtNombreProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreProducto.Location = new System.Drawing.Point(134, 74);
+            this.txtNombreProducto.MaxLength = 50;
+            this.txtNombreProducto.Name = "txtNombreProducto";
+            this.txtNombreProducto.Size = new System.Drawing.Size(437, 22);
+            this.txtNombreProducto.TabIndex = 1;
+            this.txtNombreProducto.TextChanged += new System.EventHandler(this.txtNombreProducto_TextChanged);
             // 
             // Obligatorio
             // 
@@ -163,6 +166,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox3.TabIndex = 50;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // panel6
             // 
@@ -213,10 +217,11 @@
             this.btnAplicar.Location = new System.Drawing.Point(289, 308);
             this.btnAplicar.Name = "btnAplicar";
             this.btnAplicar.Size = new System.Drawing.Size(90, 29);
-            this.btnAplicar.TabIndex = 95;
+            this.btnAplicar.TabIndex = 4;
             this.btnAplicar.Text = "&Aplicar";
             this.btnAplicar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAplicar.UseVisualStyleBackColor = true;
+            this.btnAplicar.Click += new System.EventHandler(this.btnAplicar_Click);
             // 
             // btnCancelar
             // 
@@ -226,10 +231,11 @@
             this.btnCancelar.Location = new System.Drawing.Point(481, 308);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(90, 29);
-            this.btnCancelar.TabIndex = 97;
+            this.btnCancelar.TabIndex = 6;
             this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAceptar
             // 
@@ -239,10 +245,11 @@
             this.btnAceptar.Location = new System.Drawing.Point(385, 308);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(90, 29);
-            this.btnAceptar.TabIndex = 96;
+            this.btnAceptar.TabIndex = 5;
             this.btnAceptar.Text = "&Aceptar";
             this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // label2
             // 
@@ -256,19 +263,49 @@
             this.label2.TabIndex = 98;
             this.label2.Text = "Cantidad";
             // 
-            // numericUpDown1
+            // nudCantidad
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(131, 115);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(77, 22);
-            this.numericUpDown1.TabIndex = 99;
+            this.nudCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudCantidad.Location = new System.Drawing.Point(131, 115);
+            this.nudCantidad.Name = "nudCantidad";
+            this.nudCantidad.Size = new System.Drawing.Size(77, 22);
+            this.nudCantidad.TabIndex = 2;
+            // 
+            // lblMnesaje1
+            // 
+            this.lblMnesaje1.AutoSize = true;
+            this.lblMnesaje1.BackColor = System.Drawing.Color.White;
+            this.lblMnesaje1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMnesaje1.ForeColor = System.Drawing.Color.Red;
+            this.lblMnesaje1.Location = new System.Drawing.Point(12, 308);
+            this.lblMnesaje1.Name = "lblMnesaje1";
+            this.lblMnesaje1.Size = new System.Drawing.Size(135, 16);
+            this.lblMnesaje1.TabIndex = 101;
+            this.lblMnesaje1.Text = "Campos Obligatorios";
+            this.lblMnesaje1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtMensaje2
+            // 
+            this.txtMensaje2.BackColor = System.Drawing.Color.Red;
+            this.txtMensaje2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMensaje2.Enabled = false;
+            this.txtMensaje2.ForeColor = System.Drawing.SystemColors.Control;
+            this.txtMensaje2.Location = new System.Drawing.Point(9, 305);
+            this.txtMensaje2.Multiline = true;
+            this.txtMensaje2.Name = "txtMensaje2";
+            this.txtMensaje2.ReadOnly = true;
+            this.txtMensaje2.Size = new System.Drawing.Size(141, 22);
+            this.txtMensaje2.TabIndex = 100;
+            this.txtMensaje2.TabStop = false;
             // 
             // frmTATInventarioINS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(580, 349);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.lblMnesaje1);
+            this.Controls.Add(this.txtMensaje2);
+            this.Controls.Add(this.nudCantidad);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnAplicar);
             this.Controls.Add(this.btnCancelar);
@@ -278,22 +315,24 @@
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.txtNombreCliente);
+            this.Controls.Add(this.txtNombreProducto);
             this.Controls.Add(this.Obligatorio);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.txtHistorialMedico);
+            this.Controls.Add(this.txtNota);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmTATInventarioINS";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTATInventarioINS";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmTATInventarioINS_FormClosing);
+            this.Load += new System.EventHandler(this.frmTATInventarioINS_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -302,8 +341,8 @@
         #endregion
 
         private System.Windows.Forms.Label label11;
-        public System.Windows.Forms.TextBox txtHistorialMedico;
-        public System.Windows.Forms.TextBox txtNombreCliente;
+        public System.Windows.Forms.TextBox txtNota;
+        public System.Windows.Forms.TextBox txtNombreProducto;
         public System.Windows.Forms.TextBox Obligatorio;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel5;
@@ -319,6 +358,8 @@
         public System.Windows.Forms.Button btnCancelar;
         public System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown nudCantidad;
+        private System.Windows.Forms.Label lblMnesaje1;
+        public System.Windows.Forms.TextBox txtMensaje2;
     }
 }

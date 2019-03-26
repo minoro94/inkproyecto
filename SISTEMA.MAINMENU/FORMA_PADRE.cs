@@ -251,5 +251,16 @@ namespace SISTEMA.MAINMENU
 
         }
         #endregion
+
+        #region INVENTARIO
+        private void inventarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTATInventarioCAT frm = new frmTATInventarioCAT();
+            frm.USUARIO = strUsuario.nombreUsuario;
+            frm.idUsuario = strUsuario.idUsuario;
+            string nombreTabla = "Inventario";
+            AgregarHijos(ref nombreTabla, frm);
+        }
+        #endregion
     }
 }

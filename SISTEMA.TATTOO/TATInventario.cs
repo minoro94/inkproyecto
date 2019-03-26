@@ -138,7 +138,7 @@ namespace SISTEMA.TATTOO
         {
             DB.conexionBD();
 
-            DB.COM1.CommandText = "spTATInventario ";
+            DB.COM1.CommandText = "spInventario ";
             DB.COM1.CommandType = CommandType.StoredProcedure;
 
             DB.COM1.Connection = DB.objConexion;
@@ -148,6 +148,7 @@ namespace SISTEMA.TATTOO
             {
                 DB.COM1.Parameters.AddWithValue("ACCION", Instruccion);
                 DB.COM1.Parameters.AddWithValue("idInventario", str.idInventario);
+                DB.COM1.Parameters.AddWithValue("NombreProducto", str.NombreProducto);
                 DB.COM1.Parameters.AddWithValue("idUsuario", str.idUsuario);
                 DB.COM1.Parameters.AddWithValue("Cantidad", str.Cantidad);
                 DB.COM1.Parameters.AddWithValue("Nota", str.Nota);
@@ -161,7 +162,8 @@ namespace SISTEMA.TATTOO
                     DB.REG1.Read();
                     str.idInventario = Convert.ToInt32(DB.REG1["idInventario"]);
                     str.idUsuario = Convert.ToInt32(DB.REG1["idUsuario"]);
-                    str.Cantidad = Convert.ToInt32(DB.REG1["cantidadStock"]);
+                    str.NombreProducto = Convert.ToString(DB.REG1["NombreProducto"]);
+                    str.Cantidad = Convert.ToInt32(DB.REG1["Cantidad"]);
                     str.Nota = Convert.ToString(DB.REG1["Nota"]);
                     str.USUARIO = DB.REG1["USUARIO"].ToString();
                     str.FECHAHORACAMBIO = Convert.ToDateTime(DB.REG1["FECHAHORACAMBIO"]);
@@ -170,7 +172,7 @@ namespace SISTEMA.TATTOO
                 }
                 return true;
             }
-            catch
+            catch(Exception e)
             {
                 return false;
             }

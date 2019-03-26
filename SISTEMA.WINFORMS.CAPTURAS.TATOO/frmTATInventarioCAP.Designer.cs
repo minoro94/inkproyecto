@@ -39,18 +39,17 @@
             this.Pro = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Can = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lstLista = new System.Windows.Forms.ListView();
-            this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.cbxTamaño = new System.Windows.Forms.ComboBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.cbxProducto = new System.Windows.Forms.ComboBox();
+            this.nudCantidad = new System.Windows.Forms.NumericUpDown();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.btnAgregarCliente = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -93,9 +92,9 @@
             this.label8.Location = new System.Drawing.Point(52, 11);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(66, 16);
+            this.label8.Size = new System.Drawing.Size(137, 16);
             this.label8.TabIndex = 51;
-            this.label8.Text = "Inventario";
+            this.label8.Text = "Instrumentos a Utilizar";
             // 
             // pictureBox3
             // 
@@ -171,16 +170,6 @@
             this.lstLista.UseCompatibleStateImageBehavior = false;
             this.lstLista.View = System.Windows.Forms.View.Details;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(215, 43);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(143, 16);
-            this.label2.TabIndex = 129;
-            this.label2.Text = "Productos a Utilizar";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -191,23 +180,23 @@
             this.label7.TabIndex = 134;
             this.label7.Text = "Producto";
             // 
-            // cbxTamaño
+            // cbxProducto
             // 
-            this.cbxTamaño.BackColor = System.Drawing.SystemColors.Window;
-            this.cbxTamaño.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxTamaño.FormattingEnabled = true;
-            this.cbxTamaño.Location = new System.Drawing.Point(97, 78);
-            this.cbxTamaño.Name = "cbxTamaño";
-            this.cbxTamaño.Size = new System.Drawing.Size(263, 24);
-            this.cbxTamaño.TabIndex = 133;
-            this.cbxTamaño.TabStop = false;
+            this.cbxProducto.BackColor = System.Drawing.SystemColors.Window;
+            this.cbxProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxProducto.FormattingEnabled = true;
+            this.cbxProducto.Location = new System.Drawing.Point(97, 78);
+            this.cbxProducto.Name = "cbxProducto";
+            this.cbxProducto.Size = new System.Drawing.Size(263, 24);
+            this.cbxProducto.TabIndex = 133;
+            this.cbxProducto.TabStop = false;
             // 
-            // numericUpDown1
+            // nudCantidad
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(376, 80);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(48, 22);
-            this.numericUpDown1.TabIndex = 135;
+            this.nudCantidad.Location = new System.Drawing.Point(376, 80);
+            this.nudCantidad.Name = "nudCantidad";
+            this.nudCantidad.Size = new System.Drawing.Size(48, 22);
+            this.nudCantidad.TabIndex = 135;
             // 
             // btnCancelar
             // 
@@ -240,16 +229,17 @@
             this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAceptar.UseVisualStyleBackColor = true;
             // 
-            // btnAgregarCliente
+            // btnAgregar
             // 
-            this.btnAgregarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarCliente.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.Mas;
-            this.btnAgregarCliente.Location = new System.Drawing.Point(464, 64);
-            this.btnAgregarCliente.Name = "btnAgregarCliente";
-            this.btnAgregarCliente.Size = new System.Drawing.Size(50, 50);
-            this.btnAgregarCliente.TabIndex = 138;
-            this.btnAgregarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAgregarCliente.UseVisualStyleBackColor = true;
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.Mas;
+            this.btnAgregar.Location = new System.Drawing.Point(464, 64);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(50, 50);
+            this.btnAgregar.TabIndex = 138;
+            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // panel7
             // 
@@ -266,13 +256,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(549, 335);
             this.Controls.Add(this.panel7);
-            this.Controls.Add(this.btnAgregarCliente);
+            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.nudCantidad);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.cbxTamaño);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.cbxProducto);
             this.Controls.Add(this.lstLista);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -288,7 +277,7 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -307,13 +296,12 @@
         public System.Windows.Forms.ColumnHeader Pro;
         public System.Windows.Forms.ColumnHeader Can;
         public System.Windows.Forms.ListView lstLista;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cbxTamaño;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.ComboBox cbxProducto;
+        private System.Windows.Forms.NumericUpDown nudCantidad;
         public System.Windows.Forms.Button btnCancelar;
         public System.Windows.Forms.Button btnAceptar;
-        public System.Windows.Forms.Button btnAgregarCliente;
+        public System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Panel panel7;
     }
 }

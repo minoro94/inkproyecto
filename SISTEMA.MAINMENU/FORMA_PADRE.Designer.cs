@@ -33,7 +33,6 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.Administrar = new System.Windows.Forms.ToolStripDropDownButton();
             this.inventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.empleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -83,7 +82,6 @@
             // 
             this.Administrar.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.inventarioToolStripMenuItem,
-            this.productosToolStripMenuItem,
             this.toolStripSeparator4,
             this.empleadosToolStripMenuItem,
             this.usuariosToolStripMenuItem,
@@ -101,28 +99,21 @@
             this.inventarioToolStripMenuItem.Image = global::SISTEMA.MAINMENU.Properties.Resources.PRODUCTO;
             this.inventarioToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.inventarioToolStripMenuItem.Name = "inventarioToolStripMenuItem";
-            this.inventarioToolStripMenuItem.Size = new System.Drawing.Size(155, 32);
+            this.inventarioToolStripMenuItem.Size = new System.Drawing.Size(189, 32);
             this.inventarioToolStripMenuItem.Text = "Inventario";
-            // 
-            // productosToolStripMenuItem
-            // 
-            this.productosToolStripMenuItem.Image = global::SISTEMA.MAINMENU.Properties.Resources.PRODUCTO2;
-            this.productosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(155, 32);
-            this.productosToolStripMenuItem.Text = "Productos";
+            this.inventarioToolStripMenuItem.Click += new System.EventHandler(this.inventarioToolStripMenuItem_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(152, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(186, 6);
             // 
             // empleadosToolStripMenuItem
             // 
             this.empleadosToolStripMenuItem.Image = global::SISTEMA.MAINMENU.Properties.Resources.EMPLEADOS;
             this.empleadosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
-            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(155, 32);
+            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(189, 32);
             this.empleadosToolStripMenuItem.Text = "&Empleados";
             this.empleadosToolStripMenuItem.Click += new System.EventHandler(this.empleadosToolStripMenuItem_Click);
             // 
@@ -131,14 +122,14 @@
             this.usuariosToolStripMenuItem.Image = global::SISTEMA.MAINMENU.Properties.Resources.USUARIOS;
             this.usuariosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(155, 32);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(189, 32);
             this.usuariosToolStripMenuItem.Text = "&Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(152, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(186, 6);
             // 
             // toolStripButtonCitas
             // 
@@ -373,7 +364,6 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripDropDownButton Administrar;
         private System.Windows.Forms.ToolStripMenuItem inventarioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem productosToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripMenuItem empleadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;

@@ -22,7 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <IntermediateOutputPath>C:\Users\Usuario\AppData\Local\Temp\vs99E1.tmp\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Leyva\AppData\Local\Temp\vsB91C.tmp\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,7 +32,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <IntermediateOutputPath>C:\Users\Usuario\AppData\Local\Temp\vs99E1.tmp\Release\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Leyva\AppData\Local\Temp\vsB91C.tmp\Release\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -338,6 +338,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTATInventarioINS.resx">
       <DependentUpon>frmTATInventarioINS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATInventarioMDF.resx">
+      <DependentUpon>frmTATInventarioMDF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATInventarioRMV.resx">
+      <DependentUpon>frmTATInventarioRMV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTATTamañosCAT.resx">
       <DependentUpon>frmTATTamañosCAT.cs</DependentUpon>
