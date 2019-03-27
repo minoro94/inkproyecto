@@ -241,11 +241,11 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         #region LOAD
         private void frmTATCitasCAP_INS_Load(object sender, EventArgs e)
         {
-            FillComboTamaños();
-            FillComboEstadoCita();
-            FillDatosClientes();
-            CargarPerfil(strClientes.Sexo);
-            PanelInfoTatuaje_MouseDown(null, null);
+           FillComboTamaños();
+           FillComboEstadoCita();
+           FillDatosClientes();
+           CargarPerfil(strClientes.Sexo);
+           PanelInfoTatuaje_MouseDown(null, null);
         }
         #endregion
 
