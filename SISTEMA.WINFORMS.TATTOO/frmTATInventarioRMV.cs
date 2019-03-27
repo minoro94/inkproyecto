@@ -31,6 +31,7 @@ namespace SISTEMA.WINFORMS.TATTOO
         {
             str.idInventario = id;
             str.idUsuario = idUsuario;
+            str.USUARIO = USUARIO;
             if(TABLA.DAO(ref str, 3))
             {
                 MessageBox.Show(this, "El registro ah sido eliminado correctamente", "OPERACION CORRECTA", MessageBoxButtons.OK, MessageBoxIcon.Information);

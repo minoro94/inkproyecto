@@ -103,7 +103,7 @@ namespace SISTEMA.WINFORMS.TATTOO
             str.Nota = txtNota.Text.Trim();
             str.USUARIO = USUARIO;
             str.idUsuario = idUsuario;
-
+            str.idInventario = id;
             bool Agregado = TABLA.DAO(ref str, 2);
             if (Agregado)
             {

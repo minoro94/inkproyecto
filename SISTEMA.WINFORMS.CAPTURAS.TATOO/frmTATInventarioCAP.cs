@@ -24,15 +24,30 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         TATInventario.strTATInventario[] ARR_Inventario;
         ArrayList IDsInventario = new ArrayList();
 
-        strInven[] ARR = null;
+        
         public DataTable dTable = new DataTable();
         #endregion
 
-        #region ESTRUCTURA PRIVADA
-        private struct strInven
+        #region ENABLE BUTONS
+        private void EnableButton()
         {
-            public string NombreProducto;
-            public int Cantidad;
+            if(lstLista.SelectedItems.Count > 0)
+            {
+                btnEliminar.Enabled = true;
+            }
+            else
+            {
+                btnEliminar.Enabled = false;
+            }
+
+            if(lstLista.Items.Count > 0)
+            {
+                btnAceptar.Enabled = true;
+            }
+            else
+            {
+                btnAceptar.Enabled = false;
+            }
         }
         #endregion
 
@@ -61,31 +76,98 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         #region BOTON AGREGAR
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            lstLista.Items.Clear();
-            ARR = new strInven[ARR.Length + 1];
-            for (int i = 0; i < ARR.Length; i++)
+            ListViewItem L;
+            foreach(TATInventario.strTATInventario Dato in ARR_Inventario)
             {
-                if(ARR == null)
+                for (int i = 0; i < lstLista.Items.Count; i++)
                 {
-                    ARR[i].NombreProducto = cbxProducto.SelectedItem.ToString();
-                    ARR[i].Cantidad = Convert.ToInt32(nudCantidad.Value);
+                    if (lstLista.Items[i].SubItems[0].Text == cbxProducto.SelectedItem.ToString())
+                    {
+                        if(lstLista.Items[i].SubItems[1].Text == nudCantidad.Value.ToString())
+                        {
+                            return;
+                        }
+                        else
+                        {
+                            lstLista.Items[i].SubItems[1].Text = nudCantidad.Value.ToString();
+                            return;
+                        }
+                        
+                    }
                 }
-                else
-                {
-                    ARR[i].NombreProducto = ARR[i].NombreProducto;
-                    ARR[i].Cantidad = ARR[i].Cantidad;
-                }
+                    if (Dato.NombreProducto == cbxProducto.SelectedItem.ToString())
+                    {
+                        L = new ListViewItem();
+                        L.Tag = Dato;
+                        L.Text = Dato.NombreProducto;
+                        L.SubItems.Add(Convert.ToString(nudCantidad.Value));
+                        lstLista.Items.Add(L);
+                    }
+
+                EnableButton();
                 
             }
-            ListViewItem L;
-            foreach(strInven Dato in ARR)
+        }
+        #endregion
+
+        #region LOAD
+        private void frmTATInventarioCAP_Load(object sender, EventArgs e)
+        {
+            EnableButton();
+            FillComboInventario();
+        }
+        #endregion
+
+        #region CLOSE
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        #endregion
+
+        #region BOTON CANCELAR
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        #endregion
+
+        #region BOTON ELIMINAR
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            lstLista.Items.RemoveAt(lstLista.SelectedIndices[0]);
+            EnableButton();
+        }
+        #endregion
+
+        #region LISTA SELECTED INDEX CHANGED
+        private void lstLista_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            EnableButton();
+        }
+        #endregion
+
+        #region BOTON ACEPTAR
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+
+            
+            dTable.Columns.Add("idInventario", typeof(int));
+            dTable.Columns.Add("Cantidad", typeof(int));
+            
+            foreach(TATInventario.strTATInventario Dato in ARR_Inventario)
             {
-                L = new ListViewItem();
-                L.Tag = Dato;
-                L.Text = Dato.NombreProducto;
-                L.SubItems.Add(Convert.ToString(Dato.Cantidad));
-                lstLista.Items.Add(L);
+                for (int i = 0; i < lstLista.Items.Count; i++)
+                {
+                    if(Dato.NombreProducto == lstLista.Items[i].SubItems[0].Text)
+                    {
+                        dTable.Rows.Add(Dato.idInventario, Convert.ToInt32(lstLista.Items[i].SubItems[1].Text));
+                    }
+                }
+                    
+                
             }
+
         }
         #endregion
     }

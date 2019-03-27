@@ -56,7 +56,7 @@ namespace SISTEMA.TATTOO
                 {
                     ARR[i] = new strTATInventario();
                     ARR[i].idInventario = (int)DB.REG1["idInventario"];
-                    
+                    ARR[i].NombreProducto = (string)DB.REG1["NombreProducto"];
                     ARR[i].idUsuario = (int)DB.REG1["idUsuario"];
                     ARR[i].Cantidad = (int)DB.REG1["Cantidad"];
                     ARR[i].Nota = DB.REG1["Nota"].ToString();
@@ -109,6 +109,7 @@ namespace SISTEMA.TATTOO
                     ARR[i] = new strTATInventario();
                     ARR[i].idInventario = (int)DB.REG1["idInventario"];
                     ARR[i].idUsuario = (int)DB.REG1["idUsuario"];
+                    ARR[i].NombreProducto = (string)DB.REG1["NombreProducto"];
                     ARR[i].Cantidad = (int)DB.REG1["Cantidad"];
                     ARR[i].Nota = DB.REG1["Nota"].ToString();
                     ARR[i].USUARIO = DB.REG1["USUARIO"].ToString();

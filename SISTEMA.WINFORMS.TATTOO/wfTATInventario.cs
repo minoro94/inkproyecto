@@ -34,6 +34,7 @@ namespace SISTEMA.WINFORMS.TATTOO
             frm.txtNota.Text = str.Nota;
             frm.USUARIO = str.USUARIO;
             frm.idUsuario = str.idUsuario;
+            frm.id = str.idInventario;
             return frm.ShowDialog();
         }
         #endregion
@@ -42,6 +43,11 @@ namespace SISTEMA.WINFORMS.TATTOO
         public DialogResult Remover(ref TATInventario.strTATInventario str, string USUARIO)
         {
             frmTATInventarioRMV frm = new frmTATInventarioRMV();
+            frm.lblNombreProducto.Text = str.NombreProducto;
+            frm.lblNota.Text = str.Nota;
+            frm.lblCantidad.Text = str.Cantidad.ToString();
+            frm.USUARIO = str.USUARIO;
+            frm.id = str.idInventario;
             return frm.ShowDialog();
         }
         #endregion

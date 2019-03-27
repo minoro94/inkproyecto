@@ -87,7 +87,7 @@
             this.nudCantidad.Location = new System.Drawing.Point(131, 115);
             this.nudCantidad.Name = "nudCantidad";
             this.nudCantidad.Size = new System.Drawing.Size(77, 22);
-            this.nudCantidad.TabIndex = 114;
+            this.nudCantidad.TabIndex = 2;
             // 
             // label2
             // 
@@ -109,7 +109,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(481, 308);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(90, 29);
-            this.btnCancelar.TabIndex = 112;
+            this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -123,7 +123,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(385, 308);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(90, 29);
-            this.btnAceptar.TabIndex = 111;
+            this.btnAceptar.TabIndex = 4;
             this.btnAceptar.Text = "&Aceptar";
             this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -213,7 +213,7 @@
             this.txtNombreProducto.MaxLength = 50;
             this.txtNombreProducto.Name = "txtNombreProducto";
             this.txtNombreProducto.Size = new System.Drawing.Size(437, 22);
-            this.txtNombreProducto.TabIndex = 105;
+            this.txtNombreProducto.TabIndex = 1;
             this.txtNombreProducto.TextChanged += new System.EventHandler(this.txtNombreProducto_TextChanged);
             // 
             // Obligatorio
@@ -262,7 +262,7 @@
             this.txtNota.Multiline = true;
             this.txtNota.Name = "txtNota";
             this.txtNota.Size = new System.Drawing.Size(562, 128);
-            this.txtNota.TabIndex = 102;
+            this.txtNota.TabIndex = 3;
             // 
             // panel4
             // 
