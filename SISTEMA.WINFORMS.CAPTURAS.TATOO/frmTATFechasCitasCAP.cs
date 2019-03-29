@@ -97,10 +97,12 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         #region BOTON ACEPTAR
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+            dTable.Columns.Add("idSesionCita", typeof(int));
             dTable.Columns.Add("FechaCita", typeof(DateTime));
+            dTable.Columns.Add("ELIMINADO", typeof(bool));
             for (int i = 0; i < lstLista.Items.Count; i++)
             {
-                dTable.Rows.Add(Convert.ToDateTime(lstLista.Items[i].SubItems[0].Text));
+                dTable.Rows.Add(0,Convert.ToDateTime(lstLista.Items[i].SubItems[0].Text),0);
             }
         }
         #endregion

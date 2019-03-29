@@ -94,6 +94,12 @@
     <Compile Include="frmTATFechasCitasCAP.Designer.cs">
       <DependentUpon>frmTATFechasCitasCAP.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTATFirmaCAP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATFirmaCAP.Designer.cs">
+      <DependentUpon>frmTATFirmaCAP.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTATInventarioCAP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTATFechasCitasCAP.resx">
       <DependentUpon>frmTATFechasCitasCAP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATFirmaCAP.resx">
+      <DependentUpon>frmTATFirmaCAP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTATInventarioCAP.resx">
       <DependentUpon>frmTATInventarioCAP.cs</DependentUpon>

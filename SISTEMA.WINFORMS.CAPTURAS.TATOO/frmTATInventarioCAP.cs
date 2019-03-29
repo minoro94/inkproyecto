@@ -151,9 +151,10 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         private void btnAceptar_Click(object sender, EventArgs e)
         {
 
-            
+            dTable.Columns.Add("idCitaInventario", typeof(int));
             dTable.Columns.Add("idInventario", typeof(int));
             dTable.Columns.Add("Cantidad", typeof(int));
+            dTable.Columns.Add("ELIMINADO", typeof(bool));
             
             foreach(TATInventario.strTATInventario Dato in ARR_Inventario)
             {
@@ -161,7 +162,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                 {
                     if(Dato.NombreProducto == lstLista.Items[i].SubItems[0].Text)
                     {
-                        dTable.Rows.Add(Dato.idInventario, Convert.ToInt32(lstLista.Items[i].SubItems[1].Text));
+                        dTable.Rows.Add(0,Dato.idInventario, Convert.ToInt32(lstLista.Items[i].SubItems[1].Text),0);
                     }
                 }
                     

@@ -403,6 +403,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             
             
             fileNom = @"C:\Rep\SISTEMA.WINFORMS.CAPTURAS.TATOO\Capturas\Img" + Convert.ToString(rnd.Next(10000)) + ".png";
+            //fileNom = global::SISTEMA.WINFORMS.CAPTURAS + @"\Img.png";
             imgZonaCuerpo = fileNom;
             BmpScreen.Save(fileNom, System.Drawing.Imaging.ImageFormat.Png);
 

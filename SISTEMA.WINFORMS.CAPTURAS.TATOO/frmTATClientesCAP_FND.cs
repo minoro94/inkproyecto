@@ -80,7 +80,8 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         #region BOTON ACEPTAR
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            frmTATCitasCAP_INS frm = new frmTATCitasCAP_INS();
+           // frmTATCitasCAP_INS frm = new frmTATCitasCAP_INS();
+            frmTATCitasCAP_INS2 frm = new frmTATCitasCAP_INS2();
             strClientes.idCliente = Convert.ToInt32(IDsClientes[cbxClientes.SelectedIndex]);
             frm.idCliente = strClientes.idCliente;
             
