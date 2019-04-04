@@ -62,6 +62,8 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         #region LOAD
         private void frmTATFechasCitasCAP_Load(object sender, EventArgs e)
         {
+            CrearDT();
+            RefreshList();
             EnableButton();
         }
         #endregion
@@ -77,7 +79,9 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         #region LISTA SELECTED INDEX CHANGED
         private void lstLista_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
             EnableButton();
+           
         }
         #endregion
 
@@ -94,15 +98,47 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         }
         #endregion
 
+        #region REFRESH LIST
+        private void RefreshList()
+        {
+            ListViewItem L;
+            for (int i = 0; i < dTable.Rows.Count; i++)
+            {
+                L = new ListViewItem();
+                L.Tag = dTable;
+                L.Text = Convert.ToString(dTable.Rows[i].ItemArray[1]);
+                lstLista.Items.Add(L);
+            }
+            EnableButton();
+        }
+        #endregion
         #region BOTON ACEPTAR
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            dTable.Columns.Add("idSesionCita", typeof(int));
-            dTable.Columns.Add("FechaCita", typeof(DateTime));
-            dTable.Columns.Add("ELIMINADO", typeof(bool));
+            dTable.Clear();
             for (int i = 0; i < lstLista.Items.Count; i++)
             {
                 dTable.Rows.Add(0,Convert.ToDateTime(lstLista.Items[i].SubItems[0].Text),0);
+            }
+
+            this.DialogResult = DialogResult.OK;
+            Close();
+        }
+        #endregion
+
+        #region CREAR DT
+        private void CrearDT()
+        {
+            if(dTable.Columns.Count > 0)
+            {
+
+
+            }
+            else
+            {
+                dTable.Columns.Add("idSesionCita", typeof(int));
+                dTable.Columns.Add("FechaCita", typeof(DateTime));
+                dTable.Columns.Add("ELIMINADO", typeof(bool));
             }
         }
         #endregion

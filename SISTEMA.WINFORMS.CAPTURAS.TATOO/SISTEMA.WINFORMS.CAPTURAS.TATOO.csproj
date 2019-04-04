@@ -108,7 +108,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="wfCitasInventario.cs" />
+    <Compile Include="wfSesionesCitas.cs" />
     <Compile Include="wfTATCitas.cs" />
+    <Compile Include="wfTATFirma.cs" />
     <EmbeddedResource Include="frmTATCitasCAP_CAT.resx">
       <DependentUpon>frmTATCitasCAP_CAT.cs</DependentUpon>
     </EmbeddedResource>

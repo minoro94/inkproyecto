@@ -52,6 +52,18 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
 
         TATCitas.strTATCitas strCitas = new TATCitas.strTATCitas();
         TATCitas TABLA_Citas = new TATCitas();
+
+        #region DATA TABLES
+        DataTable dtImagenesTatto = new DataTable();
+        DataTable dtCitasInventario = new DataTable();
+        DataTable dtSesionesCitas = new DataTable();
+        #endregion
+
+        #region WAFLES
+        wfCitasInventario wfCitasInventario = new wfCitasInventario();
+        wfSesionesCitas wfFechasCitas = new wfSesionesCitas();
+        #endregion
+
         #endregion
 
         #region FILL COMBO TAMAÑOS
@@ -379,5 +391,17 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         #endregion
 
         #endregion
+
+        #region BOTON AGREGAR INSTRUMENTOS
+        private void btnProductos_Click(object sender, EventArgs e)
+        {
+            wfCitasInventario.Agregar(ref dtCitasInventario);
+        }
+        #endregion
+
+        private void btnFechaCita_Click(object sender, EventArgs e)
+        {
+            wfFechasCitas.Agregar(ref dtSesionesCitas);
+        }
     }
 }

@@ -224,6 +224,7 @@
             this.btnFechaCita.TabStop = false;
             this.btnFechaCita.Text = "Fecha Cita";
             this.btnFechaCita.UseVisualStyleBackColor = true;
+            this.btnFechaCita.Click += new System.EventHandler(this.btnFechaCita_Click);
             // 
             // label5
             // 
@@ -516,6 +517,7 @@
             this.btnProductos.TabStop = false;
             this.btnProductos.Text = "INSTRUMENTOS";
             this.btnProductos.UseVisualStyleBackColor = true;
+            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
             // btnFirma
             // 

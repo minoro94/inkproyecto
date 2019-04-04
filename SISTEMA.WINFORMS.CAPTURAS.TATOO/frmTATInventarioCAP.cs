@@ -28,6 +28,29 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         public DataTable dTable = new DataTable();
         #endregion
 
+        #region REFRESH LIST
+        private void RefreshList()
+        {
+            ListViewItem L;
+            for (int i = 0; i < dTable.Rows.Count; i++)
+            {
+                L = new ListViewItem();
+                L.Tag = dTable;
+                foreach(TATInventario.strTATInventario Dato in ARR_Inventario)
+                {
+                    if(Convert.ToInt32(dTable.Rows[i].ItemArray[1]) == Dato.idInventario)
+                    {
+                        L.Text = Dato.NombreProducto;
+                    }
+                }
+                //L.Text = dTable.Rows[i].ItemArray[1].ToString();
+                L.SubItems.Add(Convert.ToString(dTable.Rows[i].ItemArray[2]));
+                lstLista.Items.Add(L);
+            }
+            EnableButton();
+        }
+        #endregion
+
         #region ENABLE BUTONS
         private void EnableButton()
         {
@@ -104,17 +127,22 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                         lstLista.Items.Add(L);
                     }
 
+
                 EnableButton();
-                
             }
+
+            
         }
         #endregion
 
         #region LOAD
         private void frmTATInventarioCAP_Load(object sender, EventArgs e)
         {
+            CrearDT();
             EnableButton();
             FillComboInventario();
+            RefreshList();
+            nudCantidad_KeyUp(null, null);
         }
         #endregion
 
@@ -150,12 +178,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         #region BOTON ACEPTAR
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-
-            dTable.Columns.Add("idCitaInventario", typeof(int));
-            dTable.Columns.Add("idInventario", typeof(int));
-            dTable.Columns.Add("Cantidad", typeof(int));
-            dTable.Columns.Add("ELIMINADO", typeof(bool));
-            
+            dTable.Clear();
             foreach(TATInventario.strTATInventario Dato in ARR_Inventario)
             {
                 for (int i = 0; i < lstLista.Items.Count; i++)
@@ -169,7 +192,44 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                 
             }
 
+            this.DialogResult = DialogResult.OK;
+            Close();
+
         }
         #endregion
+
+        #region CREAR DT
+        private void CrearDT()
+        {
+            if(dTable.Columns.Count > 0)
+            {
+                
+            }
+            else
+            {
+                dTable.Columns.Add("idCitaInventario", typeof(int));
+                dTable.Columns.Add("idInventario", typeof(int));
+                dTable.Columns.Add("Cantidad", typeof(int));
+                dTable.Columns.Add("ELIMINADO", typeof(bool));
+            }
+            
+        }
+        #endregion
+
+        
+
+        
+
+        private void nudCantidad_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (nudCantidad.Value == 0)
+            {
+                btnAgregar.Enabled = false;
+            }
+            else
+            {
+                btnAgregar.Enabled = true;
+            }
+        }
     }
 }

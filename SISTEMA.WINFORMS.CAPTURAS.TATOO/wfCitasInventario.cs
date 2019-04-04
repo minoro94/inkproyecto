@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using SISTEMA.TATTOO;
+using System.Collections;
+using System.Data;
+
+namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
+{
+    public class wfCitasInventario
+    {
+        #region AGREGAR
+        public DialogResult Agregar(ref DataTable dtInvnetario)
+        {
+                frmTATInventarioCAP frm = new frmTATInventarioCAP();
+                frm.dTable = dtInvnetario;
+                return frm.ShowDialog();
+        }
+        #endregion
+    }
+}

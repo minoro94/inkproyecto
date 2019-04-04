@@ -58,5 +58,10 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             posicionPrevia = PosicionActual;
         }
         #endregion
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
