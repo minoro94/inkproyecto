@@ -26,6 +26,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         public string NombreCliente;
         public string Telefono;
         public int idCliente;
+        public string Firma;
 
         int PosicionImg = 0;
         string imgTatuaje;
@@ -62,6 +63,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         #region WAFLES
         wfCitasInventario wfCitasInventario = new wfCitasInventario();
         wfSesionesCitas wfFechasCitas = new wfSesionesCitas();
+        wfTATFirma wfFirma = new wfTATFirma();
         #endregion
 
         #endregion
@@ -402,6 +404,11 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         private void btnFechaCita_Click(object sender, EventArgs e)
         {
             wfFechasCitas.Agregar(ref dtSesionesCitas);
+        }
+
+        private void btnFirma_Click(object sender, EventArgs e)
+        {
+            wfFirma.Agregar(ref Firma);
         }
     }
 }

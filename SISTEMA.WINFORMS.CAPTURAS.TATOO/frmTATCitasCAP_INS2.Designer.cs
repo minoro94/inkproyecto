@@ -529,6 +529,7 @@
             this.btnFirma.TabStop = false;
             this.btnFirma.Text = "FIRMA";
             this.btnFirma.UseVisualStyleBackColor = true;
+            this.btnFirma.Click += new System.EventHandler(this.btnFirma_Click);
             // 
             // PanelBorderAbajo
             // 

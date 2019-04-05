@@ -37,13 +37,15 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ptbFirma = new System.Windows.Forms.PictureBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbFirma)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -142,15 +144,15 @@
             this.panel7.Size = new System.Drawing.Size(549, 4);
             this.panel7.TabIndex = 140;
             // 
-            // pictureBox1
+            // ptbFirma
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox1.Location = new System.Drawing.Point(9, 46);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(531, 197);
-            this.pictureBox1.TabIndex = 141;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
+            this.ptbFirma.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ptbFirma.Location = new System.Drawing.Point(9, 46);
+            this.ptbFirma.Name = "ptbFirma";
+            this.ptbFirma.Size = new System.Drawing.Size(531, 197);
+            this.ptbFirma.TabIndex = 141;
+            this.ptbFirma.TabStop = false;
+            this.ptbFirma.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             // 
             // btnCancelar
             // 
@@ -185,6 +187,10 @@
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // frmTATFirmaCAP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -192,7 +198,7 @@
             this.ClientSize = new System.Drawing.Size(549, 303);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.ptbFirma);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -204,11 +210,12 @@
             this.Name = "frmTATFirmaCAP";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTATFirmaCAP";
+            this.Load += new System.EventHandler(this.frmTATFirmaCAP_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbFirma)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -224,8 +231,10 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.Button btnCancelar;
         public System.Windows.Forms.Button btnAceptar;
+        public System.Windows.Forms.PictureBox ptbFirma;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
