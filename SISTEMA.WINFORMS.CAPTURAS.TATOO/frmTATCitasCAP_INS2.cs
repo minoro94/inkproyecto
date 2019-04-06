@@ -21,12 +21,13 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             InitializeComponent();
         }
 
+        
         #region OBJETOS
         public string USUARIO;
         public string NombreCliente;
         public string Telefono;
         public int idCliente;
-        public string Firma;
+        public string Firma = "";
 
         int PosicionImg = 0;
         string imgTatuaje;
@@ -157,6 +158,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             FillDatosClientes();
             CargarPerfil(strClientes.Sexo);
             ValidaIzDe();
+            EnableButtons();
         }
         #endregion
 
@@ -318,16 +320,20 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         #region ENCONTRAR IMAGEN CARRUSEL
         private void CarruselImagen(int Posicion)
         {
-            
-            for (int i = 0; i <= imgList.Count; i++)
+            if(imgList.Count > 0)
             {
-                if(i == Posicion)
+                for (int i = 0; i <= imgList.Count; i++)
                 {
-                    ptbTatuaje.Image = Image.FromFile(imgList[i]);
+                    if (i == Posicion)
+                    {
+                        ptbTatuaje.Image = Image.FromFile(imgList[i]);
+                    }
                 }
             }
+            
 
             ValidaIzDe();
+            EnableButtons();
         }
         #endregion
 
@@ -343,7 +349,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             {
                 PosicionImg = imgList.Count-1;
             }
-            
+            EnableButtons();
             ValidaIzDe();
            
         }
@@ -401,14 +407,124 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         }
         #endregion
 
+        #region BOTON AGREGAR FECHA CITAS
         private void btnFechaCita_Click(object sender, EventArgs e)
         {
             wfFechasCitas.Agregar(ref dtSesionesCitas);
         }
+        #endregion
 
+        #region BOTON FIRMA
         private void btnFirma_Click(object sender, EventArgs e)
         {
             wfFirma.Agregar(ref Firma);
         }
+        #endregion
+
+        #region BOTON ACEPTAR
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            CapturaPantalla();
+            strCitas.idCliente = idCliente;
+            strCitas.idEstadoCita = Convert.ToInt32(IDsEstadoCita[cbxEstadoCita.SelectedIndex]);
+            strCitas.idTamaño = Convert.ToInt32(IDsTamaños[cbxTamaño.SelectedIndex]);
+            strCitas.Costo = Convert.ToDouble(txtCosto.Text.Trim());
+            strCitas.Anticipo = Convert.ToDouble(txtAnticipo.Text.Trim());
+            strCitas.Descripcion = txtDescripcion.Text.Trim();
+            strCitas.USUARIO = USUARIO;
+            DTImagenesTatto();
+            EncodePeFI();
+
+            bool Agregado = TABLA_Citas.DAO(ref strCitas, 1, dtCitasInventario, dtSesionesCitas, dtImagenesTatto);
+
+            if (Agregado)
+            {
+                MessageBox.Show(this, "Agregado Correctamente", "Operacion Correcta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.DialogResult = DialogResult.OK;
+
+                Close();
+            }
+            else
+            {
+                MessageBox.Show(this, "Ha Ocurrido Un Error", "Operacion Fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.DialogResult = DialogResult.Cancel;
+                return;
+            }
+        }
+
+        #endregion
+
+
+        #region LLENAR DTIMAGENTATTO
+        private void DTImagenesTatto()
+        {
+            dtImagenesTatto.Columns.Add("idImagenTattoo", typeof(int));
+            dtImagenesTatto.Columns.Add("ImagenTattoo", typeof(string));
+            dtImagenesTatto.Columns.Add("ELIMINADO", typeof(bool));
+            for (int i = 0; i < imgList.Count; i++)
+            {
+                String imgTAT = Herramientas.encodeImagen(imgList[i]);
+                dtImagenesTatto.Rows.Add(0, imgTAT, 0);
+            }
+        }
+        #endregion
+
+        #region ENCODE PERFIL
+        private void EncodePeFI()
+        {
+            String ImgZon = Herramientas.encodeImagen(imgZonaCuerpo);
+            strCitas.ZonaCuerpo = ImgZon;
+            String ImgFirma = Herramientas.encodeImagen(Firma);
+            strCitas.Firma = ImgFirma;
+        }
+        #endregion
+        #region BOTON ELIMINAR IMAGEN TATUAJES
+        private void btnEliminarImagen_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < imgList.Count; i++)
+            {
+                if(PosicionImg == i)
+                {
+                    imgList.Remove(imgList[i]);
+                }
+                if(imgList.Count == 0)
+                {
+                    ptbTatuaje.Image.Dispose();
+                    ptbTatuaje.Image = null;
+                }
+            }
+            PosicionImg = 0;
+            CarruselImagen(PosicionImg);
+        }
+        #endregion
+
+        #region ENABLE BUTTONS
+        private void EnableButtons()
+        {
+            if(imgList.Count == 0)
+            {
+                btnEliminarImagen.Enabled = false;
+            }
+            else
+            {
+                btnEliminarImagen.Enabled = true;
+            }
+        }
+        #endregion
+
+        #region CAPTURA DE PANTALLA
+        private void CapturaPantalla()
+        {
+            Bitmap BmpScreen = new Bitmap(ptbPerfil.Size.Width, ptbPerfil.Size.Height, System.Drawing.Imaging.PixelFormat.Format32bppPArgb);
+            Graphics ScreenShot = Graphics.FromImage(BmpScreen);
+            ScreenShot.CopyFromScreen(ptbPerfil.Location.X + this.Location.X + gbInfoTatuajes.Location.X, ptbPerfil.Location.Y + this.Location.Y + gbInfoTatuajes.Location.Y, 0, 0, Screen.PrimaryScreen.Bounds.Size, CopyPixelOperation.SourceCopy);
+            string fileNom = String.Empty;
+            saveFileDialog1.Filter = "Excel files (*.png)|*.png";
+            saveFileDialog1.RestoreDirectory = true;
+            fileNom = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\SISTEMA.WINFORMS.CAPTURAS.TATOO\Capturas\Img" + Convert.ToString(rnd.Next(10000)) + ".png");
+            imgZonaCuerpo = fileNom;
+            BmpScreen.Save(fileNom, System.Drawing.Imaging.ImageFormat.Png);
+        }
+        #endregion
     }
 }

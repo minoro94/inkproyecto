@@ -13,12 +13,16 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
 {
     public class wfTATFirma
     {
+        
+
         #region AGREGAR
-        public DialogResult Agregar(ref string firma)
+        public string Agregar(ref string firma)
         {
             frmTATFirmaCAP frm = new frmTATFirmaCAP();
             frm.DireccionFirma = firma;
-            return frm.ShowDialog();
+            frm.ShowDialog();
+            firma = frm.DireccionFirma;
+            return frm.DireccionFirma;
         }
         #endregion
     }

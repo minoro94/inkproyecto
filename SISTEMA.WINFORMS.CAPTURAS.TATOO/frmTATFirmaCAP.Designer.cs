@@ -152,6 +152,7 @@
             this.ptbFirma.Size = new System.Drawing.Size(531, 197);
             this.ptbFirma.TabIndex = 141;
             this.ptbFirma.TabStop = false;
+            this.ptbFirma.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ptbFirma_MouseClick);
             this.ptbFirma.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             // 
             // btnCancelar

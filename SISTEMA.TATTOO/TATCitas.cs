@@ -23,7 +23,7 @@ namespace SISTEMA.TATTOO
             public int idTamaño;
             public DateTime FechaCita;
             public string Firma;
-            public string ImagenTatto;
+           // public string ImagenTatto;
             public double Costo;
             public double Anticipo;
             public string ZonaCuerpo;
@@ -31,7 +31,7 @@ namespace SISTEMA.TATTOO
             public string USUARIO;
             public DateTime FECHAHORACAMBIO;
             public bool ELIMINADO;
-
+            public int NumeroSesion;
             public string nombreCliente;
             public string Tamaño;
             public string NombreEstadoCita;
@@ -57,7 +57,7 @@ namespace SISTEMA.TATTOO
             DB.COM1.Parameters.Add(SQP1);
             DB.COM1.Parameters.Add(SQP2);
             Cuantos = (int)DB.COM1.ExecuteScalar();
-            DB.COM1.CommandText = "Select * from dbo.visCitasPorFecha where FechaCita <  CAST(dateadd(day, 1 ,@FechaFin) AS DATE) and FechaCita> CAST(dateadd(day, -1 ,@FechaInicio) AS DATE) and ELIMINADO = 0  and nombreCliente like  '%' + '" + str.nombreCliente + "' + '%' order by FechaCita desc";
+            DB.COM1.CommandText = "Select * from dbo.visCitasPorFecha where FechaCita <  CAST(dateadd(day, 1 ,@FechaFin) AS DATE) and FechaCita> CAST(dateadd(day, -1 ,@FechaInicio) AS DATE) and ELIMINADO = 0  and nombreCliente like  '%' + '" + str.nombreCliente + "' + '%' ORDER BY FechaCita asc";
 
             try
             {
@@ -73,7 +73,7 @@ namespace SISTEMA.TATTOO
                     ARR[i].FechaCita = (DateTime)DB.REG1["FechaCita"];
                     ARR[i].idEstadoCita = (int)DB.REG1["idEstadoCita"];
                     ARR[i].Firma = (string)DB.REG1["Firma"];
-                    ARR[i].ImagenTatto = (string)DB.REG1["ImagenTattoo"];
+                   //ARR[i].ImagenTatto = (string)DB.REG1["ImagenTattoo"];
                     ARR[i].idTamaño = (int)DB.REG1["idTamaño"];
                     ARR[i].Costo = Convert.ToDouble(DB.REG1["Costo"]);
                     ARR[i].Anticipo = Convert.ToDouble(DB.REG1["Anticipo"]);
@@ -81,6 +81,7 @@ namespace SISTEMA.TATTOO
                     ARR[i].Descripcion = (string)DB.REG1["Descripcion"];
                     ARR[i].USUARIO = (string)DB.REG1["USUARIO"];
                     ARR[i].ELIMINADO = (bool)DB.REG1["ELIMINADO"];
+                    ARR[i].NumeroSesion = (int)DB.REG1["NumeroSesion"];
                     ARR[i].nombreCliente = (string)DB.REG1["nombreCliente"];
                     ARR[i].Tamaño = (string)DB.REG1["Tamaño"];
                     ARR[i].NombreEstadoCita = (string)DB.REG1["NombreEstadoCita"];
@@ -106,11 +107,11 @@ namespace SISTEMA.TATTOO
         #endregion
 
         #region DAO
-        public bool DAO(ref strTATCitas str, int Instruccion)
+        public bool DAO(ref strTATCitas str, int Instruccion, DataTable dtInventario, DataTable dtFechaCitas, DataTable dtImgTatto)
         {
             DB.conexionBD();
 
-            DB.COM1.CommandText = "spCitas";
+            DB.COM1.CommandText = "spCitasDET";
             DB.COM1.CommandType = CommandType.StoredProcedure;
 
             DB.COM1.Connection = DB.objConexion;
@@ -123,16 +124,19 @@ namespace SISTEMA.TATTOO
                 DB.COM1.Parameters.AddWithValue("idCliente",str.idCliente);
                 DB.COM1.Parameters.AddWithValue("idEstadoCita",str.idEstadoCita);
                 DB.COM1.Parameters.AddWithValue("idTamaño",str.idTamaño);
-                DB.COM1.Parameters.AddWithValue("FechaCita",str.FechaCita);
+                //DB.COM1.Parameters.AddWithValue("FechaCita",str.FechaCita);
                 DB.COM1.Parameters.AddWithValue("Firma",str.Firma);
-                DB.COM1.Parameters.AddWithValue("ImagenTattoo",str.ImagenTatto);
+                //DB.COM1.Parameters.AddWithValue("ImagenTattoo",str.ImagenTatto);
                 DB.COM1.Parameters.AddWithValue("Costo",str.Costo);
                 DB.COM1.Parameters.AddWithValue("Anticipo",str.Anticipo);
                 DB.COM1.Parameters.AddWithValue("ZonaCuerpo",str.ZonaCuerpo);
                 DB.COM1.Parameters.AddWithValue("Descripcion",str.Descripcion);
                 DB.COM1.Parameters.AddWithValue("USUARIO",str.USUARIO);
-               // DB.COM1.Parameters.AddWithValue("FECHAHORACAMBIO",DateTime.Now);
-               // DB.COM1.Parameters.AddWithValue("ELIMINADO",str.ELIMINADO);
+                DB.COM1.Parameters.AddWithValue("FECHAHORACAMBIO",DateTime.Now);
+                DB.COM1.Parameters.AddWithValue("ELIMINADO",str.ELIMINADO);
+                DB.COM1.Parameters.AddWithValue("tblCitasInventario", dtInventario);
+                DB.COM1.Parameters.AddWithValue("tblImagenesTattoo", dtImgTatto);
+                DB.COM1.Parameters.AddWithValue("tblSesionesCitas", dtFechaCitas);
 
                 DB.REG1 = DB.COM1.ExecuteReader();
 
@@ -143,9 +147,9 @@ namespace SISTEMA.TATTOO
                     str.idCliente = (int)DB.REG1["idCliente"];
                     str.idEstadoCita = (int)DB.REG1["idEstadoCita"];
                     str.idTamaño = (int)DB.REG1["idTamaño"];
-                    str.FechaCita = (DateTime)DB.REG1["FechaCita"];
+                   // str.FechaCita = (DateTime)DB.REG1["FechaCita"];
                     str.Firma = (string)DB.REG1["Firma"];
-                    str.ImagenTatto = (string)DB.REG1["ImagenTatto"];
+                   // str.ImagenTatto = (string)DB.REG1["ImagenTatto"];
                     str.Costo = (double)DB.REG1["Costo"];
                     str.Anticipo = (double)DB.REG1["Anticipo"];
                     str.ZonaCuerpo = (string)DB.REG1["ZonaCuerpo"];

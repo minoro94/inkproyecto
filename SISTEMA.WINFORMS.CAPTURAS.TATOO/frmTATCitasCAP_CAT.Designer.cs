@@ -56,6 +56,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnMostrar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.NumS = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -98,7 +99,7 @@
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.ImgEliminar;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(307, 531);
+            this.btnEliminar.Location = new System.Drawing.Point(307, 590);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(90, 33);
@@ -114,7 +115,7 @@
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.SALIR;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(565, 531);
+            this.btnSalir.Location = new System.Drawing.Point(747, 590);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(90, 33);
@@ -130,7 +131,7 @@
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.ImgEditar;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(111, 531);
+            this.btnEditar.Location = new System.Drawing.Point(111, 590);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(90, 33);
@@ -146,7 +147,7 @@
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.ImgAgregar;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(13, 531);
+            this.btnAgregar.Location = new System.Drawing.Point(13, 590);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(90, 33);
@@ -163,7 +164,7 @@
             this.panel5.Enabled = false;
             this.panel5.Location = new System.Drawing.Point(0, 35);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(3, 538);
+            this.panel5.Size = new System.Drawing.Size(3, 597);
             this.panel5.TabIndex = 123;
             // 
             // lstLista
@@ -174,7 +175,8 @@
             this.lstLista.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Usuario,
             this.Estado,
-            this.Empleado});
+            this.Empleado,
+            this.NumS});
             this.lstLista.Cursor = System.Windows.Forms.Cursors.Default;
             this.lstLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstLista.FullRowSelect = true;
@@ -184,7 +186,7 @@
             this.lstLista.Margin = new System.Windows.Forms.Padding(4);
             this.lstLista.MultiSelect = false;
             this.lstLista.Name = "lstLista";
-            this.lstLista.Size = new System.Drawing.Size(642, 373);
+            this.lstLista.Size = new System.Drawing.Size(824, 432);
             this.lstLista.TabIndex = 122;
             this.lstLista.UseCompatibleStateImageBehavior = false;
             this.lstLista.View = System.Windows.Forms.View.Details;
@@ -204,14 +206,14 @@
             // Empleado
             // 
             this.Empleado.Text = "Fecha Cita";
-            this.Empleado.Width = 180;
+            this.Empleado.Width = 230;
             // 
             // btnBuscar
             // 
             this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.ImgBuscar;
-            this.btnBuscar.Location = new System.Drawing.Point(617, 53);
+            this.btnBuscar.Location = new System.Drawing.Point(799, 53);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(38, 24);
@@ -239,7 +241,7 @@
             this.txtFiiltro.Margin = new System.Windows.Forms.Padding(4);
             this.txtFiiltro.MaxLength = 20;
             this.txtFiiltro.Name = "txtFiiltro";
-            this.txtFiiltro.Size = new System.Drawing.Size(490, 22);
+            this.txtFiiltro.Size = new System.Drawing.Size(672, 22);
             this.txtFiiltro.TabIndex = 119;
             this.txtFiiltro.TextChanged += new System.EventHandler(this.txtFiiltro_TextChanged);
             this.txtFiiltro.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtFiiltro_KeyUp);
@@ -250,7 +252,7 @@
             this.panel2.Enabled = false;
             this.panel2.Location = new System.Drawing.Point(0, 35);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(668, 3);
+            this.panel2.Size = new System.Drawing.Size(850, 3);
             this.panel2.TabIndex = 118;
             // 
             // panel1
@@ -265,7 +267,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(668, 35);
+            this.panel1.Size = new System.Drawing.Size(850, 35);
             this.panel1.TabIndex = 117;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -284,7 +286,7 @@
             this.panel7.BackColor = System.Drawing.Color.Black;
             this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel7.Enabled = false;
-            this.panel7.Location = new System.Drawing.Point(665, 0);
+            this.panel7.Location = new System.Drawing.Point(847, 0);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(3, 35);
             this.panel7.TabIndex = 61;
@@ -295,13 +297,13 @@
             this.panel6.Enabled = false;
             this.panel6.Location = new System.Drawing.Point(-1, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(668, 3);
+            this.panel6.Size = new System.Drawing.Size(850, 3);
             this.panel6.TabIndex = 60;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.Icono_Cerrar;
-            this.pictureBox3.Location = new System.Drawing.Point(635, 6);
+            this.pictureBox3.Location = new System.Drawing.Point(815, 6);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(25, 25);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -338,18 +340,18 @@
             this.panel4.BackColor = System.Drawing.Color.Black;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel4.Enabled = false;
-            this.panel4.Location = new System.Drawing.Point(665, 35);
+            this.panel4.Location = new System.Drawing.Point(847, 35);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(3, 538);
+            this.panel4.Size = new System.Drawing.Size(3, 597);
             this.panel4.TabIndex = 132;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Black;
             this.panel3.Enabled = false;
-            this.panel3.Location = new System.Drawing.Point(0, 570);
+            this.panel3.Location = new System.Drawing.Point(0, 629);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(668, 3);
+            this.panel3.Size = new System.Drawing.Size(850, 3);
             this.panel3.TabIndex = 133;
             // 
             // btnMostrar
@@ -358,7 +360,7 @@
             this.btnMostrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMostrar.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.ImgMostrar;
             this.btnMostrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMostrar.Location = new System.Drawing.Point(209, 530);
+            this.btnMostrar.Location = new System.Drawing.Point(209, 589);
             this.btnMostrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnMostrar.Name = "btnMostrar";
             this.btnMostrar.Size = new System.Drawing.Size(90, 33);
@@ -379,11 +381,16 @@
             this.label2.TabIndex = 135;
             this.label2.Text = "De:";
             // 
+            // NumS
+            // 
+            this.NumS.Text = "Numero Sesion";
+            this.NumS.Width = 135;
+            // 
             // frmTATCitasCAP_CAT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(668, 573);
+            this.ClientSize = new System.Drawing.Size(850, 632);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.panel3);
@@ -407,9 +414,9 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(668, 573);
+            this.MaximumSize = new System.Drawing.Size(850, 632);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(668, 573);
+            this.MinimumSize = new System.Drawing.Size(850, 632);
             this.Name = "frmTATCitasCAP_CAT";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTATCitasCAP_CAT";
@@ -453,5 +460,6 @@
         private System.Windows.Forms.ColumnHeader Estado;
         public System.Windows.Forms.Button btnMostrar;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ColumnHeader NumS;
     }
 }

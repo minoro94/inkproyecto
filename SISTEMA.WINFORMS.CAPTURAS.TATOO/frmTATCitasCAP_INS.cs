@@ -339,8 +339,8 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                 strCitas.idCliente = idCliente;
                 strCitas.idEstadoCita = Convert.ToInt32(IDsEstadoCita[cbxEstadoCita.SelectedIndex]);
                 strCitas.idTamaño = Convert.ToInt32(IDsTamaños[cbxTamaño.SelectedIndex]);
-                strCitas.FechaCita = dtpFechaCita.Value;
-                strCitas.FechaCita = new DateTime(dtpFechaCita.Value.Year, dtpFechaCita.Value.Month, dtpFechaCita.Value.Day, dtpFechaCita.Value.Hour, dtpFechaCita.Value.Minute, 0);
+                //strCitas.FechaCita = dtpFechaCita.Value;
+               // strCitas.FechaCita = new DateTime(dtpFechaCita.Value.Year, dtpFechaCita.Value.Month, dtpFechaCita.Value.Day, dtpFechaCita.Value.Hour, dtpFechaCita.Value.Minute, 0);
                 strCitas.Costo = Convert.ToDouble(txtCosto.Text.Trim());
                 strCitas.Anticipo = Convert.ToDouble(txtAnticipo.Text.Trim());
                 strCitas.Descripcion = txtDescripcion.Text.Trim();
@@ -351,17 +351,17 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                 try
                 {
                     String Imgtat = Herramientas.encodeImagen(imgTatuaje);
-                    strCitas.ImagenTatto = Imgtat;
+                   // strCitas.ImagenTatto = Imgtat;
                     String ImgZon = Herramientas.encodeImagen(imgZonaCuerpo);
                     strCitas.ZonaCuerpo = ImgZon;
                     //File.Delete(imgZonaCuerpo);
                 }
                 catch (Exception)
                 {
-                    strCitas.ImagenTatto = null;
+                //    strCitas.ImagenTatto = null;
                 }
 
-                bool Agregado = TABLA_Citas.DAO(ref strCitas, 1);
+               /* bool Agregado = TABLA_Citas.DAO(ref strCitas, 1, );
 
                 if (Agregado)
                 {
@@ -375,7 +375,9 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                     this.DialogResult = DialogResult.Cancel;
                     return;
                 }
+                */
             }
+            
             else
             {
                 MessageBox.Show(this, "Faltan Campos Por Completar", "Campos Vacios", MessageBoxButtons.OK, MessageBoxIcon.Error);

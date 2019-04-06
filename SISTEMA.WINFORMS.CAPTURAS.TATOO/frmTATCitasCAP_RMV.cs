@@ -37,8 +37,8 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         {
             str.idCita = idCita;
             str.USUARIO = USUARIO;
-            str.FechaCita = Convert.ToDateTime(lblFechaCita.Text);
-            if(TABLA_Citas.DAO(ref str, 3))
+           // str.FechaCita = Convert.ToDateTime(lblFechaCita.Text);
+            /*if(TABLA_Citas.DAO(ref str, 3))
             {
                 MessageBox.Show(this, "El registro ah sido eliminado correctamente", "OPERACION CORRECTA", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.DialogResult = DialogResult.OK;
@@ -47,7 +47,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             {
                 MessageBox.Show(this, "No se ah podido eliminar", "OPERACION INCORRECTA", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.DialogResult = DialogResult.Cancel;
-            }
+            }*/
         }
 
         #region CLOSE

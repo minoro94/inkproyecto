@@ -52,6 +52,7 @@
             this.lblNombreCliente = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.gbInfoTatuajes = new System.Windows.Forms.GroupBox();
+            this.btnEliminarImagen = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.cbxTamaño = new System.Windows.Forms.ComboBox();
@@ -70,6 +71,7 @@
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -353,6 +355,7 @@
             // 
             // gbInfoTatuajes
             // 
+            this.gbInfoTatuajes.Controls.Add(this.btnEliminarImagen);
             this.gbInfoTatuajes.Controls.Add(this.label4);
             this.gbInfoTatuajes.Controls.Add(this.label7);
             this.gbInfoTatuajes.Controls.Add(this.cbxTamaño);
@@ -371,6 +374,16 @@
             this.gbInfoTatuajes.TabIndex = 114;
             this.gbInfoTatuajes.TabStop = false;
             this.gbInfoTatuajes.Text = "Informacion Tatuaje";
+            // 
+            // btnEliminarImagen
+            // 
+            this.btnEliminarImagen.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.ImgEliminar;
+            this.btnEliminarImagen.Location = new System.Drawing.Point(998, 254);
+            this.btnEliminarImagen.Name = "btnEliminarImagen";
+            this.btnEliminarImagen.Size = new System.Drawing.Size(35, 38);
+            this.btnEliminarImagen.TabIndex = 124;
+            this.btnEliminarImagen.UseVisualStyleBackColor = true;
+            this.btnEliminarImagen.Click += new System.EventHandler(this.btnEliminarImagen_Click);
             // 
             // label4
             // 
@@ -556,6 +569,7 @@
             this.btnAceptar.Text = "&Aceptar";
             this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
@@ -660,5 +674,7 @@
         private System.Windows.Forms.Panel PanelBorderAbajo;
         private System.Windows.Forms.Button btnFechaCita;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button btnEliminarImagen;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }

@@ -70,7 +70,8 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                     L.Tag = Dato;
                     L.Text = Dato.nombreCliente;
                     L.SubItems.Add(Dato.NombreEstadoCita);
-                    L.SubItems.Add(Convert.ToString(Dato.FechaCita));
+                    L.SubItems.Add(Dato.FechaCita.ToString("dddd-d-MMMM-yyyy-hh:mm tt"));
+                    L.SubItems.Add(Convert.ToString(Dato.NumeroSesion));
                     lstLista.Items.Add(L);
                     i++;
                 }

@@ -19,12 +19,14 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         public frmTATFirmaCAP()
         {
             InitializeComponent();
+            btnAceptar.Enabled = false;
         }
 
         #region OBJETOS
         Point posicionPrevia = new Point(-1,- 1);
         Random rnd = new Random();
         public string DireccionFirma;
+        
         #endregion
 
         #region CLOSE
@@ -49,25 +51,25 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                 posicionPrevia = new Point(e.X, e.Y);
             }
             Point PosicionActual = new Point(e.X, e.Y);
-            Graphics Dibujo = ptbFirma.CreateGraphics();
+            Graphics Dibujo = this.ptbFirma.CreateGraphics();
             Dibujo.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
 
             if(e.Button == MouseButtons.Left)
             {
                 Dibujo.DrawLine(new Pen(Color.Black), posicionPrevia, PosicionActual);
+                btnAceptar.Enabled = true;
             }
-            else if(e.Button == MouseButtons.Right)
-            {
-                ptbFirma.Refresh();
-            }
+            
             posicionPrevia = PosicionActual;
         }
         #endregion
 
+        #region BOTON ACEPTAR
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             CapturaPantalla();
         }
+        #endregion
 
         #region CAPTURA DE PANTALLA
         private void CapturaPantalla()
@@ -78,10 +80,11 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             string fileNom = String.Empty;
             saveFileDialog1.Filter = "Excel files (*.png)|*.png";
             saveFileDialog1.RestoreDirectory = true;
-            // fileNom = @"C:\Img" + Convert.ToString(rnd.Next(10000)) + ".png";
-            fileNom = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Img" + Convert.ToString(rnd.Next(10000)) + ".png");
+            fileNom = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\SISTEMA.WINFORMS.CAPTURAS.TATOO\Capturas\Img" + Convert.ToString(rnd.Next(10000)) + ".png");
             DireccionFirma = fileNom;
             BmpScreen.Save(fileNom, System.Drawing.Imaging.ImageFormat.Png);
+
+            
             this.DialogResult = DialogResult.OK;
             Close();
         }
@@ -93,10 +96,11 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             CargarFirma(DireccionFirma);
         }
         #endregion
+
         #region CARGAR FIRMA
         private void CargarFirma(string Firma)
         {
-            if(Firma != null)
+            if(Firma != "")
             {
                 openFileDialog1.FileName = Firma;
                 ptbFirma.Image = Image.FromFile(openFileDialog1.FileName);
@@ -107,5 +111,27 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             }
         }
         #endregion
+
+        
+
+        private void ptbFirma_MouseClick(object sender, MouseEventArgs e)
+        {
+            if(e.Button == MouseButtons.Right)
+            {
+                if (DireccionFirma != "")
+                {
+                    ptbFirma.Image.Dispose();
+                    ptbFirma.Image = null;
+                    File.Delete(DireccionFirma);
+                    DireccionFirma = "";
+                }
+                else
+                {
+                    ptbFirma.Refresh();
+                }
+                btnAceptar.Enabled = false;
+            }
+            
+        }
     }
 }
