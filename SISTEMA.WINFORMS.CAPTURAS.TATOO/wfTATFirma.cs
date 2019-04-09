@@ -25,5 +25,15 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             return frm.DireccionFirma;
         }
         #endregion
+
+        #region MODIFICAR
+        public string Modificar(ref string firma)
+        {
+            frmTATFirmaCAP_MDF2 frm = new frmTATFirmaCAP_MDF2();
+            frm.DireccionFirma = firma;
+            frm.ShowDialog();
+            return frm.DireccionFirma;
+        }
+        #endregion
     }
 }

@@ -31,12 +31,9 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.gbDatosCita = new System.Windows.Forms.GroupBox();
             this.btnFechaCita = new System.Windows.Forms.Button();
@@ -52,37 +49,40 @@
             this.lblNombreCliente = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.gbInfoTatuajes = new System.Windows.Forms.GroupBox();
-            this.btnEliminarImagen = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.cbxTamaño = new System.Windows.Forms.ComboBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.btnAdjuntarImagen = new System.Windows.Forms.Button();
-            this.ptbIzquierda = new System.Windows.Forms.PictureBox();
-            this.ptbDerecha = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.ptbTatuaje = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.ptbPerfil = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnProductos = new System.Windows.Forms.Button();
             this.btnFirma = new System.Windows.Forms.Button();
             this.PanelBorderAbajo = new System.Windows.Forms.Panel();
-            this.btnAceptar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.btnAceptar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnEliminarImagen = new System.Windows.Forms.Button();
+            this.ptbIzquierda = new System.Windows.Forms.PictureBox();
+            this.ptbDerecha = new System.Windows.Forms.PictureBox();
+            this.ptbTatuaje = new System.Windows.Forms.PictureBox();
+            this.ptbPerfil = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.gbDatosCita.SuspendLayout();
             this.gbInfoTatuajes.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbIzquierda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbDerecha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTatuaje)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbPerfil)).BeginInit();
-            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel7
@@ -119,17 +119,6 @@
             this.panel2.Size = new System.Drawing.Size(1102, 35);
             this.panel2.TabIndex = 105;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.Icono_Cerrar;
-            this.pictureBox1.Location = new System.Drawing.Point(1070, 7);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 53;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
@@ -152,16 +141,6 @@
             this.label8.TabIndex = 51;
             this.label8.Text = "Agregar una Cita";
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.Icono_Cerrar;
-            this.pictureBox3.Location = new System.Drawing.Point(1300, 6);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 50;
-            this.pictureBox3.TabStop = false;
-            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Black;
@@ -171,18 +150,6 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1333, 4);
             this.panel6.TabIndex = 49;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Enabled = false;
-            this.pictureBox4.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.LOGOINK;
-            this.pictureBox4.Location = new System.Drawing.Point(8, 4);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(36, 31);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 12;
-            this.pictureBox4.TabStop = false;
             // 
             // panel4
             // 
@@ -375,16 +342,6 @@
             this.gbInfoTatuajes.TabStop = false;
             this.gbInfoTatuajes.Text = "Informacion Tatuaje";
             // 
-            // btnEliminarImagen
-            // 
-            this.btnEliminarImagen.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.ImgEliminar;
-            this.btnEliminarImagen.Location = new System.Drawing.Point(998, 254);
-            this.btnEliminarImagen.Name = "btnEliminarImagen";
-            this.btnEliminarImagen.Size = new System.Drawing.Size(35, 38);
-            this.btnEliminarImagen.TabIndex = 124;
-            this.btnEliminarImagen.UseVisualStyleBackColor = true;
-            this.btnEliminarImagen.Click += new System.EventHandler(this.btnEliminarImagen_Click);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -441,30 +398,6 @@
             this.btnAdjuntarImagen.UseVisualStyleBackColor = true;
             this.btnAdjuntarImagen.Click += new System.EventHandler(this.btnAdjuntarImagen_Click);
             // 
-            // ptbIzquierda
-            // 
-            this.ptbIzquierda.BackColor = System.Drawing.Color.White;
-            this.ptbIzquierda.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.Izquierda;
-            this.ptbIzquierda.Location = new System.Drawing.Point(707, 123);
-            this.ptbIzquierda.Name = "ptbIzquierda";
-            this.ptbIzquierda.Size = new System.Drawing.Size(30, 30);
-            this.ptbIzquierda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.ptbIzquierda.TabIndex = 118;
-            this.ptbIzquierda.TabStop = false;
-            this.ptbIzquierda.Click += new System.EventHandler(this.ptbIzquierda_Click);
-            // 
-            // ptbDerecha
-            // 
-            this.ptbDerecha.BackColor = System.Drawing.Color.White;
-            this.ptbDerecha.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.ClasificarDerecha;
-            this.ptbDerecha.Location = new System.Drawing.Point(1039, 123);
-            this.ptbDerecha.Name = "ptbDerecha";
-            this.ptbDerecha.Size = new System.Drawing.Size(30, 30);
-            this.ptbDerecha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.ptbDerecha.TabIndex = 117;
-            this.ptbDerecha.TabStop = false;
-            this.ptbDerecha.Click += new System.EventHandler(this.ptbDerecha_Click);
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -475,17 +408,6 @@
             this.label9.TabIndex = 116;
             this.label9.Text = "Tatuaje";
             // 
-            // ptbTatuaje
-            // 
-            this.ptbTatuaje.BackColor = System.Drawing.Color.White;
-            this.ptbTatuaje.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.ptbTatuaje.Location = new System.Drawing.Point(743, 51);
-            this.ptbTatuaje.Name = "ptbTatuaje";
-            this.ptbTatuaje.Size = new System.Drawing.Size(290, 180);
-            this.ptbTatuaje.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbTatuaje.TabIndex = 114;
-            this.ptbTatuaje.TabStop = false;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -495,18 +417,6 @@
             this.label2.Size = new System.Drawing.Size(97, 16);
             this.label2.TabIndex = 113;
             this.label2.Text = "Zona Cuerpo";
-            // 
-            // ptbPerfil
-            // 
-            this.ptbPerfil.BackColor = System.Drawing.Color.White;
-            this.ptbPerfil.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.ptbPerfil.Location = new System.Drawing.Point(373, 51);
-            this.ptbPerfil.Name = "ptbPerfil";
-            this.ptbPerfil.Size = new System.Drawing.Size(290, 241);
-            this.ptbPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbPerfil.TabIndex = 112;
-            this.ptbPerfil.TabStop = false;
-            this.ptbPerfil.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ptbPerfil_MouseClick);
             // 
             // groupBox2
             // 
@@ -553,6 +463,10 @@
             this.PanelBorderAbajo.Size = new System.Drawing.Size(1098, 4);
             this.PanelBorderAbajo.TabIndex = 133;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // btnAceptar
             // 
             this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -586,9 +500,95 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // openFileDialog1
+            // btnEliminarImagen
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.btnEliminarImagen.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.ImgEliminar;
+            this.btnEliminarImagen.Location = new System.Drawing.Point(998, 254);
+            this.btnEliminarImagen.Name = "btnEliminarImagen";
+            this.btnEliminarImagen.Size = new System.Drawing.Size(35, 38);
+            this.btnEliminarImagen.TabIndex = 124;
+            this.btnEliminarImagen.UseVisualStyleBackColor = true;
+            this.btnEliminarImagen.Click += new System.EventHandler(this.btnEliminarImagen_Click);
+            // 
+            // ptbIzquierda
+            // 
+            this.ptbIzquierda.BackColor = System.Drawing.Color.White;
+            this.ptbIzquierda.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.Izquierda;
+            this.ptbIzquierda.Location = new System.Drawing.Point(707, 123);
+            this.ptbIzquierda.Name = "ptbIzquierda";
+            this.ptbIzquierda.Size = new System.Drawing.Size(30, 30);
+            this.ptbIzquierda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.ptbIzquierda.TabIndex = 118;
+            this.ptbIzquierda.TabStop = false;
+            this.ptbIzquierda.Click += new System.EventHandler(this.ptbIzquierda_Click);
+            // 
+            // ptbDerecha
+            // 
+            this.ptbDerecha.BackColor = System.Drawing.Color.White;
+            this.ptbDerecha.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.ClasificarDerecha;
+            this.ptbDerecha.Location = new System.Drawing.Point(1039, 123);
+            this.ptbDerecha.Name = "ptbDerecha";
+            this.ptbDerecha.Size = new System.Drawing.Size(30, 30);
+            this.ptbDerecha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.ptbDerecha.TabIndex = 117;
+            this.ptbDerecha.TabStop = false;
+            this.ptbDerecha.Click += new System.EventHandler(this.ptbDerecha_Click);
+            // 
+            // ptbTatuaje
+            // 
+            this.ptbTatuaje.BackColor = System.Drawing.Color.White;
+            this.ptbTatuaje.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.ptbTatuaje.Location = new System.Drawing.Point(743, 51);
+            this.ptbTatuaje.Name = "ptbTatuaje";
+            this.ptbTatuaje.Size = new System.Drawing.Size(290, 180);
+            this.ptbTatuaje.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbTatuaje.TabIndex = 114;
+            this.ptbTatuaje.TabStop = false;
+            // 
+            // ptbPerfil
+            // 
+            this.ptbPerfil.BackColor = System.Drawing.Color.White;
+            this.ptbPerfil.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.ptbPerfil.Location = new System.Drawing.Point(373, 51);
+            this.ptbPerfil.Name = "ptbPerfil";
+            this.ptbPerfil.Size = new System.Drawing.Size(290, 241);
+            this.ptbPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbPerfil.TabIndex = 112;
+            this.ptbPerfil.TabStop = false;
+            this.ptbPerfil.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ptbPerfil_MouseClick);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.Icono_Cerrar;
+            this.pictureBox1.Location = new System.Drawing.Point(1070, 7);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 53;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.Icono_Cerrar;
+            this.pictureBox3.Location = new System.Drawing.Point(1300, 6);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 50;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Enabled = false;
+            this.pictureBox4.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.LOGOINK;
+            this.pictureBox4.Location = new System.Drawing.Point(8, 4);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(36, 31);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 12;
+            this.pictureBox4.TabStop = false;
             // 
             // frmTATCitasCAP_INS2
             // 
@@ -608,24 +608,26 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximumSize = new System.Drawing.Size(1098, 607);
+            this.MinimumSize = new System.Drawing.Size(1098, 607);
             this.Name = "frmTATCitasCAP_INS2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTATCitasCAP_INS2";
             this.Load += new System.EventHandler(this.frmTATCitasCAP_INS2_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.gbDatosCita.ResumeLayout(false);
             this.gbDatosCita.PerformLayout();
             this.gbInfoTatuajes.ResumeLayout(false);
             this.gbInfoTatuajes.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ptbIzquierda)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbDerecha)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTatuaje)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbPerfil)).EndInit();
-            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -656,16 +658,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox gbInfoTatuajes;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox ptbPerfil;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.PictureBox ptbTatuaje;
         private System.Windows.Forms.PictureBox ptbDerecha;
         private System.Windows.Forms.PictureBox ptbIzquierda;
         private System.Windows.Forms.Button btnAdjuntarImagen;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cbxTamaño;
-        private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.GroupBox groupBox2;
         public System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnProductos;
@@ -676,5 +675,8 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button btnEliminarImagen;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        public System.Windows.Forms.TextBox txtDescripcion;
+        public System.Windows.Forms.PictureBox ptbPerfil;
+        public System.Windows.Forms.PictureBox ptbTatuaje;
     }
 }

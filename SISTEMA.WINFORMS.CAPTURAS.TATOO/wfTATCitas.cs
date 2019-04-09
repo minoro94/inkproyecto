@@ -27,21 +27,19 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         #region MODIFICAR
         public DialogResult Modificar(ref TATCitas.strTATCitas str, string USUARIO)
         {
-            frmTATCitasCAP_MDF Forma = new frmTATCitasCAP_MDF();
+            frmTATCitasCAP_MDF2 Forma = new frmTATCitasCAP_MDF2();
             Forma.lblNombreCliente.Text = str.nombreCliente;
             Forma.lblTelefono.Text = str.Telefono;
             Forma.txtAnticipo.Text = str.Anticipo.ToString();
             Forma.txtCosto.Text = str.Costo.ToString();
             Forma.txtDescripcion.Text = str.Descripcion;
             Forma.ptbPerfil.Image = Herramientas.decodeImagen(str.ZonaCuerpo, ".png");
-          //  Forma.ptbTatuaje.Image = Herramientas.decodeImagen(str.ImagenTatto, ".png");
-           // Forma.imgtato = str.ImagenTatto;
             Forma.IDTamaño = str.idTamaño;
             Forma.IDEstadoCita = str.idEstadoCita;
             Forma.idCliente = str.idCliente;
-           // Forma.dtpFechaCita.Value = str.FechaCita;
             Forma.USUARIO = str.USUARIO;
             Forma.idCita = str.idCita;
+            Forma.Firma = str.Firma;
             return Forma.ShowDialog();
         }
         #endregion
@@ -52,16 +50,15 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             frmTATCitasCAP_RMV frm = new frmTATCitasCAP_RMV();
             frm.lblNombreCliente.Text = str.nombreCliente;
             frm.lblTelefono.Text = str.Telefono;
-          //  frm.lblFechaCita.Text = str.FechaCita.ToLongDateString() + " " + str.FechaCita.ToLongTimeString();
             frm.lblEstadoCita.Text = str.NombreEstadoCita;
             frm.lblTamaño.Text = str.Tamaño;
             frm.ptbPerfil.Image = Herramientas.decodeImagen(str.ZonaCuerpo, ".png");
-            //frm.ptbTatuaje.Image = Herramientas.decodeImagen(str.ImagenTatto, ".png");
             frm.lblDescripcion.Text = str.Descripcion;
             frm.lblCosto.Text = str.Costo.ToString();
             frm.lblAnticipo.Text = str.Anticipo.ToString();
             frm.idCita = str.idCita;
             frm.USUARIO = USUARIO;
+            
             return frm.ShowDialog();
         }
         #endregion

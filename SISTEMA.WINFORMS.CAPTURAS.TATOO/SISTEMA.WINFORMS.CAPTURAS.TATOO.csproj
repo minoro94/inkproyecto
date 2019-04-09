@@ -70,6 +70,12 @@
     <Compile Include="frmTATCitasCAP_MDF.Designer.cs">
       <DependentUpon>frmTATCitasCAP_MDF.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTATCitasCAP_MDF2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATCitasCAP_MDF2.Designer.cs">
+      <DependentUpon>frmTATCitasCAP_MDF2.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTATCitasCAP_MOS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,17 +100,35 @@
     <Compile Include="frmTATFechasCitasCAP.Designer.cs">
       <DependentUpon>frmTATFechasCitasCAP.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTATFechasCitasCAP_MDF2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATFechasCitasCAP_MDF2.Designer.cs">
+      <DependentUpon>frmTATFechasCitasCAP_MDF2.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTATFirmaCAP.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmTATFirmaCAP.Designer.cs">
       <DependentUpon>frmTATFirmaCAP.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTATFirmaCAP_MDF2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATFirmaCAP_MDF2.Designer.cs">
+      <DependentUpon>frmTATFirmaCAP_MDF2.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTATInventarioCAP.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmTATInventarioCAP.Designer.cs">
       <DependentUpon>frmTATInventarioCAP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATInventarioCAP_MDF2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATInventarioCAP_MDF2.Designer.cs">
+      <DependentUpon>frmTATInventarioCAP_MDF2.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -124,6 +148,9 @@
     <EmbeddedResource Include="frmTATCitasCAP_MDF.resx">
       <DependentUpon>frmTATCitasCAP_MDF.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmTATCitasCAP_MDF2.resx">
+      <DependentUpon>frmTATCitasCAP_MDF2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTATCitasCAP_MOS.resx">
       <DependentUpon>frmTATCitasCAP_MOS.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,11 +163,20 @@
     <EmbeddedResource Include="frmTATFechasCitasCAP.resx">
       <DependentUpon>frmTATFechasCitasCAP.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmTATFechasCitasCAP_MDF2.resx">
+      <DependentUpon>frmTATFechasCitasCAP_MDF2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTATFirmaCAP.resx">
       <DependentUpon>frmTATFirmaCAP.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmTATFirmaCAP_MDF2.resx">
+      <DependentUpon>frmTATFirmaCAP_MDF2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTATInventarioCAP.resx">
       <DependentUpon>frmTATInventarioCAP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATInventarioCAP_MDF2.resx">
+      <DependentUpon>frmTATInventarioCAP_MDF2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

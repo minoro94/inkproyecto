@@ -112,8 +112,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         }
         #endregion
 
-        
-
+        #region MOUSE CLICK FIRMA
         private void ptbFirma_MouseClick(object sender, MouseEventArgs e)
         {
             if(e.Button == MouseButtons.Right)
@@ -133,5 +132,6 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             }
             
         }
+        #endregion
     }
 }

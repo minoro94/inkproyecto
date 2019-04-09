@@ -51,11 +51,15 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TATCitas.cs" />
+    <Compile Include="TATCitasInventario.cs" />
     <Compile Include="TATClientes.cs" />
     <Compile Include="TATEmpleados.cs" />
     <Compile Include="TATEstadoCita.cs" />
+    <Compile Include="TATFirma.cs" />
+    <Compile Include="TATImagenesTattoo.cs" />
     <Compile Include="TATInventario.cs" />
     <Compile Include="TATPermisosTablas.cs" />
+    <Compile Include="TATSesionesCitas.cs" />
     <Compile Include="TATTamaños.cs" />
     <Compile Include="TATTIpoEmpleados.cs" />
     <Compile Include="TATTiposPermisos.cs" />
