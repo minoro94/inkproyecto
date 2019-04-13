@@ -271,7 +271,7 @@ namespace SISTEMA.MAINMENU
         #region DISPARADOR
         private void Disparador_Tick(object sender, EventArgs e)
         {
-            Disparador.Interval = 20000;
+            Disparador.Interval = 200000;
             TATCitas.strTATCitas[] ARR = null;
             string Nombre = "";
 
