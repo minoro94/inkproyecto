@@ -41,6 +41,7 @@
             this.Usuario = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Estado = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Empleado = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.NumS = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtFiiltro = new System.Windows.Forms.TextBox();
@@ -56,7 +57,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnMostrar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.NumS = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -66,7 +66,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(351, 108);
+            this.label3.Location = new System.Drawing.Point(377, 77);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(19, 16);
@@ -78,9 +78,9 @@
             this.dtpFin.CustomFormat = "dddd- d- MMMM-yyyy  ";
             this.dtpFin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpFin.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dtpFin.Location = new System.Drawing.Point(423, 104);
+            this.dtpFin.Location = new System.Drawing.Point(413, 74);
             this.dtpFin.Name = "dtpFin";
-            this.dtpFin.Size = new System.Drawing.Size(232, 22);
+            this.dtpFin.Size = new System.Drawing.Size(239, 22);
             this.dtpFin.TabIndex = 129;
             this.dtpFin.ValueChanged += new System.EventHandler(this.dtpFin_ValueChanged);
             // 
@@ -88,9 +88,9 @@
             // 
             this.dtpInicio.CustomFormat = "dddd-d-MMMM-yyyy ";
             this.dtpInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpInicio.Location = new System.Drawing.Point(80, 103);
+            this.dtpInicio.Location = new System.Drawing.Point(119, 74);
             this.dtpInicio.Name = "dtpInicio";
-            this.dtpInicio.Size = new System.Drawing.Size(219, 22);
+            this.dtpInicio.Size = new System.Drawing.Size(239, 22);
             this.dtpInicio.TabIndex = 128;
             // 
             // btnEliminar
@@ -182,11 +182,11 @@
             this.lstLista.FullRowSelect = true;
             this.lstLista.GridLines = true;
             this.lstLista.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.lstLista.Location = new System.Drawing.Point(13, 143);
+            this.lstLista.Location = new System.Drawing.Point(13, 103);
             this.lstLista.Margin = new System.Windows.Forms.Padding(4);
             this.lstLista.MultiSelect = false;
             this.lstLista.Name = "lstLista";
-            this.lstLista.Size = new System.Drawing.Size(824, 432);
+            this.lstLista.Size = new System.Drawing.Size(824, 478);
             this.lstLista.TabIndex = 122;
             this.lstLista.UseCompatibleStateImageBehavior = false;
             this.lstLista.View = System.Windows.Forms.View.Details;
@@ -208,12 +208,17 @@
             this.Empleado.Text = "Fecha Cita";
             this.Empleado.Width = 230;
             // 
+            // NumS
+            // 
+            this.NumS.Text = "Numero Sesion";
+            this.NumS.Width = 135;
+            // 
             // btnBuscar
             // 
             this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.ImgBuscar;
-            this.btnBuscar.Location = new System.Drawing.Point(799, 53);
+            this.btnBuscar.Location = new System.Drawing.Point(799, 45);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(38, 24);
@@ -225,7 +230,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(10, 57);
+            this.label1.Location = new System.Drawing.Point(13, 49);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 16);
@@ -237,7 +242,7 @@
             this.txtFiiltro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtFiiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFiiltro.Location = new System.Drawing.Point(119, 53);
+            this.txtFiiltro.Location = new System.Drawing.Point(119, 45);
             this.txtFiiltro.Margin = new System.Windows.Forms.Padding(4);
             this.txtFiiltro.MaxLength = 20;
             this.txtFiiltro.Name = "txtFiiltro";
@@ -374,17 +379,12 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 109);
+            this.label2.Location = new System.Drawing.Point(83, 77);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 16);
             this.label2.TabIndex = 135;
             this.label2.Text = "De:";
-            // 
-            // NumS
-            // 
-            this.NumS.Text = "Numero Sesion";
-            this.NumS.Width = 135;
             // 
             // frmTATCitasCAP_CAT
             // 
