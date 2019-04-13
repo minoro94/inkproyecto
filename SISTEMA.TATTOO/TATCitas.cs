@@ -73,7 +73,6 @@ namespace SISTEMA.TATTOO
                     ARR[i].FechaCita = (DateTime)DB.REG1["FechaCita"];
                     ARR[i].idEstadoCita = (int)DB.REG1["idEstadoCita"];
                     ARR[i].Firma = (string)DB.REG1["Firma"];
-                   //ARR[i].ImagenTatto = (string)DB.REG1["ImagenTattoo"];
                     ARR[i].idTamaño = (int)DB.REG1["idTamaño"];
                     ARR[i].Costo = Convert.ToDouble(DB.REG1["Costo"]);
                     ARR[i].Anticipo = Convert.ToDouble(DB.REG1["Anticipo"]);
@@ -124,9 +123,7 @@ namespace SISTEMA.TATTOO
                 DB.COM1.Parameters.AddWithValue("idCliente",str.idCliente);
                 DB.COM1.Parameters.AddWithValue("idEstadoCita",str.idEstadoCita);
                 DB.COM1.Parameters.AddWithValue("idTamaño",str.idTamaño);
-                //DB.COM1.Parameters.AddWithValue("FechaCita",str.FechaCita);
                 DB.COM1.Parameters.AddWithValue("Firma",str.Firma);
-                //DB.COM1.Parameters.AddWithValue("ImagenTattoo",str.ImagenTatto);
                 DB.COM1.Parameters.AddWithValue("Costo",str.Costo);
                 DB.COM1.Parameters.AddWithValue("Anticipo",str.Anticipo);
                 DB.COM1.Parameters.AddWithValue("ZonaCuerpo",str.ZonaCuerpo);
@@ -147,11 +144,8 @@ namespace SISTEMA.TATTOO
                     str.idCliente = (int)DB.REG1["idCliente"];
                     str.idEstadoCita = (int)DB.REG1["idEstadoCita"];
                     str.idTamaño = (int)DB.REG1["idTamaño"];
-                   // str.FechaCita = (DateTime)DB.REG1["FechaCita"];
-                    str.Firma = (string)DB.REG1["Firma"];
-                   // str.ImagenTatto = (string)DB.REG1["ImagenTatto"];
-                    str.Costo = (double)DB.REG1["Costo"];
-                    str.Anticipo = (double)DB.REG1["Anticipo"];
+                    str.Costo = Convert.ToDouble(DB.REG1["Costo"]);
+                    str.Anticipo = Convert.ToDouble(DB.REG1["Anticipo"]);
                     str.ZonaCuerpo = (string)DB.REG1["ZonaCuerpo"];
                     str.Descripcion = (string)DB.REG1["Descripcion"];
                     str.USUARIO = (string)DB.REG1["USUARIO"];

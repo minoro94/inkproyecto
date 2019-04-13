@@ -56,6 +56,10 @@ namespace SISTEMA.MAINMENU
 
         private const int SW_HIDE = 0;
         private const int SW_SHOW = 1;
+
+
+        TATCitas.strTATCitas strCitas = new TATCitas.strTATCitas();
+        TATCitas TABLA_Citas = new TATCitas();
         #endregion
 
         #region METODO AGREGAR HIJOS
@@ -165,10 +169,11 @@ namespace SISTEMA.MAINMENU
         {
             frmTATLogin Forma = new frmTATLogin();
             Forma.ShowDialog();
+            
             strUsuario = Forma.strUsuario;
             ARRPermisoTablas = Forma.ARRPermisosTablas;
+            Disparador.Start();
             
-
             if (ARRPermisoTablas != null)
             {
                 this.Enabled = true;
@@ -260,6 +265,25 @@ namespace SISTEMA.MAINMENU
             frm.idUsuario = strUsuario.idUsuario;
             string nombreTabla = "Inventario";
             AgregarHijos(ref nombreTabla, frm);
+        }
+        #endregion
+
+        #region DISPARADOR
+        private void Disparador_Tick(object sender, EventArgs e)
+        {
+            Disparador.Interval = 20000;
+            TATCitas.strTATCitas[] ARR = null;
+            string Nombre = "";
+
+            bool resulto = TABLA_Citas.Listar(ref ARR, DateTime.Now, DateTime.Now.AddDays(1), strCitas);
+            if (resulto)
+            {
+                foreach(TATCitas.strTATCitas Dato in ARR)
+                {
+                    Nombre += Dato.nombreCliente + "\nEl dia: " + Dato.FechaCita.ToString("dddd-d-MMMM-yyyy-hh:mm tt") + "\nTelefono: " + Dato.Telefono + "\n";
+                }
+            }
+            MessageBox.Show(this,"De este momento a 24hrs tiene cita con: \n" + Nombre + "\n", "Citas",MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         #endregion
     }

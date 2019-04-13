@@ -135,7 +135,7 @@ namespace SISTEMA.MAINMENU
                 {
                     strTATPermisosTablas.idUsuario = strUsuario.idUsuario;
                     TABLA_PermisosTablas.Listar(ref ARRPermisosTablas, strTATPermisosTablas);
-
+                    
                     this.Close();
                 }
 

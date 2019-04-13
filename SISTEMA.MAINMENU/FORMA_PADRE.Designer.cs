@@ -57,6 +57,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Panel = new System.Windows.Forms.Panel();
+            this.Disparador = new System.Windows.Forms.Timer(this.components);
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -99,21 +100,21 @@
             this.inventarioToolStripMenuItem.Image = global::SISTEMA.MAINMENU.Properties.Resources.PRODUCTO;
             this.inventarioToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.inventarioToolStripMenuItem.Name = "inventarioToolStripMenuItem";
-            this.inventarioToolStripMenuItem.Size = new System.Drawing.Size(189, 32);
+            this.inventarioToolStripMenuItem.Size = new System.Drawing.Size(155, 32);
             this.inventarioToolStripMenuItem.Text = "Inventario";
             this.inventarioToolStripMenuItem.Click += new System.EventHandler(this.inventarioToolStripMenuItem_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(186, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(152, 6);
             // 
             // empleadosToolStripMenuItem
             // 
             this.empleadosToolStripMenuItem.Image = global::SISTEMA.MAINMENU.Properties.Resources.EMPLEADOS;
             this.empleadosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
-            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(189, 32);
+            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(155, 32);
             this.empleadosToolStripMenuItem.Text = "&Empleados";
             this.empleadosToolStripMenuItem.Click += new System.EventHandler(this.empleadosToolStripMenuItem_Click);
             // 
@@ -122,14 +123,14 @@
             this.usuariosToolStripMenuItem.Image = global::SISTEMA.MAINMENU.Properties.Resources.USUARIOS;
             this.usuariosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(189, 32);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(155, 32);
             this.usuariosToolStripMenuItem.Text = "&Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(186, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(152, 6);
             // 
             // toolStripButtonCitas
             // 
@@ -334,6 +335,11 @@
             this.Panel.Size = new System.Drawing.Size(1246, 414);
             this.Panel.TabIndex = 2;
             // 
+            // Disparador
+            // 
+            this.Disparador.Enabled = true;
+            this.Disparador.Tick += new System.EventHandler(this.Disparador_Tick);
+            // 
             // FORMA_PADRE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -387,5 +393,6 @@
         private System.Windows.Forms.ToolStripMenuItem tipoDePermisosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tiposDeEmpleadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem estadosCitasToolStripMenuItem;
+        private System.Windows.Forms.Timer Disparador;
     }
 }

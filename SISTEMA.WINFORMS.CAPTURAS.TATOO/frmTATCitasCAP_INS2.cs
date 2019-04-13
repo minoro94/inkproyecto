@@ -423,7 +423,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         #region BOTON ACEPTAR
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            if(txtCosto.Text != "" && txtAnticipo.Text != "" && txtDescripcion.Text != "" && dtCitasInventario.Rows.Count > 0 && dtSesionesCitas.Rows.Count > 0 && dtImagenesTatto.Rows.Count > 0 && Firma != "")
+            if(txtCosto.Text != "" && txtAnticipo.Text != "" && txtDescripcion.Text != "" && dtCitasInventario.Rows.Count > 0 && dtSesionesCitas.Rows.Count > 0 && Firma != "")
             {
                 CapturaPantalla();
                 strCitas.idCliente = idCliente;
@@ -480,10 +480,10 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         {
             String ImgZon = Herramientas.encodeImagen(imgZonaCuerpo);
             strCitas.ZonaCuerpo = ImgZon;
-            File.Delete(imgZonaCuerpo);
+           // File.Delete(imgZonaCuerpo);
             String ImgFirma = Herramientas.encodeImagen(Firma);
             strCitas.Firma = ImgFirma;
-            File.Delete(Firma);
+           // File.Delete(Firma);
         }
         #endregion
 

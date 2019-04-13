@@ -90,7 +90,7 @@
             this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
             // 
             // btnAceptar
             // 
@@ -108,7 +108,7 @@
             this.btnAceptar.Text = "&Aceptar";
             this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAceptar.UseVisualStyleBackColor = true;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click_1);
             // 
             // nudCantidad
             // 
@@ -116,7 +116,7 @@
             this.nudCantidad.Name = "nudCantidad";
             this.nudCantidad.Size = new System.Drawing.Size(48, 22);
             this.nudCantidad.TabIndex = 147;
-            this.nudCantidad.KeyUp += new System.Windows.Forms.KeyEventHandler(this.nudCantidad_KeyUp);
+            this.nudCantidad.KeyUp += new System.Windows.Forms.KeyEventHandler(this.nudCantidad_KeyUp_1);
             // 
             // label7
             // 
@@ -225,7 +225,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox3.TabIndex = 50;
             this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click_1);
             // 
             // panel6
             // 
@@ -296,7 +296,7 @@
             this.Name = "frmTATInventarioCAP_MDF2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTATInventarioCAP_MDF2";
-            this.Load += new System.EventHandler(this.frmTATInventarioCAP_MDF2_Load);
+            this.Load += new System.EventHandler(this.frmTATInventarioCAP_MDF2_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

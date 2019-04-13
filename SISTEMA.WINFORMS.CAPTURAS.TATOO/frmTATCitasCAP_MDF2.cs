@@ -535,6 +535,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                 strCitas.Descripcion = txtDescripcion.Text.Trim();
                 strCitas.Firma = Firma;
                 strCitas.USUARIO = USUARIO;
+                strCitas.idCita = idCita;
                 DTImagenesTatto();
                 EncodePeFI();
 

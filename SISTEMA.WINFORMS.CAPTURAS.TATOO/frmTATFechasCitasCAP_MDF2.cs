@@ -115,7 +115,10 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         }
         #endregion
 
-        #region CREAR DT
+        #region CREAR DATA TABLE
+        /*Este metodo se ejecuta al entrar el evento LOAD como medida de seguridad
+         por si el DATATABLE recibido no contiene nada (NULL), si este viene vacio
+         se crean las columnas necesarias*/
         private void CrearDT()
         {
             if (dTable.Columns.Count > 0)
