@@ -254,7 +254,6 @@ namespace SISTEMA.WINFORMS.TATTOO
                 {
                     str.Sexo = false;
                 }
-                str.HistorialMedico = txtHistorialMedico.Text.Trim();
 
                 bool Agregado = TABLA.DAO(ref str, 2);
                 if (Agregado)

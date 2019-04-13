@@ -52,23 +52,11 @@
     <Compile Include="frmTATCitasCAP_CAT.Designer.cs">
       <DependentUpon>frmTATCitasCAP_CAT.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTATCitasCAP_INS.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmTATCitasCAP_INS.Designer.cs">
-      <DependentUpon>frmTATCitasCAP_INS.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmTATCitasCAP_INS2.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmTATCitasCAP_INS2.Designer.cs">
       <DependentUpon>frmTATCitasCAP_INS2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmTATCitasCAP_MDF.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmTATCitasCAP_MDF.Designer.cs">
-      <DependentUpon>frmTATCitasCAP_MDF.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTATCitasCAP_MDF2.cs">
       <SubType>Form</SubType>
@@ -139,14 +127,8 @@
     <EmbeddedResource Include="frmTATCitasCAP_CAT.resx">
       <DependentUpon>frmTATCitasCAP_CAT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTATCitasCAP_INS.resx">
-      <DependentUpon>frmTATCitasCAP_INS.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmTATCitasCAP_INS2.resx">
       <DependentUpon>frmTATCitasCAP_INS2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmTATCitasCAP_MDF.resx">
-      <DependentUpon>frmTATCitasCAP_MDF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTATCitasCAP_MDF2.resx">
       <DependentUpon>frmTATCitasCAP_MDF2.cs</DependentUpon>

@@ -27,7 +27,6 @@ namespace SISTEMA.TATTOO
             public string CodigoPostal;
             public int Edad;
             public bool Sexo;
-            public string HistorialMedico;
             public string USUARIO;
             public DateTime FECHAHORACAMBIO;
             public bool ELIMINADO;
@@ -68,7 +67,6 @@ namespace SISTEMA.TATTOO
                     ARR[i].CodigoPostal = (string)DB.REG1["CodigoPostal"].ToString().Trim();
                     ARR[i].Edad = Convert.ToInt16(DB.REG1["Edad"]);
                     ARR[i].Sexo = (bool)DB.REG1["Sexo"];
-                    ARR[i].HistorialMedico = (string)DB.REG1["HistorialMedico"];
                     ARR[i].USUARIO = (string)DB.REG1["USUARIO"];
                     ARR[i].FECHAHORACAMBIO = (DateTime)DB.REG1["FECHAHORACAMBIO"];
                     ARR[i].ELIMINADO = (bool)DB.REG1["ELIMINADO"];
@@ -136,7 +134,6 @@ namespace SISTEMA.TATTOO
                     ARR[i].CodigoPostal = (string)DB.REG1["CodigoPostal"].ToString().Trim();
                     ARR[i].Edad = Convert.ToInt16(DB.REG1["Edad"]);
                     ARR[i].Sexo = (bool)DB.REG1["Sexo"];
-                    ARR[i].HistorialMedico = (string)DB.REG1["HistorialMedico"];
                     ARR[i].USUARIO = (string)DB.REG1["USUARIO"];
                     ARR[i].FECHAHORACAMBIO = (DateTime)DB.REG1["FECHAHORACAMBIO"];
                     ARR[i].ELIMINADO = (bool)DB.REG1["ELIMINADO"];
@@ -181,7 +178,6 @@ namespace SISTEMA.TATTOO
                 DB.COM1.Parameters.AddWithValue("CodigoPostal",str.CodigoPostal);
                 DB.COM1.Parameters.AddWithValue("Edad",str.Edad);
                 DB.COM1.Parameters.AddWithValue("Sexo",str.Sexo);
-                DB.COM1.Parameters.AddWithValue("HistorialMedico",str.HistorialMedico);
                 DB.COM1.Parameters.AddWithValue("USUARIO",str.USUARIO);
                 DB.COM1.Parameters.AddWithValue("FECHAHORACAMBIO",DateTime.Now);
                 DB.COM1.Parameters.AddWithValue("ELIMINADO",str.ELIMINADO);
@@ -201,7 +197,6 @@ namespace SISTEMA.TATTOO
                     str.CodigoPostal = (string)DB.REG1["CodigoPostal"].ToString().Trim();
                     str.Edad = (int)DB.REG1["Edad"];
                     str.Sexo = (bool)DB.REG1["Sexo"];
-                    str.HistorialMedico = (string)DB.REG1["HistorialMedico"];
                     str.USUARIO = (string)DB.REG1["USUARIO"];
                     str.FECHAHORACAMBIO = (DateTime)DB.REG1["FECHAHORACAMBIO"];
                     str.ELIMINADO = (bool)DB.REG1["ELIMINADO"];

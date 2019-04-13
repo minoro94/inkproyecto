@@ -167,16 +167,19 @@ namespace SISTEMA.MAINMENU
         #region LOAD
         private void FORMA_PADRE_Load_1(object sender, EventArgs e)
         {
+            Disparador.Enabled = false;
             frmTATLogin Forma = new frmTATLogin();
             Forma.ShowDialog();
             
             strUsuario = Forma.strUsuario;
             ARRPermisoTablas = Forma.ARRPermisosTablas;
-            Disparador.Start();
+
+            
             
             if (ARRPermisoTablas != null)
             {
                 this.Enabled = true;
+                Disparador.Enabled = true;
 
             }
            
@@ -231,6 +234,7 @@ namespace SISTEMA.MAINMENU
         private void LogOut_Click(object sender, EventArgs e)
         {
             Panel.Controls.Clear();
+            Disparador.Enabled = false;
             this.FORMA_PADRE_Load_1(null, null);
         }
         #endregion
@@ -271,19 +275,28 @@ namespace SISTEMA.MAINMENU
         #region DISPARADOR
         private void Disparador_Tick(object sender, EventArgs e)
         {
-            Disparador.Interval = 200000;
+            Disparador.Interval = 50000;
             TATCitas.strTATCitas[] ARR = null;
             string Nombre = "";
-
-            bool resulto = TABLA_Citas.Listar(ref ARR, DateTime.Now, DateTime.Now.AddDays(1), strCitas);
+            string Telefono = "";
+            string Fecha = "";
+            bool resulto = TABLA_Citas.Listar(ref ARR, DateTime.Now.AddDays(1), strCitas);
             if (resulto)
             {
                 foreach(TATCitas.strTATCitas Dato in ARR)
                 {
-                    Nombre += Dato.nombreCliente + "\nEl dia: " + Dato.FechaCita.ToString("dddd-d-MMMM-yyyy-hh:mm tt") + "\nTelefono: " + Dato.Telefono + "\n";
+                    Nombre = Dato.nombreCliente;
+                    Telefono = Dato.Telefono;
+                    Fecha = Dato.FechaCita.ToString("dddd-d-MMMM-yyyy-hh:mm tt");
+
                 }
             }
-            MessageBox.Show(this,"De este momento a 24hrs tiene cita con: \n" + Nombre + "\n", "Citas",MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if(Nombre != "")
+            {
+                
+                MessageBox.Show(this, "EL DIA DE MAÑANA TIENE CITA CON: \n" + Nombre.ToUpper() + "\nEL DIA " + Fecha.ToUpper() + "\nFAVOR DE COMUNICARSE AL NUMERO:\n" + Telefono.ToUpper() + " PARA CONFIRMA CITA", "CITAS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            
         }
         #endregion
     }

@@ -102,6 +102,64 @@ namespace SISTEMA.TATTOO
         }
         #endregion
 
+        #region LISTAR SIN FILTRO
+        public bool Listar(ref strTATCitas[] ARR, DateTime FechaInicio, strTATCitas str)
+        {
+            DB.conexionBD();
+
+            DB.COM1.Connection = DB.objConexion;
+            DB.objConexion.Open();
+            int Cuantos = 0;
+
+            DB.COM1.CommandText = "Select count(*) from dbo.visCitasPorFecha where FechaCita <  dateadd(second, 60 ,@FechaInicio) and FechaCita> @FechaInicio and ELIMINADO = 0 AND nombreCliente like '%' + '" + str.nombreCliente + "' + '%'";
+            SqlParameter SQP2 = new SqlParameter("@FechaInicio", FechaInicio);
+            SQP2.SqlDbType = SqlDbType.DateTime;
+            DB.COM1.Parameters.Add(SQP2);
+            Cuantos = (int)DB.COM1.ExecuteScalar();
+            DB.COM1.CommandText = "Select * from dbo.visCitasPorFecha  where FechaCita <  dateadd(second, 60 ,@FechaInicio) and FechaCita> @FechaInicio and ELIMINADO = 0  and nombreCliente like  '%' + '" + str.nombreCliente + "' + '%' ORDER BY FechaCita asc";
+
+            try
+            {
+                DB.REG1 = DB.COM1.ExecuteReader();
+                int i = 0;
+                ARR = new strTATCitas[Cuantos];
+
+                while (DB.REG1.Read())
+                {
+                    ARR[i] = new strTATCitas();
+                    ARR[i].idCita = (int)DB.REG1["idCita"];
+                    ARR[i].idCliente = (int)DB.REG1["idCliente"];
+                    ARR[i].FechaCita = (DateTime)DB.REG1["FechaCita"];
+                    ARR[i].idEstadoCita = (int)DB.REG1["idEstadoCita"];
+                    ARR[i].Firma = (string)DB.REG1["Firma"];
+                    ARR[i].idTamaño = (int)DB.REG1["idTamaño"];
+                    ARR[i].Costo = Convert.ToDouble(DB.REG1["Costo"]);
+                    ARR[i].Anticipo = Convert.ToDouble(DB.REG1["Anticipo"]);
+                    ARR[i].ZonaCuerpo = (string)DB.REG1["ZonaCuerpo"];
+                    ARR[i].Descripcion = (string)DB.REG1["Descripcion"];
+                    ARR[i].USUARIO = (string)DB.REG1["USUARIO"];
+                    ARR[i].ELIMINADO = (bool)DB.REG1["ELIMINADO"];
+                    ARR[i].NumeroSesion = (int)DB.REG1["NumeroSesion"];
+                    ARR[i].nombreCliente = (string)DB.REG1["nombreCliente"];
+                    ARR[i].Tamaño = (string)DB.REG1["Tamaño"];
+                    ARR[i].NombreEstadoCita = (string)DB.REG1["NombreEstadoCita"];
+                    ARR[i].Telefono = (string)DB.REG1["Telefono"];
+                    i++;
+                }
+                DB.REG1.Close();
+                DB.objConexion.Close();
+                DB.COM1.Parameters.Clear();
+                return true;
+            }
+            catch (Exception e)
+            {
+                DB.objConexion.Close();
+                DB.REG1.Close();
+                DB.COM1.Parameters.Clear();
+                return false;
+            }
+        }
+        #endregion
 
         #endregion
 

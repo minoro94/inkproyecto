@@ -49,7 +49,6 @@ namespace SISTEMA.WINFORMS.TATTOO
                 Forma.rdbHombre.Checked = false;
                 Forma.rdbMujer.Checked = true;
             }
-            Forma.txtHistorialMedico.Text = str.HistorialMedico;
             Forma.USUARIO = str.USUARIO;
             return Forma.ShowDialog();
         }
@@ -76,7 +75,6 @@ namespace SISTEMA.WINFORMS.TATTOO
             {
                 Forma.lblSexo.Text = "Mujer";
             }
-            Forma.lblHistorialMedico.Text = str.HistorialMedico;
             Forma.USUARIO = str.USUARIO;
             return Forma.ShowDialog();
         }
