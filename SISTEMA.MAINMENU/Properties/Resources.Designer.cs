@@ -153,36 +153,6 @@ namespace SISTEMA.MAINMENU.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Icono_AdministrarUsuarios {
-            get {
-                object obj = ResourceManager.GetObject("Icono-AdministrarUsuarios", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Icono_Cerrar {
-            get {
-                object obj = ResourceManager.GetObject("Icono-Cerrar", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Icono_Cerrar1 {
-            get {
-                object obj = ResourceManager.GetObject("Icono-Cerrar1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap ImgAceptar {
             get {
                 object obj = ResourceManager.GetObject("ImgAceptar", resourceCulture);
@@ -273,6 +243,16 @@ namespace SISTEMA.MAINMENU.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap LOGO_FINAL {
+            get {
+                object obj = ResourceManager.GetObject("LOGO_FINAL", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LOGOINK {
             get {
                 object obj = ResourceManager.GetObject("LOGOINK", resourceCulture);
@@ -286,16 +266,6 @@ namespace SISTEMA.MAINMENU.Properties {
         internal static System.Drawing.Bitmap LOGOINK1 {
             get {
                 object obj = ResourceManager.GetObject("LOGOINK1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap LOGOPRINCIPALINK {
-            get {
-                object obj = ResourceManager.GetObject("LOGOPRINCIPALINK", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

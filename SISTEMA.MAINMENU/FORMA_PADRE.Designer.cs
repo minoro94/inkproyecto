@@ -88,67 +88,61 @@
             this.usuariosToolStripMenuItem,
             this.toolStripSeparator2});
             this.Administrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Administrar.Image = global::SISTEMA.MAINMENU.Properties.Resources.MENU;
             this.Administrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Administrar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Administrar.Name = "Administrar";
-            this.Administrar.Size = new System.Drawing.Size(104, 48);
+            this.Administrar.Size = new System.Drawing.Size(88, 48);
             this.Administrar.Text = "&Administrar";
             // 
             // inventarioToolStripMenuItem
             // 
-            this.inventarioToolStripMenuItem.Image = global::SISTEMA.MAINMENU.Properties.Resources.PRODUCTO;
             this.inventarioToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.inventarioToolStripMenuItem.Name = "inventarioToolStripMenuItem";
-            this.inventarioToolStripMenuItem.Size = new System.Drawing.Size(155, 32);
+            this.inventarioToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.inventarioToolStripMenuItem.Text = "Inventario";
             this.inventarioToolStripMenuItem.Click += new System.EventHandler(this.inventarioToolStripMenuItem_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(152, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(143, 6);
             // 
             // empleadosToolStripMenuItem
             // 
-            this.empleadosToolStripMenuItem.Image = global::SISTEMA.MAINMENU.Properties.Resources.EMPLEADOS;
             this.empleadosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
-            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(155, 32);
+            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.empleadosToolStripMenuItem.Text = "&Empleados";
             this.empleadosToolStripMenuItem.Click += new System.EventHandler(this.empleadosToolStripMenuItem_Click);
             // 
             // usuariosToolStripMenuItem
             // 
-            this.usuariosToolStripMenuItem.Image = global::SISTEMA.MAINMENU.Properties.Resources.USUARIOS;
             this.usuariosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(155, 32);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.usuariosToolStripMenuItem.Text = "&Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(152, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(143, 6);
             // 
             // toolStripButtonCitas
             // 
             this.toolStripButtonCitas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButtonCitas.Image = global::SISTEMA.MAINMENU.Properties.Resources.CITAS1;
             this.toolStripButtonCitas.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonCitas.Name = "toolStripButtonCitas";
-            this.toolStripButtonCitas.Size = new System.Drawing.Size(58, 48);
+            this.toolStripButtonCitas.Size = new System.Drawing.Size(42, 48);
             this.toolStripButtonCitas.Text = "Citas";
             this.toolStripButtonCitas.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // Clientes
             // 
             this.Clientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Clientes.Image = global::SISTEMA.MAINMENU.Properties.Resources.CLIENTES;
             this.Clientes.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Clientes.Name = "Clientes";
-            this.Clientes.Size = new System.Drawing.Size(76, 48);
+            this.Clientes.Size = new System.Drawing.Size(60, 48);
             this.Clientes.Text = "Clientes";
             this.Clientes.Click += new System.EventHandler(this.Clientes_Click);
             // 
@@ -158,28 +152,25 @@
             this.blocDeNotasToolStripMenuItem,
             this.calculcadoraToolStripMenuItem});
             this.Herramientas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Herramientas.Image = global::SISTEMA.MAINMENU.Properties.Resources.HERRAMIENTAS;
             this.Herramientas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Herramientas.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Herramientas.Name = "Herramientas";
-            this.Herramientas.Size = new System.Drawing.Size(118, 48);
+            this.Herramientas.Size = new System.Drawing.Size(102, 48);
             this.Herramientas.Text = "&Herramientas";
             // 
             // blocDeNotasToolStripMenuItem
             // 
-            this.blocDeNotasToolStripMenuItem.Image = global::SISTEMA.MAINMENU.Properties.Resources.BLOC;
             this.blocDeNotasToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.blocDeNotasToolStripMenuItem.Name = "blocDeNotasToolStripMenuItem";
-            this.blocDeNotasToolStripMenuItem.Size = new System.Drawing.Size(170, 32);
+            this.blocDeNotasToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.blocDeNotasToolStripMenuItem.Text = "Bloc de Notas";
             this.blocDeNotasToolStripMenuItem.Click += new System.EventHandler(this.blocDeNotasToolStripMenuItem_Click);
             // 
             // calculcadoraToolStripMenuItem
             // 
-            this.calculcadoraToolStripMenuItem.Image = global::SISTEMA.MAINMENU.Properties.Resources.CALCULADORA;
             this.calculcadoraToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.calculcadoraToolStripMenuItem.Name = "calculcadoraToolStripMenuItem";
-            this.calculcadoraToolStripMenuItem.Size = new System.Drawing.Size(170, 32);
+            this.calculcadoraToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.calculcadoraToolStripMenuItem.Text = "Calculcadora";
             this.calculcadoraToolStripMenuItem.Click += new System.EventHandler(this.calculcadoraToolStripMenuItem_Click);
             // 
@@ -194,78 +185,70 @@
             this.tiposDeEmpleadosToolStripMenuItem,
             this.estadosCitasToolStripMenuItem});
             this.Configuracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Configuracion.Image = global::SISTEMA.MAINMENU.Properties.Resources.CONFIGURACION;
             this.Configuracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Configuracion.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Configuracion.Name = "Configuracion";
-            this.Configuracion.Size = new System.Drawing.Size(119, 48);
+            this.Configuracion.Size = new System.Drawing.Size(103, 48);
             this.Configuracion.Text = "&Configuración";
             // 
             // tiposDeProductosToolStripMenuItem
             // 
-            this.tiposDeProductosToolStripMenuItem.Image = global::SISTEMA.MAINMENU.Properties.Resources.TIPO;
             this.tiposDeProductosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tiposDeProductosToolStripMenuItem.Name = "tiposDeProductosToolStripMenuItem";
-            this.tiposDeProductosToolStripMenuItem.Size = new System.Drawing.Size(212, 32);
+            this.tiposDeProductosToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
             this.tiposDeProductosToolStripMenuItem.Text = "&Tipos de Productos";
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(209, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(200, 6);
             // 
             // marcasToolStripMenuItem1
             // 
-            this.marcasToolStripMenuItem1.Image = global::SISTEMA.MAINMENU.Properties.Resources.MARCA;
             this.marcasToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.marcasToolStripMenuItem1.Name = "marcasToolStripMenuItem1";
-            this.marcasToolStripMenuItem1.Size = new System.Drawing.Size(212, 32);
+            this.marcasToolStripMenuItem1.Size = new System.Drawing.Size(203, 22);
             this.marcasToolStripMenuItem1.Text = "&Marcas";
             // 
             // tamañosToolStripMenuItem
             // 
-            this.tamañosToolStripMenuItem.Image = global::SISTEMA.MAINMENU.Properties.Resources.TIPO;
             this.tamañosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tamañosToolStripMenuItem.Name = "tamañosToolStripMenuItem";
-            this.tamañosToolStripMenuItem.Size = new System.Drawing.Size(212, 32);
+            this.tamañosToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
             this.tamañosToolStripMenuItem.Text = "Tamaños";
             this.tamañosToolStripMenuItem.Click += new System.EventHandler(this.tamañosToolStripMenuItem_Click);
             // 
             // tipoDePermisosToolStripMenuItem
             // 
-            this.tipoDePermisosToolStripMenuItem.Image = global::SISTEMA.MAINMENU.Properties.Resources.TIPO;
             this.tipoDePermisosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tipoDePermisosToolStripMenuItem.Name = "tipoDePermisosToolStripMenuItem";
-            this.tipoDePermisosToolStripMenuItem.Size = new System.Drawing.Size(212, 32);
+            this.tipoDePermisosToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
             this.tipoDePermisosToolStripMenuItem.Text = "Tipo de Permisos";
             this.tipoDePermisosToolStripMenuItem.Click += new System.EventHandler(this.tipoDePermisosToolStripMenuItem_Click);
             // 
             // tiposDeEmpleadosToolStripMenuItem
             // 
-            this.tiposDeEmpleadosToolStripMenuItem.Image = global::SISTEMA.MAINMENU.Properties.Resources.TIPO;
             this.tiposDeEmpleadosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tiposDeEmpleadosToolStripMenuItem.Name = "tiposDeEmpleadosToolStripMenuItem";
-            this.tiposDeEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(212, 32);
+            this.tiposDeEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
             this.tiposDeEmpleadosToolStripMenuItem.Text = "Tipos de Empleados";
             this.tiposDeEmpleadosToolStripMenuItem.Click += new System.EventHandler(this.tiposDeEmpleadosToolStripMenuItem_Click);
             // 
             // estadosCitasToolStripMenuItem
             // 
-            this.estadosCitasToolStripMenuItem.Image = global::SISTEMA.MAINMENU.Properties.Resources.TIPO;
             this.estadosCitasToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.estadosCitasToolStripMenuItem.Name = "estadosCitasToolStripMenuItem";
-            this.estadosCitasToolStripMenuItem.Size = new System.Drawing.Size(212, 32);
+            this.estadosCitasToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
             this.estadosCitasToolStripMenuItem.Text = "Estados Citas";
             this.estadosCitasToolStripMenuItem.Click += new System.EventHandler(this.estadosCitasToolStripMenuItem_Click);
             // 
             // LogOut
             // 
             this.LogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LogOut.Image = global::SISTEMA.MAINMENU.Properties.Resources.LOGOUT2;
             this.LogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LogOut.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.LogOut.Name = "LogOut";
-            this.LogOut.Size = new System.Drawing.Size(71, 48);
+            this.LogOut.Size = new System.Drawing.Size(55, 48);
             this.LogOut.Text = "&LogOut";
             this.LogOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LogOut.Click += new System.EventHandler(this.LogOut_Click);
@@ -273,11 +256,10 @@
             // Salir
             // 
             this.Salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Salir.Image = global::SISTEMA.MAINMENU.Properties.Resources.SALIR2;
             this.Salir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Salir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Salir.Name = "Salir";
-            this.Salir.Size = new System.Drawing.Size(55, 48);
+            this.Salir.Size = new System.Drawing.Size(39, 48);
             this.Salir.Text = "Salir";
             this.Salir.Click += new System.EventHandler(this.Salir_Click);
             // 
@@ -328,7 +310,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Panel.BackColor = System.Drawing.Color.White;
-            this.Panel.BackgroundImage = global::SISTEMA.MAINMENU.Properties.Resources.LOGOPRINCIPALINK;
+            this.Panel.BackgroundImage = global::SISTEMA.MAINMENU.Properties.Resources.LOGO_FINAL;
             this.Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Panel.Location = new System.Drawing.Point(0, 53);
             this.Panel.Name = "Panel";

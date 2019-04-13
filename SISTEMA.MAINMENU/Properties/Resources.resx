@@ -124,8 +124,8 @@
   <data name="LOGOUT" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\LOGOUT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="EMPLEADOS" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagenes\EMPLEADOS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ImgBuscar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\ImgBuscar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MENU" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\MENU.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,9 +136,6 @@
   <data name="CITAS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\CITAS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LOGOINK1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagenes\LOGOINK.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="TIPO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\TIPO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -148,8 +145,8 @@
   <data name="BLOC" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\BLOC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="CERRAR1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagenes\CERRAR1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CONFIGURACION" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\CONFIGURACION.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ImgBuscar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\ImgBuscar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,17 +157,23 @@
   <data name="ImgMirar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\ImgMirar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="PRODUCTO2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\PRODUCTO2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ImgEliminar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\ImgEliminar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LOGOUT2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagenes\LOGOUT2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SALIR2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\SALIR2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGOINK1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\LOGOINK.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ImgCancelar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\ImgCancelar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Icono-AdministrarUsuarios" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagenes\Icono-AdministrarUsuarios.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CITAS1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\CITAS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SALIR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\SALIR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,40 +187,28 @@
   <data name="LOGOINK" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\LOGOINK.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Icono-Cerrar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagenes\Icono-Cerrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CERRAR1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\CERRAR1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ImgBuscar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagenes\ImgBuscar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="PRODUCTO" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagenes\PRODUCTO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LOGOUT2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\LOGOUT2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ImgAplicar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\ImgAplicar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Icono-Cerrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagenes\Icono-Cerrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LOGOPRINCIPALINK" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\LOGOPRINCIPALINK.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CONFIGURACION" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagenes\CONFIGURACION.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PRODUCTO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\PRODUCTO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CALCULADORA" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\CALCULADORA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PRODUCTO2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagenes\PRODUCTO2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="EMPLEADOS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\EMPLEADOS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CLIENTES" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\CLIENTES.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SALIR2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagenes\SALIR2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CITAS1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagenes\CITAS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LOGO_FINAL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\LOGO-FINAL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

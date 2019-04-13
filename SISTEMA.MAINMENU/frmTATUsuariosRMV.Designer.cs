@@ -249,7 +249,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::SISTEMA.MAINMENU.Properties.Resources.Icono_Cerrar1;
             this.pictureBox1.Location = new System.Drawing.Point(405, 7);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(25, 25);
@@ -302,7 +301,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::SISTEMA.MAINMENU.Properties.Resources.Icono_Cerrar;
+
             this.pictureBox3.Location = new System.Drawing.Point(823, 1);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
