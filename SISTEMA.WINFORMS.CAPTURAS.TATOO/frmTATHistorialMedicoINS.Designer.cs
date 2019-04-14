@@ -176,7 +176,7 @@
             this.panel7.Enabled = false;
             this.panel7.Location = new System.Drawing.Point(0, 877);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(580, 14);
+            this.panel7.Size = new System.Drawing.Size(580, 4);
             this.panel7.TabIndex = 61;
             // 
             // panel5
@@ -703,6 +703,7 @@
             // textBox5
             // 
             this.textBox5.BackColor = System.Drawing.SystemColors.Info;
+            this.textBox5.Enabled = false;
             this.textBox5.Location = new System.Drawing.Point(110, 532);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(273, 22);

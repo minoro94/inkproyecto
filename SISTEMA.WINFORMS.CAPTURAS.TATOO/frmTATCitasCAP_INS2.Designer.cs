@@ -414,7 +414,6 @@
             this.gbInfoTatuajes.TabIndex = 114;
             this.gbInfoTatuajes.TabStop = false;
             this.gbInfoTatuajes.Text = "Información del tatuaje";
-            this.gbInfoTatuajes.Enter += new System.EventHandler(this.gbInfoTatuajes_Enter);
             // 
             // obligatorioTatuaje
             // 
@@ -537,7 +536,6 @@
             this.ptbPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbPerfil.TabIndex = 112;
             this.ptbPerfil.TabStop = false;
-            this.ptbPerfil.Click += new System.EventHandler(this.ptbPerfil_Click);
             this.ptbPerfil.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ptbPerfil_MouseClick);
             // 
             // label4

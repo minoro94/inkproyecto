@@ -402,7 +402,11 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         #region BOTON AGREGAR INSTRUMENTOS
         private void btnProductos_Click(object sender, EventArgs e)
         {
-            wfCitasInventario.Agregar(ref dtCitasInventario);
+            DialogResult Res = wfCitasInventario.Agregar(ref dtCitasInventario);
+            if(Res == DialogResult.OK)
+            {
+                
+            }
         }
         #endregion
 
@@ -536,14 +540,6 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         }
         #endregion
 
-        private void ptbPerfil_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gbInfoTatuajes_Enter(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
