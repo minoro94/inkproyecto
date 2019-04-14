@@ -56,6 +56,7 @@
     <Compile Include="TATEmpleados.cs" />
     <Compile Include="TATEstadoCita.cs" />
     <Compile Include="TATFirma.cs" />
+    <Compile Include="TATHistorialesMedicos.cs" />
     <Compile Include="TATImagenesTattoo.cs" />
     <Compile Include="TATInventario.cs" />
     <Compile Include="TATPermisosTablas.cs" />
