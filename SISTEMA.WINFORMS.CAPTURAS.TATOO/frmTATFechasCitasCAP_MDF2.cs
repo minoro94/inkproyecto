@@ -62,6 +62,14 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         #region BOTON ELIMINAR
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            
+            foreach(DataRow fila in dTable.Rows)
+            {
+                if (lstLista.SelectedItems[0].SubItems[0].Text.Equals(fila["FechaCita"].ToString()))
+                {
+                    fila["ELIMINADO"] = true;
+                }
+            }
             lstLista.Items.RemoveAt(lstLista.SelectedIndices[0]);
             EnableButton();
         }
@@ -82,6 +90,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             L.Tag = dtpFechaCita;
             L.Text = dtpFechaCita.Value.ToString();
             lstLista.Items.Add(L);
+            dTable.Rows.Add(0,dtpFechaCita.Value,0);
             EnableButton();
         }
         #endregion
@@ -94,8 +103,11 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             {
                 L = new ListViewItem();
                 L.Tag = dTable;
-                L.Text = Convert.ToString(dTable.Rows[i].ItemArray[1]);
-                lstLista.Items.Add(L);
+                if(Convert.ToBoolean(dTable.Rows[i].ItemArray[2]) == false)
+                {
+                    L.Text = Convert.ToString(dTable.Rows[i].ItemArray[1]);
+                    lstLista.Items.Add(L);
+                }
             }
             EnableButton();
         }
@@ -104,11 +116,11 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         #region BOTON ACEPTAR
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            dTable.Clear();
+            /*dTable.Clear();
             for (int i = 0; i < lstLista.Items.Count; i++)
             {
                 dTable.Rows.Add(0, Convert.ToDateTime(lstLista.Items[i].SubItems[0].Text), 0);
-            }
+            }*/
 
             this.DialogResult = DialogResult.OK;
             Close();
