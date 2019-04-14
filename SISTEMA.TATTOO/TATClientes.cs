@@ -12,6 +12,7 @@ namespace SISTEMA.TATTOO
     {
         #region OBJETOS
         ConexionBD DB = new ConexionBD();
+        public TATHistorialesMedicos strHistoriales = new TATHistorialesMedicos();
         #endregion
 
         #region ESTRUCTURA
