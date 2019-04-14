@@ -121,15 +121,6 @@ namespace SISTEMA.WINFORMS.TATTOO
             {
                 Obligatorio8.Visible = false;
             }
-            if(txtHistorialMedico.Text.Trim() == "")
-            {
-                Obligatorio9.Visible = true;
-                Minoro = false;
-            }
-            else
-            {
-                Obligatorio9.Visible = false;
-            }
             if (Minoro)
             {
                 lblMnesaje1.Visible = false;
@@ -256,7 +247,6 @@ namespace SISTEMA.WINFORMS.TATTOO
                     txtDomicilio.Clear();
                     txtMunicipio.Clear();
                     txtCodigoPostal.Clear();
-                    txtHistorialMedico.Clear();
                 }
                 else
                 {

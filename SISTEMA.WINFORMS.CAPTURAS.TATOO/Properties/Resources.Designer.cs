@@ -74,6 +74,26 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CarruselDerecha {
+            get {
+                object obj = ResourceManager.GetObject("CarruselDerecha", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CarruselIzquierda {
+            get {
+                object obj = ResourceManager.GetObject("CarruselIzquierda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CasificarAbajo {
             get {
                 object obj = ResourceManager.GetObject("CasificarAbajo", resourceCulture);
@@ -94,6 +114,16 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Eliminar15px {
+            get {
+                object obj = ResourceManager.GetObject("Eliminar15px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap EMPLEADOS {
             get {
                 object obj = ResourceManager.GetObject("EMPLEADOS", resourceCulture);
@@ -104,9 +134,39 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Firma {
+            get {
+                object obj = ResourceManager.GetObject("Firma", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icono_Cerrar {
             get {
                 object obj = ResourceManager.GetObject("Icono-Cerrar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_adjuntar_15 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_adjuntar_15", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_adjuntar_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_adjuntar_30", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -327,6 +387,16 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties {
         internal static System.Drawing.Bitmap LOGOINK2 {
             get {
                 object obj = ResourceManager.GetObject("LOGOINK2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MaquinaTatuaje {
+            get {
+                object obj = ResourceManager.GetObject("MaquinaTatuaje", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

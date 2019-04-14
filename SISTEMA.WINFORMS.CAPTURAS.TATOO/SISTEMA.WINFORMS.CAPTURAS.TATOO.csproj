@@ -106,6 +106,12 @@
     <Compile Include="frmTATFirmaCAP_MDF2.Designer.cs">
       <DependentUpon>frmTATFirmaCAP_MDF2.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTATHistorialMedicoINS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATHistorialMedicoINS.Designer.cs">
+      <DependentUpon>frmTATHistorialMedicoINS.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTATInventarioCAP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTATFirmaCAP_MDF2.resx">
       <DependentUpon>frmTATFirmaCAP_MDF2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATHistorialMedicoINS.resx">
+      <DependentUpon>frmTATHistorialMedicoINS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTATInventarioCAP.resx">
       <DependentUpon>frmTATInventarioCAP.cs</DependentUpon>
@@ -280,6 +289,13 @@
   <ItemGroup>
     <None Include="Resources\Izquierda.png" />
     <None Include="Resources\Mas.png" />
+    <None Include="Resources\Firma.png" />
+    <None Include="Resources\MaquinaTatuaje.png" />
+    <None Include="Resources\CarruselDerecha.png" />
+    <None Include="Resources\CarruselIzquierda.png" />
+    <None Include="Resources\Eliminar15px.png" />
+    <None Include="Resources\icons8-adjuntar-30.png" />
+    <None Include="Resources\icons8-adjuntar-15.png" />
     <Content Include="Resources\PerfilMujer.png" />
   </ItemGroup>
   <ItemGroup>

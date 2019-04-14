@@ -535,5 +535,15 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             BmpScreen.Save(fileNom, System.Drawing.Imaging.ImageFormat.Png);
         }
         #endregion
+
+        private void ptbPerfil_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gbInfoTatuajes_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
