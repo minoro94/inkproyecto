@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using SISTEMA.TATTOO;
 using System.Collections;
 
+
 namespace SISTEMA.WINFORMS.TATTOO
 {
     public partial class frmTATClientesINS : Form
@@ -129,6 +130,7 @@ namespace SISTEMA.WINFORMS.TATTOO
             else
             {
                 lblMnesaje1.Visible = true;
+                lblMnesaje1.ForeColor = Color.Red;
                 txtMensaje2.Visible = true;
             }
             return Minoro;
@@ -185,7 +187,7 @@ namespace SISTEMA.WINFORMS.TATTOO
         #region LOAD
         private void frmTATClientesINS_Load(object sender, EventArgs e)
         {
-            EnableButtons();
+            
         }
         #endregion
 
@@ -332,5 +334,12 @@ namespace SISTEMA.WINFORMS.TATTOO
         }
 
         #endregion
+
+        private void btnHistorialMedico_Click(object sender, EventArgs e)
+        {
+            frmTATHistorialMedicoINS frm = new frmTATHistorialMedicoINS();
+            frm.lblNombreCliente.Text = txtNombreCliente.Text;
+            frm.ShowDialog();
+        }
     }
 }
