@@ -28,6 +28,27 @@ namespace SISTEMA.TATTOO
             public string CodigoPostal;
             public int Edad;
             public bool Sexo;
+
+            public int idHistorialMedico;
+            public bool Hipertension;
+            public bool Diabetes;
+            public bool Hemofilia;
+            public bool Afecciones;
+            public bool AfeccionesRen;
+            public bool FiebreReum;
+            public bool Hepatitis;
+            public bool Sida;
+            public bool Tuberculosis;
+            public bool Cancer;
+            public bool Lupus;
+            public string Otros;
+            public bool Embarazo;
+            public int Meses;
+            public string Alergias;
+            public bool DificultadSangrado;
+            public bool OtrasIntervenciones;
+            public string ComplicacionesInterv;
+
             public string USUARIO;
             public DateTime FECHAHORACAMBIO;
             public bool ELIMINADO;
@@ -45,9 +66,9 @@ namespace SISTEMA.TATTOO
             DB.objConexion.Open();
             int Cuantos = 0;
 
-            DB.COM1.CommandText = "Select count (*) from Clientes where ELIMINADO = 0";
+            DB.COM1.CommandText = "Select count (*) from visClientes where ELIMINADO = 0";
             Cuantos = (int)DB.COM1.ExecuteScalar();
-            DB.COM1.CommandText = "Select * from Clientes where ELIMINADO = 0";
+            DB.COM1.CommandText = "Select * from visClientes where ELIMINADO = 0";
 
             try
             {
@@ -68,6 +89,27 @@ namespace SISTEMA.TATTOO
                     ARR[i].CodigoPostal = (string)DB.REG1["CodigoPostal"].ToString().Trim();
                     ARR[i].Edad = Convert.ToInt16(DB.REG1["Edad"]);
                     ARR[i].Sexo = (bool)DB.REG1["Sexo"];
+
+                    ARR[i].idHistorialMedico = (int)DB.REG1["idHistorialMedico"];
+                    ARR[i].Hipertension = (bool)DB.REG1["Hipertension"];
+                    ARR[i].Diabetes = (bool)DB.REG1["Diabetes"];
+                    ARR[i].Hemofilia = (bool)DB.REG1["Hemofilia"];
+                    ARR[i].Afecciones = (bool)DB.REG1["Afecciones"];
+                    ARR[i].AfeccionesRen = (bool)DB.REG1["AfeccionesRen"];
+                    ARR[i].FiebreReum = (bool)DB.REG1["FiebreReum"];
+                    ARR[i].Hepatitis = (bool)DB.REG1["Hepatitis"];
+                    ARR[i].Sida = (bool)DB.REG1["Sida"];
+                    ARR[i].Tuberculosis = (bool)DB.REG1["Tuberculosis"];
+                    ARR[i].Cancer = (bool)DB.REG1["Cancer"];
+                    ARR[i].Lupus = (bool)DB.REG1["Lupus"];
+                    ARR[i].Otros = (string)DB.REG1["Otros"];
+                    ARR[i].Embarazo = (bool)DB.REG1["Embarazo"];
+                    ARR[i].Meses = Convert.ToInt16(DB.REG1["Meses"]);
+                    ARR[i].Alergias = (string)DB.REG1["Alergias"];
+                    ARR[i].DificultadSangrado = (bool)DB.REG1["DificultadSangrado"];
+                    ARR[i].OtrasIntervenciones = (bool)DB.REG1["OtrasInvervenciones"];
+                    ARR[i].ComplicacionesInterv = (string)DB.REG1["ComplicacionesInterv"];
+
                     ARR[i].USUARIO = (string)DB.REG1["USUARIO"];
                     ARR[i].FECHAHORACAMBIO = (DateTime)DB.REG1["FECHAHORACAMBIO"];
                     ARR[i].ELIMINADO = (bool)DB.REG1["ELIMINADO"];
@@ -96,24 +138,24 @@ namespace SISTEMA.TATTOO
             int Cuantos = 0;
             if(filtro.nombreCliente != null)
             {
-                DB.COM1.CommandText = "Select count (*) from Clientes where ELIMINADO = 0 AND nombreCliente like '%' + '" + filtro.nombreCliente + "' + '%'";
+                DB.COM1.CommandText = "Select count (*) from visClientes where ELIMINADO = 0 AND nombreCliente like '%' + '" + filtro.nombreCliente + "' + '%'";
                 Cuantos = (int)DB.COM1.ExecuteScalar();
 
-                DB.COM1.CommandText = "Select * from Clientes where ELIMINADO = 0 AND nombreCliente like '%' + '" + filtro.nombreCliente + "' + '%'";
+                DB.COM1.CommandText = "Select * from visClientes where ELIMINADO = 0 AND nombreCliente like '%' + '" + filtro.nombreCliente + "' + '%'";
             }
             else if(filtro.idCliente != 0)
             {
-                DB.COM1.CommandText = "Select count (*) from Clientes where ELIMINADO = 0 AND idCliente = " + filtro.idCliente + " ";
+                DB.COM1.CommandText = "Select count (*) from visClientes where ELIMINADO = 0 AND idCliente = " + filtro.idCliente + " ";
                 Cuantos = (int)DB.COM1.ExecuteScalar();
 
-                DB.COM1.CommandText = "Select * from Clientes where ELIMINADO = 0 AND idCliente = " + filtro.idCliente + " ";
+                DB.COM1.CommandText = "Select * from visClientes where ELIMINADO = 0 AND idCliente = " + filtro.idCliente + " ";
             }
             else
             {
-                DB.COM1.CommandText = "Select count (*) from Clientes where ELIMINADO = 0 ";
+                DB.COM1.CommandText = "Select count (*) from visClientes where ELIMINADO = 0 ";
                 Cuantos = (int)DB.COM1.ExecuteScalar();
 
-                DB.COM1.CommandText = "Select * from Clientes where ELIMINADO = 0 ";
+                DB.COM1.CommandText = "Select * from visClientes where ELIMINADO = 0 ";
             }
 
             try
@@ -135,6 +177,27 @@ namespace SISTEMA.TATTOO
                     ARR[i].CodigoPostal = (string)DB.REG1["CodigoPostal"].ToString().Trim();
                     ARR[i].Edad = Convert.ToInt16(DB.REG1["Edad"]);
                     ARR[i].Sexo = (bool)DB.REG1["Sexo"];
+
+                    ARR[i].idHistorialMedico = (int)DB.REG1["idHistorialMedico"];
+                    ARR[i].Hipertension = (bool)DB.REG1["Hipertension"];
+                    ARR[i].Diabetes = (bool)DB.REG1["Diabetes"];
+                    ARR[i].Hemofilia = (bool)DB.REG1["Hemofilia"];
+                    ARR[i].Afecciones = (bool)DB.REG1["Afecciones"];
+                    ARR[i].AfeccionesRen = (bool)DB.REG1["AfeccionesRen"];
+                    ARR[i].FiebreReum = (bool)DB.REG1["FiebreReum"];
+                    ARR[i].Hepatitis = (bool)DB.REG1["Hepatitis"];
+                    ARR[i].Sida = (bool)DB.REG1["Sida"];
+                    ARR[i].Tuberculosis = (bool)DB.REG1["Tuberculosis"];
+                    ARR[i].Cancer = (bool)DB.REG1["Cancer"];
+                    ARR[i].Lupus = (bool)DB.REG1["Lupus"];
+                    ARR[i].Otros = (string)DB.REG1["Otros"];
+                    ARR[i].Embarazo = (bool)DB.REG1["Embarazo"];
+                    ARR[i].Meses = Convert.ToInt16(DB.REG1["Meses"]);
+                    ARR[i].Alergias = (string)DB.REG1["Alergias"];
+                    ARR[i].DificultadSangrado = (bool)DB.REG1["DificultadSangrado"];
+                    ARR[i].OtrasIntervenciones = (bool)DB.REG1["OtrasInvervenciones"];
+                    ARR[i].ComplicacionesInterv = (string)DB.REG1["ComplicacionesInterv"];
+
                     ARR[i].USUARIO = (string)DB.REG1["USUARIO"];
                     ARR[i].FECHAHORACAMBIO = (DateTime)DB.REG1["FECHAHORACAMBIO"];
                     ARR[i].ELIMINADO = (bool)DB.REG1["ELIMINADO"];
@@ -179,6 +242,27 @@ namespace SISTEMA.TATTOO
                 DB.COM1.Parameters.AddWithValue("CodigoPostal",str.CodigoPostal);
                 DB.COM1.Parameters.AddWithValue("Edad",str.Edad);
                 DB.COM1.Parameters.AddWithValue("Sexo",str.Sexo);
+
+                DB.COM1.Parameters.AddWithValue("idHistorialMedico", str.idHistorialMedico);
+                DB.COM1.Parameters.AddWithValue("Hipertension", str.Hipertension);
+                DB.COM1.Parameters.AddWithValue("Diabetes", str.Diabetes);
+                DB.COM1.Parameters.AddWithValue("Hemofilia", str.Hemofilia);
+                DB.COM1.Parameters.AddWithValue("Afecciones", str.Afecciones);
+                DB.COM1.Parameters.AddWithValue("AfeccionesRen", str.AfeccionesRen);
+                DB.COM1.Parameters.AddWithValue("FiebreReum", str.FiebreReum);
+                DB.COM1.Parameters.AddWithValue("Hepatitis", str.Hepatitis);
+                DB.COM1.Parameters.AddWithValue("Sida", str.Sida);
+                DB.COM1.Parameters.AddWithValue("Tuberculosis", str.Tuberculosis);
+                DB.COM1.Parameters.AddWithValue("Cancer", str.Cancer);
+                DB.COM1.Parameters.AddWithValue("Lupus", str.Lupus);
+                DB.COM1.Parameters.AddWithValue("Otros", str.Otros);
+                DB.COM1.Parameters.AddWithValue("Embarazo", str.Embarazo);
+                DB.COM1.Parameters.AddWithValue("Meses", str.Meses);
+                DB.COM1.Parameters.AddWithValue("Alergias", str.Alergias);
+                DB.COM1.Parameters.AddWithValue("DificultadSangrado", str.DificultadSangrado);
+                DB.COM1.Parameters.AddWithValue("OtrasIntervensiones", str.OtrasIntervenciones);
+                DB.COM1.Parameters.AddWithValue("ComplicacionesInterv", str.ComplicacionesInterv);
+
                 DB.COM1.Parameters.AddWithValue("USUARIO",str.USUARIO);
                 DB.COM1.Parameters.AddWithValue("FECHAHORACAMBIO",DateTime.Now);
                 DB.COM1.Parameters.AddWithValue("ELIMINADO",str.ELIMINADO);
@@ -198,6 +282,28 @@ namespace SISTEMA.TATTOO
                     str.CodigoPostal = (string)DB.REG1["CodigoPostal"].ToString().Trim();
                     str.Edad = (int)DB.REG1["Edad"];
                     str.Sexo = (bool)DB.REG1["Sexo"];
+
+                    str.idHistorialMedico = (int)DB.REG1["idHistorialMedico"];
+                    str.Hipertension = (bool)DB.REG1["Hipertension"];
+                    str.Diabetes = (bool)DB.REG1["Diabetes"];
+                    str.Hemofilia = (bool)DB.REG1["Hemofilia"];
+                    str.Afecciones = (bool)DB.REG1["Afecciones"];
+                    str.AfeccionesRen = (bool)DB.REG1["AfeccionesRen"];
+                    str.FiebreReum = (bool)DB.REG1["FiebreReum"];
+                    str.Hepatitis = (bool)DB.REG1["Hepatitis"];
+                    str.Sida = (bool)DB.REG1["Sida"];
+                    str.Tuberculosis = (bool)DB.REG1["Tuberculosis"];
+                    str.Cancer = (bool)DB.REG1["Cancer"];
+                    str.Lupus = (bool)DB.REG1["Lupus"];
+                    str.Otros = (string)DB.REG1["Otros"];
+                    str.Embarazo = (bool)DB.REG1["Embarazo"];
+                    str.Meses = Convert.ToInt16(DB.REG1["Meses"]);
+                    str.Alergias = (string)DB.REG1["Alergias"];
+                    str.DificultadSangrado = (bool)DB.REG1["DificultadSangrado"];
+                    str.OtrasIntervenciones = (bool)DB.REG1["OtrasInvervenciones"];
+                    str.ComplicacionesInterv = (string)DB.REG1["ComplicacionesInterv"];
+
+
                     str.USUARIO = (string)DB.REG1["USUARIO"];
                     str.FECHAHORACAMBIO = (DateTime)DB.REG1["FECHAHORACAMBIO"];
                     str.ELIMINADO = (bool)DB.REG1["ELIMINADO"];
