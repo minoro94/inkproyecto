@@ -21,6 +21,7 @@ namespace SISTEMA.WINFORMS.TATTOO
         #region OBJETOS
         public TATClientes.strTATClientes str = new TATClientes.strTATClientes();
         TATClientes TABLA = new TATClientes();
+        wfTATHistorialMedico wf = new wfTATHistorialMedico();
         public int id;
         public string USUARIO = "";
         #endregion
@@ -54,5 +55,12 @@ namespace SISTEMA.WINFORMS.TATTOO
                 this.DialogResult = DialogResult.Cancel;
             }
         }
+
+        #region BOTON HISTORIAL MEDICO
+        private void btnHistorialMedico_Click(object sender, EventArgs e)
+        {
+            wf.Remover(ref str);
+        }
+        #endregion
     }
 }

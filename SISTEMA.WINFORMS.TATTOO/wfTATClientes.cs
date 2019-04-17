@@ -56,6 +56,7 @@ namespace SISTEMA.WINFORMS.TATTOO
         public DialogResult Remover (ref TATClientes.strTATClientes str, string USUARIO)
         {
             frmTATClientesRMV Forma = new frmTATClientesRMV();
+            Forma.str = str;
             Forma.id = str.idCliente;
             Forma.lblNombreCliente.Text = str.nombreCliente;
             Forma.lblTelefono.Text = str.Telefono;

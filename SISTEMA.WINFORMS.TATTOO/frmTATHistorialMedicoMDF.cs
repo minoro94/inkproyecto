@@ -632,10 +632,15 @@ namespace SISTEMA.WINFORMS.TATTOO
         }
         #endregion
 
+        #region BOTON ACEPTAR
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+            CapturaDatos();
             this.DialogResult = DialogResult.OK;
             Close();
         }
+        #endregion
+
+       
     }
 }

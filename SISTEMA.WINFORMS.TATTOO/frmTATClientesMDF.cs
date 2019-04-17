@@ -21,6 +21,7 @@ namespace SISTEMA.WINFORMS.TATTOO
         #region OBJETOS
         public TATClientes.strTATClientes str = new TATClientes.strTATClientes();
         TATClientes TABLA = new TATClientes();
+        wfTATHistorialMedico wf = new wfTATHistorialMedico();
         public int id;
         public string USUARIO = "";
         #endregion
@@ -274,7 +275,6 @@ namespace SISTEMA.WINFORMS.TATTOO
 
         #endregion
 
-        
         #region KEY PRESS
 
         private void txtCodigoPostal_KeyPress(object sender, KeyPressEventArgs e)
@@ -290,7 +290,12 @@ namespace SISTEMA.WINFORMS.TATTOO
 
         private void btnHistorialMedico_Click(object sender, EventArgs e)
         {
-            
+            wf.Modificar(ref str);
+        }
+
+        private void frmTATClientesMDF_Load(object sender, EventArgs e)
+        {
+            EnableButtons();
         }
     }
 }

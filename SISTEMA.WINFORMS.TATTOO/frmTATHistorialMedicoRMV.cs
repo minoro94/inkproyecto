@@ -43,6 +43,14 @@ namespace SISTEMA.WINFORMS.TATTOO
                 lblDiabetes.Text = "No";
             }
 
+            if (str.Hemofilia)
+            {
+                lblHemofilia.Text = "Si";
+            }
+            else
+            {
+                lblHemofilia.Text = "No";
+            }
             if (str.Afecciones)
             {
                 lblAfeccionesCardiacas.Text = "Si";
@@ -173,5 +181,14 @@ namespace SISTEMA.WINFORMS.TATTOO
             this.Close();
         }
         #endregion
+
+        #region LOAD
+        private void frmTATHistorialMedicoRMV_Load(object sender, EventArgs e)
+        {
+            CargarDatos();
+        }
+        #endregion
+
+        
     }
 }

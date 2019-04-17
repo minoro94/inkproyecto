@@ -394,6 +394,7 @@
             this.btnHistorialMedico.TabIndex = 116;
             this.btnHistorialMedico.Text = "Ver historial medico";
             this.btnHistorialMedico.UseVisualStyleBackColor = true;
+            this.btnHistorialMedico.Click += new System.EventHandler(this.btnHistorialMedico_Click);
             // 
             // frmTATClientesRMV
             // 

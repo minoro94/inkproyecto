@@ -618,6 +618,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTATClientesMDF";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmTATClientesMDF_FormClosing);
+            this.Load += new System.EventHandler(this.frmTATClientesMDF_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

@@ -672,6 +672,7 @@
             this.Name = "frmTATHistorialMedicoRMV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTATHistorialMedicoRMV";
+            this.Load += new System.EventHandler(this.frmTATHistorialMedicoRMV_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
