@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using SISTEMA.TATTOO;
 using System.IO;
 using System.Drawing.Imaging;
-using System.Windows.Input;
+
 
 namespace SISTEMA.WINFORMS.TATTOO
 {

@@ -54,12 +54,6 @@
     <Compile Include="frmTATCitasCAT.Designer.cs">
       <DependentUpon>frmTATCitasCAT.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTATCitasINS.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmTATCitasINS.Designer.cs">
-      <DependentUpon>frmTATCitasINS.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmTATClientesCAT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +155,18 @@
     </Compile>
     <Compile Include="frmTATHistorialMedicoINS.Designer.cs">
       <DependentUpon>frmTATHistorialMedicoINS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATHistorialMedicoMDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATHistorialMedicoMDF.Designer.cs">
+      <DependentUpon>frmTATHistorialMedicoMDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTATHistorialMedicoRMV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATHistorialMedicoRMV.Designer.cs">
+      <DependentUpon>frmTATHistorialMedicoRMV.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTATInventarioCAT.cs">
       <SubType>Form</SubType>
@@ -289,9 +295,6 @@
     <EmbeddedResource Include="frmTATCitasCAT.resx">
       <DependentUpon>frmTATCitasCAT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTATCitasINS.resx">
-      <DependentUpon>frmTATCitasINS.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmTATClientesCAT.resx">
       <DependentUpon>frmTATClientesCAT.cs</DependentUpon>
     </EmbeddedResource>
@@ -342,6 +345,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTATHistorialMedicoINS.resx">
       <DependentUpon>frmTATHistorialMedicoINS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATHistorialMedicoMDF.resx">
+      <DependentUpon>frmTATHistorialMedicoMDF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATHistorialMedicoRMV.resx">
+      <DependentUpon>frmTATHistorialMedicoRMV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTATInventarioCAT.resx">
       <DependentUpon>frmTATInventarioCAT.cs</DependentUpon>

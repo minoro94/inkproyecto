@@ -16,7 +16,7 @@ namespace SISTEMA.WINFORMS.TATTOO
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmTATCitasINS());
+            //Application.Run(new frmTATCitasINS());
         }
     }
 }

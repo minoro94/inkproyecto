@@ -27,6 +27,7 @@ namespace SISTEMA.WINFORMS.TATTOO
         public DialogResult Modificar(ref TATClientes.strTATClientes str, string USUARIO)
         {
             frmTATClientesMDF Forma = new frmTATClientesMDF();
+            Forma.str = str;
             Forma.id = str.idCliente;
             Forma.txtNombreCliente.Text = str.nombreCliente;
             Forma.txtTelefono.Text = str.Telefono;

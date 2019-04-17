@@ -32,7 +32,7 @@ namespace SISTEMA.WINFORMS.TATTOO
             if (!Campos(A))
             {
                 btnAceptar.Enabled = false;
-                            }
+            }
             else
             {
                 btnAceptar.Enabled = true;
@@ -116,14 +116,15 @@ namespace SISTEMA.WINFORMS.TATTOO
             {
                 Obligatorio8.Visible = false;
             }
-            if (txtHistorialMedico.Text.Trim() == "")
+
+            if (str.Firma == "" || str.Firma == null)
             {
-                Obligatorio9.Visible = true;
+                ObligatorioHistorial.Visible = true;
                 Minoro = false;
             }
             else
             {
-                Obligatorio9.Visible = false;
+                ObligatorioHistorial.Visible = false;
             }
             if (Minoro)
             {
@@ -273,6 +274,7 @@ namespace SISTEMA.WINFORMS.TATTOO
 
         #endregion
 
+        
         #region KEY PRESS
 
         private void txtCodigoPostal_KeyPress(object sender, KeyPressEventArgs e)
@@ -285,5 +287,10 @@ namespace SISTEMA.WINFORMS.TATTOO
             }
         }
         #endregion
+
+        private void btnHistorialMedico_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
