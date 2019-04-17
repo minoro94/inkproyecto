@@ -48,6 +48,7 @@ namespace SISTEMA.TATTOO
             public bool DificultadSangrado;
             public bool OtrasIntervenciones;
             public string ComplicacionesInterv;
+            public string Firma;
 
             public string USUARIO;
             public DateTime FECHAHORACAMBIO;
@@ -90,11 +91,11 @@ namespace SISTEMA.TATTOO
                     ARR[i].Edad = Convert.ToInt16(DB.REG1["Edad"]);
                     ARR[i].Sexo = (bool)DB.REG1["Sexo"];
 
-                    ARR[i].idHistorialMedico = (int)DB.REG1["idHistorialMedico"];
+                    ARR[i].idHistorialMedico = (int)DB.REG1["idHisotrialMedico"];
                     ARR[i].Hipertension = (bool)DB.REG1["Hipertension"];
                     ARR[i].Diabetes = (bool)DB.REG1["Diabetes"];
                     ARR[i].Hemofilia = (bool)DB.REG1["Hemofilia"];
-                    ARR[i].Afecciones = (bool)DB.REG1["Afecciones"];
+                    ARR[i].Afecciones = (bool)DB.REG1["AfeccionesCard"];
                     ARR[i].AfeccionesRen = (bool)DB.REG1["AfeccionesRen"];
                     ARR[i].FiebreReum = (bool)DB.REG1["FiebreReum"];
                     ARR[i].Hepatitis = (bool)DB.REG1["Hepatitis"];
@@ -109,6 +110,7 @@ namespace SISTEMA.TATTOO
                     ARR[i].DificultadSangrado = (bool)DB.REG1["DificultadSangrado"];
                     ARR[i].OtrasIntervenciones = (bool)DB.REG1["OtrasInvervenciones"];
                     ARR[i].ComplicacionesInterv = (string)DB.REG1["ComplicacionesInterv"];
+                    ARR[i].Firma = (string)DB.REG1["Firma"];
 
                     ARR[i].USUARIO = (string)DB.REG1["USUARIO"];
                     ARR[i].FECHAHORACAMBIO = (DateTime)DB.REG1["FECHAHORACAMBIO"];
@@ -178,11 +180,11 @@ namespace SISTEMA.TATTOO
                     ARR[i].Edad = Convert.ToInt16(DB.REG1["Edad"]);
                     ARR[i].Sexo = (bool)DB.REG1["Sexo"];
 
-                    ARR[i].idHistorialMedico = (int)DB.REG1["idHistorialMedico"];
+                    ARR[i].idHistorialMedico = (int)DB.REG1["idHisotrialMedico"];
                     ARR[i].Hipertension = (bool)DB.REG1["Hipertension"];
                     ARR[i].Diabetes = (bool)DB.REG1["Diabetes"];
                     ARR[i].Hemofilia = (bool)DB.REG1["Hemofilia"];
-                    ARR[i].Afecciones = (bool)DB.REG1["Afecciones"];
+                    ARR[i].Afecciones = (bool)DB.REG1["AfeccionesCard"];
                     ARR[i].AfeccionesRen = (bool)DB.REG1["AfeccionesRen"];
                     ARR[i].FiebreReum = (bool)DB.REG1["FiebreReum"];
                     ARR[i].Hepatitis = (bool)DB.REG1["Hepatitis"];
@@ -195,8 +197,9 @@ namespace SISTEMA.TATTOO
                     ARR[i].Meses = Convert.ToInt16(DB.REG1["Meses"]);
                     ARR[i].Alergias = (string)DB.REG1["Alergias"];
                     ARR[i].DificultadSangrado = (bool)DB.REG1["DificultadSangrado"];
-                    ARR[i].OtrasIntervenciones = (bool)DB.REG1["OtrasInvervenciones"];
+                    ARR[i].OtrasIntervenciones = (bool)DB.REG1["OtrasIntervenciones"];
                     ARR[i].ComplicacionesInterv = (string)DB.REG1["ComplicacionesInterv"];
+                    ARR[i].Firma = (string)DB.REG1["Firma"];
 
                     ARR[i].USUARIO = (string)DB.REG1["USUARIO"];
                     ARR[i].FECHAHORACAMBIO = (DateTime)DB.REG1["FECHAHORACAMBIO"];
@@ -243,11 +246,11 @@ namespace SISTEMA.TATTOO
                 DB.COM1.Parameters.AddWithValue("Edad",str.Edad);
                 DB.COM1.Parameters.AddWithValue("Sexo",str.Sexo);
 
-                DB.COM1.Parameters.AddWithValue("idHistorialMedico", str.idHistorialMedico);
+                DB.COM1.Parameters.AddWithValue("idHisotrialMedico", str.idHistorialMedico);
                 DB.COM1.Parameters.AddWithValue("Hipertension", str.Hipertension);
                 DB.COM1.Parameters.AddWithValue("Diabetes", str.Diabetes);
                 DB.COM1.Parameters.AddWithValue("Hemofilia", str.Hemofilia);
-                DB.COM1.Parameters.AddWithValue("Afecciones", str.Afecciones);
+                DB.COM1.Parameters.AddWithValue("AfeccionesCard", str.Afecciones);
                 DB.COM1.Parameters.AddWithValue("AfeccionesRen", str.AfeccionesRen);
                 DB.COM1.Parameters.AddWithValue("FiebreReum", str.FiebreReum);
                 DB.COM1.Parameters.AddWithValue("Hepatitis", str.Hepatitis);
@@ -260,8 +263,9 @@ namespace SISTEMA.TATTOO
                 DB.COM1.Parameters.AddWithValue("Meses", str.Meses);
                 DB.COM1.Parameters.AddWithValue("Alergias", str.Alergias);
                 DB.COM1.Parameters.AddWithValue("DificultadSangrado", str.DificultadSangrado);
-                DB.COM1.Parameters.AddWithValue("OtrasIntervensiones", str.OtrasIntervenciones);
+                DB.COM1.Parameters.AddWithValue("OtrasIntervenciones", str.OtrasIntervenciones);
                 DB.COM1.Parameters.AddWithValue("ComplicacionesInterv", str.ComplicacionesInterv);
+                DB.COM1.Parameters.AddWithValue("Firma", str.Firma);
 
                 DB.COM1.Parameters.AddWithValue("USUARIO",str.USUARIO);
                 DB.COM1.Parameters.AddWithValue("FECHAHORACAMBIO",DateTime.Now);
@@ -283,11 +287,11 @@ namespace SISTEMA.TATTOO
                     str.Edad = (int)DB.REG1["Edad"];
                     str.Sexo = (bool)DB.REG1["Sexo"];
 
-                    str.idHistorialMedico = (int)DB.REG1["idHistorialMedico"];
+                    str.idHistorialMedico = (int)DB.REG1["idHisotrialMedico"];
                     str.Hipertension = (bool)DB.REG1["Hipertension"];
                     str.Diabetes = (bool)DB.REG1["Diabetes"];
                     str.Hemofilia = (bool)DB.REG1["Hemofilia"];
-                    str.Afecciones = (bool)DB.REG1["Afecciones"];
+                    str.Afecciones = (bool)DB.REG1["AfeccionesCard"];
                     str.AfeccionesRen = (bool)DB.REG1["AfeccionesRen"];
                     str.FiebreReum = (bool)DB.REG1["FiebreReum"];
                     str.Hepatitis = (bool)DB.REG1["Hepatitis"];
@@ -302,6 +306,7 @@ namespace SISTEMA.TATTOO
                     str.DificultadSangrado = (bool)DB.REG1["DificultadSangrado"];
                     str.OtrasIntervenciones = (bool)DB.REG1["OtrasInvervenciones"];
                     str.ComplicacionesInterv = (string)DB.REG1["ComplicacionesInterv"];
+                    str.Firma = (string)DB.REG1["Firma"];
 
 
                     str.USUARIO = (string)DB.REG1["USUARIO"];

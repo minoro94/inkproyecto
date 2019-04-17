@@ -12,10 +12,7 @@ namespace SISTEMA.WINFORMS.TATTOO
 {
     public class wfTATClientes
     {
-        #region OBJETOS
-        TATClientes TABLA = new TATClientes();
-        TATClientes.strTATClientes str = new TATClientes.strTATClientes();
-        #endregion
+
 
         #region AGREGAR
         public DialogResult Agregar(ref string USUARIO)

@@ -50,6 +50,7 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.Cor = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -72,7 +73,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lstLista.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Usuario,
-            this.Empleado});
+            this.Empleado,
+            this.Cor});
             this.lstLista.Cursor = System.Windows.Forms.Cursors.Default;
             this.lstLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstLista.FullRowSelect = true;
@@ -309,6 +311,11 @@
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
+            // Cor
+            // 
+            this.Cor.Text = "Correo";
+            this.Cor.Width = 215;
+            // 
             // frmTATClientesCAT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -372,5 +379,6 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
         public System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.ColumnHeader Cor;
     }
 }

@@ -281,6 +281,7 @@
     <Compile Include="wfTATClientes.cs" />
     <Compile Include="wfTATEmpleados.cs" />
     <Compile Include="wfTATEstadoCita.cs" />
+    <Compile Include="wfTATHistorialMedico.cs" />
     <Compile Include="wfTATInventario.cs" />
     <Compile Include="wfTATTamaños.cs" />
     <Compile Include="wfTATTiposEmpleados.cs" />

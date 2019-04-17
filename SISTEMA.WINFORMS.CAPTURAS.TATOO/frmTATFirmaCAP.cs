@@ -133,5 +133,10 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             
         }
         #endregion
+
+        private void saveFileDialog2_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
     }
 }

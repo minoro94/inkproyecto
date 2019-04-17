@@ -25,6 +25,7 @@ namespace SISTEMA.WINFORMS.TATTOO
         public TATClientes.strTATClientes str = new TATClientes.strTATClientes();
         TATClientes TABLA = new TATClientes();
         public string USUARIO = "";
+        wfTATHistorialMedico wfHistorialMedico = new wfTATHistorialMedico();
         #endregion
 
         #region ENABLE BUTTONS
@@ -34,13 +35,11 @@ namespace SISTEMA.WINFORMS.TATTOO
             if (!Campos(A))
             {
                 btnAceptar.Enabled = false;
-                btnAplicar.Enabled = false;
                 
             }
             else
             {
                 btnAceptar.Enabled = true;
-                btnAplicar.Enabled = true;
                 
             }
         }
@@ -122,6 +121,15 @@ namespace SISTEMA.WINFORMS.TATTOO
             {
                 Obligatorio8.Visible = false;
             }
+            if(str.Firma == "" || str.Firma == null)
+            {
+                ObligatorioHistorial.Visible = true;
+                Minoro = false;
+            }
+            else
+            {
+                ObligatorioHistorial.Visible = false;
+            }
             if (Minoro)
             {
                 lblMnesaje1.Visible = false;
@@ -131,7 +139,9 @@ namespace SISTEMA.WINFORMS.TATTOO
             {
                 lblMnesaje1.Visible = true;
                 lblMnesaje1.ForeColor = Color.Red;
+                lblMnesaje1.BackColor = Color.White;
                 txtMensaje2.Visible = true;
+                txtMensaje2.BackColor = Color.Red;
             }
             return Minoro;
         }
@@ -187,7 +197,7 @@ namespace SISTEMA.WINFORMS.TATTOO
         #region LOAD
         private void frmTATClientesINS_Load(object sender, EventArgs e)
         {
-            
+            str.Firma = "";
         }
         #endregion
 
@@ -209,54 +219,6 @@ namespace SISTEMA.WINFORMS.TATTOO
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-        #endregion
-
-        #region BOTON APLICAR
-        private void btnAplicar_Click(object sender, EventArgs e)
-        {
-            bool A = true;
-            if (Campos(A))
-            {
-                str.nombreCliente = txtNombreCliente.Text.Trim();
-                str.Telefono = txtTelefono.Text.Trim();
-                str.Correo = txtCorreo.Text.Trim();
-                str.Identificacion = txtINE.Text.Trim();
-                str.Edad = Convert.ToInt32(txtEdad.Text.Trim());
-                str.Domicilio = txtDomicilio.Text.Trim();
-                str.Municipio = txtMunicipio.Text.Trim();
-                str.CodigoPostal = txtCodigoPostal.Text.Trim();
-                str.USUARIO = USUARIO;
-                if(rdbHombre.Checked == true)
-                {
-                    str.Sexo = true;
-                }
-                else
-                {
-                    str.Sexo = false;
-                }
-
-                bool Agregado = TABLA.DAO(ref str, 1);
-                if (Agregado)
-                {
-                    MessageBox.Show(this, "Agregado Correctamente", "Operacion Correcta", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.DialogResult = DialogResult.Yes;
-                    txtNombreCliente.Clear();
-                    txtTelefono.Clear();
-                    txtCorreo.Clear();
-                    txtINE.Clear();
-                    txtEdad.Clear();
-                    txtDomicilio.Clear();
-                    txtMunicipio.Clear();
-                    txtCodigoPostal.Clear();
-                }
-                else
-                {
-                    MessageBox.Show(this, "Ha Ocurrido Un Error", "Operacion Fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    this.DialogResult = DialogResult.Cancel;
-                    return;
-                }
-            }
         }
         #endregion
 
@@ -283,7 +245,7 @@ namespace SISTEMA.WINFORMS.TATTOO
                 {
                     str.Sexo = false;
                 }
-
+                EncodeFirma();
                 bool Agregado = TABLA.DAO(ref str, 1);
                 if (Agregado)
                 {
@@ -302,44 +264,53 @@ namespace SISTEMA.WINFORMS.TATTOO
 
         #endregion
 
-        #region KEY PRESS
-        private void txtEdad_KeyPress(object sender, KeyPressEventArgs e)
+        #region ENCODE FIRMA
+        private void EncodeFirma()
         {
-            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                MessageBox.Show("Solo se permiten números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                e.Handled = true;
-                return;
-            }
+            String Firma = Herramientas.encodeImagen(str.Firma);
+            str.Firma = Firma;
         }
-
-        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                MessageBox.Show("Solo se permiten números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                e.Handled = true;
-                return;
-            }
-        }
-        
-        private void txtCodigoPostal_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                MessageBox.Show("Solo se permiten números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                e.Handled = true;
-                return;
-            }
-        }
-
         #endregion
 
+        #region BOTON HISTORIAL MEDICO
         private void btnHistorialMedico_Click(object sender, EventArgs e)
         {
-            frmTATHistorialMedicoINS frm = new frmTATHistorialMedicoINS();
-            frm.lblNombreCliente.Text = txtNombreCliente.Text;
-            frm.ShowDialog();
+            str.nombreCliente = txtNombreCliente.Text.Trim();
+            wfHistorialMedico.Agregarr(ref str);
         }
+        #endregion
+
+        #region KEY PRESS
+
+        private void txtEdad_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtCodigoPostal_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtTelefono_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+        #endregion
     }
 }

@@ -66,6 +66,7 @@ namespace SISTEMA.WINFORMS.TATTOO
                     L.Tag = Dato;
                     L.Text = Dato.nombreCliente;
                     L.SubItems.Add(Dato.Telefono);
+                    L.SubItems.Add(Dato.Correo);
                     lstLista.Items.Add(L);
                     i++;
 

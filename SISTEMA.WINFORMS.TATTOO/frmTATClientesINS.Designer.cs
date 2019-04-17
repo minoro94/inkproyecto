@@ -31,7 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTATClientesINS));
             this.panel2 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -67,11 +69,8 @@
             this.btnHistorialMedico = new System.Windows.Forms.Button();
             this.ObligatorioHistorial = new System.Windows.Forms.TextBox();
             this.lblMnesaje1 = new System.Windows.Forms.Label();
-            this.btnAplicar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -101,6 +100,17 @@
             this.label8.TabIndex = 51;
             this.label8.Text = "Agregar un Cliente";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::SISTEMA.WINFORMS.TATTOO.Properties.Resources.Icono_Cerrar;
+            this.pictureBox3.Location = new System.Drawing.Point(545, 6);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 50;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Black;
@@ -110,6 +120,18 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(580, 4);
             this.panel6.TabIndex = 49;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Enabled = false;
+            this.pictureBox2.Image = global::SISTEMA.WINFORMS.TATTOO.Properties.Resources.LOGOINK1;
+            this.pictureBox2.Location = new System.Drawing.Point(8, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(36, 31);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
             // 
             // panel3
             // 
@@ -193,6 +215,7 @@
             this.txtCodigoPostal.Name = "txtCodigoPostal";
             this.txtCodigoPostal.Size = new System.Drawing.Size(109, 22);
             this.txtCodigoPostal.TabIndex = 108;
+            this.txtCodigoPostal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigoPostal_KeyPress_1);
             // 
             // Obligatorio8
             // 
@@ -298,6 +321,7 @@
             this.txtEdad.Name = "txtEdad";
             this.txtEdad.Size = new System.Drawing.Size(82, 22);
             this.txtEdad.TabIndex = 99;
+            this.txtEdad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEdad_KeyPress_1);
             // 
             // Obligatorio5
             // 
@@ -403,6 +427,7 @@
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(164, 22);
             this.txtTelefono.TabIndex = 90;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress_1);
             // 
             // Obligatorio2
             // 
@@ -493,7 +518,6 @@
             // 
             this.ObligatorioHistorial.BackColor = System.Drawing.Color.Red;
             this.ObligatorioHistorial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ObligatorioHistorial.Enabled = false;
             this.ObligatorioHistorial.ForeColor = System.Drawing.SystemColors.Control;
             this.ObligatorioHistorial.Location = new System.Drawing.Point(388, 265);
             this.ObligatorioHistorial.Multiline = true;
@@ -502,6 +526,7 @@
             this.ObligatorioHistorial.Size = new System.Drawing.Size(174, 60);
             this.ObligatorioHistorial.TabIndex = 114;
             this.ObligatorioHistorial.TabStop = false;
+            this.ObligatorioHistorial.Visible = false;
             // 
             // lblMnesaje1
             // 
@@ -516,20 +541,6 @@
             this.lblMnesaje1.Text = "Campos Obligatorios";
             this.lblMnesaje1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblMnesaje1.Visible = false;
-            // 
-            // btnAplicar
-            // 
-            this.btnAplicar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAplicar.Image = global::SISTEMA.WINFORMS.TATTOO.Properties.Resources.ImgAplicar;
-            this.btnAplicar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAplicar.Location = new System.Drawing.Point(276, 342);
-            this.btnAplicar.Name = "btnAplicar";
-            this.btnAplicar.Size = new System.Drawing.Size(90, 29);
-            this.btnAplicar.TabIndex = 58;
-            this.btnAplicar.Text = "&Aplicar";
-            this.btnAplicar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAplicar.UseVisualStyleBackColor = true;
-            this.btnAplicar.Click += new System.EventHandler(this.btnAplicar_Click);
             // 
             // btnCancelar
             // 
@@ -558,29 +569,6 @@
             this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::SISTEMA.WINFORMS.TATTOO.Properties.Resources.Icono_Cerrar;
-            this.pictureBox3.Location = new System.Drawing.Point(545, 6);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 50;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Enabled = false;
-            this.pictureBox2.Image = global::SISTEMA.WINFORMS.TATTOO.Properties.Resources.LOGOINK1;
-            this.pictureBox2.Location = new System.Drawing.Point(8, 4);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(36, 31);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 12;
-            this.pictureBox2.TabStop = false;
             // 
             // frmTATClientesINS
             // 
@@ -617,7 +605,6 @@
             this.Controls.Add(this.txtNombreCliente);
             this.Controls.Add(this.Obligatorio);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnAplicar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.panel7);
@@ -655,7 +642,6 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label8;
-        public System.Windows.Forms.Button btnAplicar;
         public System.Windows.Forms.Button btnCancelar;
         public System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.RadioButton rdbMujer;
