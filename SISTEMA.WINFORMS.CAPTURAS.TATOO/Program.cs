@@ -16,7 +16,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmTATHistorialMedicoINS());
+            Application.Run(new frmTATCitasCAP_INS2());
         }
     }
 }

@@ -163,11 +163,11 @@
             this.label21.AutoSize = true;
             this.label21.Location = new System.Drawing.Point(13, 480);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(559, 48);
+            this.label21.Size = new System.Drawing.Size(552, 48);
             this.label21.TabIndex = 176;
-            this.label21.Text = "En nuestro consultorio usamos productos aprobados por la secretaria de salud sin " +
-    "embargo \r\ntodos estamos expuestos a ser alérgicos a uno de estos productos en cu" +
-    "alquier \r\nmomento.\r\n";
+            this.label21.Text = "En nuestro estudio utilizamos productos aprobados por la secretaria de salud, sin" +
+    " embargo \r\ntodos estamos expuestos a ser alérgicos a uno de estos productos en c" +
+    "ualquier \r\nmomento.\r\n";
             // 
             // txtTuvoComplicacion
             // 
