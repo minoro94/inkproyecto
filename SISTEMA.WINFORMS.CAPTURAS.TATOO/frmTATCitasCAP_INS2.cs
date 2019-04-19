@@ -12,6 +12,7 @@ using System.Collections;
 using System.Drawing.Imaging;
 using System.IO;
 
+
 namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
 {
     public partial class frmTATCitasCAP_INS2 : Form
@@ -28,6 +29,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         public string Telefono;
         public int idCliente;
         public string Firma = "";
+        public string Correo;
 
         int PosicionImg = 0;
         string imgZonaCuerpo;
@@ -125,6 +127,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                 lblNombreCliente.Text = Dato.nombreCliente;
                 lblTelefono.Text = Convert.ToString(Dato.Telefono);
                 strClientes.Sexo = Dato.Sexo;
+                Correo = Dato.Correo;
             }
         }
         #endregion
@@ -414,20 +417,25 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         private void btnFechaCita_Click(object sender, EventArgs e)
         {
             wfFechasCitas.Agregar(ref dtSesionesCitas);
+            if(dtSesionesCitas.Rows.Count > 0)
+            {
+               lblMensajeFecha.Text = Convert.ToString(dtSesionesCitas.Rows[0].ItemArray[1]);
+                lblMensajeFecha.ForeColor = Color.Black;
+            }
         }
         #endregion
 
         #region BOTON FIRMA
         private void btnFirma_Click(object sender, EventArgs e)
         {
-            wfFirma.Agregar(ref Firma);
+         //   wfFirma.Agregar(ref Firma);
         }
         #endregion
 
         #region BOTON ACEPTAR
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            if(txtCosto.Text != "" && txtAnticipo.Text != "" && txtDescripcion.Text != "" && dtCitasInventario.Rows.Count > 0 && dtSesionesCitas.Rows.Count > 0 && Firma != "")
+            if (Obligatorios())
             {
                 CapturaPantalla();
                 strCitas.idCliente = idCliente;
@@ -440,25 +448,12 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                 DTImagenesTatto();
                 EncodePeFI();
 
-                bool Agregado = TABLA_Citas.DAO(ref strCitas, 1, dtCitasInventario, dtSesionesCitas, dtImagenesTatto);
-
-                if (Agregado)
+                // bool Agregado = TABLA_Citas.DAO(ref strCitas, 1, dtCitasInventario, dtSesionesCitas, dtImagenesTatto);
+                wfFirma.Agregar(ref strCitas, dtSesionesCitas, dtCitasInventario, dtImagenesTatto, Correo);
+                if(this.DialogResult == DialogResult.OK)
                 {
-                    MessageBox.Show(this, "Agregado Correctamente", "Operacion Correcta", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.DialogResult = DialogResult.OK;
-
-                    Close();
+                    this.Close();
                 }
-                else
-                {
-                    MessageBox.Show(this, "Ha Ocurrido Un Error", "Operacion Fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    this.DialogResult = DialogResult.Cancel;
-                    return;
-                }
-            }
-            else
-            {
-                MessageBox.Show(this, "Algunos Campos Se Encuentran Vacios", "Campos Vacios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             
         }
@@ -482,11 +477,13 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         #region ENCODE PERFIL
         private void EncodePeFI()
         {
+            string cale = "";
             String ImgZon = Herramientas.encodeImagen(imgZonaCuerpo);
             strCitas.ZonaCuerpo = ImgZon;
-           // File.Delete(imgZonaCuerpo);
-            String ImgFirma = Herramientas.encodeImagen(Firma);
-            strCitas.Firma = ImgFirma;
+            //cale = imgZonaCuerpo;
+            //File.Delete(cale);
+            //String ImgFirma = Herramientas.encodeImagen(Firma);
+            //strCitas.Firma = ImgFirma;
            // File.Delete(Firma);
         }
         #endregion
@@ -540,6 +537,76 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         }
         #endregion
 
-        
+        #region CAMPOS OBLIGATORIOS
+        private bool Obligatorios()
+        {
+            bool Minoro = true;
+            if(dtSesionesCitas.Rows.Count == 0)
+            {
+                Minoro = false;
+            }
+
+            if(txtCosto.Text.Trim() == "")
+            {
+                obligatorioCosto.Visible = true;
+                Minoro = false;
+            }
+            else
+            {
+                obligatorioCosto.Visible = false;
+            }
+
+            if(txtAnticipo.Text.Trim() == "")
+            {
+                obligastorioAnticipo.Visible = true;
+                Minoro = false;
+            }
+            else
+            {
+                obligastorioAnticipo.Visible = false;
+            }
+
+            if(dtCitasInventario.Rows.Count == 0)
+            {
+                obligatorioInstrumentos.Visible = true;
+                Minoro = false;
+            }
+            else
+            {
+                obligatorioInstrumentos.Visible = false;
+            }
+
+            if(Rectangulos.Length == 0)
+            {
+                obligatorioZona.Visible = true;
+                Minoro = false;
+            }
+            else
+            {
+                obligatorioZona.Visible = false;
+            }
+
+            if(imgList.Count == 0)
+            {
+                obligatorioTatuaje.Visible = true;
+                Minoro = false;
+            }
+            else
+            {
+                obligatorioTatuaje.Visible = false;
+            }
+
+            if(Minoro == false)
+            {
+                lblObligatorio.Visible = true;
+            }
+            else
+            {
+                lblObligatorio.Visible = false;
+            }
+            return Minoro;
+        }
+        #endregion
+
     }
 }

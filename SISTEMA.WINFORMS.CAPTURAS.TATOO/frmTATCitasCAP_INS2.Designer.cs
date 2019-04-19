@@ -233,6 +233,7 @@
             this.obligastorioAnticipo.Size = new System.Drawing.Size(20, 25);
             this.obligastorioAnticipo.TabIndex = 126;
             this.obligastorioAnticipo.Text = "*";
+            this.obligastorioAnticipo.Visible = false;
             // 
             // obligatorioCosto
             // 
@@ -244,6 +245,7 @@
             this.obligatorioCosto.Size = new System.Drawing.Size(20, 25);
             this.obligatorioCosto.TabIndex = 126;
             this.obligatorioCosto.Text = "*";
+            this.obligatorioCosto.Visible = false;
             // 
             // lblMensajeFecha
             // 
@@ -263,12 +265,12 @@
             // btnFechaCita
             // 
             this.btnFechaCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFechaCita.Location = new System.Drawing.Point(261, 135);
+            this.btnFechaCita.Location = new System.Drawing.Point(276, 135);
             this.btnFechaCita.Name = "btnFechaCita";
-            this.btnFechaCita.Size = new System.Drawing.Size(105, 24);
+            this.btnFechaCita.Size = new System.Drawing.Size(90, 24);
             this.btnFechaCita.TabIndex = 120;
             this.btnFechaCita.TabStop = false;
-            this.btnFechaCita.Text = "Agregar fecha";
+            this.btnFechaCita.Text = "Agregar ";
             this.btnFechaCita.UseVisualStyleBackColor = true;
             this.btnFechaCita.Click += new System.EventHandler(this.btnFechaCita_Click);
             // 
@@ -289,7 +291,7 @@
             this.cbxEstadoCita.FormattingEnabled = true;
             this.cbxEstadoCita.Location = new System.Drawing.Point(116, 98);
             this.cbxEstadoCita.Name = "cbxEstadoCita";
-            this.cbxEstadoCita.Size = new System.Drawing.Size(180, 24);
+            this.cbxEstadoCita.Size = new System.Drawing.Size(135, 24);
             this.cbxEstadoCita.TabIndex = 113;
             this.cbxEstadoCita.TabStop = false;
             // 
@@ -425,6 +427,7 @@
             this.obligatorioTatuaje.Size = new System.Drawing.Size(20, 25);
             this.obligatorioTatuaje.TabIndex = 127;
             this.obligatorioTatuaje.Text = "*";
+            this.obligatorioTatuaje.Visible = false;
             // 
             // obligatorioZona
             // 
@@ -436,6 +439,7 @@
             this.obligatorioZona.Size = new System.Drawing.Size(20, 25);
             this.obligatorioZona.TabIndex = 126;
             this.obligatorioZona.Text = "*";
+            this.obligatorioZona.Visible = false;
             // 
             // btnEliminarImagen
             // 
@@ -610,6 +614,7 @@
             this.obligatorioInstrumentos.Size = new System.Drawing.Size(20, 25);
             this.obligatorioInstrumentos.TabIndex = 124;
             this.obligatorioInstrumentos.Text = "*";
+            this.obligatorioInstrumentos.Visible = false;
             // 
             // btnProductos
             // 
@@ -684,6 +689,7 @@
             this.lblObligatorio.TabIndex = 135;
             this.lblObligatorio.Text = "* Campos Obligatorios";
             this.lblObligatorio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblObligatorio.Visible = false;
             // 
             // frmTATCitasCAP_INS2
             // 
@@ -772,7 +778,6 @@
         public System.Windows.Forms.PictureBox ptbPerfil;
         public System.Windows.Forms.PictureBox ptbTatuaje;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblMensajeFecha;
         private System.Windows.Forms.Label lblObligatorio;
         private System.Windows.Forms.Label obligastorioAnticipo;
         private System.Windows.Forms.Label obligatorioCosto;
@@ -780,5 +785,6 @@
         private System.Windows.Forms.Label obligatorioZona;
         private System.Windows.Forms.Label obligatorioInstrumentos;
         public System.Windows.Forms.Button btnProductos;
+        public System.Windows.Forms.Label lblMensajeFecha;
     }
 }

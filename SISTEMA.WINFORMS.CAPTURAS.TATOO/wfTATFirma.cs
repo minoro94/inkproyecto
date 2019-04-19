@@ -16,13 +16,16 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         
 
         #region AGREGAR
-        public string Agregar(ref string firma)
+        public DialogResult Agregar(ref TATCitas.strTATCitas str, DataTable fechacitas, DataTable inventa, DataTable imag, string Correo)
         {
-            frmTATFirmaCAP frm = new frmTATFirmaCAP();
-            frm.DireccionFirma = firma;
+            frmTATCitasCAP_DONE frm = new frmTATCitasCAP_DONE();
+            frm.str = str;
+            frm.dtableFechasCita = fechacitas;
+            frm.dtInventario = inventa;
+            frm.dtImagentestato = imag;
+            frm.Correo = Correo;
             frm.ShowDialog();
-            firma = frm.DireccionFirma;
-            return frm.DireccionFirma;
+            return DialogResult.OK;
         }
         #endregion
 

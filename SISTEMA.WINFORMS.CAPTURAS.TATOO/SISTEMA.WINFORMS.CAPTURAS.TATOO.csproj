@@ -52,6 +52,12 @@
     <Compile Include="frmTATCitasCAP_CAT.Designer.cs">
       <DependentUpon>frmTATCitasCAP_CAT.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTATCitasCAP_DONE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATCitasCAP_DONE.Designer.cs">
+      <DependentUpon>frmTATCitasCAP_DONE.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTATCitasCAP_INS2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +138,9 @@
     <Compile Include="wfTATFirma.cs" />
     <EmbeddedResource Include="frmTATCitasCAP_CAT.resx">
       <DependentUpon>frmTATCitasCAP_CAT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATCitasCAP_DONE.resx">
+      <DependentUpon>frmTATCitasCAP_DONE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTATCitasCAP_INS2.resx">
       <DependentUpon>frmTATCitasCAP_INS2.cs</DependentUpon>
@@ -300,6 +309,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Capturas\" />
+    <Folder Include="PDF\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
