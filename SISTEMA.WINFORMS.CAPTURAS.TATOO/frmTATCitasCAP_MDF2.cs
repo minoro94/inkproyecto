@@ -754,7 +754,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
 
                 if (Agregado)
                 {
-                    MessageBox.Show(this, "Agregado Correctamente", "Operacion Correcta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(this, "Modificado Correctamente", "Operacion Correcta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.DialogResult = DialogResult.OK;
 
                     Close();

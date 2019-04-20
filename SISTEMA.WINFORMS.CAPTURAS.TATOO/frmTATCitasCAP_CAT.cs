@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SISTEMA.TATTOO;
 using System.Runtime.InteropServices;
+using System.Net.Mail;
+using System.IO;
 
 namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
 {
@@ -43,12 +45,18 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                 btnEditar.Enabled = false;
                 btnEliminar.Enabled = false;
                 btnMostrar.Enabled = false;
+                btnFinalizado.Enabled = false;
             }
             else
             {
                 btnEditar.Enabled = true;
                 btnEliminar.Enabled = true;
                 btnMostrar.Enabled = true;
+                strCitas = (TATCitas.strTATCitas)lstLista.SelectedItems[0].Tag;
+                if(strCitas.idEstadoCita != 3)
+                {
+                    btnFinalizado.Enabled = true;
+                }
             }
         }
         #endregion
@@ -228,24 +236,9 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         #region BOTON ELIMINAR
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            /* DialogResult Resultado;
-
-             if (lstLista.SelectedItems.Count >= 1)
-             {
-                 strCitas = (TATCitas.strTATCitas)lstLista.SelectedItems[0].Tag;
-                 Resultado = WF.Remover(ref strCitas, USUARIO);
-                 if (Resultado == System.Windows.Forms.DialogResult.OK)
-                 {
-                     RefreshList();
-                 }
-                 else
-                 {
-                     RefreshList();
-                 }
-             }*/
             DialogResult R;
             strCitas = (TATCitas.strTATCitas)lstLista.SelectedItems[0].Tag;
-           R =  MessageBox.Show(this, "Desea eliminar la cita", "Eliminar cita", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+           R =  MessageBox.Show(this, "¿Desea eliminar la cita?", "Eliminar cita", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if(R == DialogResult.Yes)
             {
@@ -309,5 +302,66 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         {
             
         }
+
+        private void btnFinalizado_Click(object sender, EventArgs e)
+        {
+            DialogResult R;
+            DialogResult C;
+            strCitas = (TATCitas.strTATCitas)lstLista.SelectedItems[0].Tag;
+            if(strCitas.idEstadoCita != 3)
+            {
+                strCitas.idEstadoCita = 3;
+                R = MessageBox.Show(this, "¿Desea finalizar la cita?", "Finalizar cita", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (R == DialogResult.Yes)
+                {
+                    bool Cambia = TABLA_Citas.DAO(ref strCitas, 2, dtInventario, dtFechasCitas, dtImagenes);
+                    if (Cambia)
+                    {
+                        C = EnviarCorreo("leyva393@hotmail.com");
+                        if(C == DialogResult.OK)
+                        {
+                            strCitas.EstadoCorreo = true;
+                            Cambia = TABLA_Citas.DAO(ref strCitas, 2, dtInventario, dtFechasCitas, dtImagenes);
+                        }
+                        RefreshList();
+
+                    }
+                }
+            }
+        }
+
+        #region ENVIAR CORREO
+        private DialogResult EnviarCorreo(string Correo)
+        {
+            //string file = "FinalFantasy.pdf";
+            string ruta = (Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName, @"..\SISTEMA.WINFORMS.CAPTURAS.TATOO\PDF\HistorialMedico.pdf"));
+            MailMessage Mensaje = new MailMessage();
+            Mensaje.To.Add(Correo);
+            Mensaje.Subject = "PDF";
+            Mensaje.SubjectEncoding = System.Text.Encoding.UTF8;
+            Mensaje.Body = "PROBANDO PDF";
+            Mensaje.Attachments.Add(new Attachment(ruta));
+            Mensaje.BodyEncoding = System.Text.Encoding.UTF8;
+            Mensaje.IsBodyHtml = true;
+            Mensaje.From = new System.Net.Mail.MailAddress("rleyvacastro@gmail.com");
+            SmtpClient Cliente = new SmtpClient();
+            Cliente.Credentials = new System.Net.NetworkCredential("rleyvacastro@gmail.com", "As5drq9zv7391,");
+            Cliente.Port = 587;
+            Cliente.EnableSsl = true;
+            Cliente.Host = "smtp.gmail.com";
+            try
+            {
+                Cliente.Send(Mensaje);
+                MessageBox.Show(this, "Correo Enviado Exitosamente a: " + Correo , "Envio Existoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return DialogResult.OK;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(this, "Ha Ocurrido Un Error Al Enviar Correo", "Operacion Fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return DialogResult.Cancel;
+            }
+
+        }
+        #endregion
     }
 }

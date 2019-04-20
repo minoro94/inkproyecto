@@ -400,6 +400,7 @@
             this.btnFinalizado.Text = "Finalizado";
             this.btnFinalizado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnFinalizado.UseVisualStyleBackColor = true;
+            this.btnFinalizado.Click += new System.EventHandler(this.btnFinalizado_Click);
             // 
             // frmTATCitasCAP_CAT
             // 

@@ -51,7 +51,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             }
             Point PosicionActual = new Point(e.X, e.Y);
             Graphics Dibujo = this.ptbFirma.CreateGraphics();
-            Dibujo.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            Dibujo.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.Default;
 
             if (e.Button == MouseButtons.Left)
             {

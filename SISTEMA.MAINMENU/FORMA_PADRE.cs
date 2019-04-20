@@ -14,6 +14,8 @@ using System.IO;
 using System.Diagnostics;
 using SISTEMA.WINFORMS.TATTOO;
 using SISTEMA.WINFORMS.CAPTURAS.TATOO;
+using System.Net.Mail;
+using System.IO;
 
 
 namespace SISTEMA.MAINMENU
@@ -57,9 +59,13 @@ namespace SISTEMA.MAINMENU
         private const int SW_HIDE = 0;
         private const int SW_SHOW = 1;
 
-
+        DataTable dtFechasCitas = new DataTable();
+        DataTable dtInventario = new DataTable();
+        DataTable dtImagenes = new DataTable();
         TATCitas.strTATCitas strCitas = new TATCitas.strTATCitas();
         TATCitas TABLA_Citas = new TATCitas();
+
+        bool Instancia = false;
         #endregion
 
         #region METODO AGREGAR HIJOS
@@ -167,19 +173,25 @@ namespace SISTEMA.MAINMENU
         #region LOAD
         private void FORMA_PADRE_Load_1(object sender, EventArgs e)
         {
+            if (!Instancia)
+            {
+                Instanciar();
+            }
+            
             Disparador.Enabled = false;
             frmTATLogin Forma = new frmTATLogin();
             Forma.ShowDialog();
             
             strUsuario = Forma.strUsuario;
             ARRPermisoTablas = Forma.ARRPermisosTablas;
-
+            
             
             
             if (ARRPermisoTablas != null)
             {
                 this.Enabled = true;
                 Disparador.Enabled = true;
+                EnvioCorreo.Enabled = true;
 
             }
            
@@ -297,6 +309,85 @@ namespace SISTEMA.MAINMENU
                 MessageBox.Show(this, "EL DIA DE MAÑANA TIENE CITA CON: \n" + Nombre.ToUpper() + "\nEL DIA " + Fecha.ToUpper() + "\nFAVOR DE COMUNICARSE AL NUMERO:\n" + Telefono.ToUpper() + " PARA CONFIRMA CITA", "CITAS", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             
+        }
+        #endregion
+
+        private void EnvioCorreo_Tick(object sender, EventArgs e)
+        {
+            EnvioCorreo.Interval = 1800000;
+            DialogResult R;
+            TATCitas.strTATCitas[] ARR = null;
+            bool Resulto = TABLA_Citas.Listar(ref ARR, DateTime.Now.AddDays(-2),DateTime.Now.AddDays(7), strCitas);
+            if (Resulto)
+            {
+                foreach(TATCitas.strTATCitas Dato in ARR)
+                {
+                    if(!Dato.EstadoCorreo && Dato.idEstadoCita == 3 && Dato.ELIMINADO == false)
+                    {
+                        R = EnviarCorreo("leyva393@hotmail.com");
+                        if(R == DialogResult.OK)
+                        {
+                            strCitas = Dato;
+                            strCitas.EstadoCorreo = true;
+                            
+                            TABLA_Citas.DAO(ref strCitas, 2, dtInventario, dtFechasCitas, dtImagenes);
+                        }
+                    }
+                }
+            }
+        }
+
+        #region ENVIAR CORREO
+        private DialogResult EnviarCorreo(string Correo)
+        {
+            //string file = "FinalFantasy.pdf";
+            string ruta = (Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName, @"..\SISTEMA.WINFORMS.CAPTURAS.TATOO\PDF\HistorialMedico.pdf"));
+            MailMessage Mensaje = new MailMessage();
+            Mensaje.To.Add(Correo);
+            Mensaje.Subject = "PDF";
+            Mensaje.SubjectEncoding = System.Text.Encoding.UTF8;
+            Mensaje.Body = "PROBANDO PDF";
+            Mensaje.Attachments.Add(new Attachment(ruta));
+            Mensaje.BodyEncoding = System.Text.Encoding.UTF8;
+            Mensaje.IsBodyHtml = true;
+            Mensaje.From = new System.Net.Mail.MailAddress("rleyvacastro@gmail.com");
+            SmtpClient Cliente = new SmtpClient();
+            Cliente.Credentials = new System.Net.NetworkCredential("rleyvacastro@gmail.com", "As5drq9zv7391,");
+            Cliente.Port = 587;
+            Cliente.EnableSsl = true;
+            Cliente.Host = "smtp.gmail.com";
+            try
+            {
+                Cliente.Send(Mensaje);
+                MessageBox.Show(this, "Correo Enviado Exitosamente a: " + Correo, "Envio Existoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return DialogResult.OK;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(this, "Ha Ocurrido Un Error Al Enviar Correo", "Operacion Fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return DialogResult.Cancel;
+            }
+
+        }
+        #endregion
+
+        #region INSTANCIAR DATATABLE
+        private void Instanciar()
+        {
+            dtFechasCitas.Columns.Add("idSesionCita", typeof(int));
+            dtFechasCitas.Columns.Add("FechaCita", typeof(DateTime));
+            dtFechasCitas.Columns.Add("ELIMINADO", typeof(bool));
+
+            dtInventario.Columns.Add("idCitaInventario", typeof(int));
+            dtInventario.Columns.Add("idInventario", typeof(int));
+            dtInventario.Columns.Add("Cantidad", typeof(int));
+            dtInventario.Columns.Add("ELIMINADO", typeof(bool));
+
+            dtImagenes.Columns.Add("idImagenTattoo", typeof(int));
+            dtImagenes.Columns.Add("ImagenTattoo", typeof(string));
+            dtImagenes.Columns.Add("ELIMINADO", typeof(bool));
+
+            Instancia = true;
         }
         #endregion
     }
