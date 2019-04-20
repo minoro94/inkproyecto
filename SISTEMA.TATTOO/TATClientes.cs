@@ -29,7 +29,6 @@ namespace SISTEMA.TATTOO
             public int Edad;
             public bool Sexo;
 
-            public int idHistorialMedico;
             public bool Hipertension;
             public bool Diabetes;
             public bool Hemofilia;
@@ -91,7 +90,6 @@ namespace SISTEMA.TATTOO
                     ARR[i].Edad = Convert.ToInt16(DB.REG1["Edad"]);
                     ARR[i].Sexo = (bool)DB.REG1["Sexo"];
 
-                    ARR[i].idHistorialMedico = (int)DB.REG1["idHisotrialMedico"];
                     ARR[i].Hipertension = (bool)DB.REG1["Hipertension"];
                     ARR[i].Diabetes = (bool)DB.REG1["Diabetes"];
                     ARR[i].Hemofilia = (bool)DB.REG1["Hemofilia"];
@@ -180,7 +178,7 @@ namespace SISTEMA.TATTOO
                     ARR[i].Edad = Convert.ToInt16(DB.REG1["Edad"]);
                     ARR[i].Sexo = (bool)DB.REG1["Sexo"];
 
-                    ARR[i].idHistorialMedico = (int)DB.REG1["idHisotrialMedico"];
+
                     ARR[i].Hipertension = (bool)DB.REG1["Hipertension"];
                     ARR[i].Diabetes = (bool)DB.REG1["Diabetes"];
                     ARR[i].Hemofilia = (bool)DB.REG1["Hemofilia"];
@@ -246,7 +244,7 @@ namespace SISTEMA.TATTOO
                 DB.COM1.Parameters.AddWithValue("Edad",str.Edad);
                 DB.COM1.Parameters.AddWithValue("Sexo",str.Sexo);
 
-                DB.COM1.Parameters.AddWithValue("idHisotrialMedico", str.idHistorialMedico);
+
                 DB.COM1.Parameters.AddWithValue("Hipertension", str.Hipertension);
                 DB.COM1.Parameters.AddWithValue("Diabetes", str.Diabetes);
                 DB.COM1.Parameters.AddWithValue("Hemofilia", str.Hemofilia);
@@ -266,6 +264,7 @@ namespace SISTEMA.TATTOO
                 DB.COM1.Parameters.AddWithValue("OtrasIntervenciones", str.OtrasIntervenciones);
                 DB.COM1.Parameters.AddWithValue("ComplicacionesInterv", str.ComplicacionesInterv);
                 DB.COM1.Parameters.AddWithValue("Firma", str.Firma);
+
 
                 DB.COM1.Parameters.AddWithValue("USUARIO",str.USUARIO);
                 DB.COM1.Parameters.AddWithValue("FECHAHORACAMBIO",DateTime.Now);
@@ -287,7 +286,7 @@ namespace SISTEMA.TATTOO
                     str.Edad = (int)DB.REG1["Edad"];
                     str.Sexo = (bool)DB.REG1["Sexo"];
 
-                    str.idHistorialMedico = (int)DB.REG1["idHisotrialMedico"];
+
                     str.Hipertension = (bool)DB.REG1["Hipertension"];
                     str.Diabetes = (bool)DB.REG1["Diabetes"];
                     str.Hemofilia = (bool)DB.REG1["Hemofilia"];
@@ -307,6 +306,7 @@ namespace SISTEMA.TATTOO
                     str.OtrasIntervenciones = (bool)DB.REG1["OtrasInvervenciones"];
                     str.ComplicacionesInterv = (string)DB.REG1["ComplicacionesInterv"];
                     str.Firma = (string)DB.REG1["Firma"];
+
 
 
                     str.USUARIO = (string)DB.REG1["USUARIO"];

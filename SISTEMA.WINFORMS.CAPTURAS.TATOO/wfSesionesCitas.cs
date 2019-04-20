@@ -29,5 +29,14 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             return frm.ShowDialog();
         }
         #endregion
+
+        #region MOSTRAR
+        public DialogResult Mostrar(ref DataTable dtFechaCitas)
+        {
+            frmTATFechasCitasCAP_MOS2 frm = new frmTATFechasCitasCAP_MOS2();
+            frm.dTable = dtFechaCitas;
+            return frm.ShowDialog();
+        }
+        #endregion
     }
 }

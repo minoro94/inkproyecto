@@ -29,5 +29,14 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             return frm.ShowDialog();
         }
         #endregion
+
+        #region MOSTRAR
+        public DialogResult Mostrar(ref DataTable dtInventario)
+        {
+            frmTATInventarioCAP_MOS2 frm = new frmTATInventarioCAP_MOS2();
+            frm.dTable = dtInventario;
+            return frm.ShowDialog();
+        }
+        #endregion
     }
 }

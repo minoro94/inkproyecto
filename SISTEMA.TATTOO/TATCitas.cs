@@ -36,6 +36,7 @@ namespace SISTEMA.TATTOO
             public string Tamaño;
             public string NombreEstadoCita;
             public string Telefono;
+            public bool EstadoCorreo;
         }
         #endregion
 
@@ -186,6 +187,7 @@ namespace SISTEMA.TATTOO
                 DB.COM1.Parameters.AddWithValue("Anticipo",str.Anticipo);
                 DB.COM1.Parameters.AddWithValue("ZonaCuerpo",str.ZonaCuerpo);
                 DB.COM1.Parameters.AddWithValue("Descripcion",str.Descripcion);
+                DB.COM1.Parameters.AddWithValue("EstadoCorreo", str.EstadoCorreo);
                 DB.COM1.Parameters.AddWithValue("USUARIO",str.USUARIO);
                 DB.COM1.Parameters.AddWithValue("FECHAHORACAMBIO",DateTime.Now);
                 DB.COM1.Parameters.AddWithValue("ELIMINADO",str.ELIMINADO);

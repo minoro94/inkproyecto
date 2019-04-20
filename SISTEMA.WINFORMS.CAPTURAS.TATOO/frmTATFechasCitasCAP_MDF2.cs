@@ -33,6 +33,10 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         #region BOTON CANCELAR
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            foreach(DataRow fila in dTable.Rows)
+            {
+                fila["ELIMINADO"] = false;
+            }
             this.Close();
         }
         #endregion

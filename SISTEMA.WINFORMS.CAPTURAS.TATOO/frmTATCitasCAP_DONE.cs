@@ -97,10 +97,10 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             CapturaPantalla();
-            bool Enviar = EnviarCorreo();
+            //bool Enviar = EnviarCorreo();
             bool Agregar = TABLA.DAO(ref str, 1, dtInventario, dtableFechasCita, dtImagentestato);
             
-            if (Agregar && Enviar)
+            if (Agregar)
             {
                 MessageBox.Show(this, "Agregado Correctamente", "Operacion Correcta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.DialogResult = DialogResult.OK;

@@ -435,6 +435,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         #region BOTON ACEPTAR
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+            DialogResult Res;
             if (Obligatorios())
             {
                 CapturaPantalla();
@@ -449,8 +450,8 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                 EncodePeFI();
 
                 // bool Agregado = TABLA_Citas.DAO(ref strCitas, 1, dtCitasInventario, dtSesionesCitas, dtImagenesTatto);
-                wfFirma.Agregar(ref strCitas, dtSesionesCitas, dtCitasInventario, dtImagenesTatto, Correo);
-                if(this.DialogResult == DialogResult.OK)
+                Res = wfFirma.Agregar(ref strCitas, dtSesionesCitas, dtCitasInventario, dtImagenesTatto, Correo);
+                if(Res == DialogResult.OK)
                 {
                     this.Close();
                 }
@@ -477,14 +478,8 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         #region ENCODE PERFIL
         private void EncodePeFI()
         {
-            string cale = "";
             String ImgZon = Herramientas.encodeImagen(imgZonaCuerpo);
             strCitas.ZonaCuerpo = ImgZon;
-            //cale = imgZonaCuerpo;
-            //File.Delete(cale);
-            //String ImgFirma = Herramientas.encodeImagen(Firma);
-            //strCitas.Firma = ImgFirma;
-           // File.Delete(Firma);
         }
         #endregion
 

@@ -139,6 +139,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
 
                             if (lstLista.Items[i].SubItems[1].Text == nudCantidad.Value.ToString())
                             {
+                            EnableButton();
                                 return;
                             }
                             if(Dato.NombreProducto == lstLista.Items[i].SubItems[0].Text)
@@ -150,9 +151,11 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                                     if (id.Equals(dat["idInventario"]))
                                     {
                                         dat["Cantidad"] = nudCantidad.Value;
+                                    EnableButton();
                                         return;
                                     }
                                 }
+                            EnableButton();
                                 return;
                             }
 
@@ -168,10 +171,12 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                             L.SubItems.Add(Convert.ToString(nudCantidad.Value));
                             dTable.Rows.Add(0, Dato.idInventario, nudCantidad.Value, 0);
                             lstLista.Items.Add(L);
+                        EnableButton();
                             return;
                         }
                         else
-                        {                     
+                        {
+                        EnableButton();
                             return;
                         }
                     }

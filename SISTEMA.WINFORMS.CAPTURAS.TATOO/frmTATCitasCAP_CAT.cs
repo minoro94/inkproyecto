@@ -29,6 +29,10 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+
+        DataTable dtInventario = new DataTable();
+        DataTable dtFechasCitas = new DataTable();
+        DataTable dtImagenes = new DataTable();
         #endregion
 
         #region ENABLE BUTTONS
@@ -91,6 +95,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         #region LOAD
         private void frmTATCitasCAP_CAT_Load(object sender, EventArgs e)
         {
+            Instanciar();
             dtpInicio.Value = DateTime.Today.AddDays(-(int)DateTime.Today.DayOfWeek + 1);
             dtpFin.Value = DateTime.Today.AddDays(-(int)DateTime.Today.DayOfWeek + 7);
             dtpFin.Value = new DateTime(dtpFin.Value.Year, dtpFin.Value.Month, dtpFin.Value.Day, 23, 59, 0);
@@ -223,21 +228,40 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         #region BOTON ELIMINAR
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            DialogResult Resultado;
+            /* DialogResult Resultado;
 
-            if (lstLista.SelectedItems.Count >= 1)
+             if (lstLista.SelectedItems.Count >= 1)
+             {
+                 strCitas = (TATCitas.strTATCitas)lstLista.SelectedItems[0].Tag;
+                 Resultado = WF.Remover(ref strCitas, USUARIO);
+                 if (Resultado == System.Windows.Forms.DialogResult.OK)
+                 {
+                     RefreshList();
+                 }
+                 else
+                 {
+                     RefreshList();
+                 }
+             }*/
+            DialogResult R;
+            strCitas = (TATCitas.strTATCitas)lstLista.SelectedItems[0].Tag;
+           R =  MessageBox.Show(this, "Desea eliminar la cita", "Eliminar cita", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if(R == DialogResult.Yes)
             {
-                strCitas = (TATCitas.strTATCitas)lstLista.SelectedItems[0].Tag;
-                Resultado = WF.Remover(ref strCitas, USUARIO);
-                if (Resultado == System.Windows.Forms.DialogResult.OK)
+                bool Elimina = TABLA_Citas.DAO(ref strCitas, 3, dtInventario, dtFechasCitas, dtImagenes);
+                if (Elimina)
                 {
                     RefreshList();
                 }
                 else
                 {
-                    RefreshList();
+
                 }
             }
+            
+            
+
         }
 
         #endregion
@@ -260,6 +284,24 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                     RefreshList();
                 }
             }
+        }
+        #endregion
+
+        #region INSTANCIAR DATATABLE
+        private void Instanciar()
+        {
+            dtFechasCitas.Columns.Add("idSesionCita", typeof(int));
+            dtFechasCitas.Columns.Add("FechaCita", typeof(DateTime));
+            dtFechasCitas.Columns.Add("ELIMINADO", typeof(bool));
+
+            dtInventario.Columns.Add("idCitaInventario", typeof(int));
+            dtInventario.Columns.Add("idInventario", typeof(int));
+            dtInventario.Columns.Add("Cantidad", typeof(int));
+            dtInventario.Columns.Add("ELIMINADO", typeof(bool));
+
+            dtImagenes.Columns.Add("idImagenTattoo", typeof(int));
+            dtImagenes.Columns.Add("ImagenTattoo", typeof(string));
+            dtImagenes.Columns.Add("ELIMINADO", typeof(bool));
         }
         #endregion
 

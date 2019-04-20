@@ -57,6 +57,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnMostrar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnFinalizado = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -386,11 +387,26 @@
             this.label2.TabIndex = 135;
             this.label2.Text = "De:";
             // 
+            // btnFinalizado
+            // 
+            this.btnFinalizado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnFinalizado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinalizado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFinalizado.Location = new System.Drawing.Point(562, 589);
+            this.btnFinalizado.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFinalizado.Name = "btnFinalizado";
+            this.btnFinalizado.Size = new System.Drawing.Size(90, 33);
+            this.btnFinalizado.TabIndex = 136;
+            this.btnFinalizado.Text = "Finalizado";
+            this.btnFinalizado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFinalizado.UseVisualStyleBackColor = true;
+            // 
             // frmTATCitasCAP_CAT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(850, 632);
+            this.Controls.Add(this.btnFinalizado);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.panel3);
@@ -461,5 +477,6 @@
         public System.Windows.Forms.Button btnMostrar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ColumnHeader NumS;
+        public System.Windows.Forms.Button btnFinalizado;
     }
 }

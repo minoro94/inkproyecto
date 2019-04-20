@@ -24,8 +24,8 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             frm.dtInventario = inventa;
             frm.dtImagentestato = imag;
             frm.Correo = Correo;
-            frm.ShowDialog();
-            return DialogResult.OK;
+            return frm.ShowDialog();
+            
         }
         #endregion
 

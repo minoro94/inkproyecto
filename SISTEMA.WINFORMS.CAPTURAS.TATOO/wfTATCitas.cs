@@ -67,13 +67,12 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         public DialogResult Mostrar(ref TATCitas.strTATCitas str, string USUARIO)
         {
             frmTATCitasCAP_MOS frm = new frmTATCitasCAP_MOS();
+            frm.idCita = str.idCita;
             frm.lblNombreCliente.Text = str.nombreCliente;
             frm.lblTelefono.Text = str.Telefono;
-            //frm.lblFechaCita.Text = str.FechaCita.ToLongDateString() + " " + str.FechaCita.ToLongTimeString();
             frm.lblEstadoCita.Text = str.NombreEstadoCita;
             frm.lblTamaño.Text = str.Tamaño;
             frm.ptbPerfil.Image = Herramientas.decodeImagen(str.ZonaCuerpo, ".png");
-           // frm.ptbTatuaje.Image = Herramientas.decodeImagen(str.ImagenTatto, ".png");
             frm.lblDescripcion.Text = str.Descripcion;
             frm.lblCosto.Text = str.Costo.ToString();
             frm.lblAnticipo.Text = str.Anticipo.ToString();

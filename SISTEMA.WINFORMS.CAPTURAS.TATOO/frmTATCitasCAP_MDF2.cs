@@ -82,6 +82,8 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         DataTable dtImagenesTatto = new DataTable();
         DataTable dtCitasInventario = new DataTable();
         DataTable dtSesionesCitas = new DataTable();
+
+        DataTable dtImagenesAUX = new DataTable();
         #endregion
 
         #endregion
@@ -278,10 +280,12 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         #region LOAD
         private void frmTATCitasCAP_MDF2_Load(object sender, EventArgs e)
         {
+            InicializaImg();
             FillComboEstadoCita();
             FillComboTamaños();
             FillDatosClientes();
             FILLIMGLIST();
+            LLenarDTAUX();
             FILLDTINVENTARIOCITAS();
             FILLDTSESIONESCITAS();
             ValidaIzDe();
@@ -313,7 +317,11 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             TABLA_ImagenesTattoo.Listar(ref ARR_ImagenesTattoo, idCita);
             foreach(TATImagenesTattoo.strTATImagenesTattoo Dato in ARR_ImagenesTattoo)
             {
-                imgListDefinitiva.Add(Dato.ImagenTatto);
+                if (!Dato.ELIMINADO)
+                {
+                    imgListDefinitiva.Add(Dato.ImagenTatto);
+                    dtImagenesTatto.Rows.Add(Dato.idImagenTattoo, Dato.ImagenTatto, Dato.ELIMINADO);
+                } 
             }
         }
         #endregion
@@ -339,27 +347,39 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             {
                 dtSesionesCitas.Rows.Add(Dato.idSesionCita, Dato.FechaCita, Dato.ELIMINADO);
             }
+            lblMensajeFecha.Text = dtSesionesCitas.Rows[0].ItemArray[1].ToString();
+            lblMensajeFecha.ForeColor = Color.Black;
         }
         #endregion
 
+        #region LLENAR DATA TABLE AUX DE IMAGENES
+        private void LLenarDTAUX()
+        {
+            dtImagenesAUX.Clear();
+            foreach (DataRow dr in dtImagenesTatto.Rows)
+            {
+                if(Convert.ToBoolean(dr["ELIMINADO"]) == false)
+                {
+                    dtImagenesAUX.Rows.Add(dr["idImagenTattoo"], dr["ImagenTattoo"], dr["ELIMINADO"]);
+                }
+            }
+        }
+        #endregion
         #region CARRUSEL
 
         #region ENCONTRAR IMAGEN CARRUSEL
         private void CarruselImagen(int Posicion)
         {
-            if (imgListDefinitiva.Count > 0)
+            int z = 0;
+            foreach(DataRow dr in dtImagenesAUX.Rows)
             {
-                for (int i = 0; i <= imgListDefinitiva.Count; i++)
+                if (z == Posicion && Convert.ToBoolean(dr["ELIMINADO"]) == false)
                 {
-                    if (i == Posicion)
-                    {
-                        ptbTatuaje.Image = Herramientas.decodeImagen(imgListDefinitiva[i], ".png");
-                    }
-                    
+                    ptbTatuaje.Image = Herramientas.decodeImagen(dr["ImagenTattoo"].ToString(), ".png");
+                    break;
                 }
+                z++;
             }
-
-
             ValidaIzDe();
             EnableButtons();
         }
@@ -372,6 +392,8 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             //imgListDefinitiva.Add(img);
             String imgTat = Herramientas.encodeImagen(img);
             imgListDefinitiva.Add(imgTat);
+            dtImagenesTatto.Rows.Add(0, imgTat, 0);
+            LLenarDTAUX();
             if (imgListDefinitiva.Count == 1)
             {
                 PosicionImg = 0;
@@ -446,19 +468,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         #region BOTON ADJUNTAR IMAGEN
         private void btnAdjuntarImagen_Click(object sender, EventArgs e)
         {
-            DialogResult Resultado = openFileDialog1.ShowDialog();
-            try
-            {
-                if (Resultado == DialogResult.OK)
-                {
-                    ptbTatuaje.Image = Image.FromFile(openFileDialog1.FileName);
-                    AgregarImagenArreglo(openFileDialog1.FileName);
-                }
-            }
-            catch
-            {
-
-            }
+            
         }
         #endregion
 
@@ -522,9 +532,210 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         }
         #endregion
 
-        private void btnAceptar_Click(object sender, EventArgs e)
+        #region CAPTURA DE PANTALLA
+        private void CapturaPantalla()
         {
-            if (txtCosto.Text != "" && txtAnticipo.Text != "" && txtDescripcion.Text != "" && dtCitasInventario.Rows.Count > 0 && dtSesionesCitas.Rows.Count > 0  && Firma != "")
+            Bitmap BmpScreen = new Bitmap(ptbPerfil.Size.Width, ptbPerfil.Size.Height, System.Drawing.Imaging.PixelFormat.Format32bppPArgb);
+            Graphics ScreenShot = Graphics.FromImage(BmpScreen);
+            ScreenShot.CopyFromScreen(ptbPerfil.Location.X + this.Location.X + gbInfoTatuajes.Location.X, ptbPerfil.Location.Y + this.Location.Y + gbInfoTatuajes.Location.Y, 0, 0, Screen.PrimaryScreen.Bounds.Size, CopyPixelOperation.SourceCopy);
+            string fileNom = String.Empty;
+            saveFileDialog1.Filter = "Excel files (*.png)|*.png";
+            saveFileDialog1.RestoreDirectory = true;
+            fileNom = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\SISTEMA.WINFORMS.CAPTURAS.TATOO\Capturas\Img" + Convert.ToString(rnd.Next(10000)) + ".png");
+            imgZonaCuerpo = fileNom;
+            BmpScreen.Save(fileNom, System.Drawing.Imaging.ImageFormat.Png);
+        }
+        #endregion
+
+        #region LLENAR DTIMAGENTATTO
+        private void DTImagenesTatto()
+        {
+            
+            foreach(TATImagenesTattoo.strTATImagenesTattoo Dato in ARR_ImagenesTattoo)
+            {
+                for (int i = 0; i < imgListDefinitiva.Count; i++)
+                {
+
+                    if(imgListDefinitiva[i] == Dato.ImagenTatto)
+                    {
+                        dtImagenesTatto.Rows.Add(Dato.idImagenTattoo, imgListDefinitiva[i], 0);
+                    }
+                    
+                }
+            }
+            
+        }
+        #endregion
+        #region INICIALIZA DT IMAGENEES
+        private void InicializaImg()
+        {
+            dtImagenesTatto.Columns.Add("idImagenTattoo", typeof(int));
+            dtImagenesTatto.Columns.Add("ImagenTattoo", typeof(string));
+            dtImagenesTatto.Columns.Add("ELIMINADO", typeof(bool));
+
+            dtImagenesAUX.Columns.Add("idImagenTattoo", typeof(int));
+            dtImagenesAUX.Columns.Add("ImagenTattoo", typeof(string));
+            dtImagenesAUX.Columns.Add("ELIMINADO", typeof(bool));
+        }
+        #endregion
+
+        #region ENCODE PERFIL
+        private void EncodePeFI()
+        {
+            String ImgZon = Herramientas.encodeImagen(imgZonaCuerpo);
+            strCitas.ZonaCuerpo = ImgZon;
+          //  File.Delete(imgZonaCuerpo);
+        }
+        #endregion
+
+        private void btnAdjuntarImagen_Click_1(object sender, EventArgs e)
+        {
+            DialogResult Resultado = openFileDialog1.ShowDialog();
+            try
+            {
+                if (Resultado == DialogResult.OK)
+                {
+                    ptbTatuaje.Image = Image.FromFile(openFileDialog1.FileName);
+                    AgregarImagenArreglo(openFileDialog1.FileName);
+                }
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void btnEliminarImagen_Click_1(object sender, EventArgs e)
+        {
+
+            bool Cambio = false;
+            for (int i = 0; i < dtImagenesTatto.Rows.Count; i++)
+            {
+                if (PosicionImg == i)
+                {
+                    foreach(DataRow dr in dtImagenesTatto.Rows)
+                    {
+                        int z = 0;
+                        if (dr["ImagenTattoo"].Equals(imgListDefinitiva[i]) && Convert.ToInt32(dr["idImagenTattoo"]) != 0)
+                        {
+                            dr["ELIMINADO"] = true;
+                            imgListDefinitiva.Remove(imgListDefinitiva[i]);
+                            Cambio = true;
+                            break;
+                        }
+                        else if(dr["ImagenTattoo"].Equals(imgListDefinitiva[i]) && Convert.ToInt32(dr["idImagenTattoo"]) == 0)
+                        {
+                            z = EncontrarPosicion(dr["ImagenTattoo"].ToString());
+                            dtImagenesTatto.Rows.RemoveAt(z);
+                            imgListDefinitiva.Remove(imgListDefinitiva[i]);
+                            Cambio = true;
+                            break;
+                        }
+                        z++;
+                    }
+                }
+                if (!Cambio && PosicionImg == i)
+                {
+                    imgListDefinitiva.Remove(imgListDefinitiva[i]);
+                }
+                if (imgListDefinitiva.Count == 0)
+                {
+                    ptbTatuaje.Image.Dispose();
+                    ptbTatuaje.Image = null;
+                    LLenarDTAUX();
+                    CarruselImagen(0);
+                    return;
+                }
+            }
+            LLenarDTAUX();
+            PosicionImg = 0;
+            CarruselImagen(PosicionImg);
+        }
+
+        #region ECONTRAPOSICION
+        private int EncontrarPosicion(string imagen)
+        {
+            int i = 0;
+            foreach(DataRow row in dtImagenesTatto.Rows)
+            {
+                if (row["ImagenTattoo"].Equals(imagen))
+                {
+                    break;
+                }
+                i++;
+            }
+            return i;
+        }
+        #endregion
+        private void ptbIzquierda_Click_1(object sender, EventArgs e)
+        {
+            PosicionImg--;
+            CarruselImagen(PosicionImg);
+        }
+
+        private void ptbDerecha_Click_1(object sender, EventArgs e)
+        {
+            PosicionImg++;
+            CarruselImagen(PosicionImg);
+        }
+
+        #region MOUSE CLICK
+        private void ptbPerfil_MouseClick_1(object sender, MouseEventArgs e)
+        {
+            int x = MousePosition.X;
+            int y = MousePosition.Y;
+            if (e.Button == MouseButtons.Right)
+            {
+                ptbPerfil.Refresh();
+                Dibuja(x, y, false);
+            }
+            else
+            {
+                Dibuja(x, y, true);
+            }
+        }
+        #endregion
+
+        #region BOTON CANCELAR
+        private void btnCancelar_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        #endregion
+
+        #region BOTON FECHACITAS
+        private void btnFechaCita_Click_1(object sender, EventArgs e)
+        {
+            wfFechasCitas.Modificar(ref dtSesionesCitas);
+            for (int i = 0; i < dtSesionesCitas.Rows.Count; i++)
+            {
+                if(Convert.ToBoolean(dtSesionesCitas.Rows[i].ItemArray[2]) == true)
+                {
+                    lblMensajeFecha.Text = "Fecha no asignada*";
+                    lblMensajeFecha.ForeColor = Color.Red;
+                }
+                else
+                {
+                    lblMensajeFecha.Text = dtSesionesCitas.Rows[i].ItemArray[1].ToString();
+                    lblMensajeFecha.ForeColor = Color.Black;
+                    break;
+                }
+            }
+        }
+
+        #endregion
+
+        #region BOTON PRODUCTOS
+        private void btnProductos_Click_1(object sender, EventArgs e)
+        {
+            wfCitasInventario.Modiificar(ref dtCitasInventario);
+        }
+        #endregion
+
+        #region BOTON ACEPTAR
+        private void btnAceptar_Click_1(object sender, EventArgs e)
+        {
+            if (Obligatorios())
             {
                 CapturaPantalla();
                 strCitas.idCliente = idCliente;
@@ -536,7 +747,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                 strCitas.Firma = Firma;
                 strCitas.USUARIO = USUARIO;
                 strCitas.idCita = idCita;
-                DTImagenesTatto();
+                strCitas.EstadoCorreo = false;
                 EncodePeFI();
 
                 bool Agregado = TABLA_Citas.DAO(ref strCitas, 2, dtCitasInventario, dtSesionesCitas, dtImagenesTatto);
@@ -560,43 +771,75 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                 MessageBox.Show(this, "Algunos Campos Se Encuentran Vacios", "Campos Vacios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
-
-        #region CAPTURA DE PANTALLA
-        private void CapturaPantalla()
-        {
-            Bitmap BmpScreen = new Bitmap(ptbPerfil.Size.Width, ptbPerfil.Size.Height, System.Drawing.Imaging.PixelFormat.Format32bppPArgb);
-            Graphics ScreenShot = Graphics.FromImage(BmpScreen);
-            ScreenShot.CopyFromScreen(ptbPerfil.Location.X + this.Location.X + gbInfoTatuajes.Location.X, ptbPerfil.Location.Y + this.Location.Y + gbInfoTatuajes.Location.Y, 0, 0, Screen.PrimaryScreen.Bounds.Size, CopyPixelOperation.SourceCopy);
-            string fileNom = String.Empty;
-            saveFileDialog1.Filter = "Excel files (*.png)|*.png";
-            saveFileDialog1.RestoreDirectory = true;
-            fileNom = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\SISTEMA.WINFORMS.CAPTURAS.TATOO\Capturas\Img" + Convert.ToString(rnd.Next(10000)) + ".png");
-            imgZonaCuerpo = fileNom;
-            BmpScreen.Save(fileNom, System.Drawing.Imaging.ImageFormat.Png);
-        }
         #endregion
 
-        #region LLENAR DTIMAGENTATTO
-        private void DTImagenesTatto()
+        #region CAMPOS OBLIGATORIOS
+        private bool Obligatorios()
         {
-            dtImagenesTatto.Columns.Add("idImagenTattoo", typeof(int));
-            dtImagenesTatto.Columns.Add("ImagenTattoo", typeof(string));
-            dtImagenesTatto.Columns.Add("ELIMINADO", typeof(bool));
-            for (int i = 0; i < imgListDefinitiva.Count; i++)
+            bool Minoro = true;
+            for (int i = 0; i < dtSesionesCitas.Rows.Count; i++)
             {
-                
-                dtImagenesTatto.Rows.Add(0, imgListDefinitiva[i], 0);
+                if(Convert.ToBoolean(dtSesionesCitas.Rows[i].ItemArray[2]) == true)
+                {
+                    Minoro = false;
+                }
             }
-        }
-        #endregion
+            
 
-        #region ENCODE PERFIL
-        private void EncodePeFI()
-        {
-            String ImgZon = Herramientas.encodeImagen(imgZonaCuerpo);
-            strCitas.ZonaCuerpo = ImgZon;
-          //  File.Delete(imgZonaCuerpo);
+            if (txtCosto.Text.Trim() == "")
+            {
+                obligatorioCosto.Visible = true;
+                Minoro = false;
+            }
+            else
+            {
+                obligatorioCosto.Visible = false;
+            }
+
+            if (txtAnticipo.Text.Trim() == "")
+            {
+                obligastorioAnticipo.Visible = true;
+                Minoro = false;
+            }
+            else
+            {
+                obligastorioAnticipo.Visible = false;
+            }
+
+            for (int i = 0; i < dtCitasInventario.Rows.Count; i++)
+            {
+                if (Convert.ToBoolean(dtCitasInventario.Rows[i].ItemArray[3]) == true)
+                {
+                    obligatorioInstrumentos.Visible = true;
+                    Minoro = false;
+                }
+                else
+                {
+                    obligatorioInstrumentos.Visible = false;
+                    break;
+                }
+            }
+            
+
+            if (imgListDefinitiva.Count == 0)
+            {
+                obligatorioTatuaje.Visible = true;
+                Minoro = false;
+            }
+            else
+            {
+                obligatorioTatuaje.Visible = false;
+            }
+
+            if (Minoro == false)
+            {
+                lblObligatorio.Visible = true;
+            }
+            else
+            {
+                lblObligatorio.Visible = false;
+            }
+            return Minoro;
         }
         #endregion
     }

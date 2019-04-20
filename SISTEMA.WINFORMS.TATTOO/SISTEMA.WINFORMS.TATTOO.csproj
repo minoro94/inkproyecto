@@ -48,12 +48,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmTATCitasCAT.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmTATCitasCAT.Designer.cs">
-      <DependentUpon>frmTATCitasCAT.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmTATClientesCAT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -292,9 +286,6 @@
     <Compile Include="wfTATTamaños.cs" />
     <Compile Include="wfTATTiposEmpleados.cs" />
     <Compile Include="wfTATTiposPermisos.cs" />
-    <EmbeddedResource Include="frmTATCitasCAT.resx">
-      <DependentUpon>frmTATCitasCAT.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmTATClientesCAT.resx">
       <DependentUpon>frmTATClientesCAT.cs</DependentUpon>
     </EmbeddedResource>
