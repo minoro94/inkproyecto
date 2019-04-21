@@ -86,6 +86,7 @@ namespace SISTEMA.TATTOO
                     ARR[i].Tamaño = (string)DB.REG1["Tamaño"];
                     ARR[i].NombreEstadoCita = (string)DB.REG1["NombreEstadoCita"];
                     ARR[i].Telefono = (string)DB.REG1["Telefono"];
+                    ARR[i].EstadoCorreo = (bool)DB.REG1["EstadoCorreo"];
                     i++;
                 }
                 DB.REG1.Close();
@@ -145,6 +146,7 @@ namespace SISTEMA.TATTOO
                     ARR[i].Tamaño = (string)DB.REG1["Tamaño"];
                     ARR[i].NombreEstadoCita = (string)DB.REG1["NombreEstadoCita"];
                     ARR[i].Telefono = (string)DB.REG1["Telefono"];
+                    ARR[i].EstadoCorreo = (bool)DB.REG1["EstadoCorreo"];
                     i++;
                 }
                 DB.REG1.Close();
