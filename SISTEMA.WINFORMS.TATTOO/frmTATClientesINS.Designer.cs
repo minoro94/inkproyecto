@@ -31,9 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTATClientesINS));
             this.panel2 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -66,11 +64,13 @@
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
             this.Obligatorio = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnHistorialMedico = new System.Windows.Forms.Button();
             this.ObligatorioHistorial = new System.Windows.Forms.TextBox();
             this.lblMnesaje1 = new System.Windows.Forms.Label();
+            this.btnHistorialMedico = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -100,17 +100,6 @@
             this.label8.TabIndex = 51;
             this.label8.Text = "Agregar un Cliente";
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::SISTEMA.WINFORMS.TATTOO.Properties.Resources.Icono_Cerrar;
-            this.pictureBox3.Location = new System.Drawing.Point(545, 6);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 50;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Black;
@@ -120,18 +109,6 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(580, 4);
             this.panel6.TabIndex = 49;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Enabled = false;
-            this.pictureBox2.Image = global::SISTEMA.WINFORMS.TATTOO.Properties.Resources.LOGOINK1;
-            this.pictureBox2.Location = new System.Drawing.Point(8, 4);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(36, 31);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 12;
-            this.pictureBox2.TabStop = false;
             // 
             // panel3
             // 
@@ -353,9 +330,9 @@
             // 
             this.txtINE.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtINE.Location = new System.Drawing.Point(90, 135);
-            this.txtINE.MaxLength = 50;
+            this.txtINE.MaxLength = 17;
             this.txtINE.Name = "txtINE";
-            this.txtINE.Size = new System.Drawing.Size(331, 22);
+            this.txtINE.Size = new System.Drawing.Size(127, 22);
             this.txtINE.TabIndex = 96;
             // 
             // Obligatorio4
@@ -367,7 +344,7 @@
             this.Obligatorio4.Multiline = true;
             this.Obligatorio4.Name = "Obligatorio4";
             this.Obligatorio4.ReadOnly = true;
-            this.Obligatorio4.Size = new System.Drawing.Size(337, 28);
+            this.Obligatorio4.Size = new System.Drawing.Size(133, 28);
             this.Obligatorio4.TabIndex = 97;
             this.Obligatorio4.TabStop = false;
             this.Obligatorio4.Visible = false;
@@ -504,16 +481,6 @@
             this.label1.TabIndex = 84;
             this.label1.Text = "Nombre";
             // 
-            // btnHistorialMedico
-            // 
-            this.btnHistorialMedico.Location = new System.Drawing.Point(391, 270);
-            this.btnHistorialMedico.Name = "btnHistorialMedico";
-            this.btnHistorialMedico.Size = new System.Drawing.Size(167, 49);
-            this.btnHistorialMedico.TabIndex = 113;
-            this.btnHistorialMedico.Text = "Agregar historial médico";
-            this.btnHistorialMedico.UseVisualStyleBackColor = true;
-            this.btnHistorialMedico.Click += new System.EventHandler(this.btnHistorialMedico_Click);
-            // 
             // ObligatorioHistorial
             // 
             this.ObligatorioHistorial.BackColor = System.Drawing.Color.Red;
@@ -536,11 +503,24 @@
             this.lblMnesaje1.ForeColor = System.Drawing.Color.Red;
             this.lblMnesaje1.Location = new System.Drawing.Point(19, 348);
             this.lblMnesaje1.Name = "lblMnesaje1";
-            this.lblMnesaje1.Size = new System.Drawing.Size(135, 16);
+            this.lblMnesaje1.Size = new System.Drawing.Size(133, 16);
             this.lblMnesaje1.TabIndex = 88;
-            this.lblMnesaje1.Text = "Campos Obligatorios";
+            this.lblMnesaje1.Text = "Campos obligatorios";
             this.lblMnesaje1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblMnesaje1.Visible = false;
+            // 
+            // btnHistorialMedico
+            // 
+            this.btnHistorialMedico.Image = global::SISTEMA.WINFORMS.TATTOO.Properties.Resources.HistorialMedico;
+            this.btnHistorialMedico.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHistorialMedico.Location = new System.Drawing.Point(391, 270);
+            this.btnHistorialMedico.Name = "btnHistorialMedico";
+            this.btnHistorialMedico.Size = new System.Drawing.Size(167, 49);
+            this.btnHistorialMedico.TabIndex = 113;
+            this.btnHistorialMedico.Text = "Agregar historial médico";
+            this.btnHistorialMedico.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHistorialMedico.UseVisualStyleBackColor = true;
+            this.btnHistorialMedico.Click += new System.EventHandler(this.btnHistorialMedico_Click);
             // 
             // btnCancelar
             // 
@@ -569,6 +549,29 @@
             this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::SISTEMA.WINFORMS.TATTOO.Properties.Resources.Icono_Cerrar;
+            this.pictureBox3.Location = new System.Drawing.Point(545, 6);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 50;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Enabled = false;
+            this.pictureBox2.Image = global::SISTEMA.WINFORMS.TATTOO.Properties.Resources.LOGOINK1;
+            this.pictureBox2.Location = new System.Drawing.Point(8, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(36, 31);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
             // 
             // frmTATClientesINS
             // 

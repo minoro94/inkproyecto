@@ -31,14 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTATTamañosMDF));
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtDetalle = new System.Windows.Forms.TextBox();
-            this.lblMnesaje1 = new System.Windows.Forms.Label();
-            this.txtMensaje2 = new System.Windows.Forms.TextBox();
-            this.txtTamaño = new System.Windows.Forms.TextBox();
-            this.Obligatorio1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -51,7 +43,13 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel9.SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtDetalle = new System.Windows.Forms.TextBox();
+            this.lblMnesaje1 = new System.Windows.Forms.Label();
+            this.txtMensaje2 = new System.Windows.Forms.TextBox();
+            this.txtTamaño = new System.Windows.Forms.TextBox();
+            this.Obligatorio1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -63,7 +61,7 @@
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Image = global::SISTEMA.WINFORMS.TATTOO.Properties.Resources.ImgCancelar;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(337, 403);
+            this.btnCancelar.Location = new System.Drawing.Point(337, 250);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(90, 29);
             this.btnCancelar.TabIndex = 69;
@@ -77,7 +75,7 @@
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.Image = global::SISTEMA.WINFORMS.TATTOO.Properties.Resources.ImgAceptar;
             this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAceptar.Location = new System.Drawing.Point(241, 403);
+            this.btnAceptar.Location = new System.Drawing.Point(241, 250);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(90, 29);
             this.btnAceptar.TabIndex = 68;
@@ -85,105 +83,6 @@
             this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel9.Controls.Add(this.label1);
-            this.panel9.Controls.Add(this.txtDetalle);
-            this.panel9.Controls.Add(this.lblMnesaje1);
-            this.panel9.Controls.Add(this.txtMensaje2);
-            this.panel9.Controls.Add(this.txtTamaño);
-            this.panel9.Controls.Add(this.Obligatorio1);
-            this.panel9.Controls.Add(this.label2);
-            this.panel9.Location = new System.Drawing.Point(12, 52);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(415, 339);
-            this.panel9.TabIndex = 66;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label1.Location = new System.Drawing.Point(13, 99);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 16);
-            this.label1.TabIndex = 85;
-            this.label1.Text = "Detalle";
-            // 
-            // txtDetalle
-            // 
-            this.txtDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDetalle.Location = new System.Drawing.Point(16, 131);
-            this.txtDetalle.MaxLength = 400;
-            this.txtDetalle.Multiline = true;
-            this.txtDetalle.Name = "txtDetalle";
-            this.txtDetalle.Size = new System.Drawing.Size(379, 128);
-            this.txtDetalle.TabIndex = 83;
-            // 
-            // lblMnesaje1
-            // 
-            this.lblMnesaje1.AutoSize = true;
-            this.lblMnesaje1.BackColor = System.Drawing.Color.White;
-            this.lblMnesaje1.ForeColor = System.Drawing.Color.Red;
-            this.lblMnesaje1.Location = new System.Drawing.Point(13, 312);
-            this.lblMnesaje1.Name = "lblMnesaje1";
-            this.lblMnesaje1.Size = new System.Drawing.Size(135, 16);
-            this.lblMnesaje1.TabIndex = 64;
-            this.lblMnesaje1.Text = "Campos Obligatorios";
-            this.lblMnesaje1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtMensaje2
-            // 
-            this.txtMensaje2.BackColor = System.Drawing.Color.Red;
-            this.txtMensaje2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMensaje2.Enabled = false;
-            this.txtMensaje2.ForeColor = System.Drawing.SystemColors.Control;
-            this.txtMensaje2.Location = new System.Drawing.Point(10, 309);
-            this.txtMensaje2.Multiline = true;
-            this.txtMensaje2.Name = "txtMensaje2";
-            this.txtMensaje2.ReadOnly = true;
-            this.txtMensaje2.Size = new System.Drawing.Size(141, 22);
-            this.txtMensaje2.TabIndex = 63;
-            this.txtMensaje2.TabStop = false;
-            // 
-            // txtTamaño
-            // 
-            this.txtTamaño.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTamaño.Location = new System.Drawing.Point(75, 31);
-            this.txtTamaño.MaxLength = 50;
-            this.txtTamaño.Name = "txtTamaño";
-            this.txtTamaño.Size = new System.Drawing.Size(320, 22);
-            this.txtTamaño.TabIndex = 61;
-            this.txtTamaño.TextChanged += new System.EventHandler(this.txtTamaño_TextChanged);
-            // 
-            // Obligatorio1
-            // 
-            this.Obligatorio1.BackColor = System.Drawing.Color.Red;
-            this.Obligatorio1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Obligatorio1.Enabled = false;
-            this.Obligatorio1.ForeColor = System.Drawing.SystemColors.Control;
-            this.Obligatorio1.Location = new System.Drawing.Point(72, 28);
-            this.Obligatorio1.Multiline = true;
-            this.Obligatorio1.Name = "Obligatorio1";
-            this.Obligatorio1.ReadOnly = true;
-            this.Obligatorio1.Size = new System.Drawing.Size(326, 28);
-            this.Obligatorio1.TabIndex = 62;
-            this.Obligatorio1.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label2.Location = new System.Drawing.Point(4, 31);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 16);
-            this.label2.TabIndex = 60;
-            this.label2.Text = "Tamaño";
             // 
             // panel2
             // 
@@ -294,7 +193,7 @@
             this.panel5.Enabled = false;
             this.panel5.Location = new System.Drawing.Point(0, 35);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(3, 406);
+            this.panel5.Size = new System.Drawing.Size(3, 257);
             this.panel5.TabIndex = 70;
             // 
             // panel4
@@ -304,29 +203,118 @@
             this.panel4.Enabled = false;
             this.panel4.Location = new System.Drawing.Point(436, 35);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(3, 406);
+            this.panel4.Size = new System.Drawing.Size(3, 257);
             this.panel4.TabIndex = 71;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Black;
             this.panel3.Enabled = false;
-            this.panel3.Location = new System.Drawing.Point(-1, 438);
+            this.panel3.Location = new System.Drawing.Point(0, 288);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(441, 4);
             this.panel3.TabIndex = 72;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.label1.Location = new System.Drawing.Point(9, 92);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 16);
+            this.label1.TabIndex = 92;
+            this.label1.Text = "Detalle";
+            // 
+            // txtDetalle
+            // 
+            this.txtDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDetalle.Location = new System.Drawing.Point(12, 111);
+            this.txtDetalle.MaxLength = 400;
+            this.txtDetalle.Multiline = true;
+            this.txtDetalle.Name = "txtDetalle";
+            this.txtDetalle.Size = new System.Drawing.Size(415, 128);
+            this.txtDetalle.TabIndex = 91;
+            // 
+            // lblMnesaje1
+            // 
+            this.lblMnesaje1.AutoSize = true;
+            this.lblMnesaje1.BackColor = System.Drawing.Color.White;
+            this.lblMnesaje1.ForeColor = System.Drawing.Color.Red;
+            this.lblMnesaje1.Location = new System.Drawing.Point(9, 256);
+            this.lblMnesaje1.Name = "lblMnesaje1";
+            this.lblMnesaje1.Size = new System.Drawing.Size(135, 16);
+            this.lblMnesaje1.TabIndex = 90;
+            this.lblMnesaje1.Text = "Campos Obligatorios";
+            this.lblMnesaje1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtMensaje2
+            // 
+            this.txtMensaje2.BackColor = System.Drawing.Color.Red;
+            this.txtMensaje2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMensaje2.Enabled = false;
+            this.txtMensaje2.ForeColor = System.Drawing.SystemColors.Control;
+            this.txtMensaje2.Location = new System.Drawing.Point(6, 253);
+            this.txtMensaje2.Multiline = true;
+            this.txtMensaje2.Name = "txtMensaje2";
+            this.txtMensaje2.ReadOnly = true;
+            this.txtMensaje2.Size = new System.Drawing.Size(141, 22);
+            this.txtMensaje2.TabIndex = 89;
+            this.txtMensaje2.TabStop = false;
+            // 
+            // txtTamaño
+            // 
+            this.txtTamaño.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTamaño.Location = new System.Drawing.Point(81, 53);
+            this.txtTamaño.MaxLength = 50;
+            this.txtTamaño.Name = "txtTamaño";
+            this.txtTamaño.Size = new System.Drawing.Size(343, 22);
+            this.txtTamaño.TabIndex = 87;
+            // 
+            // Obligatorio1
+            // 
+            this.Obligatorio1.BackColor = System.Drawing.Color.Red;
+            this.Obligatorio1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Obligatorio1.Enabled = false;
+            this.Obligatorio1.ForeColor = System.Drawing.SystemColors.Control;
+            this.Obligatorio1.Location = new System.Drawing.Point(78, 50);
+            this.Obligatorio1.Multiline = true;
+            this.Obligatorio1.Name = "Obligatorio1";
+            this.Obligatorio1.ReadOnly = true;
+            this.Obligatorio1.Size = new System.Drawing.Size(349, 28);
+            this.Obligatorio1.TabIndex = 88;
+            this.Obligatorio1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.label2.Location = new System.Drawing.Point(9, 56);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 16);
+            this.label2.TabIndex = 86;
+            this.label2.Text = "Tamaño";
             // 
             // frmTATTamañosMDF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(439, 441);
+            this.ClientSize = new System.Drawing.Size(439, 292);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtDetalle);
+            this.Controls.Add(this.lblMnesaje1);
+            this.Controls.Add(this.txtMensaje2);
+            this.Controls.Add(this.txtTamaño);
+            this.Controls.Add(this.Obligatorio1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -334,38 +322,26 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(439, 441);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(439, 441);
             this.Name = "frmTATTamañosMDF";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTATTamañosMDF";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmTATTamañosMDF_FormClosing);
             this.Load += new System.EventHandler(this.frmTATTamañosMDF_Load);
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
         public System.Windows.Forms.Button btnCancelar;
         public System.Windows.Forms.Button btnAceptar;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.TextBox txtDetalle;
-        private System.Windows.Forms.Label lblMnesaje1;
-        public System.Windows.Forms.TextBox txtMensaje2;
-        public System.Windows.Forms.TextBox txtTamaño;
-        public System.Windows.Forms.TextBox Obligatorio1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel7;
@@ -376,5 +352,13 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.TextBox txtDetalle;
+        private System.Windows.Forms.Label lblMnesaje1;
+        public System.Windows.Forms.TextBox txtMensaje2;
+        public System.Windows.Forms.TextBox txtTamaño;
+        public System.Windows.Forms.TextBox Obligatorio1;
+        private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Panel panel1;
     }
 }

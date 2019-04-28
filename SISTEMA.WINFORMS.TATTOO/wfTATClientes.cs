@@ -52,6 +52,31 @@ namespace SISTEMA.WINFORMS.TATTOO
         }
         #endregion
 
+        #region MOSTRAR
+        public DialogResult Mostrar(ref TATClientes.strTATClientes str)
+        {
+            frmTATClientesMOS frm = new frmTATClientesMOS();
+            frm.lblNombre.Text = str.nombreCliente;
+            frm.lblTelefono.Text = str.Telefono;
+            frm.lblCorreo.Text = str.Correo;
+            frm.lblINE.Text = str.Identificacion;
+            frm.lblEdad.Text = str.Edad.ToString();
+            frm.lblDomicilio.Text = str.Domicilio;
+            frm.lblMunicipio.Text = str.Municipio;
+            frm.lblCodigoPostal.Text = str.CodigoPostal;
+            if (str.Sexo)
+            {
+                frm.lblSexo.Text = "SI";
+            }
+            else
+            {
+                frm.lblSexo.Text = "NO";
+            }
+            frm.str = str;
+            return frm.ShowDialog();
+        }
+        #endregion
+
         #region REMOVER
         public DialogResult Remover (ref TATClientes.strTATClientes str, string USUARIO)
         {

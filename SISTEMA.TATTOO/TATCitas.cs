@@ -37,6 +37,7 @@ namespace SISTEMA.TATTOO
             public string NombreEstadoCita;
             public string Telefono;
             public bool EstadoCorreo;
+            public string Correo;
         }
         #endregion
 
@@ -87,6 +88,7 @@ namespace SISTEMA.TATTOO
                     ARR[i].NombreEstadoCita = (string)DB.REG1["NombreEstadoCita"];
                     ARR[i].Telefono = (string)DB.REG1["Telefono"];
                     ARR[i].EstadoCorreo = (bool)DB.REG1["EstadoCorreo"];
+                    ARR[i].Correo = (string)DB.REG1["Correo"];
                     i++;
                 }
                 DB.REG1.Close();
@@ -147,6 +149,7 @@ namespace SISTEMA.TATTOO
                     ARR[i].NombreEstadoCita = (string)DB.REG1["NombreEstadoCita"];
                     ARR[i].Telefono = (string)DB.REG1["Telefono"];
                     ARR[i].EstadoCorreo = (bool)DB.REG1["EstadoCorreo"];
+                    ARR[i].Correo = (string)DB.REG1["Correo"];
                     i++;
                 }
                 DB.REG1.Close();

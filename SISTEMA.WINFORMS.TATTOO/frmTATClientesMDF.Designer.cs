@@ -380,7 +380,7 @@
             this.txtINE.Location = new System.Drawing.Point(93, 138);
             this.txtINE.MaxLength = 50;
             this.txtINE.Name = "txtINE";
-            this.txtINE.Size = new System.Drawing.Size(331, 22);
+            this.txtINE.Size = new System.Drawing.Size(128, 22);
             this.txtINE.TabIndex = 96;
             // 
             // Obligatorio4
@@ -393,7 +393,7 @@
             this.Obligatorio4.Multiline = true;
             this.Obligatorio4.Name = "Obligatorio4";
             this.Obligatorio4.ReadOnly = true;
-            this.Obligatorio4.Size = new System.Drawing.Size(337, 28);
+            this.Obligatorio4.Size = new System.Drawing.Size(134, 28);
             this.Obligatorio4.TabIndex = 97;
             this.Obligatorio4.TabStop = false;
             // 
@@ -486,9 +486,9 @@
             this.lblMnesaje1.ForeColor = System.Drawing.Color.Red;
             this.lblMnesaje1.Location = new System.Drawing.Point(19, 352);
             this.lblMnesaje1.Name = "lblMnesaje1";
-            this.lblMnesaje1.Size = new System.Drawing.Size(135, 16);
+            this.lblMnesaje1.Size = new System.Drawing.Size(133, 16);
             this.lblMnesaje1.TabIndex = 88;
-            this.lblMnesaje1.Text = "Campos Obligatorios";
+            this.lblMnesaje1.Text = "Campos obligatorios";
             this.lblMnesaje1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtMensaje2
@@ -501,7 +501,7 @@
             this.txtMensaje2.Multiline = true;
             this.txtMensaje2.Name = "txtMensaje2";
             this.txtMensaje2.ReadOnly = true;
-            this.txtMensaje2.Size = new System.Drawing.Size(141, 22);
+            this.txtMensaje2.Size = new System.Drawing.Size(139, 22);
             this.txtMensaje2.TabIndex = 87;
             this.txtMensaje2.TabStop = false;
             // 
@@ -542,6 +542,7 @@
             // 
             // btnHistorialMedico
             // 
+            this.btnHistorialMedico.Image = global::SISTEMA.WINFORMS.TATTOO.Properties.Resources.HistorialMedico;
             this.btnHistorialMedico.Location = new System.Drawing.Point(394, 275);
             this.btnHistorialMedico.Name = "btnHistorialMedico";
             this.btnHistorialMedico.Size = new System.Drawing.Size(167, 49);

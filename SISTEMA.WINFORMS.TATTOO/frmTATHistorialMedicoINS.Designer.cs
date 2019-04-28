@@ -45,7 +45,6 @@
             this.label18 = new System.Windows.Forms.Label();
             this.txtAlergias = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.txtCuantosMeses = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.chkEmbarazoNo = new System.Windows.Forms.CheckBox();
             this.chkEmbarazoSi = new System.Windows.Forms.CheckBox();
@@ -99,11 +98,24 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.obligatorioCosto = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.nudMeses = new System.Windows.Forms.NumericUpDown();
             this.gbFirma.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbFirma)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMeses)).BeginInit();
             this.SuspendLayout();
             // 
             // gbFirma
@@ -264,15 +276,6 @@
             this.label17.Size = new System.Drawing.Size(120, 16);
             this.label17.TabIndex = 166;
             this.label17.Text = "Alergias (explique)";
-            // 
-            // txtCuantosMeses
-            // 
-            this.txtCuantosMeses.Location = new System.Drawing.Point(473, 303);
-            this.txtCuantosMeses.Name = "txtCuantosMeses";
-            this.txtCuantosMeses.Size = new System.Drawing.Size(81, 22);
-            this.txtCuantosMeses.TabIndex = 165;
-            this.txtCuantosMeses.Text = "0";
-            this.txtCuantosMeses.TextChanged += new System.EventHandler(this.txtCuantosMeses_TextChanged);
             // 
             // label16
             // 
@@ -814,11 +817,162 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // obligatorioCosto
+            // 
+            this.obligatorioCosto.AutoSize = true;
+            this.obligatorioCosto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.obligatorioCosto.ForeColor = System.Drawing.Color.Red;
+            this.obligatorioCosto.Location = new System.Drawing.Point(275, 72);
+            this.obligatorioCosto.Name = "obligatorioCosto";
+            this.obligatorioCosto.Size = new System.Drawing.Size(20, 25);
+            this.obligatorioCosto.TabIndex = 186;
+            this.obligatorioCosto.Text = "*";
+            this.obligatorioCosto.Visible = false;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.Red;
+            this.label24.Location = new System.Drawing.Point(275, 102);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(20, 25);
+            this.label24.TabIndex = 187;
+            this.label24.Text = "*";
+            this.label24.Visible = false;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.Red;
+            this.label25.Location = new System.Drawing.Point(275, 135);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(20, 25);
+            this.label25.TabIndex = 188;
+            this.label25.Text = "*";
+            this.label25.Visible = false;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.Color.Red;
+            this.label26.Location = new System.Drawing.Point(275, 165);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(20, 25);
+            this.label26.TabIndex = 189;
+            this.label26.Text = "*";
+            this.label26.Visible = false;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.Red;
+            this.label27.Location = new System.Drawing.Point(275, 197);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(20, 25);
+            this.label27.TabIndex = 190;
+            this.label27.Text = "*";
+            this.label27.Visible = false;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.ForeColor = System.Drawing.Color.Red;
+            this.label28.Location = new System.Drawing.Point(558, 75);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(20, 25);
+            this.label28.TabIndex = 191;
+            this.label28.Text = "*";
+            this.label28.Visible = false;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.ForeColor = System.Drawing.Color.Red;
+            this.label29.Location = new System.Drawing.Point(558, 105);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(20, 25);
+            this.label29.TabIndex = 192;
+            this.label29.Text = "*";
+            this.label29.Visible = false;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.Color.Red;
+            this.label30.Location = new System.Drawing.Point(558, 138);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(20, 25);
+            this.label30.TabIndex = 193;
+            this.label30.Text = "*";
+            this.label30.Visible = false;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.Color.Red;
+            this.label31.Location = new System.Drawing.Point(558, 171);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(20, 25);
+            this.label31.TabIndex = 194;
+            this.label31.Text = "*";
+            this.label31.Visible = false;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.Color.Red;
+            this.label32.Location = new System.Drawing.Point(558, 203);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(20, 25);
+            this.label32.TabIndex = 195;
+            this.label32.Text = "*";
+            this.label32.Visible = false;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.Color.Red;
+            this.label33.Location = new System.Drawing.Point(558, 236);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(20, 25);
+            this.label33.TabIndex = 196;
+            this.label33.Text = "*";
+            this.label33.Visible = false;
+            // 
+            // nudMeses
+            // 
+            this.nudMeses.Location = new System.Drawing.Point(434, 303);
+            this.nudMeses.Name = "nudMeses";
+            this.nudMeses.Size = new System.Drawing.Size(46, 22);
+            this.nudMeses.TabIndex = 197;
+            // 
             // frmTATHistorialMedicoINS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(581, 881);
+            this.Controls.Add(this.nudMeses);
+            this.Controls.Add(this.label33);
+            this.Controls.Add(this.label32);
+            this.Controls.Add(this.label31);
+            this.Controls.Add(this.label30);
+            this.Controls.Add(this.label29);
+            this.Controls.Add(this.label28);
+            this.Controls.Add(this.label27);
+            this.Controls.Add(this.label26);
+            this.Controls.Add(this.label25);
+            this.Controls.Add(this.label24);
+            this.Controls.Add(this.obligatorioCosto);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.btnCancelar);
@@ -839,7 +993,6 @@
             this.Controls.Add(this.label18);
             this.Controls.Add(this.txtAlergias);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.txtCuantosMeses);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.chkEmbarazoNo);
             this.Controls.Add(this.chkEmbarazoSi);
@@ -896,6 +1049,7 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMeses)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -945,7 +1099,6 @@
         public System.Windows.Forms.CheckBox chkDificultadSangradoNo;
         public System.Windows.Forms.CheckBox chkDificultadSangradoSi;
         public System.Windows.Forms.TextBox txtAlergias;
-        public System.Windows.Forms.TextBox txtCuantosMeses;
         public System.Windows.Forms.CheckBox chkEmbarazoNo;
         public System.Windows.Forms.CheckBox chkEmbarazoSi;
         public System.Windows.Forms.TextBox txtOtrasEnfermedades;
@@ -973,5 +1126,17 @@
         public System.Windows.Forms.CheckBox chkHipertensionSi;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Label obligatorioCosto;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.NumericUpDown nudMeses;
     }
 }

@@ -121,6 +121,9 @@
   <data name="ImgAgregar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ImgAgregar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="CarruselDerecha" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CarruselDerecha.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ImgMostrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ImgMostrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -130,8 +133,20 @@
   <data name="ImgEliminar3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ImgEliminar3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="CarruselIzquierda" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CarruselIzquierda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Izquierda" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Izquierda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EMPLEADOS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EMPLEADOS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LimpiarPerfil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LimpiarPerfil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Firma" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Firma.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ImgBuscar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ImgBuscar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,6 +172,12 @@
   <data name="ImgCopiar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ImgCopiar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Izquierda1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Izquierda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BorrarPerfil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BorrarPerfil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ImgAgregar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ImgAgregar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -175,17 +196,20 @@
   <data name="ImgEditar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ImgEditar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ImgEliminar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ImgEliminar2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8_adjuntar_15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-adjuntar-15.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ImgCopiar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ImgCopiar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="PerfilMujer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PerfilMujer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Mas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Mas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PerfilHombre" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PerfilHombre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8_adjuntar_30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-adjuntar-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CasificarAbajo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CasificarAbajo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,8 +220,11 @@
   <data name="ImgAplicar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ImgAplicar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Izquierda1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Izquierda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MaquinaTatuaje" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MaquinaTatuaje.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PerfilHombre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PerfilHombre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icono-Cerrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icono-Cerrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -208,31 +235,13 @@
   <data name="LOGOINK2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LOGOINK2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="EMPLEADOS" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\EMPLEADOS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="PerfilMujer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PerfilMujer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CarruselDerecha" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CarruselDerecha.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CarruselIzquierda" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CarruselIzquierda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Eliminar15px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Eliminar15px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Firma" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Firma.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ImgEliminar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ImgEliminar2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_adjuntar_30" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-adjuntar-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MaquinaTatuaje" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MaquinaTatuaje.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_adjuntar_15" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-adjuntar-15.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="GG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -70,7 +70,7 @@
             // txtNota
             // 
             this.txtNota.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNota.Location = new System.Drawing.Point(9, 165);
+            this.txtNota.Location = new System.Drawing.Point(9, 143);
             this.txtNota.MaxLength = 500;
             this.txtNota.Multiline = true;
             this.txtNota.Name = "txtNota";
@@ -80,7 +80,7 @@
             // txtNombreProducto
             // 
             this.txtNombreProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreProducto.Location = new System.Drawing.Point(134, 74);
+            this.txtNombreProducto.Location = new System.Drawing.Point(134, 52);
             this.txtNombreProducto.MaxLength = 50;
             this.txtNombreProducto.Name = "txtNombreProducto";
             this.txtNombreProducto.Size = new System.Drawing.Size(437, 22);
@@ -93,7 +93,7 @@
             this.Obligatorio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Obligatorio.Enabled = false;
             this.Obligatorio.ForeColor = System.Drawing.SystemColors.Control;
-            this.Obligatorio.Location = new System.Drawing.Point(131, 71);
+            this.Obligatorio.Location = new System.Drawing.Point(131, 49);
             this.Obligatorio.Multiline = true;
             this.Obligatorio.Name = "Obligatorio";
             this.Obligatorio.ReadOnly = true;
@@ -106,7 +106,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label1.Location = new System.Drawing.Point(10, 77);
+            this.label1.Location = new System.Drawing.Point(10, 55);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 16);
@@ -256,7 +256,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label2.Location = new System.Drawing.Point(10, 115);
+            this.label2.Location = new System.Drawing.Point(10, 93);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 16);
@@ -266,7 +266,7 @@
             // nudCantidad
             // 
             this.nudCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudCantidad.Location = new System.Drawing.Point(131, 115);
+            this.nudCantidad.Location = new System.Drawing.Point(131, 93);
             this.nudCantidad.Name = "nudCantidad";
             this.nudCantidad.Size = new System.Drawing.Size(77, 22);
             this.nudCantidad.TabIndex = 2;

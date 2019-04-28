@@ -74,6 +74,16 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BorrarPerfil {
+            get {
+                object obj = ResourceManager.GetObject("BorrarPerfil", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CarruselDerecha {
             get {
                 object obj = ResourceManager.GetObject("CarruselDerecha", resourceCulture);
@@ -137,6 +147,16 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties {
         internal static System.Drawing.Bitmap Firma {
             get {
                 object obj = ResourceManager.GetObject("Firma", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GG {
+            get {
+                object obj = ResourceManager.GetObject("GG", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -357,6 +377,16 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties {
         internal static System.Drawing.Bitmap Izquierda1 {
             get {
                 object obj = ResourceManager.GetObject("Izquierda1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LimpiarPerfil {
+            get {
+                object obj = ResourceManager.GetObject("LimpiarPerfil", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

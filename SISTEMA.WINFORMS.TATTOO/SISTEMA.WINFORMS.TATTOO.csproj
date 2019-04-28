@@ -156,6 +156,12 @@
     <Compile Include="frmTATHistorialMedicoMDF.Designer.cs">
       <DependentUpon>frmTATHistorialMedicoMDF.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTATHistorialMedicoMOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATHistorialMedicoMOS.Designer.cs">
+      <DependentUpon>frmTATHistorialMedicoMOS.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTATHistorialMedicoRMV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -340,6 +346,9 @@
     <EmbeddedResource Include="frmTATHistorialMedicoMDF.resx">
       <DependentUpon>frmTATHistorialMedicoMDF.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmTATHistorialMedicoMOS.resx">
+      <DependentUpon>frmTATHistorialMedicoMOS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTATHistorialMedicoRMV.resx">
       <DependentUpon>frmTATHistorialMedicoRMV.cs</DependentUpon>
     </EmbeddedResource>
@@ -512,6 +521,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\PerfilHombre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\HistorialMedico.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

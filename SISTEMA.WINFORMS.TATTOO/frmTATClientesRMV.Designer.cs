@@ -388,6 +388,7 @@
             // 
             // btnHistorialMedico
             // 
+            this.btnHistorialMedico.Image = global::SISTEMA.WINFORMS.TATTOO.Properties.Resources.HistorialMedico;
             this.btnHistorialMedico.Location = new System.Drawing.Point(400, 274);
             this.btnHistorialMedico.Name = "btnHistorialMedico";
             this.btnHistorialMedico.Size = new System.Drawing.Size(167, 49);

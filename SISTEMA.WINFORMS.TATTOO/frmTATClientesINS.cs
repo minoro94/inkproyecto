@@ -277,6 +277,14 @@ namespace SISTEMA.WINFORMS.TATTOO
         {
             str.nombreCliente = txtNombreCliente.Text.Trim();
             wfHistorialMedico.Agregarr(ref str);
+            if(str.Firma != "")
+            {
+                btnHistorialMedico.Enabled = false;
+            }
+            else
+            {
+                btnHistorialMedico.Enabled = true;
+            }
         }
         #endregion
 

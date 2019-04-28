@@ -45,6 +45,15 @@ namespace SISTEMA.WINFORMS.TATTOO
         }
         #endregion
 
+        #region MOSTRAR
+        public DialogResult Mostrar(ref TATClientes.strTATClientes strClientes)
+        {
+            frmTATHistorialMedicoMOS frm = new frmTATHistorialMedicoMOS();
+            frm.str = strClientes;
+            return frm.ShowDialog();
+        }
+        #endregion
+
 
 
 

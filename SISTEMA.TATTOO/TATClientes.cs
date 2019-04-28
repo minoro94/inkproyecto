@@ -106,7 +106,7 @@ namespace SISTEMA.TATTOO
                     ARR[i].Meses = Convert.ToInt16(DB.REG1["Meses"]);
                     ARR[i].Alergias = (string)DB.REG1["Alergias"];
                     ARR[i].DificultadSangrado = (bool)DB.REG1["DificultadSangrado"];
-                    ARR[i].OtrasIntervenciones = (bool)DB.REG1["OtrasInvervenciones"];
+                    ARR[i].OtrasIntervenciones = (bool)DB.REG1["OtrasIntervenciones"];
                     ARR[i].ComplicacionesInterv = (string)DB.REG1["ComplicacionesInterv"];
                     ARR[i].Firma = (string)DB.REG1["Firma"];
 

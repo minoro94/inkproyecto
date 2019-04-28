@@ -88,6 +88,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = global::SISTEMA.MAINMENU.Properties.Resources.CERRAR1;
             this.pictureBox1.Location = new System.Drawing.Point(405, 7);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(25, 25);

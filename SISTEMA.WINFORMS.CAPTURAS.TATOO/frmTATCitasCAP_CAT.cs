@@ -317,7 +317,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                     bool Cambia = TABLA_Citas.DAO(ref strCitas, 2, dtInventario, dtFechasCitas, dtImagenes);
                     if (Cambia)
                     {
-                        C = EnviarCorreo("leyva393@hotmail.com");
+                        C = EnviarCorreo(strCitas.Correo);
                         if(C == DialogResult.OK)
                         {
                             strCitas.EstadoCorreo = true;

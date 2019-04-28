@@ -88,7 +88,7 @@ namespace SISTEMA.WINFORMS.TATTOO
             {
                 Min = false;
             }
-            if (txtCuantosMeses.Text.Trim() == "")
+            if (nudMeses.Value != 0)
             {
                 Min = false;
             }
@@ -108,7 +108,7 @@ namespace SISTEMA.WINFORMS.TATTOO
         #region ENABLE BUTTONS
         private void EnableButtons()
         {
-            if (txtOtrasEnfermedades.Text.Trim() != "" && txtCuantosMeses.Text.Trim() != "" && txtAlergias.Text.Trim() != "" && txtTuvoComplicacion.Text.Trim() != "")
+            if (txtOtrasEnfermedades.Text.Trim() != "" && nudMeses.Value != 0 && txtAlergias.Text.Trim() != "" && txtTuvoComplicacion.Text.Trim() != "")
             {
                 btnAceptar.Enabled = true;
             }
@@ -277,7 +277,7 @@ namespace SISTEMA.WINFORMS.TATTOO
                 txtTuvoComplicacion.Text = strClientes.ComplicacionesInterv;
             }
 
-            txtCuantosMeses.Text = strClientes.Meses.ToString();
+            nudMeses.Value = strClientes.Meses;
         }
         #endregion
 
@@ -411,7 +411,7 @@ namespace SISTEMA.WINFORMS.TATTOO
             }
 
             strClientes.Otros = txtOtrasEnfermedades.Text.Trim();
-            strClientes.Meses = Convert.ToInt32(txtCuantosMeses.Text.Trim());
+            strClientes.Meses = Convert.ToInt32(nudMeses.Value);
             strClientes.ComplicacionesInterv = txtTuvoComplicacion.Text.Trim();
             strClientes.Alergias = txtAlergias.Text.Trim();
         }

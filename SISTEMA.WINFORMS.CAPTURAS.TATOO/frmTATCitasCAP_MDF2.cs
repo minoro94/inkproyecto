@@ -365,6 +365,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             }
         }
         #endregion
+
         #region CARRUSEL
 
         #region ENCONTRAR IMAGEN CARRUSEL
@@ -566,6 +567,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             
         }
         #endregion
+
         #region INICIALIZA DT IMAGENEES
         private void InicializaImg()
         {
@@ -831,6 +833,16 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                 obligatorioTatuaje.Visible = false;
             }
 
+            if(Rectangulos.Length == 0)
+            {
+                obligatorioZona.Visible = true;
+                Minoro = false;
+            }
+            else
+            {
+                obligatorioZona.Visible = false;
+            }
+
             if (Minoro == false)
             {
                 lblObligatorio.Visible = true;
@@ -842,5 +854,22 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             return Minoro;
         }
         #endregion
+
+        private void btnLimpiarPerfil_Click_1(object sender, EventArgs e)
+        {
+            if (strClientes.Sexo)
+            {
+                //openFileDialog2.FileName = @"C:\Rep\SISTEMA.WINFORMS.CAPTURAS.TATOO\Resources\PerfilHombre.png";
+                //ptbPerfil.Image = Image.FromFile(openFileDialog2.FileName);
+                ptbPerfil.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.PerfilHombre;
+            }
+            else
+            {
+
+                //openFileDialog2.FileName = @"C:\Rep\SISTEMA.WINFORMS.CAPTURAS.TATOO\Resources\PerfilMujer.png";
+                //ptbPerfil.Image = Image.FromFile(openFileDialog2.FileName);
+                ptbPerfil.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.PerfilMujer;
+            }
+        }
     }
 }

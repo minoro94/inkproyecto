@@ -28,6 +28,7 @@ namespace SISTEMA.WINFORMS.TATTOO
         Point posicionPrevia = new Point(-1, -1);
         public string DireccionFirma = "";
         Random rnd = new Random();
+        bool ObligatorioFirma;
         #endregion
 
         #region CHKS
@@ -35,12 +36,14 @@ namespace SISTEMA.WINFORMS.TATTOO
         {
             chkHipertensionSi.Checked = true;
             chkHipertensionNo.Checked = false;
+            Obligatorio();
         }
 
         private void chkHipertensionNo_Click(object sender, EventArgs e)
         {
             chkHipertensionNo.Checked = true;
             chkHipertensionSi.Checked = false;
+            Obligatorio();
 
         }
 
@@ -48,156 +51,182 @@ namespace SISTEMA.WINFORMS.TATTOO
         {
             chkDiabetesSi.Checked = true;
             chkDiabetesNo.Checked = false;
+            Obligatorio();
         }
 
         private void chkDiabetesNo_Click(object sender, EventArgs e)
         {
             chkDiabetesNo.Checked = true;
             chkDiabetesSi.Checked = false;
+            Obligatorio();
         }
 
         private void chkHemofiliaSi_Click(object sender, EventArgs e)
         {
             chkHemofiliaSi.Checked = true;
             chkHemofiliaNo.Checked = false;
+            Obligatorio();
         }
 
         private void chkHemofiliaNo_Click(object sender, EventArgs e)
         {
             chkHemofiliaNo.Checked = true;
             chkHemofiliaSi.Checked = false;
+            Obligatorio();
         }
 
         private void chkAfeccionesCarSi_Click(object sender, EventArgs e)
         {
             chkAfeccionesCarSi.Checked = true;
             chkAfeccionesCarNo.Checked = false;
+            Obligatorio();
         }
 
         private void chkAfeccionesCarNo_Click(object sender, EventArgs e)
         {
             chkAfeccionesCarNo.Checked = true;
             chkAfeccionesCarSi.Checked = false;
+            Obligatorio();
         }
 
         private void chkAfeccionesRenSi_Click(object sender, EventArgs e)
         {
             chkAfeccionesRenSi.Checked = true;
             chkAfeccionesRenNo.Checked = false;
+            Obligatorio();
         }
 
         private void chkAfeccionesRenNo_Click(object sender, EventArgs e)
         {
             chkAfeccionesRenNo.Checked = true;
             chkAfeccionesRenSi.Checked = false;
+            Obligatorio();
         }
 
         private void chkFiebreReumSi_Click(object sender, EventArgs e)
         {
             chkFiebreReumSi.Checked = true;
             chkFiebreReumNo.Checked = false;
+            Obligatorio();
         }
 
         private void chkFiebreReumNo_Click(object sender, EventArgs e)
         {
             chkFiebreReumNo.Checked = true;
             chkFiebreReumSi.Checked = false;
+            Obligatorio();
         }
 
         private void chkHepatitisSi_Click(object sender, EventArgs e)
         {
             chkHepatitisSi.Checked = true;
             chkHepatitisNo.Checked = false;
+            Obligatorio();
         }
 
         private void chkHepatitisNo_Click(object sender, EventArgs e)
         {
             chkHepatitisNo.Checked = true;
             chkHepatitisSi.Checked = false;
+            Obligatorio();
         }
 
         private void chkTuberculosisSI_Click(object sender, EventArgs e)
         {
             chkTuberculosisSI.Checked = true;
             chkTuberculosisNo.Checked = false;
+            Obligatorio();
         }
 
         private void chkTuberculosisNo_Click(object sender, EventArgs e)
         {
             chkTuberculosisNo.Checked = true;
             chkTuberculosisSI.Checked = false;
+            Obligatorio();
         }
 
         private void chkSidaSi_Click(object sender, EventArgs e)
         {
             chkSidaSi.Checked = true;
             chkSidaNo.Checked = false;
+            Obligatorio();
         }
 
         private void chkSidaNo_Click(object sender, EventArgs e)
         {
             chkSidaNo.Checked = true;
             chkSidaSi.Checked = false;
+            Obligatorio();
         }
 
         private void chkCancerSi_Click(object sender, EventArgs e)
         {
             chkCancerSi.Checked = true;
             chkCancerNo.Checked = false;
+            Obligatorio();
         }
 
         private void chkCancerNo_Click(object sender, EventArgs e)
         {
             chkCancerNo.Checked = true;
             chkCancerSi.Checked = false;
+            Obligatorio();
         }
 
         private void chkLupusSi_Click(object sender, EventArgs e)
         {
             chkLupusSi.Checked = true;
             chkLupusNo.Checked = false;
+            Obligatorio();
         }
 
         private void chkLupusNo_Click(object sender, EventArgs e)
         {
             chkLupusNo.Checked = true;
             chkLupusSi.Checked = false;
+            Obligatorio();
         }
 
         private void chkEmbarazoSi_Click(object sender, EventArgs e)
         {
             chkEmbarazoSi.Checked = true;
             chkEmbarazoNo.Checked = false;
+            Obligatorio();
         }
 
         private void chkEmbarazoNo_Click(object sender, EventArgs e)
         {
             chkEmbarazoNo.Checked = true;
             chkEmbarazoSi.Checked = false;
+            Obligatorio();
         }
 
         private void chkDificultadSangradoSi_Click(object sender, EventArgs e)
         {
             chkDificultadSangradoSi.Checked = true;
             chkDificultadSangradoNo.Checked = false;
+            Obligatorio();
         }
 
         private void chkDificultadSangradoNo_Click(object sender, EventArgs e)
         {
             chkDificultadSangradoNo.Checked = true;
             chkDificultadSangradoSi.Checked = false;
+            Obligatorio();
         }
 
         private void chkIntervencionesSi_Click(object sender, EventArgs e)
         {
             chkIntervencionesSi.Checked = true;
             chkIntervencionesNo.Checked = false;
+            Obligatorio();
         }
 
         private void chkIntervencionesNo_Click(object sender, EventArgs e)
         {
             chkIntervencionesNo.Checked = true;
             chkIntervencionesSi.Checked = false;
+            Obligatorio();
         }
         #endregion
 
@@ -215,8 +244,10 @@ namespace SISTEMA.WINFORMS.TATTOO
             if (e.Button == MouseButtons.Left)
             {
                 Dibujo.DrawLine(new Pen(Color.Black), posicionPrevia, PosicionActual);
+                ObligatorioFirma = true;
             }
-
+            
+            Obligatorio();
             posicionPrevia = PosicionActual;
         }
         #endregion
@@ -232,9 +263,13 @@ namespace SISTEMA.WINFORMS.TATTOO
                     ptbFirma.Image = null;
                     File.Delete(DireccionFirma);
                     DireccionFirma = "";
+                    ObligatorioFirma = false;
+                    Obligatorio();
                 }
                 else
                 {
+                    ObligatorioFirma = false;
+                    Obligatorio();
                     ptbFirma.Refresh();
                 }
             }
@@ -305,7 +340,7 @@ namespace SISTEMA.WINFORMS.TATTOO
             {
                 Min = false;
             }
-            if(txtCuantosMeses.Text.Trim() == "")
+            if(nudMeses.Value == 0)
             {
                 Min = false;
             }
@@ -313,9 +348,14 @@ namespace SISTEMA.WINFORMS.TATTOO
             {
                 Min = false;
             }
-            if(txtTuvoComplicacion.Text.Trim() == "")
+
+            if (!ObligatorioFirma)
             {
                 Min = false;
+            }
+            if (Min)
+            {
+                EnableButtons(Min);
             }
 
             return Min;
@@ -323,9 +363,9 @@ namespace SISTEMA.WINFORMS.TATTOO
         #endregion
 
         #region ENABLE BUTTONS
-        private void EnableButtons()
+        private void EnableButtons(bool min)
         {
-            if(txtOtrasEnfermedades.Text.Trim() != ""  && txtCuantosMeses.Text.Trim() != "" && txtAlergias.Text.Trim() != "" && txtTuvoComplicacion.Text.Trim() != "")
+            if(min)
             {
                 btnAceptar.Enabled = true;
             }
@@ -369,9 +409,9 @@ namespace SISTEMA.WINFORMS.TATTOO
         #region LOAD
         private void frmTATHistorialMedicoINS_Load(object sender, EventArgs e)
         {
-            CargarFirma(DireccionFirma);
-            CargarDatos();
-            EnableButtons();
+            //CargarFirma(DireccionFirma);
+            //CargarDatos();
+            EnableButtons(false);
             
         }
         #endregion
@@ -535,7 +575,7 @@ namespace SISTEMA.WINFORMS.TATTOO
                 txtTuvoComplicacion.Text = strClientes.ComplicacionesInterv;
             }
 
-            txtCuantosMeses.Text = strClientes.Meses.ToString();
+            //txtCuantosMeses.Text = strClientes.Meses.ToString();
         }
         #endregion
 
@@ -668,8 +708,9 @@ namespace SISTEMA.WINFORMS.TATTOO
                 strClientes.OtrasIntervenciones = false;
             }
 
+            
             strClientes.Otros = txtOtrasEnfermedades.Text.Trim();
-            strClientes.Meses = Convert.ToInt32(txtCuantosMeses.Text.Trim());
+            strClientes.Meses = Convert.ToInt32(nudMeses.Value);
             strClientes.ComplicacionesInterv = txtTuvoComplicacion.Text.Trim();
             strClientes.Alergias = txtAlergias.Text.Trim();
         }
@@ -691,22 +732,22 @@ namespace SISTEMA.WINFORMS.TATTOO
 
         private void txtOtrasEnfermedades_TextChanged(object sender, EventArgs e)
         {
-            EnableButtons();
+            Obligatorio();
         }
 
         private void txtAlergias_TextChanged(object sender, EventArgs e)
         {
-            EnableButtons();
+            Obligatorio();
         }
 
         private void txtCuantosMeses_TextChanged(object sender, EventArgs e)
         {
-            EnableButtons();
+            Obligatorio();
         }
 
         private void txtTuvoComplicacion_TextChanged(object sender, EventArgs e)
         {
-            EnableButtons();
+            Obligatorio();
         }
 
     }

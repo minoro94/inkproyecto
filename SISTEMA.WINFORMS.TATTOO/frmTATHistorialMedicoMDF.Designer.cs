@@ -43,7 +43,6 @@
             this.label18 = new System.Windows.Forms.Label();
             this.txtAlergias = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.txtCuantosMeses = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.chkEmbarazoNo = new System.Windows.Forms.CheckBox();
             this.chkEmbarazoSi = new System.Windows.Forms.CheckBox();
@@ -97,11 +96,13 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.nudMeses = new System.Windows.Forms.NumericUpDown();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.gbFirma.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbFirma)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMeses)).BeginInit();
             this.SuspendLayout();
             // 
             // panel5
@@ -250,15 +251,6 @@
             this.label17.Size = new System.Drawing.Size(120, 16);
             this.label17.TabIndex = 229;
             this.label17.Text = "Alergias (explique)";
-            // 
-            // txtCuantosMeses
-            // 
-            this.txtCuantosMeses.Location = new System.Drawing.Point(473, 303);
-            this.txtCuantosMeses.Name = "txtCuantosMeses";
-            this.txtCuantosMeses.Size = new System.Drawing.Size(81, 22);
-            this.txtCuantosMeses.TabIndex = 228;
-            this.txtCuantosMeses.Text = "0";
-            this.txtCuantosMeses.TextChanged += new System.EventHandler(this.txtCuantosMeses_TextChanged);
             // 
             // label16
             // 
@@ -810,11 +802,19 @@
             this.panel7.Size = new System.Drawing.Size(580, 4);
             this.panel7.TabIndex = 248;
             // 
+            // nudMeses
+            // 
+            this.nudMeses.Location = new System.Drawing.Point(424, 303);
+            this.nudMeses.Name = "nudMeses";
+            this.nudMeses.Size = new System.Drawing.Size(46, 22);
+            this.nudMeses.TabIndex = 249;
+            // 
             // frmTATHistorialMedicoMDF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(581, 881);
+            this.Controls.Add(this.nudMeses);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.btnAceptar);
@@ -835,7 +835,6 @@
             this.Controls.Add(this.label18);
             this.Controls.Add(this.txtAlergias);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.txtCuantosMeses);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.chkEmbarazoNo);
             this.Controls.Add(this.chkEmbarazoSi);
@@ -891,6 +890,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.gbFirma.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ptbFirma)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMeses)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -913,7 +913,6 @@
         private System.Windows.Forms.Label label18;
         public System.Windows.Forms.TextBox txtAlergias;
         private System.Windows.Forms.Label label17;
-        public System.Windows.Forms.TextBox txtCuantosMeses;
         private System.Windows.Forms.Label label16;
         public System.Windows.Forms.CheckBox chkEmbarazoNo;
         public System.Windows.Forms.CheckBox chkEmbarazoSi;
@@ -967,5 +966,6 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.NumericUpDown nudMeses;
     }
 }

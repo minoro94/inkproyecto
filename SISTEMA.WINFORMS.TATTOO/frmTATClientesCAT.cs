@@ -163,7 +163,7 @@ namespace SISTEMA.WINFORMS.TATTOO
             if(lstLista.SelectedItems.Count >= 1)
             {
                 strClientes = (TATClientes.strTATClientes)lstLista.SelectedItems[0].Tag;
-                Resultado = WF.Modificar(ref strClientes, USUARIO);
+                Resultado = WF.Mostrar(ref strClientes);
                 if(Resultado == System.Windows.Forms.DialogResult.OK)
                 {
                     RefreshList();

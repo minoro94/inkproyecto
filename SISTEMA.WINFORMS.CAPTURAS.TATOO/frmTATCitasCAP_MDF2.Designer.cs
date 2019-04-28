@@ -31,20 +31,15 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.PanelBorderAbajo = new System.Windows.Forms.Panel();
             this.lblObligatorio = new System.Windows.Forms.Label();
-            this.btnAceptar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.obligatorioInstrumentos = new System.Windows.Forms.Label();
-            this.btnProductos = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.cbxTamaño = new System.Windows.Forms.ComboBox();
@@ -52,14 +47,8 @@
             this.gbInfoTatuajes = new System.Windows.Forms.GroupBox();
             this.obligatorioTatuaje = new System.Windows.Forms.Label();
             this.obligatorioZona = new System.Windows.Forms.Label();
-            this.btnEliminarImagen = new System.Windows.Forms.Button();
-            this.btnAdjuntarImagen = new System.Windows.Forms.Button();
-            this.ptbIzquierda = new System.Windows.Forms.PictureBox();
-            this.ptbDerecha = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.ptbTatuaje = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.ptbPerfil = new System.Windows.Forms.PictureBox();
             this.gbDatosCita = new System.Windows.Forms.GroupBox();
             this.obligastorioAnticipo = new System.Windows.Forms.Label();
             this.obligatorioCosto = new System.Windows.Forms.Label();
@@ -77,16 +66,28 @@
             this.lblNombreCliente = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnAceptar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnProductos = new System.Windows.Forms.Button();
+            this.btnLimpiarPerfil = new System.Windows.Forms.Button();
+            this.btnEliminarImagen = new System.Windows.Forms.Button();
+            this.btnAdjuntarImagen = new System.Windows.Forms.Button();
+            this.ptbIzquierda = new System.Windows.Forms.PictureBox();
+            this.ptbDerecha = new System.Windows.Forms.PictureBox();
+            this.ptbTatuaje = new System.Windows.Forms.PictureBox();
+            this.ptbPerfil = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.gbInfoTatuajes.SuspendLayout();
+            this.gbDatosCita.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbIzquierda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbDerecha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTatuaje)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbPerfil)).BeginInit();
-            this.gbDatosCita.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel7
@@ -122,17 +123,6 @@
             this.panel2.Size = new System.Drawing.Size(1464, 35);
             this.panel2.TabIndex = 119;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.Icono_Cerrar;
-            this.pictureBox1.Location = new System.Drawing.Point(1429, 7);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 53;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
@@ -165,18 +155,6 @@
             this.panel6.Size = new System.Drawing.Size(1333, 4);
             this.panel6.TabIndex = 49;
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Enabled = false;
-            this.pictureBox4.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.LOGOINK;
-            this.pictureBox4.Location = new System.Drawing.Point(8, 4);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(36, 31);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 12;
-            this.pictureBox4.TabStop = false;
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
@@ -205,38 +183,6 @@
             this.lblObligatorio.Text = "* Campos Obligatorios";
             this.lblObligatorio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblObligatorio.Visible = false;
-            // 
-            // btnAceptar
-            // 
-            this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.ImgAceptar;
-            this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAceptar.Location = new System.Drawing.Point(1260, 570);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(90, 33);
-            this.btnAceptar.TabIndex = 140;
-            this.btnAceptar.TabStop = false;
-            this.btnAceptar.Text = "&Aceptar";
-            this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAceptar.UseVisualStyleBackColor = true;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click_1);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.ImgCancelar;
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(1359, 570);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(90, 33);
-            this.btnCancelar.TabIndex = 139;
-            this.btnCancelar.TabStop = false;
-            this.btnCancelar.Text = "&Cancelar";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
             // 
             // groupBox2
             // 
@@ -267,20 +213,6 @@
             this.obligatorioInstrumentos.TabIndex = 124;
             this.obligatorioInstrumentos.Text = "*";
             this.obligatorioInstrumentos.Visible = false;
-            // 
-            // btnProductos
-            // 
-            this.btnProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProductos.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.MaquinaTatuaje;
-            this.btnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProductos.Location = new System.Drawing.Point(176, 189);
-            this.btnProductos.Name = "btnProductos";
-            this.btnProductos.Size = new System.Drawing.Size(191, 35);
-            this.btnProductos.TabIndex = 112;
-            this.btnProductos.TabStop = false;
-            this.btnProductos.Text = "INSTRUMENTOS";
-            this.btnProductos.UseVisualStyleBackColor = true;
-            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click_1);
             // 
             // label4
             // 
@@ -330,6 +262,7 @@
             // 
             this.gbInfoTatuajes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbInfoTatuajes.Controls.Add(this.btnLimpiarPerfil);
             this.gbInfoTatuajes.Controls.Add(this.obligatorioTatuaje);
             this.gbInfoTatuajes.Controls.Add(this.obligatorioZona);
             this.gbInfoTatuajes.Controls.Add(this.btnEliminarImagen);
@@ -372,61 +305,6 @@
             this.obligatorioZona.Text = "*";
             this.obligatorioZona.Visible = false;
             // 
-            // btnEliminarImagen
-            // 
-            this.btnEliminarImagen.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnEliminarImagen.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarImagen.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.Eliminar15px;
-            this.btnEliminarImagen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminarImagen.Location = new System.Drawing.Point(942, 464);
-            this.btnEliminarImagen.Name = "btnEliminarImagen";
-            this.btnEliminarImagen.Size = new System.Drawing.Size(66, 24);
-            this.btnEliminarImagen.TabIndex = 124;
-            this.btnEliminarImagen.Text = "Eliminar";
-            this.btnEliminarImagen.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEliminarImagen.UseVisualStyleBackColor = true;
-            this.btnEliminarImagen.Click += new System.EventHandler(this.btnEliminarImagen_Click_1);
-            // 
-            // btnAdjuntarImagen
-            // 
-            this.btnAdjuntarImagen.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnAdjuntarImagen.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdjuntarImagen.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.icons8_adjuntar_15;
-            this.btnAdjuntarImagen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdjuntarImagen.Location = new System.Drawing.Point(525, 464);
-            this.btnAdjuntarImagen.Name = "btnAdjuntarImagen";
-            this.btnAdjuntarImagen.Size = new System.Drawing.Size(69, 24);
-            this.btnAdjuntarImagen.TabIndex = 119;
-            this.btnAdjuntarImagen.TabStop = false;
-            this.btnAdjuntarImagen.Text = "Adjuntar ";
-            this.btnAdjuntarImagen.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAdjuntarImagen.UseVisualStyleBackColor = true;
-            this.btnAdjuntarImagen.Click += new System.EventHandler(this.btnAdjuntarImagen_Click_1);
-            // 
-            // ptbIzquierda
-            // 
-            this.ptbIzquierda.BackColor = System.Drawing.Color.White;
-            this.ptbIzquierda.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.CarruselIzquierda;
-            this.ptbIzquierda.Location = new System.Drawing.Point(479, 249);
-            this.ptbIzquierda.Name = "ptbIzquierda";
-            this.ptbIzquierda.Size = new System.Drawing.Size(30, 30);
-            this.ptbIzquierda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.ptbIzquierda.TabIndex = 118;
-            this.ptbIzquierda.TabStop = false;
-            this.ptbIzquierda.Click += new System.EventHandler(this.ptbIzquierda_Click_1);
-            // 
-            // ptbDerecha
-            // 
-            this.ptbDerecha.BackColor = System.Drawing.Color.White;
-            this.ptbDerecha.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.CarruselDerecha;
-            this.ptbDerecha.Location = new System.Drawing.Point(1025, 249);
-            this.ptbDerecha.Name = "ptbDerecha";
-            this.ptbDerecha.Size = new System.Drawing.Size(30, 30);
-            this.ptbDerecha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.ptbDerecha.TabIndex = 117;
-            this.ptbDerecha.TabStop = false;
-            this.ptbDerecha.Click += new System.EventHandler(this.ptbDerecha_Click_1);
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -437,18 +315,6 @@
             this.label9.TabIndex = 116;
             this.label9.Text = "Tatuaje";
             // 
-            // ptbTatuaje
-            // 
-            this.ptbTatuaje.BackColor = System.Drawing.Color.White;
-            this.ptbTatuaje.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ptbTatuaje.Location = new System.Drawing.Point(515, 45);
-            this.ptbTatuaje.MinimumSize = new System.Drawing.Size(450, 450);
-            this.ptbTatuaje.Name = "ptbTatuaje";
-            this.ptbTatuaje.Size = new System.Drawing.Size(504, 450);
-            this.ptbTatuaje.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbTatuaje.TabIndex = 114;
-            this.ptbTatuaje.TabStop = false;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -458,20 +324,6 @@
             this.label2.Size = new System.Drawing.Size(84, 16);
             this.label2.TabIndex = 113;
             this.label2.Text = "Zona cuerpo";
-            // 
-            // ptbPerfil
-            // 
-            this.ptbPerfil.BackColor = System.Drawing.Color.White;
-            this.ptbPerfil.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ptbPerfil.Location = new System.Drawing.Point(6, 45);
-            this.ptbPerfil.MaximumSize = new System.Drawing.Size(450, 450);
-            this.ptbPerfil.MinimumSize = new System.Drawing.Size(450, 450);
-            this.ptbPerfil.Name = "ptbPerfil";
-            this.ptbPerfil.Size = new System.Drawing.Size(450, 450);
-            this.ptbPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbPerfil.TabIndex = 112;
-            this.ptbPerfil.TabStop = false;
-            this.ptbPerfil.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ptbPerfil_MouseClick_1);
             // 
             // gbDatosCita
             // 
@@ -681,6 +533,172 @@
             this.panel4.Size = new System.Drawing.Size(3, 623);
             this.panel4.TabIndex = 142;
             // 
+            // btnAceptar
+            // 
+            this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptar.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.ImgAceptar;
+            this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAceptar.Location = new System.Drawing.Point(1260, 570);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(90, 33);
+            this.btnAceptar.TabIndex = 140;
+            this.btnAceptar.TabStop = false;
+            this.btnAceptar.Text = "&Aceptar";
+            this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click_1);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.ImgCancelar;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.Location = new System.Drawing.Point(1359, 570);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(90, 33);
+            this.btnCancelar.TabIndex = 139;
+            this.btnCancelar.TabStop = false;
+            this.btnCancelar.Text = "&Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
+            // 
+            // btnProductos
+            // 
+            this.btnProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProductos.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.MaquinaTatuaje;
+            this.btnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProductos.Location = new System.Drawing.Point(176, 189);
+            this.btnProductos.Name = "btnProductos";
+            this.btnProductos.Size = new System.Drawing.Size(191, 35);
+            this.btnProductos.TabIndex = 112;
+            this.btnProductos.TabStop = false;
+            this.btnProductos.Text = "INSTRUMENTOS";
+            this.btnProductos.UseVisualStyleBackColor = true;
+            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click_1);
+            // 
+            // btnLimpiarPerfil
+            // 
+            this.btnLimpiarPerfil.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnLimpiarPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiarPerfil.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.GG;
+            this.btnLimpiarPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLimpiarPerfil.Location = new System.Drawing.Point(359, 18);
+            this.btnLimpiarPerfil.Name = "btnLimpiarPerfil";
+            this.btnLimpiarPerfil.Size = new System.Drawing.Size(97, 24);
+            this.btnLimpiarPerfil.TabIndex = 128;
+            this.btnLimpiarPerfil.TabStop = false;
+            this.btnLimpiarPerfil.Text = "Limpiar Perfil";
+            this.btnLimpiarPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLimpiarPerfil.UseVisualStyleBackColor = true;
+            this.btnLimpiarPerfil.Click += new System.EventHandler(this.btnLimpiarPerfil_Click_1);
+            // 
+            // btnEliminarImagen
+            // 
+            this.btnEliminarImagen.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnEliminarImagen.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarImagen.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.Eliminar15px;
+            this.btnEliminarImagen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminarImagen.Location = new System.Drawing.Point(942, 464);
+            this.btnEliminarImagen.Name = "btnEliminarImagen";
+            this.btnEliminarImagen.Size = new System.Drawing.Size(66, 24);
+            this.btnEliminarImagen.TabIndex = 124;
+            this.btnEliminarImagen.Text = "Eliminar";
+            this.btnEliminarImagen.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEliminarImagen.UseVisualStyleBackColor = true;
+            this.btnEliminarImagen.Click += new System.EventHandler(this.btnEliminarImagen_Click_1);
+            // 
+            // btnAdjuntarImagen
+            // 
+            this.btnAdjuntarImagen.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnAdjuntarImagen.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdjuntarImagen.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.icons8_adjuntar_15;
+            this.btnAdjuntarImagen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdjuntarImagen.Location = new System.Drawing.Point(525, 464);
+            this.btnAdjuntarImagen.Name = "btnAdjuntarImagen";
+            this.btnAdjuntarImagen.Size = new System.Drawing.Size(69, 24);
+            this.btnAdjuntarImagen.TabIndex = 119;
+            this.btnAdjuntarImagen.TabStop = false;
+            this.btnAdjuntarImagen.Text = "Adjuntar ";
+            this.btnAdjuntarImagen.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAdjuntarImagen.UseVisualStyleBackColor = true;
+            this.btnAdjuntarImagen.Click += new System.EventHandler(this.btnAdjuntarImagen_Click_1);
+            // 
+            // ptbIzquierda
+            // 
+            this.ptbIzquierda.BackColor = System.Drawing.Color.White;
+            this.ptbIzquierda.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.CarruselIzquierda;
+            this.ptbIzquierda.Location = new System.Drawing.Point(479, 249);
+            this.ptbIzquierda.Name = "ptbIzquierda";
+            this.ptbIzquierda.Size = new System.Drawing.Size(30, 30);
+            this.ptbIzquierda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.ptbIzquierda.TabIndex = 118;
+            this.ptbIzquierda.TabStop = false;
+            this.ptbIzquierda.Click += new System.EventHandler(this.ptbIzquierda_Click_1);
+            // 
+            // ptbDerecha
+            // 
+            this.ptbDerecha.BackColor = System.Drawing.Color.White;
+            this.ptbDerecha.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.CarruselDerecha;
+            this.ptbDerecha.Location = new System.Drawing.Point(1025, 249);
+            this.ptbDerecha.Name = "ptbDerecha";
+            this.ptbDerecha.Size = new System.Drawing.Size(30, 30);
+            this.ptbDerecha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.ptbDerecha.TabIndex = 117;
+            this.ptbDerecha.TabStop = false;
+            this.ptbDerecha.Click += new System.EventHandler(this.ptbDerecha_Click_1);
+            // 
+            // ptbTatuaje
+            // 
+            this.ptbTatuaje.BackColor = System.Drawing.Color.White;
+            this.ptbTatuaje.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ptbTatuaje.Location = new System.Drawing.Point(515, 45);
+            this.ptbTatuaje.MinimumSize = new System.Drawing.Size(450, 450);
+            this.ptbTatuaje.Name = "ptbTatuaje";
+            this.ptbTatuaje.Size = new System.Drawing.Size(504, 450);
+            this.ptbTatuaje.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbTatuaje.TabIndex = 114;
+            this.ptbTatuaje.TabStop = false;
+            // 
+            // ptbPerfil
+            // 
+            this.ptbPerfil.BackColor = System.Drawing.Color.White;
+            this.ptbPerfil.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ptbPerfil.Location = new System.Drawing.Point(6, 45);
+            this.ptbPerfil.MaximumSize = new System.Drawing.Size(450, 450);
+            this.ptbPerfil.MinimumSize = new System.Drawing.Size(450, 450);
+            this.ptbPerfil.Name = "ptbPerfil";
+            this.ptbPerfil.Size = new System.Drawing.Size(450, 450);
+            this.ptbPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbPerfil.TabIndex = 112;
+            this.ptbPerfil.TabStop = false;
+            this.ptbPerfil.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ptbPerfil_MouseClick_1);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.Icono_Cerrar;
+            this.pictureBox1.Location = new System.Drawing.Point(1429, 7);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 53;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Enabled = false;
+            this.pictureBox4.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.LOGOINK;
+            this.pictureBox4.Location = new System.Drawing.Point(8, 4);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(36, 31);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 12;
+            this.pictureBox4.TabStop = false;
+            // 
             // frmTATCitasCAP_MDF2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -706,18 +724,18 @@
             this.Load += new System.EventHandler(this.frmTATCitasCAP_MDF2_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.gbInfoTatuajes.ResumeLayout(false);
             this.gbInfoTatuajes.PerformLayout();
+            this.gbDatosCita.ResumeLayout(false);
+            this.gbDatosCita.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbIzquierda)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbDerecha)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTatuaje)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbPerfil)).EndInit();
-            this.gbDatosCita.ResumeLayout(false);
-            this.gbDatosCita.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -773,5 +791,6 @@
         public System.Windows.Forms.Label lblNombreCliente;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btnLimpiarPerfil;
     }
 }
