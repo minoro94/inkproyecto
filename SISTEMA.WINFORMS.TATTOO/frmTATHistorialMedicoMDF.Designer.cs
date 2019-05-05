@@ -85,12 +85,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.gbFirma = new System.Windows.Forms.GroupBox();
             this.ptbFirma = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -98,7 +96,6 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.nudMeses = new System.Windows.Forms.NumericUpDown();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.gbFirma.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbFirma)).BeginInit();
@@ -663,7 +660,6 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -682,17 +678,6 @@
             this.label8.Size = new System.Drawing.Size(105, 16);
             this.label8.TabIndex = 51;
             this.label8.Text = "Historial médico";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::SISTEMA.WINFORMS.TATTOO.Properties.Resources.Icono_Cerrar;
-            this.pictureBox3.Location = new System.Drawing.Point(547, 7);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 50;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // panel6
             // 
@@ -732,7 +717,7 @@
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.Image = global::SISTEMA.WINFORMS.TATTOO.Properties.Resources.ImgAceptar;
             this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAceptar.Location = new System.Drawing.Point(374, 836);
+            this.btnAceptar.Location = new System.Drawing.Point(473, 836);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(90, 33);
             this.btnAceptar.TabIndex = 246;
@@ -741,22 +726,6 @@
             this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Image = global::SISTEMA.WINFORMS.TATTOO.Properties.Resources.ImgCancelar;
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(473, 836);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(90, 33);
-            this.btnCancelar.TabIndex = 245;
-            this.btnCancelar.TabStop = false;
-            this.btnCancelar.Text = "&Cancelar";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // gbFirma
             // 
@@ -818,7 +787,6 @@
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.gbFirma);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.label23);
@@ -886,7 +854,6 @@
             this.Load += new System.EventHandler(this.frmTATHistorialMedicoMDF_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.gbFirma.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ptbFirma)).EndInit();
@@ -955,12 +922,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.Button btnAceptar;
-        public System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.GroupBox gbFirma;
         public System.Windows.Forms.PictureBox ptbFirma;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;

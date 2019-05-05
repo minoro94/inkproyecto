@@ -31,7 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTATClientesINS));
             this.panel2 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -60,17 +62,15 @@
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.Obligatorio2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtMensaje2 = new System.Windows.Forms.TextBox();
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
             this.Obligatorio = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ObligatorioHistorial = new System.Windows.Forms.TextBox();
-            this.lblMnesaje1 = new System.Windows.Forms.Label();
             this.btnHistorialMedico = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lblMnesaje1 = new System.Windows.Forms.Label();
+            this.txtMensaje2 = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -100,6 +100,17 @@
             this.label8.TabIndex = 51;
             this.label8.Text = "Agregar un Cliente";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::SISTEMA.WINFORMS.TATTOO.Properties.Resources.Icono_Cerrar;
+            this.pictureBox3.Location = new System.Drawing.Point(545, 6);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 50;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Black;
@@ -109,6 +120,18 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(580, 4);
             this.panel6.TabIndex = 49;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Enabled = false;
+            this.pictureBox2.Image = global::SISTEMA.WINFORMS.TATTOO.Properties.Resources.LOGOINK1;
+            this.pictureBox2.Location = new System.Drawing.Point(8, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(36, 31);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
             // 
             // panel3
             // 
@@ -432,20 +455,6 @@
             this.label2.TabIndex = 89;
             this.label2.Text = "Telefono";
             // 
-            // txtMensaje2
-            // 
-            this.txtMensaje2.BackColor = System.Drawing.Color.Red;
-            this.txtMensaje2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMensaje2.ForeColor = System.Drawing.SystemColors.Control;
-            this.txtMensaje2.Location = new System.Drawing.Point(16, 345);
-            this.txtMensaje2.Multiline = true;
-            this.txtMensaje2.Name = "txtMensaje2";
-            this.txtMensaje2.ReadOnly = true;
-            this.txtMensaje2.Size = new System.Drawing.Size(141, 22);
-            this.txtMensaje2.TabIndex = 87;
-            this.txtMensaje2.TabStop = false;
-            this.txtMensaje2.Visible = false;
-            // 
             // txtNombreCliente
             // 
             this.txtNombreCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -486,36 +495,22 @@
             this.ObligatorioHistorial.BackColor = System.Drawing.Color.Red;
             this.ObligatorioHistorial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ObligatorioHistorial.ForeColor = System.Drawing.SystemColors.Control;
-            this.ObligatorioHistorial.Location = new System.Drawing.Point(388, 265);
+            this.ObligatorioHistorial.Location = new System.Drawing.Point(360, 267);
             this.ObligatorioHistorial.Multiline = true;
             this.ObligatorioHistorial.Name = "ObligatorioHistorial";
             this.ObligatorioHistorial.ReadOnly = true;
-            this.ObligatorioHistorial.Size = new System.Drawing.Size(174, 60);
+            this.ObligatorioHistorial.Size = new System.Drawing.Size(201, 55);
             this.ObligatorioHistorial.TabIndex = 114;
             this.ObligatorioHistorial.TabStop = false;
             this.ObligatorioHistorial.Visible = false;
-            // 
-            // lblMnesaje1
-            // 
-            this.lblMnesaje1.AutoSize = true;
-            this.lblMnesaje1.BackColor = System.Drawing.Color.White;
-            this.lblMnesaje1.Enabled = false;
-            this.lblMnesaje1.ForeColor = System.Drawing.Color.Red;
-            this.lblMnesaje1.Location = new System.Drawing.Point(19, 348);
-            this.lblMnesaje1.Name = "lblMnesaje1";
-            this.lblMnesaje1.Size = new System.Drawing.Size(133, 16);
-            this.lblMnesaje1.TabIndex = 88;
-            this.lblMnesaje1.Text = "Campos obligatorios";
-            this.lblMnesaje1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblMnesaje1.Visible = false;
             // 
             // btnHistorialMedico
             // 
             this.btnHistorialMedico.Image = global::SISTEMA.WINFORMS.TATTOO.Properties.Resources.HistorialMedico;
             this.btnHistorialMedico.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHistorialMedico.Location = new System.Drawing.Point(391, 270);
+            this.btnHistorialMedico.Location = new System.Drawing.Point(363, 270);
             this.btnHistorialMedico.Name = "btnHistorialMedico";
-            this.btnHistorialMedico.Size = new System.Drawing.Size(167, 49);
+            this.btnHistorialMedico.Size = new System.Drawing.Size(195, 49);
             this.btnHistorialMedico.TabIndex = 113;
             this.btnHistorialMedico.Text = "Agregar historial médico";
             this.btnHistorialMedico.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -550,34 +545,39 @@
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
-            // pictureBox3
+            // lblMnesaje1
             // 
-            this.pictureBox3.Image = global::SISTEMA.WINFORMS.TATTOO.Properties.Resources.Icono_Cerrar;
-            this.pictureBox3.Location = new System.Drawing.Point(545, 6);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 50;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.lblMnesaje1.AutoSize = true;
+            this.lblMnesaje1.BackColor = System.Drawing.Color.White;
+            this.lblMnesaje1.ForeColor = System.Drawing.Color.Red;
+            this.lblMnesaje1.Location = new System.Drawing.Point(19, 348);
+            this.lblMnesaje1.Name = "lblMnesaje1";
+            this.lblMnesaje1.Size = new System.Drawing.Size(133, 16);
+            this.lblMnesaje1.TabIndex = 116;
+            this.lblMnesaje1.Text = "Campos obligatorios";
+            this.lblMnesaje1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox2
+            // txtMensaje2
             // 
-            this.pictureBox2.Enabled = false;
-            this.pictureBox2.Image = global::SISTEMA.WINFORMS.TATTOO.Properties.Resources.LOGOINK1;
-            this.pictureBox2.Location = new System.Drawing.Point(8, 4);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(36, 31);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 12;
-            this.pictureBox2.TabStop = false;
+            this.txtMensaje2.BackColor = System.Drawing.Color.Red;
+            this.txtMensaje2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMensaje2.Enabled = false;
+            this.txtMensaje2.ForeColor = System.Drawing.SystemColors.Control;
+            this.txtMensaje2.Location = new System.Drawing.Point(16, 345);
+            this.txtMensaje2.Multiline = true;
+            this.txtMensaje2.Name = "txtMensaje2";
+            this.txtMensaje2.ReadOnly = true;
+            this.txtMensaje2.Size = new System.Drawing.Size(139, 22);
+            this.txtMensaje2.TabIndex = 115;
+            this.txtMensaje2.TabStop = false;
             // 
             // frmTATClientesINS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(580, 387);
+            this.Controls.Add(this.lblMnesaje1);
+            this.Controls.Add(this.txtMensaje2);
             this.Controls.Add(this.btnHistorialMedico);
             this.Controls.Add(this.rdbMujer);
             this.Controls.Add(this.rdbHombre);
@@ -603,8 +603,6 @@
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.Obligatorio2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.lblMnesaje1);
-            this.Controls.Add(this.txtMensaje2);
             this.Controls.Add(this.txtNombreCliente);
             this.Controls.Add(this.Obligatorio);
             this.Controls.Add(this.label1);
@@ -671,12 +669,12 @@
         public System.Windows.Forms.TextBox txtTelefono;
         public System.Windows.Forms.TextBox Obligatorio2;
         private System.Windows.Forms.Label label2;
-        public System.Windows.Forms.TextBox txtMensaje2;
         public System.Windows.Forms.TextBox txtNombreCliente;
         public System.Windows.Forms.TextBox Obligatorio;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnHistorialMedico;
         public System.Windows.Forms.TextBox ObligatorioHistorial;
         private System.Windows.Forms.Label lblMnesaje1;
+        public System.Windows.Forms.TextBox txtMensaje2;
     }
 }

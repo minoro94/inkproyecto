@@ -61,7 +61,7 @@
             this.panel5.Location = new System.Drawing.Point(0, 35);
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(4, 286);
+            this.panel5.Size = new System.Drawing.Size(4, 202);
             this.panel5.TabIndex = 82;
             // 
             // panel2
@@ -177,14 +177,14 @@
             this.panel4.Location = new System.Drawing.Point(439, 35);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(4, 286);
+            this.panel4.Size = new System.Drawing.Size(4, 202);
             this.panel4.TabIndex = 83;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Black;
             this.panel3.Enabled = false;
-            this.panel3.Location = new System.Drawing.Point(0, 318);
+            this.panel3.Location = new System.Drawing.Point(0, 233);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(443, 5);
@@ -195,7 +195,7 @@
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Image = global::SISTEMA.WINFORMS.TATTOO.Properties.Resources.ImgCancelar;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(341, 281);
+            this.btnCancelar.Location = new System.Drawing.Point(341, 191);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(90, 29);
@@ -210,7 +210,7 @@
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.Image = global::SISTEMA.WINFORMS.TATTOO.Properties.Resources.ImgAceptar;
             this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAceptar.Location = new System.Drawing.Point(243, 281);
+            this.btnAceptar.Location = new System.Drawing.Point(243, 191);
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(90, 29);
@@ -224,20 +224,20 @@
             // 
             this.lblTamaño.BackColor = System.Drawing.SystemColors.Info;
             this.lblTamaño.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblTamaño.Location = new System.Drawing.Point(104, 62);
+            this.lblTamaño.Location = new System.Drawing.Point(88, 50);
             this.lblTamaño.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblTamaño.Name = "lblTamaño";
-            this.lblTamaño.Size = new System.Drawing.Size(326, 27);
+            this.lblTamaño.Size = new System.Drawing.Size(342, 27);
             this.lblTamaño.TabIndex = 99;
             // 
             // lblDetalle
             // 
             this.lblDetalle.BackColor = System.Drawing.SystemColors.Info;
             this.lblDetalle.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblDetalle.Location = new System.Drawing.Point(14, 136);
+            this.lblDetalle.Location = new System.Drawing.Point(88, 86);
             this.lblDetalle.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblDetalle.Name = "lblDetalle";
-            this.lblDetalle.Size = new System.Drawing.Size(415, 128);
+            this.lblDetalle.Size = new System.Drawing.Size(343, 88);
             this.lblDetalle.TabIndex = 98;
             // 
             // label1
@@ -245,7 +245,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label1.Location = new System.Drawing.Point(11, 109);
+            this.label1.Location = new System.Drawing.Point(14, 87);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 16);
@@ -257,7 +257,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label2.Location = new System.Drawing.Point(11, 63);
+            this.label2.Location = new System.Drawing.Point(11, 51);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 16);
@@ -268,7 +268,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(443, 321);
+            this.ClientSize = new System.Drawing.Size(443, 237);
             this.Controls.Add(this.lblTamaño);
             this.Controls.Add(this.lblDetalle);
             this.Controls.Add(this.label1);

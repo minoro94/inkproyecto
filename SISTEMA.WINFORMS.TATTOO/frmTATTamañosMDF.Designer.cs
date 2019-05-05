@@ -61,7 +61,7 @@
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Image = global::SISTEMA.WINFORMS.TATTOO.Properties.Resources.ImgCancelar;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(337, 250);
+            this.btnCancelar.Location = new System.Drawing.Point(334, 184);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(90, 29);
             this.btnCancelar.TabIndex = 69;
@@ -75,7 +75,7 @@
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.Image = global::SISTEMA.WINFORMS.TATTOO.Properties.Resources.ImgAceptar;
             this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAceptar.Location = new System.Drawing.Point(241, 250);
+            this.btnAceptar.Location = new System.Drawing.Point(238, 184);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(90, 29);
             this.btnAceptar.TabIndex = 68;
@@ -193,7 +193,7 @@
             this.panel5.Enabled = false;
             this.panel5.Location = new System.Drawing.Point(0, 35);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(3, 257);
+            this.panel5.Size = new System.Drawing.Size(3, 189);
             this.panel5.TabIndex = 70;
             // 
             // panel4
@@ -203,14 +203,14 @@
             this.panel4.Enabled = false;
             this.panel4.Location = new System.Drawing.Point(436, 35);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(3, 257);
+            this.panel4.Size = new System.Drawing.Size(3, 189);
             this.panel4.TabIndex = 71;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Black;
             this.panel3.Enabled = false;
-            this.panel3.Location = new System.Drawing.Point(0, 288);
+            this.panel3.Location = new System.Drawing.Point(0, 222);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(441, 4);
             this.panel3.TabIndex = 72;
@@ -220,7 +220,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label1.Location = new System.Drawing.Point(9, 92);
+            this.label1.Location = new System.Drawing.Point(11, 87);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 16);
@@ -230,11 +230,11 @@
             // txtDetalle
             // 
             this.txtDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDetalle.Location = new System.Drawing.Point(12, 111);
+            this.txtDetalle.Location = new System.Drawing.Point(81, 84);
             this.txtDetalle.MaxLength = 400;
             this.txtDetalle.Multiline = true;
             this.txtDetalle.Name = "txtDetalle";
-            this.txtDetalle.Size = new System.Drawing.Size(415, 128);
+            this.txtDetalle.Size = new System.Drawing.Size(343, 88);
             this.txtDetalle.TabIndex = 91;
             // 
             // lblMnesaje1
@@ -242,7 +242,7 @@
             this.lblMnesaje1.AutoSize = true;
             this.lblMnesaje1.BackColor = System.Drawing.Color.White;
             this.lblMnesaje1.ForeColor = System.Drawing.Color.Red;
-            this.lblMnesaje1.Location = new System.Drawing.Point(9, 256);
+            this.lblMnesaje1.Location = new System.Drawing.Point(12, 187);
             this.lblMnesaje1.Name = "lblMnesaje1";
             this.lblMnesaje1.Size = new System.Drawing.Size(135, 16);
             this.lblMnesaje1.TabIndex = 90;
@@ -255,7 +255,7 @@
             this.txtMensaje2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMensaje2.Enabled = false;
             this.txtMensaje2.ForeColor = System.Drawing.SystemColors.Control;
-            this.txtMensaje2.Location = new System.Drawing.Point(6, 253);
+            this.txtMensaje2.Location = new System.Drawing.Point(9, 184);
             this.txtMensaje2.Multiline = true;
             this.txtMensaje2.Name = "txtMensaje2";
             this.txtMensaje2.ReadOnly = true;
@@ -302,7 +302,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(439, 292);
+            this.ClientSize = new System.Drawing.Size(439, 224);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtDetalle);
             this.Controls.Add(this.lblMnesaje1);

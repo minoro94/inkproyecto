@@ -55,7 +55,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label2.Location = new System.Drawing.Point(10, 96);
+            this.label2.Location = new System.Drawing.Point(60, 77);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 16);
@@ -69,7 +69,7 @@
             this.panel5.Enabled = false;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(3, 349);
+            this.panel5.Size = new System.Drawing.Size(3, 267);
             this.panel5.TabIndex = 124;
             // 
             // panel3
@@ -144,7 +144,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label1.Location = new System.Drawing.Point(10, 58);
+            this.label1.Location = new System.Drawing.Point(10, 43);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 16);
@@ -156,7 +156,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label11.Location = new System.Drawing.Point(10, 127);
+            this.label11.Location = new System.Drawing.Point(82, 112);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(37, 16);
@@ -168,7 +168,7 @@
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Image = global::SISTEMA.WINFORMS.TATTOO.Properties.Resources.ImgCancelar;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(481, 308);
+            this.btnCancelar.Location = new System.Drawing.Point(478, 219);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(90, 29);
             this.btnCancelar.TabIndex = 126;
@@ -182,7 +182,7 @@
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.Image = global::SISTEMA.WINFORMS.TATTOO.Properties.Resources.ImgAceptar;
             this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAceptar.Location = new System.Drawing.Point(385, 308);
+            this.btnAceptar.Location = new System.Drawing.Point(382, 219);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(90, 29);
             this.btnAceptar.TabIndex = 125;
@@ -198,14 +198,14 @@
             this.panel4.Enabled = false;
             this.panel4.Location = new System.Drawing.Point(577, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(3, 349);
+            this.panel4.Size = new System.Drawing.Size(3, 267);
             this.panel4.TabIndex = 131;
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.Black;
             this.panel7.Enabled = false;
-            this.panel7.Location = new System.Drawing.Point(0, 345);
+            this.panel7.Location = new System.Drawing.Point(0, 264);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(580, 4);
             this.panel7.TabIndex = 132;
@@ -214,7 +214,7 @@
             // 
             this.lblNombreProducto.BackColor = System.Drawing.SystemColors.Info;
             this.lblNombreProducto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblNombreProducto.Location = new System.Drawing.Point(131, 57);
+            this.lblNombreProducto.Location = new System.Drawing.Point(131, 42);
             this.lblNombreProducto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreProducto.Name = "lblNombreProducto";
             this.lblNombreProducto.Size = new System.Drawing.Size(440, 22);
@@ -224,7 +224,7 @@
             // 
             this.lblCantidad.BackColor = System.Drawing.SystemColors.Info;
             this.lblCantidad.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblCantidad.Location = new System.Drawing.Point(131, 95);
+            this.lblCantidad.Location = new System.Drawing.Point(131, 74);
             this.lblCantidad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(50, 22);
@@ -234,17 +234,17 @@
             // 
             this.lblNota.BackColor = System.Drawing.SystemColors.Info;
             this.lblNota.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblNota.Location = new System.Drawing.Point(13, 143);
+            this.lblNota.Location = new System.Drawing.Point(129, 110);
             this.lblNota.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNota.Name = "lblNota";
-            this.lblNota.Size = new System.Drawing.Size(558, 128);
+            this.lblNota.Size = new System.Drawing.Size(440, 93);
             this.lblNota.TabIndex = 135;
             // 
             // frmTATInventarioRMV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(580, 349);
+            this.ClientSize = new System.Drawing.Size(580, 267);
             this.Controls.Add(this.lblNota);
             this.Controls.Add(this.lblCantidad);
             this.Controls.Add(this.lblNombreProducto);

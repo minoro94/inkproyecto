@@ -374,11 +374,13 @@
             // btnHistorialMedico
             // 
             this.btnHistorialMedico.Image = global::SISTEMA.WINFORMS.TATTOO.Properties.Resources.HistorialMedico;
-            this.btnHistorialMedico.Location = new System.Drawing.Point(400, 268);
+            this.btnHistorialMedico.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHistorialMedico.Location = new System.Drawing.Point(402, 268);
             this.btnHistorialMedico.Name = "btnHistorialMedico";
-            this.btnHistorialMedico.Size = new System.Drawing.Size(167, 49);
+            this.btnHistorialMedico.Size = new System.Drawing.Size(166, 49);
             this.btnHistorialMedico.TabIndex = 117;
             this.btnHistorialMedico.Text = "Ver historial medico";
+            this.btnHistorialMedico.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnHistorialMedico.UseVisualStyleBackColor = true;
             this.btnHistorialMedico.Click += new System.EventHandler(this.btnHistorialMedico_Click);
             // 

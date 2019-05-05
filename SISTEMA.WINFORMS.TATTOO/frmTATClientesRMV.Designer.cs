@@ -58,7 +58,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnHistorialMedico = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -71,7 +70,7 @@
             this.panel5.Enabled = false;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(3, 387);
+            this.panel5.Size = new System.Drawing.Size(3, 359);
             this.panel5.TabIndex = 80;
             // 
             // panel3
@@ -148,14 +147,14 @@
             this.panel4.Enabled = false;
             this.panel4.Location = new System.Drawing.Point(577, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(3, 387);
+            this.panel4.Size = new System.Drawing.Size(3, 359);
             this.panel4.TabIndex = 81;
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.Black;
             this.panel7.Enabled = false;
-            this.panel7.Location = new System.Drawing.Point(0, 384);
+            this.panel7.Location = new System.Drawing.Point(0, 357);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(580, 4);
             this.panel7.TabIndex = 82;
@@ -165,7 +164,7 @@
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Image = global::SISTEMA.WINFORMS.TATTOO.Properties.Resources.ImgEliminar2;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(381, 345);
+            this.btnCancelar.Location = new System.Drawing.Point(385, 315);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(90, 33);
             this.btnCancelar.TabIndex = 79;
@@ -179,7 +178,7 @@
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.Image = global::SISTEMA.WINFORMS.TATTOO.Properties.Resources.ImgAceptar;
             this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAceptar.Location = new System.Drawing.Point(477, 345);
+            this.btnAceptar.Location = new System.Drawing.Point(481, 315);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(90, 33);
             this.btnAceptar.TabIndex = 78;
@@ -386,23 +385,11 @@
             this.label1.TabIndex = 93;
             this.label1.Text = "Nombre";
             // 
-            // btnHistorialMedico
-            // 
-            this.btnHistorialMedico.Image = global::SISTEMA.WINFORMS.TATTOO.Properties.Resources.HistorialMedico;
-            this.btnHistorialMedico.Location = new System.Drawing.Point(400, 274);
-            this.btnHistorialMedico.Name = "btnHistorialMedico";
-            this.btnHistorialMedico.Size = new System.Drawing.Size(167, 49);
-            this.btnHistorialMedico.TabIndex = 116;
-            this.btnHistorialMedico.Text = "Ver historial medico";
-            this.btnHistorialMedico.UseVisualStyleBackColor = true;
-            this.btnHistorialMedico.Click += new System.EventHandler(this.btnHistorialMedico_Click);
-            // 
             // frmTATClientesRMV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(580, 387);
-            this.Controls.Add(this.btnHistorialMedico);
+            this.ClientSize = new System.Drawing.Size(580, 359);
             this.Controls.Add(this.lblSexo);
             this.Controls.Add(this.lblCodigoPostal);
             this.Controls.Add(this.lblMunicipio);
@@ -477,6 +464,5 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnHistorialMedico;
     }
 }

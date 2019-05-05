@@ -543,11 +543,13 @@
             // btnHistorialMedico
             // 
             this.btnHistorialMedico.Image = global::SISTEMA.WINFORMS.TATTOO.Properties.Resources.HistorialMedico;
-            this.btnHistorialMedico.Location = new System.Drawing.Point(394, 275);
+            this.btnHistorialMedico.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHistorialMedico.Location = new System.Drawing.Point(367, 275);
             this.btnHistorialMedico.Name = "btnHistorialMedico";
-            this.btnHistorialMedico.Size = new System.Drawing.Size(167, 49);
+            this.btnHistorialMedico.Size = new System.Drawing.Size(195, 49);
             this.btnHistorialMedico.TabIndex = 115;
             this.btnHistorialMedico.Text = "Modificar historial médico";
+            this.btnHistorialMedico.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnHistorialMedico.UseVisualStyleBackColor = true;
             this.btnHistorialMedico.Click += new System.EventHandler(this.btnHistorialMedico_Click);
             // 
@@ -556,11 +558,11 @@
             this.ObligatorioHistorial.BackColor = System.Drawing.Color.Red;
             this.ObligatorioHistorial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ObligatorioHistorial.ForeColor = System.Drawing.SystemColors.Control;
-            this.ObligatorioHistorial.Location = new System.Drawing.Point(391, 270);
+            this.ObligatorioHistorial.Location = new System.Drawing.Point(364, 272);
             this.ObligatorioHistorial.Multiline = true;
             this.ObligatorioHistorial.Name = "ObligatorioHistorial";
             this.ObligatorioHistorial.ReadOnly = true;
-            this.ObligatorioHistorial.Size = new System.Drawing.Size(174, 60);
+            this.ObligatorioHistorial.Size = new System.Drawing.Size(201, 55);
             this.ObligatorioHistorial.TabIndex = 116;
             this.ObligatorioHistorial.TabStop = false;
             this.ObligatorioHistorial.Visible = false;

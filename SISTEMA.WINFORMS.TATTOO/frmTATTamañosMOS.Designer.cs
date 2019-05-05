@@ -30,25 +30,23 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTATTamañosMOS));
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnAceptar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel9.SuspendLayout();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnAceptar = new System.Windows.Forms.Button();
+            this.lblTamaño = new System.Windows.Forms.Label();
+            this.lblDetalle = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -62,44 +60,8 @@
             this.panel5.Enabled = false;
             this.panel5.Location = new System.Drawing.Point(0, 35);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(3, 406);
+            this.panel5.Size = new System.Drawing.Size(3, 207);
             this.panel5.TabIndex = 76;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel9.Controls.Add(this.label12);
-            this.panel9.Controls.Add(this.label20);
-            this.panel9.Controls.Add(this.label1);
-            this.panel9.Controls.Add(this.label2);
-            this.panel9.Location = new System.Drawing.Point(12, 52);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(415, 339);
-            this.panel9.TabIndex = 73;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label1.Location = new System.Drawing.Point(13, 99);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 16);
-            this.label1.TabIndex = 85;
-            this.label1.Text = "Detalle";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label2.Location = new System.Drawing.Point(4, 31);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 16);
-            this.label2.TabIndex = 60;
-            this.label2.Text = "Tamaño";
             // 
             // panel2
             // 
@@ -127,6 +89,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(439, 35);
             this.panel1.TabIndex = 71;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SISTEMA.WINFORMS.TATTOO.Properties.Resources.Icono_Cerrar;
+            this.pictureBox1.Location = new System.Drawing.Point(405, 7);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 56;
+            this.pictureBox1.TabStop = false;
             // 
             // panel8
             // 
@@ -170,81 +142,6 @@
             this.panel6.Size = new System.Drawing.Size(441, 4);
             this.panel6.TabIndex = 48;
             // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Black;
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Enabled = false;
-            this.panel4.Location = new System.Drawing.Point(436, 35);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(3, 406);
-            this.panel4.TabIndex = 77;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.Enabled = false;
-            this.panel3.Location = new System.Drawing.Point(-1, 438);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(441, 4);
-            this.panel3.TabIndex = 78;
-            // 
-            // label20
-            // 
-            this.label20.BackColor = System.Drawing.SystemColors.Info;
-            this.label20.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label20.Location = new System.Drawing.Point(16, 129);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(384, 144);
-            this.label20.TabIndex = 94;
-            // 
-            // label12
-            // 
-            this.label12.BackColor = System.Drawing.SystemColors.Info;
-            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label12.Location = new System.Drawing.Point(71, 30);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(329, 22);
-            this.label12.TabIndex = 95;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Image = global::SISTEMA.WINFORMS.TATTOO.Properties.Resources.ImgAceptar1;
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(337, 399);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(90, 33);
-            this.btnCancelar.TabIndex = 75;
-            this.btnCancelar.Text = "Aceptar";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // btnAceptar
-            // 
-            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.Image = global::SISTEMA.WINFORMS.TATTOO.Properties.Resources.ImgCopiar1;
-            this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAceptar.Location = new System.Drawing.Point(241, 399);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(90, 33);
-            this.btnAceptar.TabIndex = 74;
-            this.btnAceptar.Text = "Copiar";
-            this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAceptar.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SISTEMA.WINFORMS.TATTOO.Properties.Resources.Icono_Cerrar;
-            this.pictureBox1.Location = new System.Drawing.Point(405, 7);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 56;
-            this.pictureBox1.TabStop = false;
-            // 
             // pictureBox3
             // 
             this.pictureBox3.Location = new System.Drawing.Point(823, 1);
@@ -267,38 +164,129 @@
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Black;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Enabled = false;
+            this.panel4.Location = new System.Drawing.Point(436, 35);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(3, 207);
+            this.panel4.TabIndex = 77;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.Enabled = false;
+            this.panel3.Location = new System.Drawing.Point(-1, 240);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(441, 4);
+            this.panel3.TabIndex = 78;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Image = global::SISTEMA.WINFORMS.TATTOO.Properties.Resources.ImgAceptar1;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.Location = new System.Drawing.Point(340, 193);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(90, 33);
+            this.btnCancelar.TabIndex = 75;
+            this.btnCancelar.Text = "Aceptar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // btnAceptar
+            // 
+            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptar.Image = global::SISTEMA.WINFORMS.TATTOO.Properties.Resources.ImgCopiar1;
+            this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAceptar.Location = new System.Drawing.Point(244, 193);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(90, 33);
+            this.btnAceptar.TabIndex = 74;
+            this.btnAceptar.Text = "Copiar";
+            this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            // 
+            // lblTamaño
+            // 
+            this.lblTamaño.BackColor = System.Drawing.SystemColors.Info;
+            this.lblTamaño.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTamaño.Location = new System.Drawing.Point(88, 49);
+            this.lblTamaño.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblTamaño.Name = "lblTamaño";
+            this.lblTamaño.Size = new System.Drawing.Size(342, 27);
+            this.lblTamaño.TabIndex = 103;
+            // 
+            // lblDetalle
+            // 
+            this.lblDetalle.BackColor = System.Drawing.SystemColors.Info;
+            this.lblDetalle.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblDetalle.Location = new System.Drawing.Point(88, 85);
+            this.lblDetalle.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblDetalle.Name = "lblDetalle";
+            this.lblDetalle.Size = new System.Drawing.Size(343, 88);
+            this.lblDetalle.TabIndex = 102;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.label1.Location = new System.Drawing.Point(14, 86);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 16);
+            this.label1.TabIndex = 101;
+            this.label1.Text = "Detalle";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.label2.Location = new System.Drawing.Point(11, 50);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 16);
+            this.label2.TabIndex = 100;
+            this.label2.Text = "Tamaño";
+            // 
             // frmTATTamañosMOS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(439, 441);
+            this.ClientSize = new System.Drawing.Size(439, 242);
+            this.Controls.Add(this.lblTamaño);
+            this.Controls.Add(this.lblDetalle);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel4);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(439, 441);
+            this.MaximumSize = new System.Drawing.Size(439, 242);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(439, 441);
+            this.MinimumSize = new System.Drawing.Size(439, 242);
             this.Name = "frmTATTamañosMOS";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTATTamañosMOS";
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -307,9 +295,6 @@
         private System.Windows.Forms.Panel panel5;
         public System.Windows.Forms.Button btnCancelar;
         public System.Windows.Forms.Button btnAceptar;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -321,7 +306,9 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
-        public System.Windows.Forms.Label label20;
-        public System.Windows.Forms.Label label12;
+        public System.Windows.Forms.Label lblTamaño;
+        public System.Windows.Forms.Label lblDetalle;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
