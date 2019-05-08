@@ -102,6 +102,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Image = global::SISTEMA.MAINMENU.Properties.Resources.CERRAR1;
             this.pictureBox3.Location = new System.Drawing.Point(610, 6);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(25, 25);
@@ -113,6 +114,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Enabled = false;
+            this.pictureBox2.Image = global::SISTEMA.MAINMENU.Properties.Resources.EMPLEADOS;
             this.pictureBox2.Location = new System.Drawing.Point(6, 6);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(27, 25);

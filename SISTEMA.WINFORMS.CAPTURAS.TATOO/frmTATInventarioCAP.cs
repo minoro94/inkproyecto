@@ -231,5 +231,19 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                 btnAgregar.Enabled = true;
             }
         }
+
+        #region NUD CANTIDAD VALUE CHANGED
+        private void nudCantidad_ValueChanged(object sender, EventArgs e)
+        {
+            if (nudCantidad.Value == 0)
+            {
+                btnAgregar.Enabled = false;
+            }
+            else
+            {
+                btnAgregar.Enabled = true;
+            }
+        }
+        #endregion
     }
 }

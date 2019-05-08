@@ -324,6 +324,7 @@
     <None Include="Resources\icons8-adjuntar-30.png" />
     <None Include="Resources\icons8-adjuntar-15.png" />
     <Content Include="Resources\BorrarPerfil.png" />
+    <Content Include="Resources\EstadoFinalizado.png" />
     <Content Include="Resources\GG.png" />
     <Content Include="Resources\LimpiarPerfil.png" />
     <Content Include="Resources\PerfilMujer.png" />

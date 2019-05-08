@@ -300,7 +300,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
 
         private void dtpFin_ValueChanged(object sender, EventArgs e)
         {
-            
+            RefreshList();
         }
 
         private void btnFinalizado_Click(object sender, EventArgs e)
@@ -363,5 +363,10 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
 
         }
         #endregion
+
+        private void dtpInicio_ValueChanged(object sender, EventArgs e)
+        {
+            RefreshList();
+        }
     }
 }

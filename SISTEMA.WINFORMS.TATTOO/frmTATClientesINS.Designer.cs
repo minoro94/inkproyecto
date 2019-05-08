@@ -556,6 +556,7 @@
             this.lblMnesaje1.TabIndex = 116;
             this.lblMnesaje1.Text = "Campos obligatorios";
             this.lblMnesaje1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblMnesaje1.Visible = false;
             // 
             // txtMensaje2
             // 
@@ -570,6 +571,7 @@
             this.txtMensaje2.Size = new System.Drawing.Size(139, 22);
             this.txtMensaje2.TabIndex = 115;
             this.txtMensaje2.TabStop = false;
+            this.txtMensaje2.Visible = false;
             // 
             // frmTATClientesINS
             // 

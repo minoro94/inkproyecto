@@ -280,6 +280,8 @@ namespace SISTEMA.WINFORMS.TATTOO
             if(str.Firma != "")
             {
                 btnHistorialMedico.Enabled = false;
+                btnHistorialMedico.Text = "HISTORIAL AGREGADO CORRECTAMENTE";
+                ObligatorioHistorial.Visible = false;
             }
             else
             {

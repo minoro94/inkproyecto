@@ -200,6 +200,7 @@
             this.nudCantidad.Name = "nudCantidad";
             this.nudCantidad.Size = new System.Drawing.Size(48, 22);
             this.nudCantidad.TabIndex = 135;
+            this.nudCantidad.ValueChanged += new System.EventHandler(this.nudCantidad_ValueChanged);
             this.nudCantidad.KeyUp += new System.Windows.Forms.KeyEventHandler(this.nudCantidad_KeyUp);
             // 
             // panel7

@@ -340,10 +340,10 @@ namespace SISTEMA.WINFORMS.TATTOO
             {
                 Min = false;
             }
-            if(nudMeses.Value == 0)
+            /*if(nudMeses.Value == 0)
             {
                 Min = false;
-            }
+            }*/
             if(txtAlergias.Text.Trim() == "")
             {
                 Min = false;
