@@ -350,10 +350,10 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         {
             //string file = "FinalFantasy.pdf";
             
-            string ruta = (Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName, @"..\SISTEMA.WINFORMS.CAPTURAS.TATOO\PDF\HistorialMedico.pdf"));
+            string ruta = (Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName, @"..\SISTEMA.WINFORMS.CAPTURAS.TATOO\PDF\cuidados para el tatuaje.pdf"));
             MailMessage Mensaje = new MailMessage();
             Mensaje.To.Add(Correo);
-            Mensaje.Subject = "Como cuidar tu tatto inksaciable";
+            Mensaje.Subject = "Como cuidar tu tattoo inksaciable";
             Mensaje.SubjectEncoding = System.Text.Encoding.UTF8;
             Mensaje.Body = "El pdf anexado viene informacion importante para cuidar la sanacion de tu tattoo.";
             Mensaje.Attachments.Add(new Attachment(ruta));
