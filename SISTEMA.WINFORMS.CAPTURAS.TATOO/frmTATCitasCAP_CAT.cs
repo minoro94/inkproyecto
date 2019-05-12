@@ -11,6 +11,7 @@ using SISTEMA.TATTOO;
 using System.Runtime.InteropServices;
 using System.Net.Mail;
 using System.IO;
+using System.Threading;
 
 namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
 {
@@ -322,6 +323,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                 {
                     ptbEnviando.Visible = true;
                     lblEnviando.Visible = true;
+                    Thread.Sleep(3000);
                     bool Cambia = TABLA_Citas.DAO(ref strCitas, 2, dtInventario, dtFechasCitas, dtImagenes);
                     if (Cambia)
                     {
