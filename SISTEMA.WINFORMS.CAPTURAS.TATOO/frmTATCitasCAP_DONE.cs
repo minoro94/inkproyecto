@@ -31,6 +31,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         Point posicionPrevia = new Point(-1, -1);
         public string DireccionFirma;
         public string Correo;
+        string borrafirma;
         Random rnd = new Random();
         TATCitas TABLA = new TATCitas();
         #endregion
@@ -55,7 +56,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
 
             if (e.Button == MouseButtons.Left)
             {
-                Dibujo.DrawLine(new Pen(Color.Black), posicionPrevia, PosicionActual);
+                Dibujo.DrawLine(new Pen(Color.Black,2), posicionPrevia, PosicionActual);
                 btnAceptar.Enabled = true;
             }
 
@@ -79,11 +80,11 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         {
             Bitmap BmpScreen = new Bitmap(ptbFirma.Size.Width, ptbFirma.Size.Height, System.Drawing.Imaging.PixelFormat.Format32bppPArgb);
             Graphics ScreenShot = Graphics.FromImage(BmpScreen);
-            ScreenShot.CopyFromScreen(ptbFirma.Location.X + this.Location.X, ptbFirma.Location.Y + this.Location.Y, 0, 0, Screen.PrimaryScreen.Bounds.Size, CopyPixelOperation.SourceCopy);
+            ScreenShot.CopyFromScreen(ptbFirma.Location.X + this.Location.X + groupBox1.Location.X, ptbFirma.Location.Y + this.Location.Y + groupBox1.Location.Y, 0, 0, Screen.PrimaryScreen.Bounds.Size, CopyPixelOperation.SourceCopy);
             string fileNom = String.Empty;
             saveFileDialog1.Filter = "Excel files (*.png)|*.png";
             saveFileDialog1.RestoreDirectory = true;
-            fileNom = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\SISTEMA.WINFORMS.CAPTURAS.TATOO\Capturas\Img" + Convert.ToString(rnd.Next(10000)) + ".png");
+            fileNom = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\SISTEMA.WINFORMS.CAPTURAS.TATOO\Capturas\Imgfirma" + Convert.ToString(rnd.Next(10000)) + ".png");
             DireccionFirma = fileNom;
             
             BmpScreen.Save(fileNom, System.Drawing.Imaging.ImageFormat.Png);
@@ -94,8 +95,10 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         }
         #endregion
 
+        #region BOTON ACEPTAR
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+
             CapturaPantalla();
             //bool Enviar = EnviarCorreo();
             bool Agregar = TABLA.DAO(ref str, 1, dtInventario, dtableFechasCita, dtImagentestato);
@@ -104,6 +107,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             {
                 MessageBox.Show(this, "Agregado Correctamente", "Operacion Correcta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.DialogResult = DialogResult.OK;
+               // File.Delete(DireccionFirma);
                 Close();
             }
             else
@@ -114,6 +118,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             }
 
         }
+        #endregion
 
 
         #region ENVIAR CORREO

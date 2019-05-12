@@ -26,6 +26,8 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         TATCitas TABLA_Citas = new TATCitas();
         wfTATCitas WF = new wfTATCitas();
 
+       // frmTATEnviando frmEnviando = new frmTATEnviando();
+
         public string USUARIO = "";
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -35,6 +37,9 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         DataTable dtInventario = new DataTable();
         DataTable dtFechasCitas = new DataTable();
         DataTable dtImagenes = new DataTable();
+
+        
+ 
         #endregion
 
         #region ENABLE BUTTONS
@@ -307,6 +312,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         {
             DialogResult R;
             DialogResult C;
+            DialogResult A;
             strCitas = (TATCitas.strTATCitas)lstLista.SelectedItems[0].Tag;
             if(strCitas.idEstadoCita != 3)
             {
@@ -330,33 +336,46 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             }
         }
 
+        
+
+        private void dtpInicio_ValueChanged(object sender, EventArgs e)
+        {
+            RefreshList();
+        }
+
         #region ENVIAR CORREO
         private DialogResult EnviarCorreo(string Correo)
         {
             //string file = "FinalFantasy.pdf";
+            ptbEnviando.Visible = true;
+            lblEnviando.Visible = true;
             string ruta = (Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName, @"..\SISTEMA.WINFORMS.CAPTURAS.TATOO\PDF\HistorialMedico.pdf"));
             MailMessage Mensaje = new MailMessage();
             Mensaje.To.Add(Correo);
-            Mensaje.Subject = "PDF";
+            Mensaje.Subject = "Como cuidar tu tatto inksaciable";
             Mensaje.SubjectEncoding = System.Text.Encoding.UTF8;
-            Mensaje.Body = "PROBANDO PDF";
+            Mensaje.Body = "El pdf anexado viene informacion importante para cuidar la sanacion de tu tattoo.";
             Mensaje.Attachments.Add(new Attachment(ruta));
             Mensaje.BodyEncoding = System.Text.Encoding.UTF8;
             Mensaje.IsBodyHtml = true;
-            Mensaje.From = new System.Net.Mail.MailAddress("rleyvacastro@gmail.com");
+            Mensaje.From = new System.Net.Mail.MailAddress("inksaciable@gmail.com");
             SmtpClient Cliente = new SmtpClient();
-            Cliente.Credentials = new System.Net.NetworkCredential("rleyvacastro@gmail.com", "As5drq9zv7391,");
+            Cliente.Credentials = new System.Net.NetworkCredential("inksaciable@gmail.com", "6421078481");
             Cliente.Port = 587;
             Cliente.EnableSsl = true;
             Cliente.Host = "smtp.gmail.com";
             try
             {
                 Cliente.Send(Mensaje);
-                MessageBox.Show(this, "Correo Enviado Exitosamente a: " + Correo , "Envio Existoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ptbEnviando.Visible = false;
+                lblEnviando.Visible = false;
+                MessageBox.Show(this, "Correo Enviado Exitosamente a: " + Correo, "Envio Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return DialogResult.OK;
             }
             catch (Exception e)
             {
+                ptbEnviando.Visible = false;
+                lblEnviando.Visible = false;
                 MessageBox.Show(this, "Ha Ocurrido Un Error Al Enviar Correo", "Operacion Fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return DialogResult.Cancel;
             }
@@ -364,9 +383,6 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         }
         #endregion
 
-        private void dtpInicio_ValueChanged(object sender, EventArgs e)
-        {
-            RefreshList();
-        }
+
     }
 }

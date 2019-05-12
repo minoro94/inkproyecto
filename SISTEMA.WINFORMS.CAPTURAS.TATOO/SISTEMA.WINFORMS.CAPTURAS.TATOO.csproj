@@ -88,6 +88,12 @@
     <Compile Include="frmTATClientesCAP_FND.Designer.cs">
       <DependentUpon>frmTATClientesCAP_FND.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTATEnviando.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATEnviando.Designer.cs">
+      <DependentUpon>frmTATEnviando.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTATFechasCitasCAP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTATClientesCAP_FND.resx">
       <DependentUpon>frmTATClientesCAP_FND.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATEnviando.resx">
+      <DependentUpon>frmTATEnviando.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTATFechasCitasCAP.resx">
       <DependentUpon>frmTATFechasCitasCAP.cs</DependentUpon>
@@ -324,6 +333,7 @@
     <None Include="Resources\icons8-adjuntar-30.png" />
     <None Include="Resources\icons8-adjuntar-15.png" />
     <Content Include="Resources\BorrarPerfil.png" />
+    <Content Include="Resources\Cargando.gif" />
     <Content Include="Resources\EstadoFinalizado.png" />
     <Content Include="Resources\GG.png" />
     <Content Include="Resources\LimpiarPerfil.png" />

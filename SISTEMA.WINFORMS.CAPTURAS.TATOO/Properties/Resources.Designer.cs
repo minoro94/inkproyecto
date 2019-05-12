@@ -84,6 +84,26 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Cargando {
+            get {
+                object obj = ResourceManager.GetObject("Cargando", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cargando1 {
+            get {
+                object obj = ResourceManager.GetObject("Cargando1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CarruselDerecha {
             get {
                 object obj = ResourceManager.GetObject("CarruselDerecha", resourceCulture);

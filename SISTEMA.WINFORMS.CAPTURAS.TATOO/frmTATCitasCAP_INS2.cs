@@ -33,7 +33,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
 
         int PosicionImg = 0;
         string imgZonaCuerpo;
-
+        string imgZonaborra;
         List<String> imgList = new List<String>();
         string[] Imagenes = new string[0];
         Random rnd = new Random();
@@ -453,6 +453,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                 Res = wfFirma.Agregar(ref strCitas, dtSesionesCitas, dtCitasInventario, dtImagenesTatto, Correo);
                 if(Res == DialogResult.OK)
                 {
+                    //File.Delete(imgZonaborra);
                     this.Close();
                 }
             }
@@ -478,6 +479,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         #region ENCODE PERFIL
         private void EncodePeFI()
         {
+            imgZonaborra = imgZonaCuerpo;
             String ImgZon = Herramientas.encodeImagen(imgZonaCuerpo);
             strCitas.ZonaCuerpo = ImgZon;
         }

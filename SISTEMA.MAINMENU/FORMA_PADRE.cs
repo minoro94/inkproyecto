@@ -324,7 +324,7 @@ namespace SISTEMA.MAINMENU
                 {
                     if(!Dato.EstadoCorreo && Dato.idEstadoCita == 3 && Dato.ELIMINADO == false)
                     {
-                        R = EnviarCorreo("leyva393@hotmail.com");
+                        R = EnviarCorreo(Dato.Correo);
                         if(R == DialogResult.OK)
                         {
                             strCitas = Dato;
@@ -344,15 +344,15 @@ namespace SISTEMA.MAINMENU
             string ruta = (Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName, @"..\SISTEMA.WINFORMS.CAPTURAS.TATOO\PDF\HistorialMedico.pdf"));
             MailMessage Mensaje = new MailMessage();
             Mensaje.To.Add(Correo);
-            Mensaje.Subject = "PDF";
+            Mensaje.Subject = "Como cuidar tu tatto inksaciable";
             Mensaje.SubjectEncoding = System.Text.Encoding.UTF8;
-            Mensaje.Body = "PROBANDO PDF";
+            Mensaje.Body = "El pdf anexado viene informacion importante para cuidar la sanacion de tu tattoo.";
             Mensaje.Attachments.Add(new Attachment(ruta));
             Mensaje.BodyEncoding = System.Text.Encoding.UTF8;
             Mensaje.IsBodyHtml = true;
-            Mensaje.From = new System.Net.Mail.MailAddress("rleyvacastro@gmail.com");
+            Mensaje.From = new System.Net.Mail.MailAddress("inksaciable@gmail.com");
             SmtpClient Cliente = new SmtpClient();
-            Cliente.Credentials = new System.Net.NetworkCredential("rleyvacastro@gmail.com", "As5drq9zv7391,");
+            Cliente.Credentials = new System.Net.NetworkCredential("inksaciable@gmail.com", "6421078481");
             Cliente.Port = 587;
             Cliente.EnableSsl = true;
             Cliente.Host = "smtp.gmail.com";

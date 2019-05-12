@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTATCitasCAP_CAT));
             this.label3 = new System.Windows.Forms.Label();
             this.dtpFin = new System.Windows.Forms.DateTimePicker();
@@ -46,12 +45,12 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.lblEnviando = new System.Windows.Forms.Label();
+            this.ptbEnviando = new System.Windows.Forms.PictureBox();
             this.btnFinalizado = new System.Windows.Forms.Button();
             this.btnMostrar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -59,8 +58,10 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.EnviandoCorreo = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbEnviando)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -232,29 +233,6 @@
             this.panel6.Size = new System.Drawing.Size(850, 3);
             this.panel6.TabIndex = 60;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.Icono_Cerrar;
-            this.pictureBox3.Location = new System.Drawing.Point(815, 6);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 12;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Enabled = false;
-            this.pictureBox2.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.ImgClientes;
-            this.pictureBox2.Location = new System.Drawing.Point(6, 6);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(27, 25);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 11;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseDown);
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -296,6 +274,28 @@
             this.label2.Size = new System.Drawing.Size(29, 16);
             this.label2.TabIndex = 135;
             this.label2.Text = "De:";
+            // 
+            // lblEnviando
+            // 
+            this.lblEnviando.AutoSize = true;
+            this.lblEnviando.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblEnviando.Location = new System.Drawing.Point(364, 262);
+            this.lblEnviando.Name = "lblEnviando";
+            this.lblEnviando.Size = new System.Drawing.Size(118, 16);
+            this.lblEnviando.TabIndex = 138;
+            this.lblEnviando.Text = "Enviando Correo...";
+            this.lblEnviando.Visible = false;
+            // 
+            // ptbEnviando
+            // 
+            this.ptbEnviando.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.Cargando1;
+            this.ptbEnviando.Location = new System.Drawing.Point(353, 281);
+            this.ptbEnviando.Name = "ptbEnviando";
+            this.ptbEnviando.Size = new System.Drawing.Size(129, 76);
+            this.ptbEnviando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbEnviando.TabIndex = 139;
+            this.ptbEnviando.TabStop = false;
+            this.ptbEnviando.Visible = false;
             // 
             // btnFinalizado
             // 
@@ -406,11 +406,36 @@
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.Icono_Cerrar;
+            this.pictureBox3.Location = new System.Drawing.Point(815, 6);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 12;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Enabled = false;
+            this.pictureBox2.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.ImgClientes;
+            this.pictureBox2.Location = new System.Drawing.Point(6, 6);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(27, 25);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseDown);
+            // 
             // frmTATCitasCAP_CAT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(850, 632);
+            this.Controls.Add(this.ptbEnviando);
+            this.Controls.Add(this.lblEnviando);
             this.Controls.Add(this.btnFinalizado);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnMostrar);
@@ -445,6 +470,7 @@
             this.Load += new System.EventHandler(this.frmTATCitasCAP_CAT_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbEnviando)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -483,6 +509,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ColumnHeader NumS;
         public System.Windows.Forms.Button btnFinalizado;
-        private System.Windows.Forms.Timer EnviandoCorreo;
+        private System.Windows.Forms.Label lblEnviando;
+        private System.Windows.Forms.PictureBox ptbEnviando;
     }
 }

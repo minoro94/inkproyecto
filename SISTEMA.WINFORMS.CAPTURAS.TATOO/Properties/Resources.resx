@@ -172,6 +172,9 @@
   <data name="ImgCopiar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ImgCopiar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ImgEditar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ImgEditar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ImgCancelar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ImgCancelar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -187,8 +190,8 @@
   <data name="GG" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ImgEditar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ImgEditar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="EstadoFinalizado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EstadoFinalizado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LOGOINK" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LOGOINK.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,6 +220,9 @@
   <data name="CasificarAbajo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CasificarAbajo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Cargando" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cargando.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="84327850-anatomía-del-cuerpo-humano-frente-espalda-vista-lateral-mujer-ilustración-vectorial-" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\84327850-anatomía-del-cuerpo-humano-frente-espalda-vista-lateral-mujer-ilustración-vectorial-.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -244,7 +250,7 @@
   <data name="EMPLEADOS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\EMPLEADOS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="EstadoFinalizado" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\EstadoFinalizado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Cargando1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cargando.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
