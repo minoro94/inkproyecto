@@ -321,9 +321,8 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                 R = MessageBox.Show(this, "¿Desea finalizar la cita?", "Finalizar cita", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (R == DialogResult.Yes)
                 {
-                    ptbEnviando.Visible = true;
-                    lblEnviando.Visible = true;
-                    Thread.Sleep(3000);
+
+                    backgroundWorker1.RunWorkerAsync();
                     bool Cambia = TABLA_Citas.DAO(ref strCitas, 2, dtInventario, dtFechasCitas, dtImagenes);
                     if (Cambia)
                     {
@@ -384,8 +383,13 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             }
 
         }
+
         #endregion
 
-
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            ptbEnviando.Visible = true;
+            lblEnviando.Visible = true;
+        }
     }
 }
