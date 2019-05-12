@@ -320,6 +320,8 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                 R = MessageBox.Show(this, "¿Desea finalizar la cita?", "Finalizar cita", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (R == DialogResult.Yes)
                 {
+                    ptbEnviando.Visible = true;
+                    lblEnviando.Visible = true;
                     bool Cambia = TABLA_Citas.DAO(ref strCitas, 2, dtInventario, dtFechasCitas, dtImagenes);
                     if (Cambia)
                     {
@@ -347,8 +349,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         private DialogResult EnviarCorreo(string Correo)
         {
             //string file = "FinalFantasy.pdf";
-            ptbEnviando.Visible = true;
-            lblEnviando.Visible = true;
+            
             string ruta = (Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName, @"..\SISTEMA.WINFORMS.CAPTURAS.TATOO\PDF\HistorialMedico.pdf"));
             MailMessage Mensaje = new MailMessage();
             Mensaje.To.Add(Correo);
