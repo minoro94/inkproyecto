@@ -307,6 +307,7 @@
             // 
             // txtAnticipo
             // 
+            this.txtAnticipo.Enabled = false;
             this.txtAnticipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAnticipo.Location = new System.Drawing.Point(116, 212);
             this.txtAnticipo.Margin = new System.Windows.Forms.Padding(4);
@@ -315,7 +316,9 @@
             this.txtAnticipo.Size = new System.Drawing.Size(112, 22);
             this.txtAnticipo.TabIndex = 111;
             this.txtAnticipo.TabStop = false;
+            this.txtAnticipo.TextChanged += new System.EventHandler(this.txtAnticipo_TextChanged);
             this.txtAnticipo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAnticipo_KeyPress);
+            this.txtAnticipo.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtAnticipo_KeyUp);
             // 
             // label10
             // 
@@ -337,6 +340,7 @@
             this.txtCosto.Size = new System.Drawing.Size(112, 22);
             this.txtCosto.TabIndex = 109;
             this.txtCosto.TabStop = false;
+            this.txtCosto.TextChanged += new System.EventHandler(this.txtCosto_TextChanged);
             this.txtCosto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCosto_KeyPress);
             // 
             // label6

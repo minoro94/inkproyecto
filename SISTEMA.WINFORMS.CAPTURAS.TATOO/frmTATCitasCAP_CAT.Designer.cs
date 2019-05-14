@@ -51,8 +51,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblEnviando = new System.Windows.Forms.Label();
-            this.ptbEnviando = new System.Windows.Forms.PictureBox();
             this.btnFinalizado = new System.Windows.Forms.Button();
             this.btnMostrar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -60,11 +58,9 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbEnviando)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -299,28 +295,6 @@
             this.label2.TabIndex = 135;
             this.label2.Text = "De:";
             // 
-            // lblEnviando
-            // 
-            this.lblEnviando.AutoSize = true;
-            this.lblEnviando.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblEnviando.Location = new System.Drawing.Point(364, 262);
-            this.lblEnviando.Name = "lblEnviando";
-            this.lblEnviando.Size = new System.Drawing.Size(118, 16);
-            this.lblEnviando.TabIndex = 138;
-            this.lblEnviando.Text = "Enviando Correo...";
-            this.lblEnviando.Visible = false;
-            // 
-            // ptbEnviando
-            // 
-            this.ptbEnviando.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.Cargando1;
-            this.ptbEnviando.Location = new System.Drawing.Point(353, 281);
-            this.ptbEnviando.Name = "ptbEnviando";
-            this.ptbEnviando.Size = new System.Drawing.Size(129, 76);
-            this.ptbEnviando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptbEnviando.TabIndex = 139;
-            this.ptbEnviando.TabStop = false;
-            this.ptbEnviando.Visible = false;
-            // 
             // btnFinalizado
             // 
             this.btnFinalizado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -430,17 +404,11 @@
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // backgroundWorker1
-            // 
-            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
-            // 
             // frmTATCitasCAP_CAT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(850, 632);
-            this.Controls.Add(this.ptbEnviando);
-            this.Controls.Add(this.lblEnviando);
             this.Controls.Add(this.btnFinalizado);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnMostrar);
@@ -477,7 +445,6 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbEnviando)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -514,8 +481,5 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ColumnHeader NumS;
         public System.Windows.Forms.Button btnFinalizado;
-        private System.Windows.Forms.Label lblEnviando;
-        private System.Windows.Forms.PictureBox ptbEnviando;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

@@ -12,6 +12,7 @@ using System.Runtime.InteropServices;
 using System.Net.Mail;
 using System.IO;
 using System.Threading;
+using System.ComponentModel;
 
 namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
 {
@@ -26,8 +27,11 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         TATCitas.strTATCitas strCitas = new TATCitas.strTATCitas();
         TATCitas TABLA_Citas = new TATCitas();
         wfTATCitas WF = new wfTATCitas();
+        frmTATEnviando frmEnviando = new frmTATEnviando();
+        BackgroundWorker tarea = new BackgroundWorker();
+        // frmTATEnviando frmEnviando = new frmTATEnviando();
 
-       // frmTATEnviando frmEnviando = new frmTATEnviando();
+        bool C;
 
         public string USUARIO = "";
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -304,16 +308,20 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         }
         #endregion
 
+        #region DTPFIN VALUE CHANGED
         private void dtpFin_ValueChanged(object sender, EventArgs e)
         {
             RefreshList();
         }
+        #endregion
 
         private void btnFinalizado_Click(object sender, EventArgs e)
         {
             DialogResult R;
-            DialogResult C;
+            
             DialogResult A;
+            tarea.DoWork += Haceralgo;
+            tarea.RunWorkerCompleted += Termina;
             strCitas = (TATCitas.strTATCitas)lstLista.SelectedItems[0].Tag;
             if(strCitas.idEstadoCita != 3)
             {
@@ -322,15 +330,22 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                 if (R == DialogResult.Yes)
                 {
 
-                    backgroundWorker1.RunWorkerAsync();
+                    tarea.RunWorkerAsync();
+                    frmEnviando.ShowDialog();
                     bool Cambia = TABLA_Citas.DAO(ref strCitas, 2, dtInventario, dtFechasCitas, dtImagenes);
                     if (Cambia)
                     {
-                        C = EnviarCorreo(strCitas.Correo);
-                        if(C == DialogResult.OK)
+                       // C = EnviarCorreo(strCitas.Correo);
+                       
+                        if(C)
                         {
+                            MessageBox.Show(this, "Correo Enviado Exitosamente a: " + strCitas.Correo, "Envio Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             strCitas.EstadoCorreo = true;
                             Cambia = TABLA_Citas.DAO(ref strCitas, 2, dtInventario, dtFechasCitas, dtImagenes);
+                        }
+                        else
+                        {
+                            MessageBox.Show(this, "Ha Ocurrido Un Error Al Enviar Correo", "Operacion Fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         RefreshList();
 
@@ -339,18 +354,18 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             }
         }
 
-        
 
+        #region DTP VALUE CHANGED
         private void dtpInicio_ValueChanged(object sender, EventArgs e)
         {
             RefreshList();
         }
+        #endregion
 
         #region ENVIAR CORREO
-        private DialogResult EnviarCorreo(string Correo)
+        private bool EnviarCorreo(string Correo)
         {
             //string file = "FinalFantasy.pdf";
-            
             string ruta = (Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName, @"..\SISTEMA.WINFORMS.CAPTURAS.TATOO\PDF\cuidados para el tatuaje.pdf"));
             MailMessage Mensaje = new MailMessage();
             Mensaje.To.Add(Correo);
@@ -369,27 +384,34 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             try
             {
                 Cliente.Send(Mensaje);
-                ptbEnviando.Visible = false;
-                lblEnviando.Visible = false;
-                MessageBox.Show(this, "Correo Enviado Exitosamente a: " + Correo, "Envio Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return DialogResult.OK;
+               // MessageBox.Show(this, "Correo Enviado Exitosamente a: " + Correo, "Envio Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return true;
             }
             catch (Exception e)
             {
-                ptbEnviando.Visible = false;
-                lblEnviando.Visible = false;
-                MessageBox.Show(this, "Ha Ocurrido Un Error Al Enviar Correo", "Operacion Fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return DialogResult.Cancel;
+               // MessageBox.Show(this, "Ha Ocurrido Un Error Al Enviar Correo", "Operacion Fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               return false;
             }
 
         }
 
         #endregion
 
-        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        #region HACER ALGO
+        public void Haceralgo(object o, DoWorkEventArgs e)
         {
-            ptbEnviando.Visible = true;
-            lblEnviando.Visible = true;
+          C = EnviarCorreo(strCitas.Correo);
         }
+
+        #endregion
+
+        #region TERMINA
+        public void Termina(object o, RunWorkerCompletedEventArgs e)
+        {
+            frmEnviando.Close();
+        }
+        #endregion
+
+
     }
 }

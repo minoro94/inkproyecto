@@ -23,11 +23,6 @@ namespace SISTEMA.TATTOO
                 byte[] imageBytes = ms.ToArray();
 
                 string base64String = Convert.ToBase64String(imageBytes);
-                
-                /*if (File.Exists(nombreArchivo))
-                {
-                    File.Delete(nombreArchivo);
-                }*/
                 return base64String;
             }
         }

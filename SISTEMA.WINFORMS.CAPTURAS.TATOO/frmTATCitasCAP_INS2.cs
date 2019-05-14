@@ -181,6 +181,8 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                 Dibuja(1000, 0, true);
                 return;
             }
+           
+            
         }
 
         private void txtAnticipo_KeyPress(object sender, KeyPressEventArgs e)
@@ -192,6 +194,8 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                 Dibuja(1000, 0, true);
                 return;
             }
+
+
         }
 
         #endregion
@@ -482,6 +486,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             imgZonaborra = imgZonaCuerpo;
             String ImgZon = Herramientas.encodeImagen(imgZonaCuerpo);
             strCitas.ZonaCuerpo = ImgZon;
+            //File.Delete(imgZonaborra);
         }
         #endregion
 
@@ -531,6 +536,8 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             fileNom = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\SISTEMA.WINFORMS.CAPTURAS.TATOO\Capturas\Img" + Convert.ToString(rnd.Next(10000)) + ".png");
             imgZonaCuerpo = fileNom;
             BmpScreen.Save(fileNom, System.Drawing.Imaging.ImageFormat.Png);
+            BmpScreen.Dispose();
+            saveFileDialog1.Dispose();  
         }
         #endregion
 
@@ -605,5 +612,35 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         }
         #endregion
 
+        private void txtCosto_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCosto.Text != "")
+            {
+                txtAnticipo.Enabled = true;
+            }
+            else
+            {
+                txtAnticipo.Enabled = false;
+            }
+        }
+
+        private void txtAnticipo_TextChanged(object sender, EventArgs e)
+        {
+            if(txtAnticipo.Text != "")
+            {
+                if (Convert.ToInt32(txtAnticipo.Text) > Convert.ToInt32(txtCosto.Text))
+                {
+                    txtAnticipo.Text = "";
+                    MessageBox.Show("El anticipo no puede ser mayor al costo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
+            
+        }
+
+        private void txtAnticipo_KeyUp(object sender, KeyEventArgs e)
+        {
+
+            
+        }
     }
 }
