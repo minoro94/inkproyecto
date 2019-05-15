@@ -88,27 +88,31 @@ namespace SISTEMA.WINFORMS.TATTOO
             {
                 Min = false;
             }
-            if (nudMeses.Value != 0)
+            /*if(nudMeses.Value == 0)
             {
                 Min = false;
-            }
+            }*/
             if (txtAlergias.Text.Trim() == "")
             {
                 Min = false;
             }
-            if (txtTuvoComplicacion.Text.Trim() == "")
+
+            /*if (!ObligatorioFirma)
             {
                 Min = false;
-            }
+            }*/
+            
+                EnableButtons(Min);
+            
 
             return Min;
         }
         #endregion
 
         #region ENABLE BUTTONS
-        private void EnableButtons()
+        private void EnableButtons(bool min)
         {
-            if (txtOtrasEnfermedades.Text.Trim() != "" && nudMeses.Value != 0 && txtAlergias.Text.Trim() != "" && txtTuvoComplicacion.Text.Trim() != "")
+            if (min)
             {
                 btnAceptar.Enabled = true;
             }
@@ -434,22 +438,22 @@ namespace SISTEMA.WINFORMS.TATTOO
         #region TXT CHANGED
         private void txtOtrasEnfermedades_TextChanged(object sender, EventArgs e)
         {
-            EnableButtons();
+            Obligatorio();
         }
 
         private void txtCuantosMeses_TextChanged(object sender, EventArgs e)
         {
-            EnableButtons();
+            Obligatorio();
         }
 
         private void txtAlergias_TextChanged(object sender, EventArgs e)
         {
-            EnableButtons();
+            Obligatorio();
         }
 
         private void txtTuvoComplicacion_TextChanged(object sender, EventArgs e)
         {
-            EnableButtons();
+            Obligatorio();
         }
         #endregion
 
@@ -458,7 +462,7 @@ namespace SISTEMA.WINFORMS.TATTOO
         {
             CargarFirma();
             CargarDatos();
-            EnableButtons();
+           // EnableButtons(false);
         }
         #endregion
 

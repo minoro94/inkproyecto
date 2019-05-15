@@ -192,6 +192,7 @@ namespace SISTEMA.MAINMENU
                 this.Enabled = true;
                 Disparador.Enabled = true;
                 EnvioCorreo.Enabled = true;
+                EliminarCapturas();
 
             }
            
@@ -388,6 +389,18 @@ namespace SISTEMA.MAINMENU
             dtImagenes.Columns.Add("ELIMINADO", typeof(bool));
 
             Instancia = true;
+        }
+        #endregion
+
+        #region ELIMINAR ARCHIVOS CAPTURAS
+        private void EliminarCapturas()
+        {
+            String tempFolder = @"..\..\..\SISTEMA.WINFORMS.CAPTURAS.TATOO\Capturas";
+            foreach (var item in Directory.GetFiles(tempFolder, "*.*"))
+            {
+                File.SetAttributes(item, FileAttributes.Normal);
+                File.Delete(item);
+            }
         }
         #endregion
     }

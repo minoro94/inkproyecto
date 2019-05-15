@@ -412,7 +412,11 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             DialogResult Res = wfCitasInventario.Agregar(ref dtCitasInventario);
             if(Res == DialogResult.OK)
             {
-                
+                lblInstrumentosAgregados.Visible = true;
+            }
+            else
+            {
+                lblInstrumentosAgregados.Visible = false;
             }
         }
         #endregion
@@ -443,6 +447,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             if (Obligatorios())
             {
                 CapturaPantalla();
+                
                 strCitas.idCliente = idCliente;
                 strCitas.idEstadoCita = Convert.ToInt32(IDsEstadoCita[cbxEstadoCita.SelectedIndex]);
                 strCitas.idTamaño = Convert.ToInt32(IDsTamaños[cbxTamaño.SelectedIndex]);
@@ -484,8 +489,11 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         private void EncodePeFI()
         {
             imgZonaborra = imgZonaCuerpo;
+            
             String ImgZon = Herramientas.encodeImagen(imgZonaCuerpo);
+            File.Delete(imgZonaborra);
             strCitas.ZonaCuerpo = ImgZon;
+            
             //File.Delete(imgZonaborra);
         }
         #endregion
@@ -537,6 +545,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             imgZonaCuerpo = fileNom;
             BmpScreen.Save(fileNom, System.Drawing.Imaging.ImageFormat.Png);
             BmpScreen.Dispose();
+            ScreenShot.Dispose();
             saveFileDialog1.Dispose();  
         }
         #endregion
@@ -612,6 +621,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         }
         #endregion
 
+        #region COSTO TXT CHANGED
         private void txtCosto_TextChanged(object sender, EventArgs e)
         {
             if (txtCosto.Text != "")
@@ -623,7 +633,9 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                 txtAnticipo.Enabled = false;
             }
         }
+        #endregion
 
+        #region ANTICIPO TXT CHANGED
         private void txtAnticipo_TextChanged(object sender, EventArgs e)
         {
             if(txtAnticipo.Text != "")
@@ -636,11 +648,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             }
             
         }
+        #endregion
 
-        private void txtAnticipo_KeyUp(object sender, KeyEventArgs e)
-        {
-
-            
-        }
     }
 }

@@ -51,7 +51,7 @@ namespace SISTEMA.TATTOO
             DB.objConexion.Open();
             int Cuantos = 0;
 
-            DB.COM1.CommandText = "Select count(*) from dbo.visCitasPorFecha where FechaCita <  CAST(dateadd(day, 1 ,@FechaFin) AS DATE) and FechaCita> CAST(dateadd(day, -1 ,@FechaInicio) AS DATE) and ELIMINADO = 0 AND nombreCliente like '%' + '" + str.nombreCliente + "' + '%'";
+            DB.COM1.CommandText = "Select count(*) from dbo.visCitasPorFecha where FechaCita <  cast(cast(dateadd(day,1,@FechaFin) as date) as datetime) and FechaCita> cast(cast(@FechaInicio as date) as datetime) and ELIMINADO = 0 AND nombreCliente like '%' + '" + str.nombreCliente + "' + '%'";
             SqlParameter SQP1 = new SqlParameter("@FechaFin",FechaFin);
             SQP1.SqlDbType = SqlDbType.DateTime;
             SqlParameter SQP2 = new SqlParameter("@FechaInicio",FechaInicio);
@@ -59,7 +59,7 @@ namespace SISTEMA.TATTOO
             DB.COM1.Parameters.Add(SQP1);
             DB.COM1.Parameters.Add(SQP2);
             Cuantos = (int)DB.COM1.ExecuteScalar();
-            DB.COM1.CommandText = "Select * from dbo.visCitasPorFecha where FechaCita <  CAST(dateadd(day, 1 ,@FechaFin) AS DATE) and FechaCita> CAST(dateadd(day, -1 ,@FechaInicio) AS DATE) and ELIMINADO = 0  and nombreCliente like  '%' + '" + str.nombreCliente + "' + '%' ORDER BY FechaCita asc";
+            DB.COM1.CommandText = "Select * from dbo.visCitasPorFecha where FechaCita <  cast(cast(dateadd(day,1,@FechaFin) as date) as datetime) and FechaCita> cast(cast(@FechaInicio as date) as datetime) and ELIMINADO = 0 AND nombreCliente like '%' + '" + str.nombreCliente + "' + '%'" + " ORDER BY FechaCita asc";
 
             try
             {

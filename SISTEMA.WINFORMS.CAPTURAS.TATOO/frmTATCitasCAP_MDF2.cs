@@ -33,6 +33,9 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         public int IDEstadoCita;
         public bool Sexo;
 
+        bool costo = false;
+        bool anticipo = false;
+
         int PosicionImg = 0;
         string imgZonaCuerpo;
 
@@ -669,6 +672,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             return i;
         }
         #endregion
+
         private void ptbIzquierda_Click_1(object sender, EventArgs e)
         {
             PosicionImg--;
@@ -869,6 +873,34 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                 //openFileDialog2.FileName = @"C:\Rep\SISTEMA.WINFORMS.CAPTURAS.TATOO\Resources\PerfilMujer.png";
                 //ptbPerfil.Image = Image.FromFile(openFileDialog2.FileName);
                 ptbPerfil.Image = global::SISTEMA.WINFORMS.CAPTURAS.TATOO.Properties.Resources.PerfilMujer;
+            }
+        }
+
+        private void txtCosto_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCosto.Text != "")
+            {
+                txtAnticipo.Enabled = true;
+            }
+            else
+            {
+                txtAnticipo.Enabled = false;
+            }
+        }
+
+        private void txtAnticipo_TextChanged(object sender, EventArgs e)
+        {
+            if (txtAnticipo.Text != "" && anticipo)
+            {
+                if (Convert.ToInt32(txtAnticipo.Text) > Convert.ToInt32(txtCosto.Text))
+                {
+                    txtAnticipo.Text = "";
+                    MessageBox.Show("El anticipo no puede ser mayor al costo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
+            else
+            {
+                anticipo = true;
             }
         }
     }

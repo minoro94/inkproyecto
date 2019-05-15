@@ -77,6 +77,7 @@
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.lblObligatorio = new System.Windows.Forms.Label();
+            this.lblInstrumentosAgregados = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -318,7 +319,7 @@
             this.txtAnticipo.TabStop = false;
             this.txtAnticipo.TextChanged += new System.EventHandler(this.txtAnticipo_TextChanged);
             this.txtAnticipo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAnticipo_KeyPress);
-            this.txtAnticipo.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtAnticipo_KeyUp);
+
             // 
             // label10
             // 
@@ -594,6 +595,7 @@
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.lblInstrumentosAgregados);
             this.groupBox2.Controls.Add(this.obligatorioInstrumentos);
             this.groupBox2.Controls.Add(this.btnProductos);
             this.groupBox2.Controls.Add(this.label4);
@@ -695,6 +697,22 @@
             this.lblObligatorio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblObligatorio.Visible = false;
             // 
+            // lblInstrumentosAgregados
+            // 
+            this.lblInstrumentosAgregados.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblInstrumentosAgregados.AutoSize = true;
+            this.lblInstrumentosAgregados.BackColor = System.Drawing.SystemColors.Control;
+            this.lblInstrumentosAgregados.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInstrumentosAgregados.ForeColor = System.Drawing.Color.Red;
+            this.lblInstrumentosAgregados.Location = new System.Drawing.Point(194, 227);
+            this.lblInstrumentosAgregados.Name = "lblInstrumentosAgregados";
+            this.lblInstrumentosAgregados.Size = new System.Drawing.Size(153, 16);
+            this.lblInstrumentosAgregados.TabIndex = 125;
+            this.lblInstrumentosAgregados.Text = "Instrumentos agregados";
+            this.lblInstrumentosAgregados.Visible = false;
+            // 
             // frmTATCitasCAP_INS2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -790,5 +808,6 @@
         private System.Windows.Forms.Label obligatorioInstrumentos;
         public System.Windows.Forms.Button btnProductos;
         public System.Windows.Forms.Label lblMensajeFecha;
+        public System.Windows.Forms.Label lblInstrumentosAgregados;
     }
 }

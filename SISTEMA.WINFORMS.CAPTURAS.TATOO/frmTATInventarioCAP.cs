@@ -63,14 +63,14 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                 btnEliminar.Enabled = false;
             }
 
-            if(lstLista.Items.Count > 0)
+            /*if(lstLista.Items.Count > 0)
             {
                 btnAceptar.Enabled = true;
             }
             else
             {
                 btnAceptar.Enabled = false;
-            }
+            }*/
         }
         #endregion
 
@@ -156,6 +156,14 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         #region BOTON CANCELAR
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            if(lstLista.Items.Count == 0)
+            {
+                this.DialogResult = DialogResult.Cancel;
+            }
+            else
+            {
+                this.DialogResult = DialogResult.OK;
+            }
             this.Close();
         }
         #endregion
@@ -192,7 +200,15 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                 
             }
 
-            this.DialogResult = DialogResult.OK;
+            if(lstLista.Items.Count == 0)
+            {
+                this.DialogResult = DialogResult.Cancel;
+            }
+            else
+            {
+                this.DialogResult = DialogResult.OK;
+            }
+            
             Close();
 
         }

@@ -13,6 +13,7 @@ namespace SISTEMA.TATTOO
 {
    public class Herramientas
     {
+        static string r = "";
         #region ENCODE IMAGEN
         public static string encodeImagen(string nombreArchivo)
         {
@@ -22,9 +23,12 @@ namespace SISTEMA.TATTOO
                 image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
                 byte[] imageBytes = ms.ToArray();
 
-                string base64String = Convert.ToBase64String(imageBytes);
-                return base64String;
+                //string base64String = Convert.ToBase64String(imageBytes);
+                r = Convert.ToBase64String(imageBytes);
+                
             }
+            File.Delete(nombreArchivo);
+            return r;
         }
         #endregion
 

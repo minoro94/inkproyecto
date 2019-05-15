@@ -243,7 +243,7 @@ namespace SISTEMA.WINFORMS.TATTOO
 
             if (e.Button == MouseButtons.Left)
             {
-                Dibujo.DrawLine(new Pen(Color.Black), posicionPrevia, PosicionActual);
+                Dibujo.DrawLine(new Pen(Color.Black,2), posicionPrevia, PosicionActual);
                 ObligatorioFirma = true;
             }
             
