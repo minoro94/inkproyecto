@@ -23,12 +23,11 @@ namespace SISTEMA.TATTOO
                 image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
                 byte[] imageBytes = ms.ToArray();
 
-                //string base64String = Convert.ToBase64String(imageBytes);
-                r = Convert.ToBase64String(imageBytes);
+                string base64String = Convert.ToBase64String(imageBytes);
+                return base64String;
                 
             }
-            File.Delete(nombreArchivo);
-            return r;
+            
         }
         #endregion
 

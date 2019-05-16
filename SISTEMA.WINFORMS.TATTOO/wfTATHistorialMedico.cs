@@ -18,7 +18,9 @@ namespace SISTEMA.WINFORMS.TATTOO
             frm.strClientes = strclientes;
             frm.lblNombreCliente.Text = strclientes.nombreCliente;
             frm.DireccionFirma = strclientes.Firma;
+            frm.sexo = strclientes.Sexo;
             frm.ShowDialog();
+            
             strclientes = frm.strClientes;
             return strclientes;
         }

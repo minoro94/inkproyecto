@@ -84,18 +84,18 @@ namespace SISTEMA.WINFORMS.TATTOO
             {
                 Min = false;
             }
-            if (txtOtrasEnfermedades.Text.Trim() == "")
+            /*if (txtOtrasEnfermedades.Text.Trim() == "")
             {
                 Min = false;
-            }
+            }*/
             /*if(nudMeses.Value == 0)
             {
                 Min = false;
             }*/
-            if (txtAlergias.Text.Trim() == "")
+            /*if (txtAlergias.Text.Trim() == "")
             {
                 Min = false;
-            }
+            }*/
 
             /*if (!ObligatorioFirma)
             {
@@ -462,7 +462,14 @@ namespace SISTEMA.WINFORMS.TATTOO
         {
             CargarFirma();
             CargarDatos();
-           // EnableButtons(false);
+            if (strClientes.Sexo)
+            {
+                chkEmbarazoNo.Checked = true;
+                chkEmbarazoNo.Enabled = false;
+                chkEmbarazoSi.Enabled = false;
+                nudMeses.Enabled = false;
+            }
+            // EnableButtons(false);
         }
         #endregion
 

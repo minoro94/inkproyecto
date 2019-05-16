@@ -276,6 +276,14 @@ namespace SISTEMA.WINFORMS.TATTOO
         private void btnHistorialMedico_Click(object sender, EventArgs e)
         {
             str.nombreCliente = txtNombreCliente.Text.Trim();
+            if (rdbHombre.Checked)
+            {
+                str.Sexo = true;
+            }
+            else
+            {
+                str.Sexo = false;
+            }
             wfHistorialMedico.Agregarr(ref str);
             if(str.Firma != "")
             {

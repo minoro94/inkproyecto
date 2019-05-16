@@ -29,6 +29,7 @@ namespace SISTEMA.WINFORMS.TATTOO
         public string DireccionFirma = "";
         Random rnd = new Random();
         bool ObligatorioFirma;
+       public bool sexo;
         #endregion
 
         #region CHKS
@@ -336,18 +337,18 @@ namespace SISTEMA.WINFORMS.TATTOO
             {
                 Min = false;
             }
-            if(txtOtrasEnfermedades.Text.Trim() == "")
+            /*if(txtOtrasEnfermedades.Text.Trim() == "")
             {
                 Min = false;
-            }
+            }*/
             /*if(nudMeses.Value == 0)
             {
                 Min = false;
             }*/
-            if(txtAlergias.Text.Trim() == "")
+            /*if(txtAlergias.Text.Trim() == "")
             {
                 Min = false;
-            }
+            }*/
 
             if (!ObligatorioFirma)
             {
@@ -411,6 +412,13 @@ namespace SISTEMA.WINFORMS.TATTOO
         {
             //CargarFirma(DireccionFirma);
             //CargarDatos();
+            if (sexo)
+            {
+                chkEmbarazoNo.Checked = true;
+                chkEmbarazoNo.Enabled = false;
+                chkEmbarazoSi.Enabled = false;
+                nudMeses.Enabled = false;
+            }
             EnableButtons(false);
             
         }
