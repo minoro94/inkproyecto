@@ -491,7 +491,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             imgZonaborra = imgZonaCuerpo;
             
             String ImgZon = Herramientas.encodeImagen(imgZonaCuerpo);
-            File.Delete(imgZonaborra);
+            //File.Delete(imgZonaborra);
             strCitas.ZonaCuerpo = ImgZon;
             
             //File.Delete(imgZonaborra);

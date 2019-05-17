@@ -462,6 +462,7 @@ namespace SISTEMA.WINFORMS.TATTOO
         {
             CargarFirma();
             CargarDatos();
+            Obligatorio();
             if (strClientes.Sexo)
             {
                 chkEmbarazoNo.Checked = true;
