@@ -157,6 +157,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             CrearDT();
             RefreshList();
             EnableButton();
+            dtpFechaCita.MinDate = DateTime.Today;
         }
         #endregion
     }
