@@ -82,6 +82,12 @@
     <Compile Include="frmTATCitasCAP_RMV.Designer.cs">
       <DependentUpon>frmTATCitasCAP_RMV.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTATCitasPendientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTATCitasPendientes.Designer.cs">
+      <DependentUpon>frmTATCitasPendientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTATClientesCAP_FND.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTATCitasCAP_RMV.resx">
       <DependentUpon>frmTATCitasCAP_RMV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTATCitasPendientes.resx">
+      <DependentUpon>frmTATCitasPendientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTATClientesCAP_FND.resx">
       <DependentUpon>frmTATClientesCAP_FND.cs</DependentUpon>

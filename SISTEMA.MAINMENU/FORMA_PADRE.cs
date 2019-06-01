@@ -16,6 +16,7 @@ using SISTEMA.WINFORMS.TATTOO;
 using SISTEMA.WINFORMS.CAPTURAS.TATOO;
 using System.Net.Mail;
 using System.IO;
+using System.Data.SqlClient;
 
 
 namespace SISTEMA.MAINMENU
@@ -184,9 +185,29 @@ namespace SISTEMA.MAINMENU
             
             strUsuario = Forma.strUsuario;
             ARRPermisoTablas = Forma.ARRPermisosTablas;
+            ConexionBD DB = new ConexionBD();
+            DB.conexionBD();
+
+            DB.COM1.Connection = DB.objConexion;
+            DB.objConexion.Open();
+            int Cuantos = 0;
+
+            DB.COM1.CommandText = "Select count(*) from dbo.configuracionUsuarioNTC where idUsuario=@idUsuario";
+            SqlParameter SQP = new SqlParameter("@idUsuario", strUsuario.idUsuario);
+            SQP.SqlDbType = SqlDbType.Int;
+            DB.COM1.Parameters.Add(SQP);
+            Cuantos = (int)DB.COM1.ExecuteScalar();
+            if (Cuantos != 0)
+            {
+                DB.COM1.CommandText = "Select count(*) from dbo.visCitasPorFecha where CAST(FechaRegistro AS DATE) = CAST(@Fecha AS DATE) and ELIMINADO = 0 AND Aprobado = 0";
+                SQP = new SqlParameter("@Fecha", DateTime.Now);
+                SQP.SqlDbType = SqlDbType.DateTime;
+                DB.COM1.Parameters.Add(SQP);
+                Cuantos = (int)DB.COM1.ExecuteScalar();
+            }
             
-            
-            
+
+
             if (ARRPermisoTablas != null)
             {
                 this.Enabled = true;
@@ -195,7 +216,14 @@ namespace SISTEMA.MAINMENU
                 EliminarCapturas();
 
             }
-           
+
+            if (Cuantos != 0)
+            {
+                frmTATCitasPendientes frm = new frmTATCitasPendientes();
+                string nombreTabla = "Citas Pendientes";
+                AgregarHijos(ref nombreTabla, frm);
+            }
+
         }
         #endregion
 
@@ -403,5 +431,12 @@ namespace SISTEMA.MAINMENU
             }
         }
         #endregion
+
+        private void CitasPendientes_Click(object sender, EventArgs e)
+        {
+            frmTATCitasPendientes frm = new frmTATCitasPendientes();
+            string nombreTabla = "Citas Pendientes";
+            AgregarHijos(ref nombreTabla, frm);
+        }
     }
 }

@@ -89,13 +89,31 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         #region BOTON AGREGAR
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            bool existe = false;
+            var date = DateTime.Now;
+
+            date = new DateTime(dtpFechaCita.Value.Year, dtpFechaCita.Value.Month, dtpFechaCita.Value.Day, dtpFechaCita.Value.Hour, dtpFechaCita.Value.Minute,0, dtpFechaCita.Value.Kind);
+            for (int i = 0; i < lstLista.Items.Count; i++)
+            {
+                if (((DateTime)lstLista.Items[i].Tag).Equals(date))
+                {
+                    existe = true;
+                }
+            }
+            if (existe)
+            {
+                MessageBox.Show(this, "Una fecha parecida ya esta agregada", "Fecha invalida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                ListViewItem L;
+                L = new ListViewItem();
+                L.Text = date.ToString();
+                L.Tag = date;
+                lstLista.Items.Add(L);
+                EnableButton();
+            }
             
-            ListViewItem L;
-            L = new ListViewItem();
-            L.Tag = dtpFechaCita;
-            L.Text = dtpFechaCita.Value.ToString();
-            lstLista.Items.Add(L);
-            EnableButton();
         }
         #endregion
 

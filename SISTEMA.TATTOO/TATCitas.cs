@@ -38,6 +38,9 @@ namespace SISTEMA.TATTOO
             public string Telefono;
             public bool EstadoCorreo;
             public string Correo;
+            public string NombreEmpleado;
+            public bool Aprobado;
+            public DateTime FechaRegistro;
         }
         #endregion
 
@@ -167,6 +170,53 @@ namespace SISTEMA.TATTOO
         }
         #endregion
 
+        #region LISTAR CON FILTRO DETALLE
+        public bool Listar(ref strTATCitas[] ARR, DateTime Fecha)
+        {
+            DB.conexionBD();
+
+            DB.COM1.Connection = DB.objConexion;
+            DB.objConexion.Open();
+            int Cuantos = 0;
+
+            DB.COM1.CommandText = "select  count(*) from (Select idCita from dbo.visCitasPorFecha where CAST(FechaRegistro AS DATE) = CAST(@Fecha AS DATE) and ELIMINADO = 0 AND Aprobado = 0 group by idCita,Anticipo,FechaRegistro,nombreCliente,nombreEmpleado) as A";
+            SqlParameter SQP2 = new SqlParameter("@Fecha", Fecha);
+            SQP2.SqlDbType = SqlDbType.DateTime;
+            DB.COM1.Parameters.Add(SQP2);
+            Cuantos = (int)DB.COM1.ExecuteScalar();
+            
+            DB.COM1.CommandText = "Select idCita,Anticipo,nombreCliente,nombreEmpleado,FechaRegistro from dbo.visCitasPorFecha where CAST(FechaRegistro AS DATE) = CAST(@Fecha AS DATE) and ELIMINADO = 0 AND Aprobado = 0 group by idCita,Anticipo,FechaRegistro,nombreCliente,nombreEmpleado ORDER BY FechaRegistro asc";
+
+            try
+            {
+                DB.REG1 = DB.COM1.ExecuteReader();
+                int i = 0;
+                ARR = new strTATCitas[Cuantos];
+
+                while (DB.REG1.Read())
+                {
+                    ARR[i] = new strTATCitas();
+                    ARR[i].idCita = (int)DB.REG1["idCita"];
+                    ARR[i].Anticipo = Convert.ToDouble(DB.REG1["Anticipo"]);
+                    ARR[i].nombreCliente = (string)DB.REG1["nombreCliente"];
+                    ARR[i].NombreEmpleado = (string)DB.REG1["NombreEmpleado"];
+                    ARR[i].FechaRegistro = (DateTime)DB.REG1["FechaRegistro"];
+                    i++;
+                }
+                DB.REG1.Close();
+                DB.objConexion.Close();
+                DB.COM1.Parameters.Clear();
+                return true;
+            }
+            catch (Exception e)
+            {
+                DB.objConexion.Close();
+                DB.REG1.Close();
+                DB.COM1.Parameters.Clear();
+                return false;
+            }
+        }
+        #endregion
         #endregion
 
         #region DAO
@@ -196,6 +246,7 @@ namespace SISTEMA.TATTOO
                 DB.COM1.Parameters.AddWithValue("USUARIO",str.USUARIO);
                 DB.COM1.Parameters.AddWithValue("FECHAHORACAMBIO",DateTime.Now);
                 DB.COM1.Parameters.AddWithValue("ELIMINADO",str.ELIMINADO);
+                DB.COM1.Parameters.AddWithValue("FechaRegistro", str.FechaRegistro);
                 DB.COM1.Parameters.AddWithValue("tblCitasInventario", dtInventario);
                 DB.COM1.Parameters.AddWithValue("tblImagenesTattoo", dtImgTatto);
                 DB.COM1.Parameters.AddWithValue("tblSesionesCitas", dtFechaCitas);

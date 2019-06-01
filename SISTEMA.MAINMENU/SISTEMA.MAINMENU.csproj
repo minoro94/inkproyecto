@@ -231,5 +231,8 @@
   <ItemGroup>
     <None Include="Imagenes\LOGO-FINAL.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Imagenes\EstadoFinalizado.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

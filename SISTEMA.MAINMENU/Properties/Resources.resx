@@ -136,6 +136,9 @@
   <data name="CITAS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\CITAS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ImgMirar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\ImgMirar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="TIPO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\TIPO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -154,8 +157,8 @@
   <data name="ImgAceptar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\ImgAceptar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ImgMirar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagenes\ImgMirar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LOGOINK" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\LOGOINK.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PRODUCTO2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\PRODUCTO2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,20 +187,17 @@
   <data name="ImgEditar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\ImgEditar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LOGOINK" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagenes\LOGOINK.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="CERRAR1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\CERRAR1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PRODUCTO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\PRODUCTO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LOGOUT2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\LOGOUT2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ImgAplicar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\ImgAplicar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="PRODUCTO" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagenes\PRODUCTO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CALCULADORA" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\CALCULADORA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -210,5 +210,8 @@
   </data>
   <data name="LOGO_FINAL" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\LOGO-FINAL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EstadoFinalizado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\EstadoFinalizado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

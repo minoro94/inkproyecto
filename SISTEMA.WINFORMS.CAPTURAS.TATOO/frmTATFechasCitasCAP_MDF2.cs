@@ -89,13 +89,32 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
         #region BOTON AGREGAR
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            ListViewItem L;
-            L = new ListViewItem();
-            L.Tag = dtpFechaCita;
-            L.Text = dtpFechaCita.Value.ToString();
-            lstLista.Items.Add(L);
-            dTable.Rows.Add(0,dtpFechaCita.Value,0);
-            EnableButton();
+            bool existe = false;
+            var date = DateTime.Now;
+
+            date = new DateTime(dtpFechaCita.Value.Year, dtpFechaCita.Value.Month, dtpFechaCita.Value.Day, dtpFechaCita.Value.Hour, dtpFechaCita.Value.Minute,0, dtpFechaCita.Value.Kind);
+            for (int i = 0; i < lstLista.Items.Count; i++)
+            {
+                if (((DateTime)lstLista.Items[i].Tag).Equals(date))
+                {
+                    existe = true;
+                }
+            }
+            if (existe)
+            {
+                MessageBox.Show(this, "Una fecha parecida ya esta agregada", "Fecha invalida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                ListViewItem L;
+                L = new ListViewItem();
+                L.Tag = date;
+                L.Text = date.ToString();
+                lstLista.Items.Add(L);
+                dTable.Rows.Add(0, date, 0);
+                EnableButton();
+            }
+            
         }
         #endregion
 
@@ -110,6 +129,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                 if(Convert.ToBoolean(dTable.Rows[i].ItemArray[2]) == false)
                 {
                     L.Text = Convert.ToString(dTable.Rows[i].ItemArray[1]);
+                    L.Tag = (DateTime)dTable.Rows[i].ItemArray[1];
                     lstLista.Items.Add(L);
                 }
             }
