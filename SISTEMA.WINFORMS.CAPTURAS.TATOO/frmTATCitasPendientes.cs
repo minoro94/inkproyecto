@@ -56,6 +56,7 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
             
             bool Resulto = TABLA_Citas.Listar(ref ARR, finicio);
             int i = 0;
+            double anticipos = 0;
             if (Resulto == true)
             {
                 ListViewItem L;
@@ -66,12 +67,13 @@ namespace SISTEMA.WINFORMS.CAPTURAS.TATOO
                     L.Text = Dato.nombreCliente;
                     L.SubItems.Add(Dato.FechaRegistro.ToString("dddd-d-MMMM-yyyy-hh:mm tt"));
                     L.SubItems.Add(Dato.Anticipo.ToString());
+                    anticipos = anticipos + Dato.Anticipo;
                     L.SubItems.Add(Dato.NombreEmpleado);
                     lstLista.Items.Add(L);
                     i++;
                 }
             }
-
+            lblAnticipos.Text = anticipos.ToString();
             EnableButtons();
         }
         #endregion

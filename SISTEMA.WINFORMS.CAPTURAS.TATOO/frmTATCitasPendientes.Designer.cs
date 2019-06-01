@@ -49,6 +49,8 @@
             this.btnAprobarTodos = new System.Windows.Forms.Button();
             this.btnAprobar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblAnticipos = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -219,22 +221,22 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "Cliente";
-            this.columnHeader1.Width = 302;
+            this.columnHeader1.Width = 293;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Fecha";
-            this.columnHeader2.Width = 117;
+            this.columnHeader2.Width = 231;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Anticipo";
-            this.columnHeader3.Width = 70;
+            this.columnHeader3.Width = 63;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Empleado";
-            this.columnHeader4.Width = 333;
+            this.columnHeader4.Width = 237;
             // 
             // btnAprobarTodos
             // 
@@ -284,11 +286,31 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(390, 428);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(116, 16);
+            this.label2.TabIndex = 152;
+            this.label2.Text = "Total de Anticipos";
+            // 
+            // lblAnticipos
+            // 
+            this.lblAnticipos.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblAnticipos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblAnticipos.Location = new System.Drawing.Point(512, 426);
+            this.lblAnticipos.Name = "lblAnticipos";
+            this.lblAnticipos.Size = new System.Drawing.Size(90, 22);
+            this.lblAnticipos.TabIndex = 153;
+            // 
             // frmTATCitasPendientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(851, 466);
+            this.Controls.Add(this.lblAnticipos);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnAprobar);
             this.Controls.Add(this.btnAprobarTodos);
@@ -341,5 +363,7 @@
         public System.Windows.Forms.Button btnAprobarTodos;
         public System.Windows.Forms.Button btnAprobar;
         public System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblAnticipos;
     }
 }
