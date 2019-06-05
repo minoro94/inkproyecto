@@ -289,7 +289,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(390, 428);
+            this.label2.Location = new System.Drawing.Point(417, 428);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(116, 16);
             this.label2.TabIndex = 152;
@@ -299,9 +299,9 @@
             // 
             this.lblAnticipos.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblAnticipos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblAnticipos.Location = new System.Drawing.Point(512, 426);
+            this.lblAnticipos.Location = new System.Drawing.Point(536, 426);
             this.lblAnticipos.Name = "lblAnticipos";
-            this.lblAnticipos.Size = new System.Drawing.Size(90, 22);
+            this.lblAnticipos.Size = new System.Drawing.Size(64, 22);
             this.lblAnticipos.TabIndex = 153;
             // 
             // frmTATCitasPendientes

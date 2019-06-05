@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using SISTEMA.TATTOO;
+//using SISTEMA.TATTOO;
 
 namespace SISTEMA.MAINMENU
 {
@@ -16,12 +16,12 @@ namespace SISTEMA.MAINMENU
         [STAThread]
         static void Main(string[] args)
         {
-            if(Environment.CurrentDirectory.EndsWith("\\SISTEMA.MAINMENU\\bin\\Debug") || Environment.CurrentDirectory.EndsWith("\\SISTEMA.MAINMENU\\bin\\Release"))
-            {
+            /*if(Environment.CurrentDirectory.EndsWith("\\SISTEMA.MAINMENU\\bin\\Debug") || Environment.CurrentDirectory.EndsWith("\\SISTEMA.MAINMENU\\bin\\Release"))
+            {*/
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
                 Application.Run(new FORMA_PADRE());
-            }
+            /*}
             else
             {
                 if(args.Length > 0)
@@ -84,7 +84,7 @@ namespace SISTEMA.MAINMENU
                         }
                     }
                 }
-            }
+            }*/
             
         }
     }

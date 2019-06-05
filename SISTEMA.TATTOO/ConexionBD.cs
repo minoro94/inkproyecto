@@ -36,20 +36,22 @@ namespace SISTEMA.TATTOO
         {
             //Cadena de conexion con seguridad SQL
             //string cadenaConexion = "Server=192.168.1.64;Database=Tattoo;User Id=sa;Password=123456;";
-            string cadenaConexion = "Server=25.11.13.13;Database=Tattoo;User Id=sa;Password=123456;";
+            //string cadenaConexion = "Server=25.11.13.13;Database=Tattoo;User Id=sa;Password=123456;";
+            objConexion = new SqlConnection("Server=INKSACIABLE-PC\\SQLEXPRESS;Database=Tattoo;User Id=sa;Password=29289417;");
 
             //Cadena de conexion con Seguridad Integrada de Windows
             //Personalizar la cadena de conxion de acuerdo a su Base de datos
             //  Cambia esto 
-            try
-            {
-                string cadenaConexionTrust = File.ReadAllText($"{Environment.CurrentDirectory.Substring(0, 2)}\\SISTEMCONFIG\\DATABASE.CNF");
-                objConexion = new SqlConnection(cadenaConexion);
-            }
-            catch (SqlException ex)
-            {
-                File.WriteAllText($"{Environment.CurrentDirectory[0].ToString():\\SISTEMCONFIG\\logs.txt}", ex.Message);
-            }
+            //try
+            //{
+            //    string aux = $"{Environment.CurrentDirectory.Substring(0, 2)}\\SISTEMCONFIG\\DATABASE.CNF";
+            //    string cadenaConexionTrust = File.ReadAllText($"{Environment.CurrentDirectory.Substring(0, 2)}\\SISTEMCONFIG\\DATABASE.CNF");
+            //    objConexion = new SqlConnection(cadenaConexion);
+            //}
+            //catch (SqlException ex)
+            //{
+            //    File.WriteAllText($"{Environment.CurrentDirectory[0].ToString():\\SISTEMCONFIG\\logs.txt}", ex.Message);
+            //}
         }
         #endregion
 
